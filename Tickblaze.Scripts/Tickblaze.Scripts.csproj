@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TickblazeDocumentsDir Condition="$(TickblazeDocumentsDir) == ''">$(UserProfile)\Documents\Tickblaze 2\</TickblazeDocumentsDir>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,9 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Tickblaze.API">
-      <HintPath>References\Tickblaze.API.dll</HintPath>
-    </Reference>
+    <Reference Include="References\Tickblaze.API.dll" Private="False" />
   </ItemGroup>
+
+  <Target Name="ExportScripts" AfterTargets="Build">
+    <PropertyGroup>
+      <ScriptsDir>$(TickblazeDocumentsDir)\Scripts\</ScriptsDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(ScriptsDir)" />
+    <ZipDirectory SourceDirectory="$(OutputPath)" DestinationFile="$(ScriptsDir)$(AssemblyName).zip" Overwrite="true" />
+  </Target>
 
 </Project>
