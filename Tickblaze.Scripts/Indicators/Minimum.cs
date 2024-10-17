@@ -1,9 +1,9 @@
 ﻿namespace Tickblaze.Scripts.Indicators;
 
 /// <summary>
-/// Simple Moving Average [SMA]
+/// Minimum [MIN]
 /// </summary>
-public partial class SimpleMovingAverage : Indicator
+public partial class Minimum : Indicator
 {
 	[Parameter("Source")]
 	public ISeries<double> Source { get; set; }
@@ -12,25 +12,25 @@ public partial class SimpleMovingAverage : Indicator
 	public int Period { get; set; } = 14;
 
 	[Plot("Result")]
-	public PlotSeries Result { get; set; } = new(Color.Blue, LineStyle.Solid);
+	public PlotSeries Result { get; set; }
 
-	public SimpleMovingAverage()
+	public Minimum()
 	{
-		Name = "Simple Moving Average";
-		ShortName = "SMA";
+		Name = "Minimum";
+		ShortName = "MIN";
 		IsOverlay = true;
 	}
 
 	protected override void Calculate(int index)
 	{
 		var period = Math.Min(Period, index + 1);
-		var sum = 0.0;
+		var minimum = double.MaxValue;
 
 		for (var i = 0; i < period; i++)
 		{
-			sum += Source[index - i];
+			minimum = Math.Min(minimum, Source[index - i]);
 		}
 
-		Result[index] = sum / period;
+		Result[index] = minimum;
 	}
 }
