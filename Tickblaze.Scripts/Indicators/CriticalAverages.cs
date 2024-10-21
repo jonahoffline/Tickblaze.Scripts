@@ -46,21 +46,12 @@ public partial class CriticalAverages : Indicator
 		IsOverlay = true;
 	}
 
-	private string _path = @"C:\Users\sbgtr\Documents\CriticalAverages_Tickblaze.txt";
-	private string _pathc = @"C:\Users\sbgtr\Documents\CriticalAverages_TickblazeCloses.txt";
-	private bool _isNewBar = false;
-	private List<string> _tcdata = new();
-	private List<string> _odata = new();
-
 	protected override void Calculate(int index)
 	{
-		_isNewBar = index != _priorIndex;
-		_tcdata.Add($"{Bars[index].Time.ToLocalTime()}   {Bars[index].Close}      index: {index}  priorIndex: {_priorIndex}");
-
-		ProjectedClose1[index] = 0;
-		ProjectedClose2[index] = 0;
-		ProjectedHigh[index] = 0;
-		ProjectedLow[index] = 0;
+		ProjectedClose1[index] = Bars[index].Close;
+		ProjectedClose2[index] = Bars[index].Close;
+		ProjectedHigh[index] = Bars[index].Close;
+		ProjectedLow[index] = Bars[index].Close;
 
 		if (index < 2)
 		{
@@ -103,11 +94,6 @@ public partial class CriticalAverages : Indicator
 				while (_highLowRange[_dayOfWeek].Count > AveragingPeriod)
 				{
 					_highLowRange[_dayOfWeek].RemoveAt(0);
-				}
-
-				if (_isNewBar)
-				{
-					_odata.Add($"{Bars[index].Time.ToLocalTime()}, OCRange{_openCloseRange[_dayOfWeek].Count}:, {_openCloseRange[_dayOfWeek][^1]}, HLRange{_highLowRange[_dayOfWeek].Count}:, {_highLowRange[_dayOfWeek][^1]}, H {Bars[index].High}, L {Bars[index].Low}\n");
 				}
 			}
 
@@ -172,19 +158,6 @@ public partial class CriticalAverages : Indicator
 				ProjectedLow[index] = temp == 0 ? ProjectedLow[index - 1] : temp;
 			}
 			catch { }
-		}
-
-		if (_isNewBar)
-		{
-			_odata.Add($"{Bars[index].Time.ToLocalTime()}, ProjectedHigh{ProjectedHigh[index]}:, ProjectedLow{ProjectedLow[index]}, ProjectedClose1{ProjectedClose1[index]}:, ProjectedClose2{ProjectedClose2[index]}\n");
-		}
-
-		if (false && Bars[index].Time.ToLocalTime().Month == 10 && Bars[index].Time.ToLocalTime().Day == 21 && _path.Length > 0)
-		{
-			System.IO.File.WriteAllLines(_path, _odata);
-			System.IO.File.WriteAllLines(_pathc, _tcdata);
-			_odata.Clear();
-			_path = string.Empty;
 		}
 
 		_priorIndex = index;
