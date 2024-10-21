@@ -35,7 +35,7 @@ public partial class CriticalAverages : Indicator
 	private double _theOpen;
 	private double _dailyHigh = double.MinValue;
 	private double _dailyLow = double.MaxValue;
-	private int _dayId = 0;
+	private int _dayId;
 	private bool _isNewSession;
 	private int _priorIndex = -1;
 
@@ -137,27 +137,19 @@ public partial class CriticalAverages : Indicator
 
 		if (_openCloseAverage != double.MinValue && _dailyHigh != double.MinValue)
 		{
-			try
-			{
-				ProjectedClose1[index] = _theOpen + _openCloseAverage;
-				ProjectedClose2[index] = _theOpen - _openCloseAverage;
-			}
-			catch { }
+			ProjectedClose1[index] = _theOpen + _openCloseAverage;
+			ProjectedClose2[index] = _theOpen - _openCloseAverage;
 		}
 
 		if (_highLowAverage != double.MinValue && _dailyHigh != double.MinValue)
 		{
-			try
-			{
-				var mid = (_dailyHigh + _dailyLow) / 2.0;
+			var mid = (_dailyHigh + _dailyLow) / 2.0;
 
-				var temp = mid + _highLowAverage / 2.0;
-				ProjectedHigh[index] = temp == 0 ? ProjectedHigh[index - 1] : temp;
+			var temp = mid + _highLowAverage / 2.0;
+			ProjectedHigh[index] = temp == 0 ? ProjectedHigh[index - 1] : temp;
 
-				temp = mid - _highLowAverage / 2.0;
-				ProjectedLow[index] = temp == 0 ? ProjectedLow[index - 1] : temp;
-			}
-			catch { }
+			temp = mid - _highLowAverage / 2.0;
+			ProjectedLow[index] = temp == 0 ? ProjectedLow[index - 1] : temp;
 		}
 
 		_priorIndex = index;
