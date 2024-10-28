@@ -3,7 +3,7 @@ using Tickblaze.Scripts.Indicators;
 
 namespace Tickblaze.Scripts.Strategies;
 
-[Browsable(false)]
+//[Browsable(false)]
 public class MovingAverageCrossover : Strategy
 {
 	[Parameter("MA Type")]
@@ -18,10 +18,24 @@ public class MovingAverageCrossover : Strategy
 	private MovingAverage _fastMovingAverage, _slowMovingAverage;
 	private Series<bool> _isBullishTrend;
 
+	public MovingAverageCrossover()
+	{
+		Name = "Moving Average Crossover";
+		Description = "The Moving Average Crossover Strategy detects trends by tracking crossovers between fast and slow moving averages. A bullish crossover triggers a buy order, while a bearish crossover triggers a sell order, aiming to capture early trend changes.";
+	}
+
 	protected override void Initialize()
 	{
-		_fastMovingAverage = new MovingAverage(Bars.Close, FastPeriod, MovingAverageType);
-		_slowMovingAverage = new MovingAverage(Bars.Close, SlowPeriod, MovingAverageType);
+		_fastMovingAverage = new MovingAverage(Bars.Close, FastPeriod, MovingAverageType)
+		{
+			ShowOnChart = true
+		};
+
+		_slowMovingAverage = new MovingAverage(Bars.Close, SlowPeriod, MovingAverageType)
+		{
+			ShowOnChart = true
+		};
+
 		_isBullishTrend = new();
 	}
 
@@ -56,8 +70,8 @@ public class MovingAverageCrossover : Strategy
 		}
 
 		var isBearishCrossover = !_isBullishTrend[index] && _isBullishTrend[index - 1];
-        if (isBearishCrossover)
-        {
+		if (isBearishCrossover)
+		{
 			ClosePosition();
 			ExecuteMarketOrder(OrderAction.Sell, 1);
 		}
