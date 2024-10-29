@@ -2,7 +2,7 @@
 
 namespace Tickblaze.Scripts.Strategies;
 
-public class RelativeStrengthIndexOverboughtOversold : Strategy
+public class RsiOverboughtOversold : Strategy
 {
 	[NumericRange(1, int.MaxValue)]
 	[Parameter("RSI Period")]
@@ -30,9 +30,12 @@ public class RelativeStrengthIndexOverboughtOversold : Strategy
 	[Parameter("Long enabled?")]
 	public bool IsLongEnabled { get; set; } = true;
 
+	[Parameter("Reverse on opposite signal?")]
+	public bool IsReverseOnOppositeSignalEnabled { get; set; } = true;
+
 	private RelativeStrengthIndex _rsi;
 
-	public RelativeStrengthIndexOverboughtOversold()
+	public RsiOverboughtOversold()
 	{
 		Name = "RSI Overbought/Oversold";
 		Description = "A reversal strategy based on the Relative Strength Index (RSI) generating a long signal when the RSI falls below the oversold level and a short signal when it rises above the overbought level.";
