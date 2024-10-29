@@ -1,4 +1,5 @@
-﻿using Tickblaze.Scripts.Indicators;
+﻿using System.Diagnostics;
+using Tickblaze.Scripts.Indicators;
 
 namespace Tickblaze.Scripts.Strategies;
 
@@ -73,7 +74,7 @@ public class MovingAverageCrossover : Strategy
 			return;
 		}
 
-		if (_isBullishTrend[index] != !_isBullishTrend[index - 1])
+		if (_isBullishTrend[index] == _isBullishTrend[index - 1])
 		{
 			return;
 		}
@@ -100,13 +101,17 @@ public class MovingAverageCrossover : Strategy
 		if (StopLossPercent > 0)
 		{
 			var stopLossPercentOfPrice = orderDirection == OrderDirection.Long ? 1 - StopLossPercent / 100 : 1 + StopLossPercent / 100;
-			SetStopLoss(order, Math.Max(0.001, Bars[index].Close * stopLossPercentOfPrice));
+			var stopLossPrice = Bars[index].Close * stopLossPercentOfPrice;
+
+			SetStopLoss(order, Math.Max(0.001, stopLossPrice));
 		}
 
 		if (TakeProfitPercent > 0)
 		{
 			var takeProfitPercentOfPrice = orderDirection == OrderDirection.Long ? 1 + TakeProfitPercent / 100 : 1 - TakeProfitPercent / 100;
-			SetTakeProfit(order, Math.Max(0.001, Bars[index].Close * takeProfitPercentOfPrice));
+			var takeProfitPrice = Bars[index].Close * takeProfitPercentOfPrice;
+
+			SetTakeProfit(order, Math.Max(0.001, takeProfitPrice));
 		}
 	}
 }
