@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using Tickblaze.Scripts.Indicators;
+﻿using Tickblaze.Scripts.Indicators;
 
 namespace Tickblaze.Scripts.Strategies;
 
@@ -9,11 +8,23 @@ public class MovingAverageCrossover : Strategy
 	[Parameter("MA Type")]
 	public MovingAverageType MovingAverageType { get; set; } = MovingAverageType.Simple;
 
-	[Parameter("Fast Period")]
+	[Parameter("Fast Period"), NumericRange(0)]
 	public int FastPeriod { get; set; } = 12;
 
-	[Parameter("Slow Period")]
+	[Parameter("Slow Period"), NumericRange(0)]
 	public int SlowPeriod { get; set; } = 26;
+
+	[Parameter("Stop Loss %"), NumericRange(0)]
+	public double StopLossPercent { get; set; } = 0;
+
+	[Parameter("Take Profit %"), NumericRange(0)]
+	public double TakeProfitPercent { get; set; } = 0;
+
+	[Parameter("Enable Shorting")]
+	public bool EnableShorting { get; set; } = true;
+
+	[Parameter("Enable Longing")]
+	public bool EnableLonging { get; set; } = true;
 
 	private MovingAverage _fastMovingAverage, _slowMovingAverage;
 	private Series<bool> _isBullishTrend;
@@ -36,7 +47,7 @@ public class MovingAverageCrossover : Strategy
 			ShowOnChart = true
 		};
 
-		_isBullishTrend = new();
+		_isBullishTrend = new Series<bool>();
 	}
 
 	protected override void OnBar(int index)
@@ -62,18 +73,40 @@ public class MovingAverageCrossover : Strategy
 			return;
 		}
 
-		var isBullishCrossover = _isBullishTrend[index] && !_isBullishTrend[index - 1];
-		if (isBullishCrossover)
+		if (_isBullishTrend[index] != !_isBullishTrend[index - 1])
 		{
-			ClosePosition();
-			ExecuteMarketOrder(OrderAction.Buy, 1);
+			return;
 		}
 
-		var isBearishCrossover = !_isBullishTrend[index] && _isBullishTrend[index - 1];
-		if (isBearishCrossover)
+		var orderDirection = _isBullishTrend[index] ? OrderDirection.Long : OrderDirection.Short;
+
+		// If take profits are enabled, they handle the exits exclusively
+		if (Position != null)
 		{
+			if (orderDirection == Position.Direction || TakeProfitPercent > 0)
+			{
+				return;
+			}
+
 			ClosePosition();
-			ExecuteMarketOrder(OrderAction.Sell, 1);
+		}
+
+		if (orderDirection == OrderDirection.Long ? !EnableLonging : !EnableShorting)
+		{
+			return;
+		}
+
+		var order = ExecuteMarketOrder(orderDirection == OrderDirection.Long ? OrderAction.Buy : OrderAction.Sell, 1);
+		if (StopLossPercent > 0)
+		{
+			var stopLossPercentOfPrice = orderDirection == OrderDirection.Long ? 1 - StopLossPercent / 100 : 1 + StopLossPercent / 100;
+			SetStopLoss(order, Math.Max(0.001, Bars[index].Close * stopLossPercentOfPrice));
+		}
+
+		if (TakeProfitPercent > 0)
+		{
+			var takeProfitPercentOfPrice = orderDirection == OrderDirection.Long ? 1 + TakeProfitPercent / 100 : 1 - TakeProfitPercent / 100;
+			SetTakeProfit(order, Math.Max(0.001, Bars[index].Close * takeProfitPercentOfPrice));
 		}
 	}
 }
