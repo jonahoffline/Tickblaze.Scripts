@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Tickblaze.Scripts.Indicators;
+﻿using Tickblaze.Scripts.Indicators;
 
 namespace Tickblaze.Scripts.Strategies;
 
@@ -32,7 +31,7 @@ public class MovingAverageCrossover : Strategy
 
 	public MovingAverageCrossover()
 	{
-		Name = "Moving Average Crossover";
+		Name = "MA Crossover";
 		Description = "The Moving Average Crossover Strategy detects trends by tracking crossovers between fast and slow moving averages. A bullish crossover triggers a buy order, while a bearish crossover triggers a sell order, aiming to capture early trend changes.";
 	}
 
