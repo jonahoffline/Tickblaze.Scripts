@@ -79,6 +79,7 @@ public class MovingAverageCrossover : Strategy
 		}
 
 		var orderDirection = _isBullishTrend[index] ? OrderDirection.Long : OrderDirection.Short;
+		var quantity = 1d;
 
 		// If take profits are enabled, they handle the exits exclusively
 		if (Position != null)
@@ -88,7 +89,7 @@ public class MovingAverageCrossover : Strategy
 				return;
 			}
 
-			ClosePosition();
+			quantity = Position.Quantity * 2;
 		}
 
 		if (orderDirection == OrderDirection.Long ? !EnableLonging : !EnableShorting)
@@ -96,7 +97,7 @@ public class MovingAverageCrossover : Strategy
 			return;
 		}
 
-		var order = ExecuteMarketOrder(orderDirection == OrderDirection.Long ? OrderAction.Buy : OrderAction.Sell, 1);
+		var order = ExecuteMarketOrder(orderDirection == OrderDirection.Long ? OrderAction.Buy : OrderAction.Sell, quantity);
 		if (StopLossPercent > 0)
 		{
 			var stopLossPercentOfPrice = orderDirection == OrderDirection.Long ? 1 - StopLossPercent / 100 : 1 + StopLossPercent / 100;
