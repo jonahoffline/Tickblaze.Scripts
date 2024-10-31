@@ -37,15 +37,11 @@ public class MovingAverageCrossover : Strategy
 
 	protected override void Initialize()
 	{
-		_fastMovingAverage = new MovingAverage(Bars.Close, FastPeriod, MovingAverageType)
-		{
-			ShowOnChart = true
-		};
+		_fastMovingAverage = new MovingAverage(Bars.Close, FastPeriod, MovingAverageType) { ShowOnChart = true };
+		_fastMovingAverage.Result.Color = Color.Blue;
 
-		_slowMovingAverage = new MovingAverage(Bars.Close, SlowPeriod, MovingAverageType)
-		{
-			ShowOnChart = true
-		};
+		_slowMovingAverage = new MovingAverage(Bars.Close, SlowPeriod, MovingAverageType) { ShowOnChart = true };
+		_slowMovingAverage.Result.Color = Color.Green;
 
 		_isBullishTrend = new Series<bool>();
 	}
