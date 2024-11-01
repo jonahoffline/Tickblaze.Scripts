@@ -101,25 +101,20 @@ public class OcoTicks : TradeManagementStrategy
 		Stop();
 	}
 
-	private record class OrderSpec
-	{
-		public decimal Quantity { get; set; }
-		public int? TakeProfitTicks { get; set; }
-		public decimal Remainder { get; set; }
-	}
-
 	protected override void OnEntryOrder(IOrder order)
 	{
-		CancelOrder(order);
-
 		DirectionAsInt = order.Direction is OrderDirection.Long ? 1 : -1;
 
 		var quantity = CalculateQuantity(PositionSizeType, PositionSize, StopLossTicks, RoundingMode.Down);
 		if (quantity < Symbol.MinimumVolume)
 		{
+			// TODO Add alert here when added to API
+			CancelOrder(order, "TMS aborted due to max risk settings");
 			Stop();
 			return;
 		}
+
+		CancelOrder(order, "Order replaced by TMS");
 
 		var takeProfits = Enumerable.Range(0, 2)
 			.Select(i => (Ticks: i == 0 ? FirstTakeProfitTicks : SecondTakeProfitTicks, SizePercent: i == 0 ? FirstTakeProfitSizePercent : SecondTakeProfitSizePercent))
@@ -235,5 +230,12 @@ public class OcoTicks : TradeManagementStrategy
 		public IOrder Entry;
 		public IOrder StopLoss;
 		public IOrder ProfitTarget;
+	}
+
+	private class OrderSpec
+	{
+		public decimal Quantity { get; set; }
+		public int? TakeProfitTicks { get; init; }
+		public decimal Remainder { get; set; }
 	}
 }
