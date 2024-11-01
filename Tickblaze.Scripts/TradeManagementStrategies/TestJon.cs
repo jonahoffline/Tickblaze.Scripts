@@ -1,4 +1,4 @@
-﻿using Tickblaze.Scripts.Api.Interfaces.Orders;
+using Tickblaze.Scripts.Api.Interfaces.Orders;
 
 namespace Tickblaze.Scripts.TradeManagementStrategies;
 
@@ -165,18 +165,6 @@ public class TestJon : TradeManagementStrategy
 		}
 
 		TryMoveToBreakEven();
-	}
-
-	protected override void OnShutdown()
-	{
-		foreach (var group in _orderData)
-		foreach (var order in new[] { group.StopLoss, group.Entry, group.ProfitTarget })
-		{
-			if (order?.Status is OrderStatus.Pending)
-			{
-				CancelOrder(order);
-			}
-		}
 	}
 
 	public enum SizeType
