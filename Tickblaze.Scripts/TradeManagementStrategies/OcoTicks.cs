@@ -115,6 +115,11 @@ public class OcoTicks : TradeManagementStrategy
 		DirectionAsInt = order.Direction is OrderDirection.Long ? 1 : -1;
 
 		var quantity = CalculateQuantity(PositionSizeType, PositionSize, StopLossTicks, RoundingMode.Down);
+		if (quantity < Symbol.MinimumVolume)
+		{
+			Stop();
+			return;
+		}
 
 		var takeProfits = Enumerable.Range(0, 2)
 			.Select(i => (Ticks: i == 0 ? FirstTakeProfitTicks : SecondTakeProfitTicks, SizePercent: i == 0 ? FirstTakeProfitSizePercent : SecondTakeProfitSizePercent))
@@ -162,6 +167,9 @@ public class OcoTicks : TradeManagementStrategy
 		// Dump the remaining quantity in the last, stop only bracket
 		orderSpecs[^1].Quantity += quantityToDistribute;
 
+		// Remove invalid orders (can happen if there was only 1 order worth of risk allotted)
+		orderSpecs.RemoveAll(spec => spec.Quantity == 0);
+
 		var action = order.Direction is OrderDirection.Long ? OrderAction.Buy : OrderAction.SellShort;
 		foreach (var spec in orderSpecs)
 		{
@@ -197,7 +205,7 @@ public class OcoTicks : TradeManagementStrategy
 		}
 
 		var risk = sizeType is SizeType.EquityRisk ? size : Account.BuyingPower * (size / 100);
-		return Math.Max(Symbol.MinimumVolume, Symbol.NormalizeVolume(risk / (distanceTicks * Symbol.TickValue), roundingMode));
+		return Symbol.NormalizeVolume(risk / (distanceTicks * Symbol.TickValue), roundingMode);
 	}
 
 	protected override void OnOrderUpdate(IOrder order)
