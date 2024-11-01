@@ -40,22 +40,7 @@ public class TestJon : TradeManagementStrategy
 	[Parameter("Breakeven offset (ticks)", Description = "Enter the number of ticks of profit you want to protect, once the Breakeven Trigger In Ticks has been reached. A positive number will protect that many ticks, a negative number will leave that many ticks at risk, and allow the trade more room to move before closing.")]
 	public int BreakevenOffsetTicks { get; set; } = 1;
 
-	public enum SizeType
-	{
-		Units,
-		EquityRisk,
-		EquityRiskPercent
-	}
-
 	private readonly List<OrderData> _orderData = [];
-	private bool _isBreakEvenTriggered;
-
-	public class OrderData
-	{
-		public IOrder Entry = null;
-		public IOrder StopLoss;
-		public IOrder ProfitTarget;
-	}
 
 	public TestJon()
 	{
@@ -78,7 +63,7 @@ public class TestJon : TradeManagementStrategy
 
 	private void TryMoveToBreakEven()
 	{
-		if (BreakevenTriggerTicks == 0)
+		if (BreakevenTriggerTicks == 0 || Position == null || !EnableAutoBreakeven)
 		{
 			return;
 		}
@@ -131,23 +116,23 @@ public class TestJon : TradeManagementStrategy
 			if (tpTicks == 0 || tpQuantityPercent == 0)
 				continue;
 
-			var orderGroupQuantity = Math.Min(remainingQuantity, quantity * tpQuantityPercent);
+			var orderGroupQuantity = Math.Min(remainingQuantity, quantity * tpQuantityPercent / 100);
 			remainingQuantity -= orderGroupQuantity;
 
 			_orderData.Add(new OrderData
 			{
 				Entry = order.Type switch
 				{
-					OrderType.Stop => PlaceStopOrder(action, quantity, order.StopPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
-					OrderType.Limit => PlaceLimitOrder(action, quantity, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
-					OrderType.StopLimit => PlaceStopLimitOrder(action, quantity, order.StopPrice, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
-					OrderType.Market => ExecuteMarketOrder(action, quantity, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.Stop => PlaceStopOrder(action, orderGroupQuantity, order.StopPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.Limit => PlaceLimitOrder(action, orderGroupQuantity, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.StopLimit => PlaceStopLimitOrder(action, orderGroupQuantity, order.StopPrice, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.Market => ExecuteMarketOrder(action, orderGroupQuantity, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
 					_ => throw new ArgumentOutOfRangeException()
 				}
 			});
 
-			_orderData[^1].ProfitTarget = SetTakeProfit(_orderData[^1].Entry, order.Price - StopLossTicks * Symbol.TickSize * direction);
-			_orderData[^1].StopLoss = SetStopLoss(_orderData[^1].Entry, order.Price + tpTicks * Symbol.TickSize * direction);
+			_orderData[^1].ProfitTarget = SetTakeProfit(_orderData[^1].Entry, order.Price + tpTicks * Symbol.TickSize * direction);
+			_orderData[^1].StopLoss = SetStopLoss(_orderData[^1].Entry, order.Price - StopLossTicks * Symbol.TickSize * direction);
 		}
 
 		if (BreakevenTriggerTicks == 0)
@@ -185,16 +170,26 @@ public class TestJon : TradeManagementStrategy
 	protected override void OnShutdown()
 	{
 		foreach (var group in _orderData)
-			foreach (var order in new[] { group.StopLoss, group.Entry, group.ProfitTarget })
+		foreach (var order in new[] { group.StopLoss, group.Entry, group.ProfitTarget })
+		{
+			if (order?.Status is OrderStatus.Pending)
 			{
-				if (order?.Status is OrderStatus.Pending)
-				{
-					CancelOrder(order);
-				}
+				CancelOrder(order);
 			}
+		}
 	}
 
-	protected override void OnDestroy()
+	public enum SizeType
 	{
+		Units,
+		EquityRisk,
+		EquityRiskPercent
+	}
+	
+	public class OrderData
+	{
+		public IOrder Entry;
+		public IOrder StopLoss;
+		public IOrder ProfitTarget;
 	}
 }
