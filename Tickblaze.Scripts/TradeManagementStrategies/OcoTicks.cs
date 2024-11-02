@@ -19,7 +19,7 @@ public class OcoTicks : TradeManagementStrategy
 	[Parameter("Take-profit #1 distance (ticks)", Description = "Enter the distance from your entry, that you would like to set Target #1. Entering zero (0) means you have no Target #1.")]
 	public int FirstTakeProfitTicks { get; set; } = 8;
 
-	[NumericRange(0, double.MaxValue)]
+	[NumericRange(0, 100)]
 	[Parameter("Take-profit #1 size (%)", Description = "Enter how much % of your position you would like to close at Target #1.")]
 	public double FirstTakeProfitSizePercent { get; set; } = 70;
 
@@ -27,7 +27,7 @@ public class OcoTicks : TradeManagementStrategy
 	[Parameter("Take-profit #2 distance (ticks)", Description = "Enter the distance from your entry, that you would like to set Target #2. Entering zero (0) means you have no Target #2.")]
 	public int SecondTakeProfitTicks { get; set; } = 24;
 
-	[NumericRange(0, double.MaxValue)]
+	[NumericRange(0, 100)]
 	[Parameter("Take-profit #2 size (%)", Description = "Enter how much % of your position you would like to close at Target #2.")]
 	public double SecondTakeProfitSizePercent { get; set; } = 30;
 
@@ -119,19 +119,24 @@ public class OcoTicks : TradeManagementStrategy
 		var takeProfits = Enumerable.Range(0, 2)
 			.Select(i => (Ticks: i == 0 ? FirstTakeProfitTicks : SecondTakeProfitTicks, SizePercent: i == 0 ? FirstTakeProfitSizePercent : SecondTakeProfitSizePercent))
 			.Where(x => x.SizePercent != 0 && x.Ticks != 0)
-			.ToArray();
+			.ToList();
+
+		if (takeProfits.Count == 2 && takeProfits[0].SizePercent >= 100)
+		{
+			takeProfits.RemoveAt(1);
+		}
 
 		// Split our order into up to 3 (1 per take profit with valid settings, and one more for the remaining quantity if the take profits don't add up to 100%)
 		var orderSpecs = new List<OrderSpec>();
 		var remainingPercent = (decimal) 100;
-		for (var i = 0; i < takeProfits.Length + 1 && remainingPercent > 0; i++)
+		for (var i = 0; i < takeProfits.Count + 1 && remainingPercent > 0; i++)
 		{
-			var orderGroupPercent = i < takeProfits.Length ? Math.Min((decimal) takeProfits[i].SizePercent, remainingPercent) : remainingPercent;
+			var orderGroupPercent = i < takeProfits.Count ? Math.Min((decimal) takeProfits[i].SizePercent, remainingPercent) : remainingPercent;
 			remainingPercent -= orderGroupPercent;
 			orderSpecs.Add(new OrderSpec
 			{
 				Quantity = quantity * orderGroupPercent / 100,
-				TakeProfitTicks = i < takeProfits.Length ? takeProfits[i].Ticks : null
+				TakeProfitTicks = i < takeProfits.Count ? takeProfits[i].Ticks : null
 			});
 		}
 
@@ -146,14 +151,14 @@ public class OcoTicks : TradeManagementStrategy
 		}
 		
 		// If two take profits, ensure second take profit has at least some quantity if there's anything left
-		if (takeProfits.Length == 2 && orderSpecs[1].Quantity == 0 && quantityToDistribute > 0)
+		if (takeProfits.Count == 2 && orderSpecs[1].Quantity == 0 && quantityToDistribute > 0)
 		{
 			orderSpecs[1].Quantity = Symbol.MinimumVolume;
 			quantityToDistribute -= Symbol.MinimumVolume;
 		}
 
 		// Allocate min quantity to the first bracket if it was rounded down and there's any remaining to allocate
-		if (takeProfits.Length > 0 && orderSpecs[0].Remainder > 0 && quantityToDistribute > 0)
+		if (takeProfits.Count > 0 && orderSpecs[0].Remainder > 0 && quantityToDistribute > 0)
 		{
 			orderSpecs[0].Quantity += Symbol.MinimumVolume;
 			quantityToDistribute -= Symbol.MinimumVolume;
@@ -181,7 +186,9 @@ public class OcoTicks : TradeManagementStrategy
 			});
 
 			if (spec.TakeProfitTicks != null)
+			{
 				_orderData[^1].ProfitTarget = SetTakeProfit(_orderData[^1].Entry, order.Price + spec.TakeProfitTicks.Value * Symbol.TickSize * DirectionAsInt);
+			}
 
 			_orderData[^1].StopLoss = SetStopLoss(_orderData[^1].Entry, order.Price - StopLossTicks * Symbol.TickSize * DirectionAsInt);
 		}
