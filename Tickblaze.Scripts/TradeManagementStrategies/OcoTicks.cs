@@ -114,7 +114,7 @@ public class OcoTicks : TradeManagementStrategy
 			return;
 		}
 
-		CancelOrder(order, "Order replaced by TMS");
+		CancelOrder(order, "Order replaced by TMS", true);
 
 		var takeProfits = Enumerable.Range(0, 2)
 			.Select(i => (Ticks: i == 0 ? FirstTakeProfitTicks : SecondTakeProfitTicks, SizePercent: i == 0 ? FirstTakeProfitSizePercent : SecondTakeProfitSizePercent))
