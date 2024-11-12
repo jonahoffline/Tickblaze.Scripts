@@ -103,10 +103,16 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 
 	public override void SetPoint(IComparable xDataValue, IComparable yDataValue, int index)
 	{
+		var lastBarTime = Chart.GetTimeByXCoordinate(Chart.GetXCoordinateByBarIndex(Bars.Count - 1));
 		var barIndex = Chart.GetBarIndexByXCoordinate(Point.X);
 		var bar = Bars[barIndex];
 
 		Point.Value = (bar.High + bar.Low + bar.Close) / 3;
+
+		if ((DateTime)Point.Time > lastBarTime)
+		{
+			Point.Time = lastBarTime;
+		}
 	}
 
 	public override void OnRender(IDrawingContext context)
