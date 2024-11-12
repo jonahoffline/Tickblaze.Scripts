@@ -1,5 +1,4 @@
 ﻿namespace Tickblaze.Scripts.Indicators;
-
 /// <summary>
 /// Volume Weighted Average Price [VWAP]
 /// </summary>
@@ -10,13 +9,11 @@ public partial class VolumeWeightedAveragePrice : Indicator
 
 	[Parameter("Show Band 1")]
 	public bool ShowBand1 { get; set; } = false;
-
 	[Parameter("Band 1 deviations"), NumericRange(0, double.MaxValue)]
 	public double Band1Multiplier { get; set; } = 0.75;
 
 	[Parameter("Show Band 2")]
 	public bool ShowBand2 { get; set; } = false;
-
 	[Parameter("Band 2 deviations"), NumericRange(0, double.MaxValue)]
 	public double Band2Multiplier { get; set; } = 1.75;
 
@@ -47,16 +44,22 @@ public partial class VolumeWeightedAveragePrice : Indicator
 	[Plot("Band3 Lower")]
 	public PlotSeries Band3Lower { get; set; } = new(Color.Red);
 
-	private double _volumeSum;
-	private double _typicalVolumeSum;
-	private double _varianceSum;
-	private bool _isNewDay;
+	private Series<double> _volumeSum;
+	private Series<double> _typicalVolumeSum;
+	private Series<double> _varianceSum;
 
 	public VolumeWeightedAveragePrice()
 	{
 		Name = "Volume Weighted Average Price";
 		ShortName = "VWAP";
 		IsOverlay = true;
+	}
+
+	protected override void Initialize()
+	{
+		_volumeSum = new DataSeries();
+		_typicalVolumeSum = new DataSeries();
+		_varianceSum = new DataSeries();
 	}
 
 	protected override void Calculate(int index)
@@ -68,25 +71,30 @@ public partial class VolumeWeightedAveragePrice : Indicator
 
 		var time0 = ToInteger(Bars[index].Time.ToLocalTime()) / 100;
 		var time1 = ToInteger(Bars[index - 1].Time.ToLocalTime()) / 100;
-		_isNewDay = time1 < StartTimeLocal && time0 >= StartTimeLocal || time1 < StartTimeLocal && time0 < time1;
 
-		if (_isNewDay)
+		var isNewDay = time1 < StartTimeLocal && time0 >= StartTimeLocal || time1 < StartTimeLocal && time0 < time1;
+		if (isNewDay)
 		{
-			_volumeSum = 0;
-			_typicalVolumeSum = 0;
-			_varianceSum = 0;
+			_volumeSum[index - 1] = 0;
+			_typicalVolumeSum[index - 1] = 0;
+			_varianceSum[index - 1] = 0;
 		}
 
 		var bar = Bars[index];
-		var typicalPrice = Bars.TypicalPrice[index];// (bar.High + bar.Low + bar.Close) / 3;
-		_typicalVolumeSum += bar.Volume * typicalPrice;
-		_volumeSum += bar.Volume;
-		var curVWAP = _typicalVolumeSum / _volumeSum;
+		var typicalPrice = Bars.TypicalPrice[index];
+
+		_typicalVolumeSum[index] = _typicalVolumeSum[index - 1] + bar.Volume * typicalPrice;
+		_volumeSum[index] = _volumeSum[index - 1] + bar.Volume;
+
+		var curVWAP = _typicalVolumeSum[index] / _volumeSum[index];
 		var diff = typicalPrice - curVWAP;
-		_varianceSum += diff * diff;
-		var deviation = Math.Sqrt(Math.Max(_varianceSum / (index + 1), 0));
+
+		_varianceSum[index] = _varianceSum[index - 1] + diff * diff;
+
+		var deviation = Math.Sqrt(Math.Max(_varianceSum[index] / (index + 1), 0));
 
 		Result[index] = curVWAP;
+
 		if (ShowBand1)
 		{
 			Band1Upper[index] = curVWAP + deviation * Band1Multiplier;
@@ -106,7 +114,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 		}
 	}
 
-	private int ToInteger(DateTime t)
+	private static int ToInteger(DateTime t)
 	{
 		var hr = t.Hour * 10000;
 		var min = t.Minute * 100;
