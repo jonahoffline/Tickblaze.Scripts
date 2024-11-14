@@ -2,7 +2,7 @@ using Tickblaze.Scripts.Indicators;
 
 namespace Tickblaze.Scripts.Strategies;
 
-public class MovingAverageCrossover : Strategy
+public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 {
 	[Parameter("MA Type")]
 	public MovingAverageType MovingAverageType { get; set; } = MovingAverageType.Simple;
@@ -13,12 +13,6 @@ public class MovingAverageCrossover : Strategy
 	[Parameter("Slow Period"), NumericRange(0)]
 	public int SlowPeriod { get; set; } = 26;
 
-	[Parameter("Stop Loss %"), NumericRange(0)]
-	public double StopLossPercent { get; set; } = 0;
-
-	[Parameter("Take Profit %"), NumericRange(0)]
-	public double TakeProfitPercent { get; set; } = 0;
-
 	[Parameter("Enable Shorting")]
 	public bool EnableShorting { get; set; } = true;
 
@@ -27,7 +21,7 @@ public class MovingAverageCrossover : Strategy
 
 	private MovingAverage _fastMovingAverage, _slowMovingAverage;
 	private Series<bool> _isBullishTrend;
-    private bool firstBar = true;
+    private bool _firstBar = true;
 
     public MovingAverageCrossover()
 	{
@@ -48,9 +42,9 @@ public class MovingAverageCrossover : Strategy
 
 	protected override void OnBar(int index)
 	{
-        if (firstBar)
+        if (_firstBar)
         {
-            firstBar = false;
+            _firstBar = false;
             return;
         }
 
@@ -86,7 +80,7 @@ public class MovingAverageCrossover : Strategy
 		// If take profits are enabled, they handle the exits exclusively
 		if (Position != null)
 		{
-			if (orderDirection == Position.Direction || TakeProfitPercent > 0)
+			if (orderDirection == Position.Direction || TakeProfit > 0)
 			{
 				return;
 			}
@@ -100,20 +94,6 @@ public class MovingAverageCrossover : Strategy
 		}
 
 		var order = ExecuteMarketOrder(orderDirection == OrderDirection.Long ? OrderAction.Buy : OrderAction.Sell, quantity);
-		if (StopLossPercent > 0)
-		{
-			var stopLossPercentOfPrice = orderDirection == OrderDirection.Long ? 1 - StopLossPercent / 100 : 1 + StopLossPercent / 100;
-			var stopLossPrice = Bars[index].Close * stopLossPercentOfPrice;
-
-			SetStopLoss(order, Math.Max(0.001, stopLossPrice));
-		}
-
-		if (TakeProfitPercent > 0)
-		{
-			var takeProfitPercentOfPrice = orderDirection == OrderDirection.Long ? 1 + TakeProfitPercent / 100 : 1 - TakeProfitPercent / 100;
-			var takeProfitPrice = Bars[index].Close * takeProfitPercentOfPrice;
-
-			SetTakeProfit(order, Math.Max(0.001, takeProfitPrice));
-		}
+		PlaceStopLossAndTarget(order, Bars.Close[^1], orderDirection);
 	}
 }

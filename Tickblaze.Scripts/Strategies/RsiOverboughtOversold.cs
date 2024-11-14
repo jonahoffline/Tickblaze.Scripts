@@ -2,7 +2,7 @@
 
 namespace Tickblaze.Scripts.Strategies;
 
-public class RsiOverboughtOversold : Strategy
+public class RsiOverboughtOversold : BaseStopsAndTargetsStrategy
 {
 	[NumericRange(1, int.MaxValue)]
 	[Parameter("RSI Period")]
@@ -15,14 +15,6 @@ public class RsiOverboughtOversold : Strategy
 	[NumericRange(0, 100)]
 	[Parameter("RSI Oversold")]
 	public int RsiOversoldValue { get; set; } = 30;
-
-	[NumericRange(0, int.MaxValue)]
-	[Parameter("Stop-loss %")]
-	public double StopLossPercent { get; set; } = 10;
-
-	[NumericRange(0, int.MaxValue)]
-	[Parameter("Take-profit %")]
-	public double TakeProfitPercent { get; set; } = 10;
 
 	[Parameter("Short enabled?")]
 	public bool IsShortEnabled { get; set; } = true;
@@ -93,26 +85,10 @@ public class RsiOverboughtOversold : Strategy
 			return;
 		}
 
-		var price = Bars.Close[^1];
 		var action = direction is OrderDirection.Long ? OrderAction.Buy : OrderAction.SellShort;
-		var exitMultiplier = direction is OrderDirection.Long ? 1 : -1;
 		var quantity = 1 + (Position?.Quantity ?? 0);
 		var marketOrder = ExecuteMarketOrder(action, quantity, TimeInForce.GoodTillCancel, comment);
+        PlaceStopLossAndTarget(marketOrder, Bars.Close[^1], direction);
 
-		if (StopLossPercent > 0)
-		{
-			var stopLossOffset = price * (StopLossPercent / 100);
-			var stopLoss = price - stopLossOffset * exitMultiplier;
-
-			SetStopLoss(marketOrder, stopLoss, "SL");
-		}
-
-		if (TakeProfitPercent > 0)
-		{
-			var takeProfitOffset = price * (TakeProfitPercent / 100);
-			var takeProfit = price + takeProfitOffset * exitMultiplier;
-
-			SetTakeProfit(marketOrder, takeProfit, "TP");
-		}
-	}
+    }
 }
