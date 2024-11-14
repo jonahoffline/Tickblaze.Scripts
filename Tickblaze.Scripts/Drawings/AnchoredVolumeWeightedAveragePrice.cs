@@ -29,31 +29,31 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	[Parameter("2. Band Visible?")]
 	public bool BandEnabled2 { get; set; } = false;
 
-	[Parameter("Band 2 deviations"), NumericRange(0, double.MaxValue)]
+	[Parameter("2. Band deviations"), NumericRange(0, double.MaxValue)]
 	public double BandMultiplier2 { get; set; } = 1.75;
 
-	[Parameter("Band 2 Color")]
+	[Parameter("2. Band Color")]
 	public Color BandColor2 { get; set; } = Color.Yellow;
 
-	[Parameter("Band 2 Line Thickness"), NumericRange(1, 5)]
+	[Parameter("2. Band Line Thickness"), NumericRange(1, 5)]
 	public int BandThickness2 { get; set; } = 1;
 
-	[Parameter("Band 2 Line Style")]
+	[Parameter("2. Band Line Style")]
 	public LineStyle BandLineStyle2 { get; set; } = LineStyle.Solid;
 
 	[Parameter("3. Band Visible?")]
 	public bool BandEnabled3 { get; set; } = false;
 
-	[Parameter("Band 3 deviations"), NumericRange(0, double.MaxValue)]
+	[Parameter("3. Band deviations"), NumericRange(0, double.MaxValue)]
 	public double BandMultiplier3 { get; set; } = 2.75;
 
-	[Parameter("Band 3 Color")]
+	[Parameter("3. Band Color")]
 	public Color BandColor3 { get; set; } = Color.Red;
 
-	[Parameter("Band 3 Line Thickness"), NumericRange(1, 5)]
+	[Parameter("3. Band Line Thickness"), NumericRange(1, 5)]
 	public int BandThickness3 { get; set; } = 1;
 
-	[Parameter("Band 3 Line Style")]
+	[Parameter("3. Band Line Style")]
 	public LineStyle BandLineStyle3 { get; set; } = LineStyle.Solid;
 
 	public IChartPoint Point => Points[0];
