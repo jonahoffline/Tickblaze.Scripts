@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IOrderManager | Tickblaze </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IOrderManager | Tickblaze ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="logo-img" src="../images/logo.png" alt="Tickblaze">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager">
+
+
+
+  <h1 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager" class="text-break">Interface IOrderManager</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_GetExchangeRate_System_String_System_String_">IOrderAccessor.GetExchangeRate(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Symbol">IOrderAccessor.Symbol</a>
+    </div>
+    <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Account">IOrderAccessor.Account</a>
+    </div>
+    <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_PendingOrders">IOrderAccessor.PendingOrders</a>
+    </div>
+    <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Position">IOrderAccessor.Position</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.html">Orders</a></h6>
+  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
+  <h5 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IOrderManager : IOrderAccessor</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_CancelOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.CancelOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_CancelOrder_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_String_System_Boolean_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.CancelOrder(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.String,System.Boolean)">CancelOrder(IOrder, string, bool)</h4>
+  <div class="markdown level1 summary"><p>Cancels the specified order with an optional comment.</p>
+<param name="order">The order to cancel.<param name="comment">Optional comment for the order.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CancelOrder(IOrder order, string comment = &quot;&quot;, bool cancelSilently = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">cancelSilently</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ClosePosition_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.ClosePosition*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ClosePosition_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.ClosePosition(System.String)">ClosePosition(string)</h4>
+  <div class="markdown level1 summary"><p>Closes the entire position with an optional comment.</p>
+<param name="comment">Optional comment for the order.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClosePosition(string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ExecuteMarketOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.ExecuteMarketOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ExecuteMarketOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.ExecuteMarketOrder(Tickblaze.Scripts.Api.Enums.OrderAction,System.Double,Tickblaze.Scripts.Api.Enums.TimeInForce,System.String)">ExecuteMarketOrder(OrderAction, double, TimeInForce, string)</h4>
+  <div class="markdown level1 summary"><p>Executes a market order immediately based on the given action and quantity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder ExecuteMarketOrder(OrderAction action, double quantity, TimeInForce timeInForce = TimeInForce.Day, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderAction.html">OrderAction</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The buy or sell action.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">quantity</span></td>
+        <td><p>The order quantity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></td>
+        <td><span class="parametername">timeInForce</span></td>
+        <td><p>Order duration setting. Defaults to Day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional order comment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_GetOrderExpectedPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.GetOrderExpectedPrice*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_GetOrderExpectedPrice_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.GetOrderExpectedPrice(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder)">GetOrderExpectedPrice(IOrder)</h4>
+  <div class="markdown level1 summary"><p>Gets estimated fill price of pending order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetOrderExpectedPrice(IOrder order)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The pending order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ModifyOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.ModifyOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ModifyOrder_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_Nullable_System_Double__System_Nullable_System_Double__Tickblaze_Scripts_Api_Enums_TimeInForce_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.ModifyOrder(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Double,System.Nullable{System.Double},System.Nullable{System.Double},Tickblaze.Scripts.Api.Enums.TimeInForce)">ModifyOrder(IOrder, double, double?, double?, TimeInForce)</h4>
+  <div class="markdown level1 summary"><p>Modifies an existing order.</p>
+<param name="order">The order of open position.<param name="quantity">Order quantity.<param name="stopPrice">Stop price if applicable.<param name="limitPrice">Limit price if applicable.<param name="timeInForce">Order duration. Defaults to Day.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ModifyOrder(IOrder order, double quantity, double? stopPrice, double? limitPrice, TimeInForce timeInForce = TimeInForce.Day)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">quantity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><span class="parametername">stopPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><span class="parametername">limitPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></td>
+        <td><span class="parametername">timeInForce</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceLimitOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceLimitOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceLimitOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceLimitOrder(Tickblaze.Scripts.Api.Enums.OrderAction,System.Double,System.Double,Tickblaze.Scripts.Api.Enums.TimeInForce,System.String)">PlaceLimitOrder(OrderAction, double, double, TimeInForce, string)</h4>
+  <div class="markdown level1 summary"><p>Places a limit order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder PlaceLimitOrder(OrderAction action, double quantity, double limitPrice, TimeInForce timeInForce = TimeInForce.Day, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderAction.html">OrderAction</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The buy or sell action.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">quantity</span></td>
+        <td><p>Order quantity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">limitPrice</span></td>
+        <td><p>Limit price.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></td>
+        <td><span class="parametername">timeInForce</span></td>
+        <td><p>Order duration. Defaults to Day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceOrder_Tickblaze_Scripts_Api_Enums_OrderAction_Tickblaze_Scripts_Api_Enums_OrderType_System_Double_System_Nullable_System_Double__System_Nullable_System_Double__Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceOrder(Tickblaze.Scripts.Api.Enums.OrderAction,Tickblaze.Scripts.Api.Enums.OrderType,System.Double,System.Nullable{System.Double},System.Nullable{System.Double},Tickblaze.Scripts.Api.Enums.TimeInForce,System.String)">PlaceOrder(OrderAction, OrderType, double, double?, double?, TimeInForce, string)</h4>
+  <div class="markdown level1 summary"><p>Places an order of specified type with defined price parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder PlaceOrder(OrderAction action, OrderType type, double quantity, double? stopPrice, double? limitPrice, TimeInForce timeInForce = TimeInForce.Day, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderAction.html">OrderAction</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The buy or sell action.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderType.html">OrderType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Order type (e.g., Limit, Stop).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">quantity</span></td>
+        <td><p>Order quantity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><span class="parametername">stopPrice</span></td>
+        <td><p>Stop price if applicable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><span class="parametername">limitPrice</span></td>
+        <td><p>Limit price if applicable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></td>
+        <td><span class="parametername">timeInForce</span></td>
+        <td><p>Order duration. Defaults to Day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceStopLimitOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceStopLimitOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceStopLimitOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_System_Double_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceStopLimitOrder(Tickblaze.Scripts.Api.Enums.OrderAction,System.Double,System.Double,System.Double,Tickblaze.Scripts.Api.Enums.TimeInForce,System.String)">PlaceStopLimitOrder(OrderAction, double, double, double, TimeInForce, string)</h4>
+  <div class="markdown level1 summary"><p>Places a stop-limit order.</p>
+<param name="action">The buy or sell action.<param name="quantity">Order quantity.<param name="stopPrice">Stop price.<param name="limitPrice">Limit price.<param name="timeInForce">Order duration. Defaults to Day.<param name="comment">Optional comment for the order.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder PlaceStopLimitOrder(OrderAction action, double quantity, double stopPrice, double limitPrice, TimeInForce timeInForce = TimeInForce.Day, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderAction.html">OrderAction</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">quantity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">stopPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">limitPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></td>
+        <td><span class="parametername">timeInForce</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceStopOrder_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceStopOrder*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceStopOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.PlaceStopOrder(Tickblaze.Scripts.Api.Enums.OrderAction,System.Double,System.Double,Tickblaze.Scripts.Api.Enums.TimeInForce,System.String)">PlaceStopOrder(OrderAction, double, double, TimeInForce, string)</h4>
+  <div class="markdown level1 summary"><p>Places a stop order that activates when the stop price is reached.</p>
+<param name="action">The buy or sell action.<param name="quantity">Order quantity.<param name="stopPrice">Stop price.<param name="timeInForce">Order duration. Defaults to Day.<param name="comment">Optional comment for the order.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder PlaceStopOrder(OrderAction action, double quantity, double stopPrice, TimeInForce timeInForce = TimeInForce.Day, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderAction.html">OrderAction</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">quantity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">stopPrice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></td>
+        <td><span class="parametername">timeInForce</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLoss_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetStopLoss*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLoss_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetStopLoss(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Double,System.String)">SetStopLoss(IOrder, double, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a stop-loss order on an open position at a specified price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder SetStopLoss(IOrder order, double stopPrice, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The order of the open position to which the stop-loss is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">stopPrice</span></td>
+        <td><p>The price at which the stop-loss order is set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order, providing additional information or notes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><p>The updated order with the stop-loss applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLossPercent_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetStopLossPercent*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLossPercent_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetStopLossPercent(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Double,System.String)">SetStopLossPercent(IOrder, double, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a stop-loss order on an open position based on a specified percentage from the entry price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder SetStopLossPercent(IOrder order, double percent, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The order of the open position to which the stop-loss is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">percent</span></td>
+        <td><p>The percentage away from the entry price to place the stop-loss.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order, providing additional information or notes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><p>The updated order with the stop-loss applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLossTicks_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetStopLossTicks*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLossTicks_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Int32_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetStopLossTicks(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Int32,System.String)">SetStopLossTicks(IOrder, int, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a stop-loss order on an open position based on a specified number of ticks from the entry price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder SetStopLossTicks(IOrder order, int ticks, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The order of the open position to which the stop-loss is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">ticks</span></td>
+        <td><p>The number of ticks away from the entry price to place the stop-loss.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order, providing additional information or notes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><p>The updated order with the stop-loss applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfit_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetTakeProfit*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfit_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetTakeProfit(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Double,System.String)">SetTakeProfit(IOrder, double, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a take-profit order at a specified price to close a position when the price is reached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder SetTakeProfit(IOrder order, double limitPrice, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The order of the open position to which the take-profit is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">limitPrice</span></td>
+        <td><p>The price at which the take-profit order is set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order, providing additional information or notes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><p>The updated order with the take-profit applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfitPercent_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetTakeProfitPercent*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfitPercent_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetTakeProfitPercent(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Double,System.String)">SetTakeProfitPercent(IOrder, double, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a take-profit order on an open position based on a specified percentage from the entry price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder SetTakeProfitPercent(IOrder order, double percent, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The order of the open position to which the take-profit is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">percent</span></td>
+        <td><p>The percentage away from the entry price to place the take-profit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order, providing additional information or notes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><p>The updated order with the take-profit applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfitTicks_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetTakeProfitTicks*"></a>
+  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfitTicks_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Int32_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.SetTakeProfitTicks(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Int32,System.String)">SetTakeProfitTicks(IOrder, int, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a take-profit order on an open position based on a specified number of ticks from the entry price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOrder SetTakeProfitTicks(IOrder order, int ticks, string comment = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>The order of the open position to which the take-profit is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">ticks</span></td>
+        <td><p>The number of ticks away from the entry price to place the take-profit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">comment</span></td>
+        <td><p>Optional comment for the order, providing additional information or notes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></td>
+        <td><p>The updated order with the take-profit applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
