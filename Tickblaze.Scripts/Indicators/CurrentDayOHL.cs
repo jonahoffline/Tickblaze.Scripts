@@ -5,26 +5,17 @@
 /// </summary>
 public partial class CurrentDayOHL : Indicator
 {
-	[Parameter("Start time"), NumericRange(0, 2359, 1)]
-	public int StartTime { get; set; } = 930;
-
-	[Parameter("End time"), NumericRange(0, 2359, 1)]
-	public int EndTime { get; set; } = 1600;
-
 	[Plot("Open")]
-	public PlotSeries POpen { get; set; } = new(Color.Orange, LineStyle.Dash);
+	public PlotSeries Open { get; set; } = new(Color.Orange, LineStyle.Dash);
 
 	[Plot("High")]
-	public PlotSeries PHigh { get; set; } = new(Color.Red, LineStyle.Dash);
+	public PlotSeries High { get; set; } = new(Color.Red, LineStyle.Dash);
 
 	[Plot("Low")]
-	public PlotSeries PLow { get; set; } = new(Color.Blue, LineStyle.Dash);
+	public PlotSeries Low { get; set; } = new(Color.Blue, LineStyle.Dash);
 
-	private double _highestHigh = double.MinValue;
-	private double _lowestLow = double.MaxValue;
-	private double _open;
-	private string _dayIdStart = "";
-	private string _dayIdEnded = "";
+	private Bar _dailyBar;
+	private IExchangeSession _lastSession;
 
 	public CurrentDayOHL()
 	{
@@ -35,76 +26,29 @@ public partial class CurrentDayOHL : Indicator
 
 	protected override void Calculate(int index)
 	{
-		var t0 = ToTime(Bars[index].Time) / 100;
-		var day = Bars[index].Time.Day;
-		var bartimeStr = Bars[index].Time.ToShortDateString();
-		var isEndOfSession = false;
-
-		//determine if EndTime was encountered today
-		if (t0 >= EndTime && _dayIdEnded.CompareTo(bartimeStr) != 0)
+		if (index == 0)
 		{
-			_dayIdEnded = bartimeStr;
-			isEndOfSession = true;
+			return;
 		}
 
-		if (StartTime < EndTime)
-		{
-			//Start time encountered, set variables
-			if (t0 > StartTime && _dayIdStart.CompareTo(bartimeStr) != 0)
-			{
-				_dayIdStart = bartimeStr;
-				_open = Bars[index].Open;
-				_highestHigh = Bars[index].High;
-				_lowestLow = Bars[index].Low;
-			}
-			//while we're between start and end, find HH and LL
-			else if (t0 > StartTime && t0 <= EndTime)
-			{
-				if (_highestHigh < Bars[index].High)
-				{
-					_highestHigh = Math.Max(_highestHigh, Bars[index].High);
-				}
+		var bar = Bars[index];
+		var currentSession = Bars.Symbol.ExchangeCalendar.GetSession(bar.Time);
 
-				_lowestLow = Math.Min(_lowestLow, Bars[index].Low);
-			}
-		}
-		else if (StartTime > EndTime)
+		var isNewSession = _lastSession is null || _lastSession != currentSession;
+		if (isNewSession)
 		{
-			if (t0 > StartTime && _dayIdStart.CompareTo(bartimeStr) != 0)
-			{
-				_dayIdStart = bartimeStr;
-				_open = Bars[index].Open;
-				_highestHigh = Bars[index].High;
-				_lowestLow = Bars[index].Low;
-			}
-			else if (t0 > StartTime || t0 <= EndTime)
-			{
-				_highestHigh = Math.Max(_highestHigh, Bars[index].High);
-				_lowestLow = Math.Min(_lowestLow, Bars[index].Low);
-			}
+			_lastSession = currentSession;
+			_dailyBar = new(currentSession.StartUtcDateTime, bar.Open, bar.High, bar.Low, bar.Close, 0);
 		}
-		else if (StartTime == EndTime)
+		else
 		{
-			if (isEndOfSession)
-			{
-				_open = Bars[index].Open;
-				_highestHigh = Bars[index].High;
-				_lowestLow = Bars[index].Low;
-			}
-			else
-			{
-				_highestHigh = Math.Max(_highestHigh, Bars[index].High);
-				_lowestLow = Math.Min(_lowestLow, Bars[index].Low);
-			}
+			_dailyBar.High = Math.Max(_dailyBar.High, bar.High);
+			_dailyBar.Low = Math.Min(_dailyBar.Low, bar.Low);
+			_dailyBar.Close = bar.Close;
 		}
 
-		POpen[index] = _open;
-		PHigh[index] = _highestHigh;
-		PLow[index] = _lowestLow;
-	}
-
-	private static int ToTime(DateTime t)
-	{
-		return t.Hour * 10000 + t.Minute * 100 + t.Second;
+		Open[index] = _dailyBar.Open;
+		High[index] = _dailyBar.High;
+		Low[index] = _dailyBar.Low;
 	}
 }
