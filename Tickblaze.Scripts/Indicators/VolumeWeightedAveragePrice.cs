@@ -53,6 +53,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 		Name = "Volume Weighted Average Price";
 		ShortName = "VWAP";
 		IsOverlay = true;
+		AutoRescale = false;
 	}
 
 	protected override void Initialize()
