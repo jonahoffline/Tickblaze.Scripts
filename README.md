@@ -1,34 +1,102 @@
-The **Tickblaze Scripts API Library** provides developers with the tools required to build custom scripts and strategies for the **Tickblaze** trading platform. This library offers a comprehensive set of classes, methods, and events to interact with Tickblaze's charting, backtesting, and live trading environments.
+# Getting Started
 
-### Key Features:
+Follow these steps to set up your environment and create your first custom indicator for Tickblaze.
 
-- **Custom Indicators**: Develop personalized technical indicators and integrate them directly into Tickblaze's charting and analysis tools.
-- **Drawing Tools**: Create custom drawing tools for enhanced chart visualization and analysis
-- **Trading Strategies**: Build and backtest algorithmic trading strategies using real-time market data or historical simulations.
-- **Order Management**: Execute and manage orders programmatically with full control over order types, risk management, and execution.
-- **Market Data Access**: Access live and historical market data for stocks, futures, forex, and other asset classes supported by Tickblaze.
-- **Event-Driven Architecture**: Leverage Tickblaze's event-based model for real-time reactions to market conditions and order executions.
-- **Extensibility**: Fully customizable to extend and build on existing features, from execution logic to trading rules.
+### 1. Create a New Class Library
 
-### Getting Started:
-
-To use the Tickblaze Scripts API, install the [NuGet package](https://www.nuget.org/packages/Tickblaze.Scripts.Api) in your project. The library can be referenced in your C# scripts or used within any .NET application.
-
-**Installation via NuGet Package Manager:**
+Create a new class library project using the .NET CLI:
 
 ```
-Install-Package Tickblaze.Scripts.Api
+dotnet new classlib -n CustomIndicator -f net8.0
 ```
 
+This will create a folder named CustomIndicator with the basic structure for a .NET class library targeting .NET 8.0.
 
-**Installation via .NET CLI:**
+### 2. Add the Tickblaze.Scripts NuGet Package
+
+Add the Tickblaze.Scripts.Api NuGet package to your project:
 
 ```
-dotnet add package Tickblaze.Scripts.Api
+dotnet add package Tickblaze.Scripts.Api --version *
 ```
 
-### Resources:
+The `--version *` ensures you always get the latest version.
 
-For detailed documentation and examples, visit our [GitHub repository](https://github.com/Tickblaze/Tickblaze.Scripts).
+### 3. Create Your Indicator
 
-This package is essential for developing any custom script, strategy, or indicator within the Tickblaze platform.
+Open the _Class1.cs_ file in your project, and replace its contents with the following code:
+
+```cs
+namespace CustomIndicator;
+
+/// <summary>
+/// A custom indicator that calculates the typical price for a bar.
+/// </summary>
+public partial class TypicalPrice : Indicator
+{
+    [Plot("Result")]
+    public PlotSeries Result { get; set; } = new(Color.Blue, LineStyle.Solid, 1);
+
+    public TypicalPrice()
+    {
+        Name = "Typical Price";
+        IsOverlay = true;
+    }
+
+    /// <summary>
+    /// Calculates the typical price for the given bar.
+    /// </summary>
+    protected override void Calculate(int index)
+    {
+        var bar = Bars[index];
+
+        Result[index] = (bar.High + bar.Low + bar.Close) / 3;
+    }
+}
+```
+
+This code defines a new indicator called **Typical Price** that calculates the average of a bar's high, low, and close prices.
+
+### 4. Build Your Project
+
+Build your project to compile the indicator:
+
+```
+dotnet build
+```
+
+This will generate the necessary output files and prepare your indicator for use in Tickblaze.
+
+### 5. Attach the Indicator to Tickblaze
+
+After building your project, the indicator should be automatically imported into Tickblaze. To use it:
+
+1. **Right-click** on the chart in Tickblaze.
+2. Select `Indicators` and click `Add / Edit Settings`.
+3. From the dropdown menu, select `Typical Price`.
+4. Click the down arrow to add it to the chart.
+5. Click the `OK` button.
+
+## How to Debug
+
+Debugging your custom indicators and strategies is straightforward:
+
+1. **Run Tickblaze** as usual.
+2. **Attach your debugger** to the `Tickblaze.View.exe` process:
+   - Open your IDE (e.g., Visual Studio or Rider).
+   - Attach to the `Tickblaze.View.exe` process.
+3. Set breakpoints in your code to inspect values or troubleshoot issues.
+
+## Additional Resources
+
+This repository includes several examples:
+
+- [Bar Types](./src/BarTypes/)
+- [Drawings](./src/Drawings/)
+- [Indicators](./src/Indicators/)
+- [Position Sizers](./src/PositionSizers/)
+- [Strategies](./src/Strategies/)
+- [Trade Management Strategies](./src/TradeManagementStrategies/)
+
+## API Reference
+For detailed documentation on the Tickblaze scripting API, visit the official [API Reference Page](https://tickblaze.github.io/Tickblaze.Scripts/).
