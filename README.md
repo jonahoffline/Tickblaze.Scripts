@@ -8,6 +8,7 @@ Create a new class library project using the .NET CLI:
 
 ```
 dotnet new classlib -n CustomIndicator -f net8.0
+cd CustomIndicator
 ```
 
 This will create a folder named CustomIndicator with the basic structure for a .NET class library targeting .NET 8.0.
