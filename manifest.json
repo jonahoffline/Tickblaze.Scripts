@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/tickblaze/Tickblaze.Desktop/src/Docs",
+  "source_base_path": "/home/runner/work/Tickblaze.Scripts/Tickblaze.Scripts/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,883 +12,853 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Attributes.NumericRangeAttribute.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.NumericRangeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Attributes.NumericRangeAttribute.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Attributes.NumericRangeAttribute.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Attributes.PlotAttribute.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.PlotAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Attributes.PlotAttribute.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Attributes.PlotAttribute.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Attributes.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Attributes.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Attributes.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.BarType.SourceDataType.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.BarType.SourceDataType.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.BarType.SourceDataType.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.BarType.SourceDataType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.BarType.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.BarType.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.BarType.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.BarType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.Drawing.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.Drawing.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.Drawing.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.Drawing.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.IIndicator.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.IIndicator.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.IIndicator.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.IIndicator.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.IStrategyScriptBase.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.IStrategyScriptBase.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.Indicator.BandShading.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.Indicator.BandShading.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.Indicator.BandShading.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.Indicator.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.Indicator.BandShading.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.Indicator.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.Indicator.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.PositionSizer.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.Indicator.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.PositionSizer.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.PositionSizer.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.Script.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.PositionSizer.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.Script.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.Script.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.Strategy.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.Script.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.Strategy.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.Strategy.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.TradeManagementStrategy.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.Strategy.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.TradeManagementStrategy.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.TradeManagementStrategy.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.TradingScript.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.TradeManagementStrategy.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.TradingScript.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.TradingScript.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.WatchlistCellString.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.TradingScript.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.WatchlistCellString.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.WatchlistCellString.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.WatchlistCellString.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Bases.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.CollectionExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Bases.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.CollectionExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.CollectionExtensions.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.FontStyle.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.CollectionExtensions.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.FontStyle.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.FontStyle.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.FontWeight.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.FontStyle.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.FontWeight.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.FontWeight.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.HorizontalAlignment.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.FontWeight.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.HorizontalAlignment.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.HorizontalAlignment.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.LineStyle.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.HorizontalAlignment.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.LineStyle.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.LineStyle.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderAction.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.LineStyle.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderAction.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderAction.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderDirection.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderAction.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderDirection.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderDirection.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderDirection.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderStatus.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderStatus.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderType.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderStatus.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderType.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.PlotStyle.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.OrderType.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.PlotStyle.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.PlotStyle.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.PositionStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.PlotStyle.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.PositionStatus.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.PositionStatus.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.RoundingMode.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.PositionStatus.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.RoundingMode.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.RoundingMode.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.TimeInForce.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.RoundingMode.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.TimeInForce.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.TimeInForce.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.VerticalAlignment.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.TimeInForce.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.VerticalAlignment.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.VerticalAlignment.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.VerticalAlignment.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Enums.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.IndexedDictionary-2.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Enums.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.IndexedDictionary-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.IndexedDictionary-2.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IAccount.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.IndexedDictionary-2.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IAccount.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IAccount.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChart.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IAccount.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChart.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IAutoScale.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartObject.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IAutoScale.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartObject.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChart.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartPoint.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChart.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartPoint.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartObject.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartPoints.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartObject.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartPoints.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartPanel.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartScale.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartPanel.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IChartScale.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartPoint.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IDispatcher.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartPoint.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IDispatcher.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartPoints.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IDrawingAnnotation.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartPoints.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IDrawingAnnotation.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartScale.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IChartScale.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IDispatcher.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IExchangeCalendar.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IDispatcher.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IExchangeCalendar.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IDrawingAnnotation.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IExchangeSession.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IDrawingAnnotation.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IExchangeSession.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IMetadata.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IMetadata.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IExchangeCalendar.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IPlot.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IExchangeCalendar.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IPlot.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IExchangeSession.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IPoint.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IExchangeSession.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IPoint.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IMetadata.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IScript.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IMetadata.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IScript.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IPlot.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.ISeries-1.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IPlot.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.ISeries-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IPoint.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.ISize.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IPoint.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.ISize.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IScript.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.ISymbol.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.IScript.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.ISeries-1.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.ISeries-1.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.ISize.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.ISize.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.ISymbol.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.ISymbol.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrders.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrders.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrders.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IOrders.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Bar.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Bar.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.Orders.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Interfaces.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarPeriod.SourceType.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Interfaces.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarPeriod.SourceType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Bar.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarPeriod.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Bar.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarPeriod.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.BarPeriod.SourceType.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeries.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.BarPeriod.SourceType.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.BarPeriod.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.ChartPoint.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.BarPeriod.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.ChartPoint.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Color.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Color.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.BarSeries.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.DataSeries.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.BarSeries.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.DataSeries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.ChartPoint.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Font.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.ChartPoint.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Font.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Color.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Metadata.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Color.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Metadata.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.DataSeries.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.PlotLevel.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.DataSeries.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.PlotLevel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Font.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Font.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Metadata.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Metadata.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.PlotLevel.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Point.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.PlotLevel.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Point.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Series-1.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Series-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.PlotSeries.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.SeriesTransform-2.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.PlotSeries.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.SeriesTransform-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Point.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Size.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Point.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Size.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Series-1.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Symbol.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Series-1.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Symbol.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.SeriesTransform-2.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.SeriesTransform-2.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Size.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Parameter.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Size.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Parameter.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.Symbol.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Parameters.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.Symbol.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Parameters.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Models.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.yml",
       "output": {
         ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Models.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Parameter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Parameter.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.Parameters.yml",
-      "output": {
-        ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.Parameters.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "API/Tickblaze.Scripts.Api.yml",
-      "output": {
-        ".html": {
-          "relative_path": "API/Tickblaze.Scripts.Api.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.html"
         }
       },
       "version": ""
     },
     {
       "type": "Toc",
-      "source_relative_path": "API/toc.yml",
+      "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "API/toc.html"
-        },
         ".json": {
-          "relative_path": "API/toc.json"
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -917,11 +887,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/toc.html"
-        },
         ".json": {
           "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
         }
       },
       "version": ""
@@ -950,11 +920,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
