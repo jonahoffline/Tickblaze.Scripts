@@ -4,14 +4,17 @@ Follow these steps to set up your environment and create your first custom indic
 
 ### 1. Create a New Class Library
 
-Create a new class library project using the .NET CLI:
+Create a new class class library targeting .NET 8.0:
 
 ```
 dotnet new classlib -n CustomIndicator -f net8.0
-cd CustomIndicator
 ```
 
-This will create a folder named CustomIndicator with the basic structure for a .NET class library targeting .NET 8.0.
+And navigate to its directory:
+
+```
+cd CustomIndicator
+```
 
 ### 2. Add the Tickblaze.Scripts NuGet Package
 
