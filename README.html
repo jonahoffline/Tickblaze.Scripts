@@ -71,10 +71,19 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<p>Please refer to <a href="../.github/workflows/docs.yml">GitHub Action</a> for more details how the process is automated.
-For local testing, use the following command:</p>
-<pre><code>docfx docs/docfx.json --serve
+<p>Please refer to <a href="../.github/workflows/docs.yml">GitHub Action</a> for more details how the process is automated.</p>
+<p>To run it locally:</p>
+<ol>
+<li>Build the project
+<pre><code>dotnet build
 </code></pre>
+</li>
+<li>Build the docset and run:
+<pre><code>docfx docfx.json --serve
+</code></pre>
+</li>
+<li>Now you can preview the docs website on http://localhost:8080.</li>
+</ol>
 
 </article>
           </div>

@@ -2,7 +2,7 @@
   "README.html": {
     "href": "README.html",
     "title": "| Tickblaze",
-    "keywords": "Please refer to GitHub Action for more details how the process is automated. For local testing, use the following command: docfx docs/docfx.json --serve"
+    "keywords": "Please refer to GitHub Action for more details how the process is automated. To run it locally: Build the project dotnet build Build the docset and run: docfx docfx.json --serve Now you can preview the docs website on http://localhost:8080."
   },
   "api/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.html": {
     "href": "api/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.html",
