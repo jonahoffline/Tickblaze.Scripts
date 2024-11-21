@@ -5,13 +5,13 @@ namespace Tickblaze.Scripts.Strategies;
 public abstract class BaseStopsAndTargetsStrategy : Strategy
 {
     [Parameter("Stop Loss Type")]
-    public StopTargetDistanceType StopLossType { get; set; } = StopTargetDistanceType.DollarsPerQuantity;
+    public StopTargetDistanceType StopLossType { get; set; } = StopTargetDistanceType.Dollars;
 
     [Parameter("Stop Loss"), NumericRange(0)]
     public double StopLoss { get; set; } = 0;
 
     [Parameter("Take Profit Type")]
-    public StopTargetDistanceType TakeProfitType { get; set; } = StopTargetDistanceType.DollarsPerQuantity;
+    public StopTargetDistanceType TakeProfitType { get; set; } = StopTargetDistanceType.Dollars;
 
     [Parameter("Take Profit"), NumericRange(0)]
     public double TakeProfit { get; set; } = 0;
@@ -21,8 +21,8 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
         return distanceType switch
         {
             StopTargetDistanceType.Dollars => Symbol.PointSize / (Symbol.PointValue * quantity),
-            StopTargetDistanceType.DollarsPerQuantity => Symbol.PointSize / Symbol.PointValue,
             StopTargetDistanceType.Ticks => Symbol.TickSize,
+            StopTargetDistanceType.Points => Symbol.PointSize,
             StopTargetDistanceType.PercentOfPrice => Bars.Close[bar] / 100
         };
     }
@@ -47,8 +47,10 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 
 public enum StopTargetDistanceType
 {
+    [DisplayName("$")]
     Dollars,
-    DollarsPerQuantity,
     Ticks,
+    Points,
+    [DisplayName("% of Price")]
     PercentOfPrice
 }
