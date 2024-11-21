@@ -1,362 +1,861 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class Indicator | Tickblaze </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Indicator | Tickblaze ">
-    
-    <meta name="description" content="Represents a base class for indicator scripts. Provides functionality for calculating and rendering the indicator on the chart.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="Represents a base class for indicator scripts. Provides functionality for calculating and rendering the indicator on the chart.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="logo-img" src="../images/logo.png" alt="Tickblaze">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator' data-commentid='T:Tickblaze.Scripts.Api.Bases.Indicator' id='Tickblaze_Scripts_Api_Bases_Indicator'>Class Indicator   </h1>
- <div class="facts text-secondary">
-<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Bases.html'>Tickblaze.Scripts.Api.Bases</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
-</div><p>Represents a base class for indicator scripts. Provides functionality for calculating and rendering the indicator on the chart.</p>
-<pre><code class='lang-csharp'>public abstract class Indicator : Script, IMetadata, IIndicator, IScript, IDisposable, IChartObject</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+
+        <article data-uid="Tickblaze.Scripts.Api.Bases.Indicator">
+
+
+  <div>TEST</div>
+
+
+  <h1 id="Tickblaze_Scripts_Api_Bases_Indicator" data-uid="Tickblaze.Scripts.Api.Bases.Indicator" class="text-break">
+Class Indicator  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.html">Bases</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a base class for indicator scripts. Provides functionality for calculating and rendering the indicator on the chart.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html'>Script</a>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Indicator : Script, IMetadata, IIndicator, IScript, IDisposable, IChartObject</code></pre>
+  </div>
+
+
+
+
+  <details class="typelist-details">
+  <summary>Inheritance</summary>
+  <dl class="typelist inheritance">
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a></div>
+      <div><span class="xref">Indicator</span></div>
+    </dd>
+  </dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Implements</summary>
+    <dl class="typelist implements">
+      <dd>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.IIndicator.html">IIndicator</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a></div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartObject.html">IChartObject</a></div>
+      </dd>
+    </dl>
+  </details>
+
+
+  <details class="typelist-details">
+    <summary>Inherited Members</summary>
+    <dl class="typelist inheritedMembers">
+      <dd>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_OnDestroy">Script.OnDestroy()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem">Script.CreateChartToolbarMenuItem()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_">Script.Print(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Dispose">Script.Dispose()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Name">Script.Name</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ShortName">Script.ShortName</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Description">Script.Description</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Metadata">Script.Metadata</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Parameters">Script.Parameters</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Bars">Script.Bars</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_IsInitialized">Script.IsInitialized</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_UiDispatcher">Script.UiDispatcher</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+      </div>
+    </dd></dl>
+  </details>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator__ctor_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.#ctor*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator__ctor" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.#ctor">
+  Indicator()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Bases.Indicator.html">Indicator</a> class.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Indicator.html'>Indicator</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Indicator()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_AutoRescale_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.AutoRescale*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_AutoRescale" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.AutoRescale">
+  AutoRescale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance automatically rescales the chart or not. Default value is true.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
-<div>
-<a href='Tickblaze.Scripts.Api.Interfaces.IMetadata.html'>IMetadata</a>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoRescale { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_Chart_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Chart*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_Chart" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Chart">
+  Chart
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The chart to which this object belongs.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.IIndicator.html'>IIndicator</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IChart Chart { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChart.html">IChart</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_ChartScale_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ChartScale*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_ChartScale" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ChartScale">
+  ChartScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The scale used by this object on the chart.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Interfaces.IScript.html'>IScript</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IChartScale ChartScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartScale.html">IChartScale</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_DisplayName_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.DisplayName*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_DisplayName" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.DisplayName">
+  DisplayName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the display name of the indicator.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.idisposable'>IDisposable</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string DisplayName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_IsOverlay_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.IsOverlay*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_IsOverlay" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.IsOverlay">
+  IsOverlay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance is overlayed on the chart or plotted on a separate indicator panel.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Interfaces.IChartObject.html'>IChartObject</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOverlay { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_IsPercentage_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.IsPercentage*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_IsPercentage" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.IsPercentage">
+  IsPercentage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the indicator is a percentage indicator. The default value is false.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize'>Script.Initialize()</a>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPercentage { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_Levels_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Levels*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_Levels" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Levels">
+  Levels
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the levels of the indicator.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_OnDestroy'>Script.OnDestroy()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;PlotLevel&gt; Levels { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.PlotLevel.html">PlotLevel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_LevelsSerializable_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.LevelsSerializable*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_LevelsSerializable" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.LevelsSerializable">
+  LevelsSerializable
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the levels of the indicator as a serializable dictionary.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem'>Script.CreateChartToolbarMenuItem()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public IReadOnlyDictionary&lt;string, PlotLevel&gt; LevelsSerializable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotLevel.html">PlotLevel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_Plots_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Plots*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_Plots" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Plots">
+  Plots
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the plots of the indicator.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_'>Script.Print(object)</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;PlotSeries&gt; Plots { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_PlotsSerializable_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.PlotsSerializable*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_PlotsSerializable" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.PlotsSerializable">
+  PlotsSerializable
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the plots of the indicator as a serializable dictionary.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Dispose'>Script.Dispose()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public IReadOnlyDictionary&lt;string, IPlot&gt; PlotsSerializable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPlot.html">IPlot</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_ScalePrecision_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ScalePrecision*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_ScalePrecision" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ScalePrecision">
+  ScalePrecision
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The number of decimals displayed on the price scale of the indicator panel.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Name'>Script.Name</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ScalePrecision { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_ShowOnChart_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ShowOnChart*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_ShowOnChart" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ShowOnChart">
+  ShowOnChart
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the object is visible on the chart.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ShortName'>Script.ShortName</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowOnChart { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_Symbol_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Symbol*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_Symbol" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Symbol">
+  Symbol
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISymbol Symbol { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISymbol.html">ISymbol</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_Calculate_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Calculate*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_Calculate" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Calculate">
+  Calculate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates the values for the indicator.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Description'>Script.Description</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Calculate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_Calculate_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Calculate*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_Calculate_System_Int32_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.Calculate(System.Int32)">
+  Calculate(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculate the value(s) of the indicator for a given index.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Metadata'>Script.Metadata</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Calculate(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the calculated value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_ConfigureWatchlistCell_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ConfigureWatchlistCell*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_ConfigureWatchlistCell_Tickblaze_Scripts_Api_Bases_WatchlistCellString_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ConfigureWatchlistCell(Tickblaze.Scripts.Api.Bases.WatchlistCellString)">
+  ConfigureWatchlistCell(WatchlistCellString)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the watchlist cell representation.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Parameters'>Script.Parameters</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ConfigureWatchlistCell(WatchlistCellString cellString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cellString</code> <a class="xref" href="Tickblaze.Scripts.Api.Bases.WatchlistCellString.html">WatchlistCellString</a></dt>
+    <dd><p>The watchlist cell string to configure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_OnRender_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.OnRender*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)">
+  OnRender(IDrawingContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the indicator on the chart.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Bars'>Script.Bars</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnRender(IDrawingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html">IDrawingContext</a></dt>
+    <dd><p>The drawing context to render the indicator.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_ShadeBetween_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ShadeBetween*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_ShadeBetween_Tickblaze_Scripts_Api_Models_PlotSeries_Tickblaze_Scripts_Api_Models_PlotSeries_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Single_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.ShadeBetween(Tickblaze.Scripts.Api.Models.PlotSeries,Tickblaze.Scripts.Api.Models.PlotSeries,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Single)">
+  ShadeBetween(PlotSeries, PlotSeries, Color?, Color?, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shades the area between two plot series.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_IsInitialized'>Script.IsInitialized</a>
-</div>
-<div>
-<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_UiDispatcher'>Script.UiDispatcher</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone'>object.MemberwiseClone()</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
-</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.#ctor' data-commentid='M:Tickblaze.Scripts.Api.Bases.Indicator.#ctor' id='Tickblaze_Scripts_Api_Bases_Indicator__ctor'>Indicator()   </h3>
- <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Bases.Indicator</span> class.</p>
-<pre><code class='lang-csharp'>protected Indicator()</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.AutoRescale' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.AutoRescale' id='Tickblaze_Scripts_Api_Bases_Indicator_AutoRescale'>AutoRescale   </h3>
- <p>Indicates whether this instance automatically rescales the chart or not. Default value is true.</p>
-<pre><code class='lang-csharp'>public bool AutoRescale { get; init; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ShadeBetween(PlotSeries series1, PlotSeries series2, Color? fill1, Color? fill2, float opacity = 1)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>series1</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a></dt>
+    <dd><p>The first plot series.</p>
+</dd>
+    <dt><code>series2</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a></dt>
+    <dd><p>The second plot series.</p>
+</dd>
+    <dt><code>fill1</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</dt>
+    <dd><p>The color to shade when first series is above second series.</p>
+</dd>
+    <dt><code>fill2</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</dt>
+    <dd><p>The color to shade when first series is below second series.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity of the shading, ranging from 0.0 (fully transparent) to 1.0 (fully opaque).</p>
+</dd>
+  </dl>
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.Chart' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.Chart' id='Tickblaze_Scripts_Api_Bases_Indicator_Chart'>Chart   </h3>
- <p>The chart to which this object belongs.</p>
-<pre><code class='lang-csharp'>public IChart Chart { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChart.html'>IChart</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.ChartScale' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.ChartScale' id='Tickblaze_Scripts_Api_Bases_Indicator_ChartScale'>ChartScale   </h3>
- <p>The scale used by this object on the chart.</p>
-<pre><code class='lang-csharp'>public IChartScale ChartScale { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartScale.html'>IChartScale</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.DisplayName' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.DisplayName' id='Tickblaze_Scripts_Api_Bases_Indicator_DisplayName'>DisplayName   </h3>
- <p>Gets the display name of the indicator.</p>
-<pre><code class='lang-csharp'>public virtual string DisplayName { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.IsOverlay' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.IsOverlay' id='Tickblaze_Scripts_Api_Bases_Indicator_IsOverlay'>IsOverlay   </h3>
- <p>Indicates whether this instance is overlayed on the chart or plotted on a separate indicator panel.</p>
-<pre><code class='lang-csharp'>public bool IsOverlay { get; init; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
 
 
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.IsPercentage' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.IsPercentage' id='Tickblaze_Scripts_Api_Bases_Indicator_IsPercentage'>IsPercentage   </h3>
- <p>Indicates whether the indicator is a percentage indicator. The default value is false.</p>
-<pre><code class='lang-csharp'>public bool IsPercentage { get; init; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.Levels' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.Levels' id='Tickblaze_Scripts_Api_Bases_Indicator_Levels'>Levels   </h3>
- <p>Gets the levels of the indicator.</p>
-<pre><code class='lang-csharp'>public IReadOnlyList&lt;PlotLevel&gt; Levels { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='Tickblaze.Scripts.Api.Models.PlotLevel.html'>PlotLevel</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.LevelsSerializable' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.LevelsSerializable' id='Tickblaze_Scripts_Api_Bases_Indicator_LevelsSerializable'>LevelsSerializable   </h3>
- <p>Gets the levels of the indicator as a serializable dictionary.</p>
-<pre><code class='lang-csharp'>[Browsable(false)]
-public IReadOnlyDictionary&lt;string, PlotLevel&gt; LevelsSerializable { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2'>IReadOnlyDictionary</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>, <a href='Tickblaze.Scripts.Api.Models.PlotLevel.html'>PlotLevel</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.Plots' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.Plots' id='Tickblaze_Scripts_Api_Bases_Indicator_Plots'>Plots   </h3>
- <p>Gets the plots of the indicator.</p>
-<pre><code class='lang-csharp'>public IReadOnlyList&lt;PlotSeries&gt; Plots { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='Tickblaze.Scripts.Api.Models.PlotSeries.html'>PlotSeries</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.PlotsSerializable' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.PlotsSerializable' id='Tickblaze_Scripts_Api_Bases_Indicator_PlotsSerializable'>PlotsSerializable   </h3>
- <p>Gets the plots of the indicator as a serializable dictionary.</p>
-<pre><code class='lang-csharp'>[Browsable(false)]
-public IReadOnlyDictionary&lt;string, IPlot&gt; PlotsSerializable { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2'>IReadOnlyDictionary</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>, <a href='Tickblaze.Scripts.Api.Interfaces.IPlot.html'>IPlot</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.ScalePrecision' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.ScalePrecision' id='Tickblaze_Scripts_Api_Bases_Indicator_ScalePrecision'>ScalePrecision   </h3>
- <p>The number of decimals displayed on the price scale of the indicator panel.</p>
-<pre><code class='lang-csharp'>public int? ScalePrecision { get; init; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>?  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.ShowOnChart' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.ShowOnChart' id='Tickblaze_Scripts_Api_Bases_Indicator_ShowOnChart'>ShowOnChart   </h3>
- <p>Indicates whether the object is visible on the chart.</p>
-<pre><code class='lang-csharp'>public bool ShowOnChart { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.Symbol' data-commentid='P:Tickblaze.Scripts.Api.Bases.Indicator.Symbol' id='Tickblaze_Scripts_Api_Bases_Indicator_Symbol'>Symbol   </h3>
- <pre><code class='lang-csharp'>public ISymbol Symbol { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISymbol.html'>ISymbol</a>  </dt>
-<dd>
-
-
-
-</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.Calculate' data-commentid='M:Tickblaze.Scripts.Api.Bases.Indicator.Calculate' id='Tickblaze_Scripts_Api_Bases_Indicator_Calculate'>Calculate()   </h3>
- <p>Calculates the values for the indicator.</p>
-<pre><code class='lang-csharp'>public void Calculate()</code></pre><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.Calculate(System.Int32)' data-commentid='M:Tickblaze.Scripts.Api.Bases.Indicator.Calculate(System.Int32)' id='Tickblaze_Scripts_Api_Bases_Indicator_Calculate_System_Int32_'>Calculate(int)   </h3>
- <p>Calculate the value(s) of the indicator for a given index.</p>
-<pre><code class='lang-csharp'>protected virtual void Calculate(int index)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>index</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
-<dd>
-
-
-<p>The index of the calculated value.</p>
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.ConfigureWatchlistCell(Tickblaze.Scripts.Api.Bases.WatchlistCellString)' data-commentid='M:Tickblaze.Scripts.Api.Bases.Indicator.ConfigureWatchlistCell(Tickblaze.Scripts.Api.Bases.WatchlistCellString)' id='Tickblaze_Scripts_Api_Bases_Indicator_ConfigureWatchlistCell_Tickblaze_Scripts_Api_Bases_WatchlistCellString_'>ConfigureWatchlistCell(WatchlistCellString)   </h3>
- <p>Configures the watchlist cell representation.</p>
-<pre><code class='lang-csharp'>public virtual void ConfigureWatchlistCell(WatchlistCellString cellString)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>cellString</code> <a href='Tickblaze.Scripts.Api.Bases.WatchlistCellString.html'>WatchlistCellString</a>  </dt>
-<dd>
-
-
-<p>The watchlist cell string to configure.</p>
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)' data-commentid='M:Tickblaze.Scripts.Api.Bases.Indicator.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)' id='Tickblaze_Scripts_Api_Bases_Indicator_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_'>OnRender(IDrawingContext)   </h3>
- <p>Renders the indicator on the chart.</p>
-<pre><code class='lang-csharp'>public virtual void OnRender(IDrawingContext context)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>context</code> <a href='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html'>IDrawingContext</a>  </dt>
-<dd>
-
-
-<p>The drawing context to render the indicator.</p>
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Indicator.ShadeBetween(Tickblaze.Scripts.Api.Models.PlotSeries,Tickblaze.Scripts.Api.Models.PlotSeries,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Single)' data-commentid='M:Tickblaze.Scripts.Api.Bases.Indicator.ShadeBetween(Tickblaze.Scripts.Api.Models.PlotSeries,Tickblaze.Scripts.Api.Models.PlotSeries,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Single)' id='Tickblaze_Scripts_Api_Bases_Indicator_ShadeBetween_Tickblaze_Scripts_Api_Models_PlotSeries_Tickblaze_Scripts_Api_Models_PlotSeries_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Single_'>ShadeBetween(PlotSeries, PlotSeries, Color?, Color?, float)   </h3>
- <p>Shades the area between two plot series.</p>
-<pre><code class='lang-csharp'>protected virtual void ShadeBetween(PlotSeries series1, PlotSeries series2, Color? fill1, Color? fill2, float opacity = 1)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>series1</code> <a href='Tickblaze.Scripts.Api.Models.PlotSeries.html'>PlotSeries</a>  </dt>
-<dd>
-
-
-<p>The first plot series.</p>
-
-</dd><dt><code>series2</code> <a href='Tickblaze.Scripts.Api.Models.PlotSeries.html'>PlotSeries</a>  </dt>
-<dd>
-
-
-<p>The second plot series.</p>
-
-</dd><dt><code>fill1</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
-<dd>
-
-
-<p>The color to shade when first series is above second series.</p>
-
-</dd><dt><code>fill2</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
-<dd>
-
-
-<p>The color to shade when first series is below second series.</p>
-
-</dd><dt><code>opacity</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
-<dd>
-
-
-<p>The opacity of the shading, ranging from 0.0 (fully transparent) to 1.0 (fully opaque).</p>
-
-</dd></dl>
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
   </body>
 </html>

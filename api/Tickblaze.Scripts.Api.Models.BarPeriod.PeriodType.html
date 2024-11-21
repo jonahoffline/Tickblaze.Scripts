@@ -1,288 +1,231 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Enum BarPeriod.PeriodType | Tickblaze </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum BarPeriod.PeriodType | Tickblaze ">
-    
-    <meta name="description" content="Defines the different period types for the bar.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="Defines the different period types for the bar.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="logo-img" src="../images/logo.png" alt="Tickblaze">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType' data-commentid='T:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType' id='Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType'>Enum BarPeriod.PeriodType   </h1>
- <div class="facts text-secondary">
-<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Models.html'>Tickblaze.Scripts.Api.Models</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
-</div><p>Defines the different period types for the bar.</p>
-<pre><code class='lang-csharp'>public enum BarPeriod.PeriodType</code></pre><h2 class='section'>Fields</h2><dl class='parameters'><dt><code>BidAsk = 18</code>   </dt>
-<dd>
 
+        <article data-uid="Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType">
+
+
+
+
+  <h1 id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType" data-uid="Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType" class="text-break">
+Enum BarPeriod.PeriodType  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines the different period types for the bar.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum BarPeriod.PeriodType</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_BidAsk"><code>BidAsk = 18</code></dt>
+    <dd><p>The bid-ask period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Custom"><code>Custom = 19</code></dt>
+    <dd><p>The custom period type defined by the user.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Day"><code>Day = 1</code></dt>
+    <dd><p>The daily period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_HeikinAshi"><code>HeikinAshi = 12</code></dt>
+    <dd><p>The Heikin Ashi period, a type of candlestick chart.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Kagi"><code>Kagi = 14</code></dt>
+    <dd><p>The Kagi chart period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Level2"><code>Level2 = 7</code></dt>
+    <dd><p>The Level 2 period, typically used for market depth data.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_LineBreak"><code>LineBreak = 15</code></dt>
+    <dd><p>The Line Break chart period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Minute"><code>Minute = 6</code></dt>
+    <dd><p>The period based on minutes.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Momentum"><code>Momentum = 11</code></dt>
+    <dd><p>The momentum-based period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Month"><code>Month = 3</code></dt>
+    <dd><p>The monthly period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_None"><code>None = 0</code></dt>
+    <dd><p>No period type specified.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_PointAndFigureClose"><code>PointAndFigureClose = 16</code></dt>
+    <dd><p>The Point and Figure chart with close-based periods.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_PointAndFigureHighLow"><code>PointAndFigureHighLow = 17</code></dt>
+    <dd><p>The Point and Figure chart with high-low periods.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileDay"><code>ProfileDay = 22</code></dt>
+    <dd><p>The profile-based period with day granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileMinute"><code>ProfileMinute = 21</code></dt>
+    <dd><p>The profile-based period with minute granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileMonth"><code>ProfileMonth = 24</code></dt>
+    <dd><p>The profile-based period with month granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileRange"><code>ProfileRange = 26</code></dt>
+    <dd><p>The profile-based period with range granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileTick"><code>ProfileTick = 20</code></dt>
+    <dd><p>The profile-based period with tick granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileVolume"><code>ProfileVolume = 27</code></dt>
+    <dd><p>The profile-based period with volume granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileWeek"><code>ProfileWeek = 23</code></dt>
+    <dd><p>The profile-based period with week granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileYear"><code>ProfileYear = 25</code></dt>
+    <dd><p>The profile-based period with year granularity.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Range"><code>Range = 9</code></dt>
+    <dd><p>The range-based period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Renko"><code>Renko = 13</code></dt>
+    <dd><p>The Renko period, another type of chart that ignores time.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Second"><code>Second = 5</code></dt>
+    <dd><p>The period based on seconds.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Tick"><code>Tick = 8</code></dt>
+    <dd><p>The tick-based period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Volume"><code>Volume = 10</code></dt>
+    <dd><p>The volume-based period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Week"><code>Week = 2</code></dt>
+    <dd><p>The weekly period.</p>
+</dd>
+    <dt id="Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Year"><code>Year = 4</code></dt>
+    <dd><p>The yearly period.</p>
+</dd>
+  </dl>
 
-<p>The bid-ask period.</p>
 
-</dd><dt><code>Custom = 19</code>   </dt>
-<dd>
 
-
-<p>The custom period type defined by the user.</p>
-
-</dd><dt><code>Day = 1</code>   </dt>
-<dd>
-
-
-<p>The daily period.</p>
-
-</dd><dt><code>HeikinAshi = 12</code>   </dt>
-<dd>
-
-
-<p>The Heikin Ashi period, a type of candlestick chart.</p>
-
-</dd><dt><code>Kagi = 14</code>   </dt>
-<dd>
-
-
-<p>The Kagi chart period.</p>
-
-</dd><dt><code>Level2 = 7</code>   </dt>
-<dd>
-
-
-<p>The Level 2 period, typically used for market depth data.</p>
-
-</dd><dt><code>LineBreak = 15</code>   </dt>
-<dd>
-
-
-<p>The Line Break chart period.</p>
-
-</dd><dt><code>Minute = 6</code>   </dt>
-<dd>
-
-
-<p>The period based on minutes.</p>
-
-</dd><dt><code>Momentum = 11</code>   </dt>
-<dd>
-
-
-<p>The momentum-based period.</p>
-
-</dd><dt><code>Month = 3</code>   </dt>
-<dd>
-
-
-<p>The monthly period.</p>
-
-</dd><dt><code>None = 0</code>   </dt>
-<dd>
-
-
-<p>No period type specified.</p>
-
-</dd><dt><code>PointAndFigureClose = 16</code>   </dt>
-<dd>
-
-
-<p>The Point and Figure chart with close-based periods.</p>
-
-</dd><dt><code>PointAndFigureHighLow = 17</code>   </dt>
-<dd>
-
-
-<p>The Point and Figure chart with high-low periods.</p>
-
-</dd><dt><code>ProfileDay = 22</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with day granularity.</p>
-
-</dd><dt><code>ProfileMinute = 21</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with minute granularity.</p>
-
-</dd><dt><code>ProfileMonth = 24</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with month granularity.</p>
-
-</dd><dt><code>ProfileRange = 26</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with range granularity.</p>
-
-</dd><dt><code>ProfileTick = 20</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with tick granularity.</p>
-
-</dd><dt><code>ProfileVolume = 27</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with volume granularity.</p>
-
-</dd><dt><code>ProfileWeek = 23</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with week granularity.</p>
-
-</dd><dt><code>ProfileYear = 25</code>   </dt>
-<dd>
-
-
-<p>The profile-based period with year granularity.</p>
-
-</dd><dt><code>Range = 9</code>   </dt>
-<dd>
-
-
-<p>The range-based period.</p>
-
-</dd><dt><code>Renko = 13</code>   </dt>
-<dd>
-
-
-<p>The Renko period, another type of chart that ignores time.</p>
-
-</dd><dt><code>Second = 5</code>   </dt>
-<dd>
-
-
-<p>The period based on seconds.</p>
-
-</dd><dt><code>Tick = 8</code>   </dt>
-<dd>
-
-
-<p>The tick-based period.</p>
-
-</dd><dt><code>Volume = 10</code>   </dt>
-<dd>
-
-
-<p>The volume-based period.</p>
-
-</dd><dt><code>Week = 2</code>   </dt>
-<dd>
-
-
-<p>The weekly period.</p>
-
-</dd><dt><code>Year = 4</code>   </dt>
-<dd>
-
-
-<p>The yearly period.</p>
-
-</dd></dl>
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
   </body>
 </html>

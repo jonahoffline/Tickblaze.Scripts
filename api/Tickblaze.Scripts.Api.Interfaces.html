@@ -1,233 +1,215 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Namespace Tickblaze.Scripts.Api.Interfaces | Tickblaze </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Namespace Tickblaze.Scripts.Api.Interfaces | Tickblaze ">
-    
-    
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="logo-img" src="../images/logo.png" alt="Tickblaze">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces' data-commentid='N:Tickblaze.Scripts.Api.Interfaces' id='Tickblaze_Scripts_Api_Interfaces'>Namespace Tickblaze.Scripts.Api.Interfaces   </h1>
- <h3 class='section'>Namespaces</h3><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.Orders.html'>Tickblaze.Scripts.Api.Interfaces.Orders</a>  </dt>
-<dd>
 
+        <article data-uid="Tickblaze.Scripts.Api.Interfaces">
 
+  <h1 id="Tickblaze_Scripts_Api_Interfaces" data-uid="Tickblaze.Scripts.Api.Interfaces" class="text-break">Namespace Tickblaze.Scripts.Api.Interfaces</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
 
-</dd></dl><h3 class='section'>Interfaces</h3><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IAccount.html'>IAccount</a>  </dt>
-<dd>
-
-
-<p>Represents trading account with balance, margin, positions, and equity details.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChart.html'>IChart</a>  </dt>
-<dd>
-
-
-<p>Represents a chart that displays financial data.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartObject.html'>IChartObject</a>  </dt>
-<dd>
-
-
-<p>Represents an object displayed on a chart, including its scale, and rendering behavior.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartPoint.html'>IChartPoint</a>  </dt>
-<dd>
-
-
-<p>Represents a point on a chart with a specific index, time, and value.
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IAccount.html">IAccount</a></dt>
+      <dd><p>Represents trading account with balance, margin, positions, and equity details.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChart.html">IChart</a></dt>
+      <dd><p>Represents a chart that displays financial data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartObject.html">IChartObject</a></dt>
+      <dd><p>Represents an object displayed on a chart, including its scale, and rendering behavior.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartPoint.html">IChartPoint</a></dt>
+      <dd><p>Represents a point on a chart with a specific index, time, and value.
 Used to store data points on the chart, where each point has a unique index and associated time and value.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartPoints.html'>IChartPoints</a>  </dt>
-<dd>
-
-
-<p>Represents a collection of chart points that can be accessed and manipulated.
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartPoints.html">IChartPoints</a></dt>
+      <dd><p>Represents a collection of chart points that can be accessed and manipulated.
 Each chart point consists of X (time) and Y (value) data values.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartScale.html'>IChartScale</a>  </dt>
-<dd>
-
-
-<p>Represents the scale for the price axis in a chart, including the maximum and minimum price.
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartScale.html">IChartScale</a></dt>
+      <dd><p>Represents the scale for the price axis in a chart, including the maximum and minimum price.
 It provides methods to format prices and convert between price values and their corresponding Y coordinates.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IDispatcher.html'>IDispatcher</a>  </dt>
-<dd>
-
-
-<p>Provides the ability to execute delegates on the UI thread</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IDrawingAnnotation.html'>IDrawingAnnotation</a>  </dt>
-<dd>
-
-
-<p>Represents a drawing annotation on a chart, typically used for visual elements such as lines, shapes, or markers. It contains a collection of points that define the shape or path of the annotation on the chart.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html'>IDrawingContext</a>  </dt>
-<dd>
-
-
-<p>Defines a context for rendering graphical elements, including shapes, text, and lines.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IExchangeCalendar.html'>IExchangeCalendar</a>  </dt>
-<dd>
-
-
-<p>Defines methods for handling exchange calendars, including date/time conversion and session status.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IExchangeSession.html'>IExchangeSession</a>  </dt>
-<dd>
-
-
-<p>Defines methods and properties for handling exchange sessions, including session times and duration.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IMetadata.html'>IMetadata</a>  </dt>
-<dd>
-
-
-<p>Defines metadata properties for a script, including name, description, and related metadata.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IPlot.html'>IPlot</a>  </dt>
-<dd>
-
-
-<p>Defines properties for a plot including visual appearance.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
-<dd>
-
-
-<p>Defines properties for a point with X and Y coordinates.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IScript.html'>IScript</a>  </dt>
-<dd>
-
-
-<p>Defines properties and methods for a script, including initialization and metadata.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries&lt;TItem&gt;</a>  </dt>
-<dd>
-
-
-<p>Defines a series of items and provides methods to retrieve specific items from the series.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISize.html'>ISize</a>  </dt>
-<dd>
-
-
-<p>Defines properties for the size, including height and width.</p>
-
-</dd><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISymbol.html'>ISymbol</a>  </dt>
-<dd>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IDispatcher.html">IDispatcher</a></dt>
+      <dd><p>Provides the ability to execute delegates on the UI thread</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IDrawingAnnotation.html">IDrawingAnnotation</a></dt>
+      <dd><p>Represents a drawing annotation on a chart, typically used for visual elements such as lines, shapes, or markers. It contains a collection of points that define the shape or path of the annotation on the chart.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html">IDrawingContext</a></dt>
+      <dd><p>Defines a context for rendering graphical elements, including shapes, text, and lines.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IExchangeCalendar.html">IExchangeCalendar</a></dt>
+      <dd><p>Defines methods for handling exchange calendars, including date/time conversion and session status.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IExchangeSession.html">IExchangeSession</a></dt>
+      <dd><p>Defines methods and properties for handling exchange sessions, including session times and duration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a></dt>
+      <dd><p>Defines metadata properties for a script, including name, description, and related metadata.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPlot.html">IPlot</a></dt>
+      <dd><p>Defines properties for a plot including visual appearance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+      <dd><p>Defines properties for a point with X and Y coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a></dt>
+      <dd><p>Defines properties and methods for a script, including initialization and metadata.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries&lt;TItem&gt;</a></dt>
+      <dd><p>Defines a series of items and provides methods to retrieve specific items from the series.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISize.html">ISize</a></dt>
+      <dd><p>Defines properties for the size, including height and width.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISymbol.html">ISymbol</a></dt>
+      <dd><p>Defines properties and methods related to a symbol, including tick size, point size, and volume normalization.</p>
+</dd>
+    </dl>
 
 
-<p>Defines properties and methods related to a symbol, including tick size, point size, and volume normalization.</p>
-
-</dd></dl>
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
   </body>
 </html>

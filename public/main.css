@@ -1,0 +1,43 @@
+img#logo {
+  max-height: 42px;
+}
+
+details.typelist-details summary {
+  font-weight: 500;
+  margin-top: 1rem;
+  cursor: pointer !important;
+  user-select: none;
+}
+
+details.typelist-details summary::before {
+    display: inline-block;
+    font-family: bootstrap-icons;
+    font-size: .8em;
+    content: "\f285";
+    transform-origin: .5em 50%;
+    margin-right: .2rem;
+}
+
+details[open].typelist-details summary::before {
+    transform: rotate(90deg);;
+}
+
+/* This rule hides the display of inherited types */
+.inheritance {
+  /* display: none !important; */
+}
+
+/* This rule hides the display of inherited members */
+.inheritedMembers {
+  /* display: none !important; */
+}
+
+/* This rule hides the display of implemented types */
+.implements {
+  /* display: none !important; */
+}
+
+/* This rule hides the display of derived types */
+.derived {
+  /* display: none !important; */
+}

@@ -1,309 +1,701 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class BarSeries | Tickblaze </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class BarSeries | Tickblaze ">
-    
-    <meta name="description" content="Represents a series of bars, with various calculated series such as Low, High, Open, Close, and others.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="Represents a series of bars, with various calculated series such as Low, High, Open, Close, and others.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="logo-img" src="../images/logo.png" alt="Tickblaze">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries' data-commentid='T:Tickblaze.Scripts.Api.Models.BarSeries' id='Tickblaze_Scripts_Api_Models_BarSeries'>Class BarSeries   </h1>
- <div class="facts text-secondary">
-<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Models.html'>Tickblaze.Scripts.Api.Models</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
-</div><p>Represents a series of bars, with various calculated series such as Low, High, Open, Close, and others.</p>
-<pre><code class='lang-csharp'>public class BarSeries : Series&lt;Bar&gt;, ISeries&lt;Bar&gt;, IReadOnlyList&lt;Bar?&gt;, IReadOnlyCollection&lt;Bar?&gt;, IEnumerable&lt;Bar?&gt;, IEnumerable</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+
+        <article data-uid="Tickblaze.Scripts.Api.Models.BarSeries">
+
+
+  <div>TEST</div>
+
+
+  <h1 id="Tickblaze_Scripts_Api_Models_BarSeries" data-uid="Tickblaze.Scripts.Api.Models.BarSeries" class="text-break">
+Class BarSeries  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a series of bars, with various calculated series such as Low, High, Open, Close, and others.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html'>Series&lt;Bar&gt;</a>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BarSeries : Series&lt;Bar&gt;, ISeries&lt;Bar&gt;, IReadOnlyList&lt;Bar?&gt;, IReadOnlyCollection&lt;Bar?&gt;, IEnumerable&lt;Bar?&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+
+  <details class="typelist-details">
+  <summary>Inheritance</summary>
+  <dl class="typelist inheritance">
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html">Series</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
+      <div><span class="xref">BarSeries</span></div>
+    </dd>
+  </dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Implements</summary>
+    <dl class="typelist implements">
+      <dd>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+      </dd>
+    </dl>
+  </details>
+
+
+  <details class="typelist-details">
+    <summary>Inherited Members</summary>
+    <dl class="typelist inheritedMembers">
+      <dd>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values">Series&lt;Bar&gt;.Values</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_get_DefaultValue">Series&lt;Bar&gt;.get_DefaultValue()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Last_System_Int32_">Series&lt;Bar&gt;.Last(int)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_">Series&lt;Bar&gt;.Append(Bar)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_GetEnumerator">Series&lt;Bar&gt;.GetEnumerator()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Count">Series&lt;Bar&gt;.Count</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+      </div>
+    </dd></dl>
+  </details>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_">CollectionExtensions.BinarySearch&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;, TItem)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.#ctor*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod)">
+  BarSeries(Symbol, BarPeriod)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the BarSeries class with a specified symbol and period.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.BarSeries.html'>BarSeries</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarSeries(Symbol symbol, BarPeriod period)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>symbol</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Symbol.html">Symbol</a></dt>
+    <dd><p>The symbol of the bar series.</p>
+</dd>
+    <dt><code>period</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarPeriod.html">BarPeriod</a></dt>
+    <dd><p>The period of the bars in the series.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Close_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Close*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Close" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Close">
+  Close
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of close prices for each bar.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
-<div>
-<a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries&lt;Bar&gt;</a>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; Close { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_High_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.High*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_High" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.High">
+  High
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of high prices for each bar.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList&lt;Bar?&gt;</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; High { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Item_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Item*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Item_System_Int32_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Item(System.Int32)">
+  this[int]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indexer to access bars in the series by their index.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1'>IReadOnlyCollection&lt;Bar?&gt;</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Bar? this[int index] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the bar.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a></dt>
+    <dd><p>The bar at the specified index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Low_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Low*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Low" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Low">
+  Low
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of low prices for each bar.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1'>IEnumerable&lt;Bar?&gt;</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; Low { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_MedianPrice_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.MedianPrice*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_MedianPrice" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.MedianPrice">
+  MedianPrice
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of median prices for each bar.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.collections.ienumerable'>IEnumerable</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; MedianPrice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Open_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Open*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Open" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Open">
+  Open
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of open prices for each bar.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values'>Series&lt;Bar&gt;.Values</a>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; Open { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Period_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Period*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Period" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Period">
+  Period
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The period of the bars in the series.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_get_DefaultValue'>Series&lt;Bar&gt;.get_DefaultValue()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarPeriod Period { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.BarPeriod.html">BarPeriod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Symbol_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Symbol*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Symbol" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Symbol">
+  Symbol
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The symbol associated with the bar series.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Last_System_Int32_'>Series&lt;Bar&gt;.Last(int)</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Symbol Symbol { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Symbol.html">Symbol</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Time_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Time*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Time" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Time">
+  Time
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of time for each bar.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_'>Series&lt;Bar&gt;.Append(Bar?)</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;DateTime&gt; Time { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_TypicalPrice_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.TypicalPrice*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_TypicalPrice" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.TypicalPrice">
+  TypicalPrice
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of typical prices for each bar.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_GetEnumerator'>Series&lt;Bar&gt;.GetEnumerator()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; TypicalPrice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Volume_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Volume*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Volume" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Volume">
+  Volume
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series of volumes for each bar.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Count'>Series&lt;Bar&gt;.Count</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISeries&lt;double&gt; Volume { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Slice_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Slice*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Slice_System_DateTime_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Slice(System.DateTime)">
+  Slice(DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Slices the series starting from a specific UTC date/time.</p>
 </div>
-<div>
-<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Item_System_Int32_'>Series&lt;Bar&gt;.this[int]</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; Slice(DateTime dateTimeUtc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dateTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The UTC date/time to slice from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>A sequence of indexes starting from the given date/time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_BarClosed" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.BarClosed">
+  BarClosed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event triggered when a bar is closed.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone'>object.MemberwiseClone()</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
-</div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
-</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h4 class='section'>Extension Methods</h4><dl class="typelist"><dd>
-<div>
-<a href='Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_'>CollectionExtensions.BinarySearch&lt;Bar&gt;(IReadOnlyList&lt;Bar&gt;, Bar)</a>
-</div>
-
-</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod)' data-commentid='M:Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod)' id='Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_'>BarSeries(Symbol, BarPeriod)   </h3>
- <p>Initializes a new instance of the BarSeries class with a specified symbol and period.</p>
-<pre><code class='lang-csharp'>public BarSeries(Symbol symbol, BarPeriod period)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>symbol</code> <a href='Tickblaze.Scripts.Api.Models.Symbol.html'>Symbol</a>  </dt>
-<dd>
-
-
-<p>The symbol of the bar series.</p>
-
-</dd><dt><code>period</code> <a href='Tickblaze.Scripts.Api.Models.BarPeriod.html'>BarPeriod</a>  </dt>
-<dd>
-
-
-<p>The period of the bars in the series.</p>
-
-</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Close' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Close' id='Tickblaze_Scripts_Api_Models_BarSeries_Close'>Close   </h3>
- <p>The series of close prices for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; Close { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;BarSeries.BarEventArgs&gt; BarClosed</code></pre>
+  </div>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.High' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.High' id='Tickblaze_Scripts_Api_Models_BarSeries_High'>High   </h3>
- <p>The series of high prices for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; High { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Low' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Low' id='Tickblaze_Scripts_Api_Models_BarSeries_Low'>Low   </h3>
- <p>The series of low prices for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; Low { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.html">BarEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.MedianPrice' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.MedianPrice' id='Tickblaze_Scripts_Api_Models_BarSeries_MedianPrice'>MedianPrice   </h3>
- <p>The series of median prices for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; MedianPrice { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Open' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Open' id='Tickblaze_Scripts_Api_Models_BarSeries_Open'>Open   </h3>
- <p>The series of open prices for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; Open { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
 
 
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Period' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Period' id='Tickblaze_Scripts_Api_Models_BarSeries_Period'>Period   </h3>
- <p>The period of the bars in the series.</p>
-<pre><code class='lang-csharp'>public BarPeriod Period { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.BarPeriod.html'>BarPeriod</a>  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Symbol' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Symbol' id='Tickblaze_Scripts_Api_Models_BarSeries_Symbol'>Symbol   </h3>
- <p>The symbol associated with the bar series.</p>
-<pre><code class='lang-csharp'>public Symbol Symbol { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Symbol.html'>Symbol</a>  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Time' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Time' id='Tickblaze_Scripts_Api_Models_BarSeries_Time'>Time   </h3>
- <p>The series of time for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;DateTime&gt; Time { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.datetime'>DateTime</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.TypicalPrice' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.TypicalPrice' id='Tickblaze_Scripts_Api_Models_BarSeries_TypicalPrice'>TypicalPrice   </h3>
- <p>The series of typical prices for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; TypicalPrice { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Volume' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Volume' id='Tickblaze_Scripts_Api_Models_BarSeries_Volume'>Volume   </h3>
- <p>The series of volumes for each bar.</p>
-<pre><code class='lang-csharp'>public ISeries&lt;double&gt; Volume { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Item(System.Int32)' data-commentid='P:Tickblaze.Scripts.Api.Models.BarSeries.Item(System.Int32)' id='Tickblaze_Scripts_Api_Models_BarSeries_Item_System_Int32_'>this[int]   </h3>
- <p>Indexer to access bars in the series by their index.</p>
-<pre><code class='lang-csharp'>public override Bar? this[int index] { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Bar.html'>Bar</a>?  </dt>
-<dd>
-
-
-
-</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.Slice(System.DateTime)' data-commentid='M:Tickblaze.Scripts.Api.Models.BarSeries.Slice(System.DateTime)' id='Tickblaze_Scripts_Api_Models_BarSeries_Slice_System_DateTime_'>Slice(DateTime)   </h3>
- <p>Slices the series starting from a specific UTC date/time.</p>
-<pre><code class='lang-csharp'>public IEnumerable&lt;int&gt; Slice(DateTime dateTimeUtc)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dateTimeUtc</code> <a href='https://learn.microsoft.com/dotnet/api/system.datetime'>DateTime</a>  </dt>
-<dd>
-
-
-<p>The UTC date/time to slice from.</p>
-
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1'>IEnumerable</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>&gt;  </dt>
-<dd>
-
-
-<p>A sequence of indexes starting from the given date/time.</p>
-
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.BarSeries.BarClosed' data-commentid='E:Tickblaze.Scripts.Api.Models.BarSeries.BarClosed' id='Tickblaze_Scripts_Api_Models_BarSeries_BarClosed'>BarClosed   </h3>
- <p>Event triggered when a bar is closed.</p>
-<pre><code class='lang-csharp'>public event Action&lt;BarSeries.BarEventArgs&gt; BarClosed</code></pre><h4 class='section'>Event Type</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.action-1'>Action</a>&lt;<a href='Tickblaze.Scripts.Api.Models.BarSeries.html'>BarSeries</a>.<a href='Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.html'>BarEventArgs</a>&gt;  </dt>
-<dd>
-
-
-
-</dd></dl>
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
   </body>
 </html>

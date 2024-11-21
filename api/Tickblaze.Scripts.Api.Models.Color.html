@@ -1,726 +1,1975 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Struct Color | Tickblaze </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct Color | Tickblaze ">
-    
-    <meta name="description" content="Represents a color with alpha, red, green, and blue values.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="Represents a color with alpha, red, green, and blue values.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="logo-img" src="../images/logo.png" alt="Tickblaze">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color' data-commentid='T:Tickblaze.Scripts.Api.Models.Color' id='Tickblaze_Scripts_Api_Models_Color'>Struct Color   </h1>
- <div class="facts text-secondary">
-<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Models.html'>Tickblaze.Scripts.Api.Models</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
-</div><p>Represents a color with alpha, red, green, and blue values.</p>
-<pre><code class='lang-csharp'>public readonly struct Color : IEquatable&lt;Color&gt;</code></pre><h4 class='section'>Implements</h4><dl class="typelist"><dd>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.iequatable-1'>IEquatable&lt;Color&gt;</a>
+
+        <article data-uid="Tickblaze.Scripts.Api.Models.Color">
+
+
+  <div>TEST</div>
+
+
+  <h1 id="Tickblaze_Scripts_Api_Models_Color" data-uid="Tickblaze.Scripts.Api.Models.Color" class="text-break">
+Struct Color  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a color with alpha, red, green, and blue values.</p>
 </div>
+  <div class="markdown conceptual"></div>
 
-</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct Color : IEquatable&lt;Color&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <details class="typelist-details">
+    <summary>Implements</summary>
+    <dl class="typelist implements">
+      <dd>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>&gt;</div>
+      </dd>
+    </dl>
+  </details>
+
+
+  <details class="typelist-details">
+    <summary>Inherited Members</summary>
+    <dl class="typelist inheritedMembers">
+      <dd>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      </div>
+    </dd></dl>
+  </details>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color__ctor_" data-uid="Tickblaze.Scripts.Api.Models.Color.#ctor*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color__ctor_System_Byte_System_Byte_System_Byte_System_Byte_" data-uid="Tickblaze.Scripts.Api.Models.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+  Color(byte, byte, byte, byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents a color with alpha, red, green, and blue values.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(byte a, byte r, byte g, byte b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The alpha value of the color.</p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The red value of the color.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The green value of the color.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The blue value of the color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Black" data-uid="Tickblaze.Scripts.Api.Models.Color.Black">
+  Black
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Black</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Blue" data-uid="Tickblaze.Scripts.Api.Models.Color.Blue">
+  Blue
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Blue</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_CoolGray" data-uid="Tickblaze.Scripts.Api.Models.Color.CoolGray">
+  CoolGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color CoolGray</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Cyan" data-uid="Tickblaze.Scripts.Api.Models.Color.Cyan">
+  Cyan
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Cyan</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_DarkGray" data-uid="Tickblaze.Scripts.Api.Models.Color.DarkGray">
+  DarkGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color DarkGray</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_DeepPurple" data-uid="Tickblaze.Scripts.Api.Models.Color.DeepPurple">
+  DeepPurple
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color DeepPurple</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_DimGray" data-uid="Tickblaze.Scripts.Api.Models.Color.DimGray">
+  DimGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color DimGray</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Empty" data-uid="Tickblaze.Scripts.Api.Models.Color.Empty">
+  Empty
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Empty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Gray" data-uid="Tickblaze.Scripts.Api.Models.Color.Gray">
+  Gray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Gray</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Green" data-uid="Tickblaze.Scripts.Api.Models.Color.Green">
+  Green
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Green</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Gunmetal" data-uid="Tickblaze.Scripts.Api.Models.Color.Gunmetal">
+  Gunmetal
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Gunmetal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_LightGray" data-uid="Tickblaze.Scripts.Api.Models.Color.LightGray">
+  LightGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color LightGray</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Orange" data-uid="Tickblaze.Scripts.Api.Models.Color.Orange">
+  Orange
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Orange</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Pink" data-uid="Tickblaze.Scripts.Api.Models.Color.Pink">
+  Pink
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Pink</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Purple" data-uid="Tickblaze.Scripts.Api.Models.Color.Purple">
+  Purple
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Purple</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Red" data-uid="Tickblaze.Scripts.Api.Models.Color.Red">
+  Red
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Red</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Silver" data-uid="Tickblaze.Scripts.Api.Models.Color.Silver">
+  Silver
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Silver</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_SteelGray" data-uid="Tickblaze.Scripts.Api.Models.Color.SteelGray">
+  SteelGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color SteelGray</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_TealGreen" data-uid="Tickblaze.Scripts.Api.Models.Color.TealGreen">
+  TealGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color TealGreen</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Transparent" data-uid="Tickblaze.Scripts.Api.Models.Color.Transparent">
+  Transparent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Transparent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_White" data-uid="Tickblaze.Scripts.Api.Models.Color.White">
+  White
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color White</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Yellow" data-uid="Tickblaze.Scripts.Api.Models.Color.Yellow">
+  Yellow
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Color Yellow</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_A_" data-uid="Tickblaze.Scripts.Api.Models.Color.A*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_A" data-uid="Tickblaze.Scripts.Api.Models.Color.A">
+  A
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The alpha value of the color.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte A { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_B_" data-uid="Tickblaze.Scripts.Api.Models.Color.B*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_B" data-uid="Tickblaze.Scripts.Api.Models.Color.B">
+  B
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The blue value of the color.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte B { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_G_" data-uid="Tickblaze.Scripts.Api.Models.Color.G*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_G" data-uid="Tickblaze.Scripts.Api.Models.Color.G">
+  G
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The green value of the color.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte G { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_Hex_" data-uid="Tickblaze.Scripts.Api.Models.Color.Hex*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Hex" data-uid="Tickblaze.Scripts.Api.Models.Color.Hex">
+  Hex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The HEX value of the color.</p>
 </div>
-<div>
-<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Hex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_R_" data-uid="Tickblaze.Scripts.Api.Models.Color.R*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_R" data-uid="Tickblaze.Scripts.Api.Models.Color.R">
+  R
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The red value of the color.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)' id='Tickblaze_Scripts_Api_Models_Color__ctor_System_Byte_System_Byte_System_Byte_System_Byte_'>Color(byte, byte, byte, byte)   </h3>
- <p>Represents a color with alpha, red, green, and blue values.</p>
-<pre><code class='lang-csharp'>public Color(byte a, byte r, byte g, byte b)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>a</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte R { get; }</code></pre>
+  </div>
 
 
-<p>The alpha value of the color.</p>
 
-</dd><dt><code>r</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>The red value of the color.</p>
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
 
-</dd><dt><code>g</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>The green value of the color.</p>
 
-</dd><dt><code>b</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>The blue value of the color.</p>
 
-</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Black' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Black' id='Tickblaze_Scripts_Api_Models_Color_Black'>Black   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Black</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
+  <h2 class="section" id="methods">Methods
+</h2>
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Blue' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Blue' id='Tickblaze_Scripts_Api_Models_Color_Blue'>Blue   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Blue</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <a id="Tickblaze_Scripts_Api_Models_Color_CanArgbHexBeParsed_" data-uid="Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_CanArgbHexBeParsed_System_String_" data-uid="Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(System.String)">
+  CanArgbHexBeParsed(string)
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Checks if an ARGB hex string can be parsed into a valid color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.CoolGray' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.CoolGray' id='Tickblaze_Scripts_Api_Models_Color_CoolGray'>CoolGray   </h3>
- <pre><code class='lang-csharp'>public static readonly Color CoolGray</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanArgbHexBeParsed(string hex)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The ARGB hex string to check.</p>
+</dd>
+  </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the string can be parsed; otherwise, false.</p>
+</dd>
+  </dl>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Cyan' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Cyan' id='Tickblaze_Scripts_Api_Models_Color_Cyan'>Cyan   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Cyan</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.DarkGray' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.DarkGray' id='Tickblaze_Scripts_Api_Models_Color_DarkGray'>DarkGray   </h3>
- <pre><code class='lang-csharp'>public static readonly Color DarkGray</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.DeepPurple' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.DeepPurple' id='Tickblaze_Scripts_Api_Models_Color_DeepPurple'>DeepPurple   </h3>
- <pre><code class='lang-csharp'>public static readonly Color DeepPurple</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.DimGray' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.DimGray' id='Tickblaze_Scripts_Api_Models_Color_DimGray'>DimGray   </h3>
- <pre><code class='lang-csharp'>public static readonly Color DimGray</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
+  <a id="Tickblaze_Scripts_Api_Models_Color_Equals_" data-uid="Tickblaze.Scripts.Api.Models.Color.Equals*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Equals_System_Object_" data-uid="Tickblaze.Scripts.Api.Models.Color.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Empty' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Empty' id='Tickblaze_Scripts_Api_Models_Color_Empty'>Empty   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Empty</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="markdown level1 summary"><p>Checks if the current color is equal to an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with.</p>
+</dd>
+  </dl>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Gray' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Gray' id='Tickblaze_Scripts_Api_Models_Color_Gray'>Gray   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Gray</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the object is a color and equals the current color; otherwise, false.</p>
+</dd>
+  </dl>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Green' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Green' id='Tickblaze_Scripts_Api_Models_Color_Green'>Green   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Green</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Gunmetal' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Gunmetal' id='Tickblaze_Scripts_Api_Models_Color_Gunmetal'>Gunmetal   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Gunmetal</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.LightGray' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.LightGray' id='Tickblaze_Scripts_Api_Models_Color_LightGray'>LightGray   </h3>
- <pre><code class='lang-csharp'>public static readonly Color LightGray</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
+  <a id="Tickblaze_Scripts_Api_Models_Color_Equals_" data-uid="Tickblaze.Scripts.Api.Models.Color.Equals*"></a>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Orange' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Orange' id='Tickblaze_Scripts_Api_Models_Color_Orange'>Orange   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Orange</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_Equals_Tickblaze_Scripts_Api_Models_Color_" data-uid="Tickblaze.Scripts.Api.Models.Color.Equals(Tickblaze.Scripts.Api.Models.Color)">
+  Equals(Color)
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Checks if the current color is equal to another color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Color other)</code></pre>
+  </div>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Pink' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Pink' id='Tickblaze_Scripts_Api_Models_Color_Pink'>Pink   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Pink</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The other color to compare with.</p>
+</dd>
+  </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the colors are equal; otherwise, false.</p>
+</dd>
+  </dl>
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Purple' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Purple' id='Tickblaze_Scripts_Api_Models_Color_Purple'>Purple   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Purple</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Red' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Red' id='Tickblaze_Scripts_Api_Models_Color_Red'>Red   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Red</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Silver' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Silver' id='Tickblaze_Scripts_Api_Models_Color_Silver'>Silver   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Silver</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.SteelGray' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.SteelGray' id='Tickblaze_Scripts_Api_Models_Color_SteelGray'>SteelGray   </h3>
- <pre><code class='lang-csharp'>public static readonly Color SteelGray</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <a id="Tickblaze_Scripts_Api_Models_Color_FromArgb_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromArgb*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_FromArgb_System_Byte_System_Byte_System_Byte_System_Byte_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)">
+  FromArgb(byte, byte, byte, byte)
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Creates a color from ARGB values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.TealGreen' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.TealGreen' id='Tickblaze_Scripts_Api_Models_Color_TealGreen'>TealGreen   </h3>
- <pre><code class='lang-csharp'>public static readonly Color TealGreen</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromArgb(byte a, byte r, byte g, byte b)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Alpha value (0-255).</p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Red value (0-255).</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Green value (0-255).</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Blue value (0-255).</p>
+</dd>
+  </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance with the specified ARGB values.</p>
+</dd>
+  </dl>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Transparent' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Transparent' id='Tickblaze_Scripts_Api_Models_Color_Transparent'>Transparent   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Transparent</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.White' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.White' id='Tickblaze_Scripts_Api_Models_Color_White'>White   </h3>
- <pre><code class='lang-csharp'>public static readonly Color White</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Yellow' data-commentid='F:Tickblaze.Scripts.Api.Models.Color.Yellow' id='Tickblaze_Scripts_Api_Models_Color_Yellow'>Yellow   </h3>
- <pre><code class='lang-csharp'>public static readonly Color Yellow</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.A' data-commentid='P:Tickblaze.Scripts.Api.Models.Color.A' id='Tickblaze_Scripts_Api_Models_Color_A'>A   </h3>
- <p>The alpha value of the color.</p>
-<pre><code class='lang-csharp'>public byte A { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
+  <a id="Tickblaze_Scripts_Api_Models_Color_FromDrawingColor_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromDrawingColor*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_FromDrawingColor_System_Drawing_Color_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromDrawingColor(System.Drawing.Color)">
+  FromDrawingColor(Color)
+  
+  </h3>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.B' data-commentid='P:Tickblaze.Scripts.Api.Models.Color.B' id='Tickblaze_Scripts_Api_Models_Color_B'>B   </h3>
- <p>The blue value of the color.</p>
-<pre><code class='lang-csharp'>public byte B { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromDrawingColor(Color color)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> instance.</p>
+</dd>
+  </dl>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.G' data-commentid='P:Tickblaze.Scripts.Api.Models.Color.G' id='Tickblaze_Scripts_Api_Models_Color_G'>G   </h3>
- <p>The green value of the color.</p>
-<pre><code class='lang-csharp'>public byte G { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance representing the system drawing color.</p>
+</dd>
+  </dl>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Hex' data-commentid='P:Tickblaze.Scripts.Api.Models.Color.Hex' id='Tickblaze_Scripts_Api_Models_Color_Hex'>Hex   </h3>
- <p>The HEX value of the color.</p>
-<pre><code class='lang-csharp'>public string Hex { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.R' data-commentid='P:Tickblaze.Scripts.Api.Models.Color.R' id='Tickblaze_Scripts_Api_Models_Color_R'>R   </h3>
- <p>The red value of the color.</p>
-<pre><code class='lang-csharp'>public byte R { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
 
-</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(System.String)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(System.String)' id='Tickblaze_Scripts_Api_Models_Color_CanArgbHexBeParsed_System_String_'>CanArgbHexBeParsed(string)   </h3>
- <p>Checks if an ARGB hex string can be parsed into a valid color.</p>
-<pre><code class='lang-csharp'>public static bool CanArgbHexBeParsed(string hex)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>hex</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
-<p>The ARGB hex string to check.</p>
+  <a id="Tickblaze_Scripts_Api_Models_Color_FromName_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromName*"></a>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_FromName_System_String_System_String_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromName(System.String,System.String)">
+  FromName(string, string?)
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Creates a color from the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-<p>True if the string can be parsed; otherwise, false.</p>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromName(string colorName, string? fallbackColorName = null)</code></pre>
+  </div>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Equals(Tickblaze.Scripts.Api.Models.Color)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.Equals(Tickblaze.Scripts.Api.Models.Color)' id='Tickblaze_Scripts_Api_Models_Color_Equals_Tickblaze_Scripts_Api_Models_Color_'>Equals(Color)   </h3>
- <p>Checks if the current color is equal to another color.</p>
-<pre><code class='lang-csharp'>public bool Equals(Color other)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>other</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the color.</p>
+</dd>
+    <dt><code>fallbackColorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fallback color name if the first is not found.</p>
+</dd>
+  </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance corresponding to the name.</p>
+</dd>
+  </dl>
 
-<p>The other color to compare with.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
 
 
-<p>True if the colors are equal; otherwise, false.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.Equals(System.Object)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.Equals(System.Object)' id='Tickblaze_Scripts_Api_Models_Color_Equals_System_Object_'>Equals(object)   </h3>
- <p>Checks if the current color is equal to an object.</p>
-<pre><code class='lang-csharp'>public override bool Equals(object obj)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>obj</code> <a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>  </dt>
-<dd>
 
 
-<p>The object to compare with.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
 
 
-<p>True if the object is a color and equals the current color; otherwise, false.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)' id='Tickblaze_Scripts_Api_Models_Color_FromArgb_System_Byte_System_Byte_System_Byte_System_Byte_'>FromArgb(byte, byte, byte, byte)   </h3>
- <p>Creates a color from ARGB values.</p>
-<pre><code class='lang-csharp'>public static Color FromArgb(byte a, byte r, byte g, byte b)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>a</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <a id="Tickblaze_Scripts_Api_Models_Color_FromRgb_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromRgb*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_FromRgb_System_Byte_System_Byte_System_Byte_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromRgb(System.Byte,System.Byte,System.Byte)">
+  FromRgb(byte, byte, byte)
+  
+  </h3>
 
-<p>Alpha value (0-255).</p>
+  <div class="markdown level1 summary"><p>Creates a color from RGB values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd><dt><code>r</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromRgb(byte r, byte g, byte b)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Red value (0-255).</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Green value (0-255).</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Blue value (0-255).</p>
+</dd>
+  </dl>
 
-<p>Red value (0-255).</p>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance with the specified RGB values.</p>
+</dd>
+  </dl>
 
-</dd><dt><code>g</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>Green value (0-255).</p>
 
-</dd><dt><code>b</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>Blue value (0-255).</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance with the specified ARGB values.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.FromDrawingColor(System.Drawing.Color)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.FromDrawingColor(System.Drawing.Color)' id='Tickblaze_Scripts_Api_Models_Color_FromDrawingColor_System_Drawing_Color_'>FromDrawingColor(Color)   </h3>
- <p>Converts a <span class="xref">System.Drawing.Color</span> to a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span>.</p>
-<pre><code class='lang-csharp'>public static Color FromDrawingColor(Color color)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='https://learn.microsoft.com/dotnet/api/system.drawing.color'>Color</a>  </dt>
-<dd>
 
+  <a id="Tickblaze_Scripts_Api_Models_Color_FromRgba_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromRgba*"></a>
 
-<p>The <span class="xref">System.Drawing.Color</span> instance.</p>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_FromRgba_System_Byte_System_Byte_System_Byte_System_Byte_" data-uid="Tickblaze.Scripts.Api.Models.Color.FromRgba(System.Byte,System.Byte,System.Byte,System.Byte)">
+  FromRgba(byte, byte, byte, byte)
+  
+  </h3>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="markdown level1 summary"><p>Creates a color from RGBA values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromRgba(byte r, byte g, byte b, byte a)</code></pre>
+  </div>
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance representing the system drawing color.</p>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Red value (0-255).</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Green value (0-255).</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Blue value (0-255).</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Alpha value (0-255).</p>
+</dd>
+  </dl>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.FromName(System.String,System.String)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.FromName(System.String,System.String)' id='Tickblaze_Scripts_Api_Models_Color_FromName_System_String_System_String_'>FromName(string, string?)   </h3>
- <p>Creates a color from the specified name.</p>
-<pre><code class='lang-csharp'>public static Color FromName(string colorName, string? fallbackColorName = null)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>colorName</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance with the specified RGBA values.</p>
+</dd>
+  </dl>
 
 
-<p>The name of the color.</p>
 
-</dd><dt><code>fallbackColorName</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>?  </dt>
-<dd>
 
 
-<p>The fallback color name if the first is not found.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance corresponding to the name.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.FromRgb(System.Byte,System.Byte,System.Byte)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.FromRgb(System.Byte,System.Byte,System.Byte)' id='Tickblaze_Scripts_Api_Models_Color_FromRgb_System_Byte_System_Byte_System_Byte_'>FromRgb(byte, byte, byte)   </h3>
- <p>Creates a color from RGB values.</p>
-<pre><code class='lang-csharp'>public static Color FromRgb(byte r, byte g, byte b)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>r</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>Red value (0-255).</p>
+  <a id="Tickblaze_Scripts_Api_Models_Color_GetHashCode_" data-uid="Tickblaze.Scripts.Api.Models.Color.GetHashCode*"></a>
 
-</dd><dt><code>g</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_GetHashCode" data-uid="Tickblaze.Scripts.Api.Models.Color.GetHashCode">
+  GetHashCode()
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Gets the hash code for the color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-<p>Green value (0-255).</p>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
 
-</dd><dt><code>b</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The hash code of the color.</p>
+</dd>
+  </dl>
 
-<p>Blue value (0-255).</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance with the specified RGB values.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.FromRgba(System.Byte,System.Byte,System.Byte,System.Byte)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.FromRgba(System.Byte,System.Byte,System.Byte,System.Byte)' id='Tickblaze_Scripts_Api_Models_Color_FromRgba_System_Byte_System_Byte_System_Byte_System_Byte_'>FromRgba(byte, byte, byte, byte)   </h3>
- <p>Creates a color from RGBA values.</p>
-<pre><code class='lang-csharp'>public static Color FromRgba(byte r, byte g, byte b, byte a)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>r</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>Red value (0-255).</p>
 
-</dd><dt><code>g</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
 
 
-<p>Green value (0-255).</p>
 
-</dd><dt><code>b</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <a id="Tickblaze_Scripts_Api_Models_Color_New_" data-uid="Tickblaze.Scripts.Api.Models.Color.New*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_New_Tickblaze_Scripts_Api_Models_Color_System_Single_" data-uid="Tickblaze.Scripts.Api.Models.Color.New(Tickblaze.Scripts.Api.Models.Color,System.Single)">
+  New(Color, float)
+  
+  </h3>
 
-<p>Blue value (0-255).</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance with the specified opacity level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd><dt><code>a</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color New(Color color, float opacity)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The base color to adjust.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The desired opacity level as a float (0.0 to 1.0).</p>
+</dd>
+  </dl>
 
-<p>Alpha value (0-255).</p>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance with the specified opacity.</p>
+</dd>
+  </dl>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance with the specified RGBA values.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.GetHashCode' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.GetHashCode' id='Tickblaze_Scripts_Api_Models_Color_GetHashCode'>GetHashCode()   </h3>
- <p>Gets the hash code for the color.</p>
-<pre><code class='lang-csharp'>public override int GetHashCode()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
-<dd>
 
 
-<p>The hash code of the color.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.New(Tickblaze.Scripts.Api.Models.Color,System.Single)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.New(Tickblaze.Scripts.Api.Models.Color,System.Single)' id='Tickblaze_Scripts_Api_Models_Color_New_Tickblaze_Scripts_Api_Models_Color_System_Single_'>New(Color, float)   </h3>
- <p>Creates a new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance with the specified opacity level.</p>
-<pre><code class='lang-csharp'>public static Color New(Color color, float opacity)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>The base color to adjust.</p>
 
-</dd><dt><code>opacity</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
-<dd>
 
+  <a id="Tickblaze_Scripts_Api_Models_Color_ParseArgbHex_" data-uid="Tickblaze.Scripts.Api.Models.Color.ParseArgbHex*"></a>
 
-<p>The desired opacity level as a float (0.0 to 1.0).</p>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_ParseArgbHex_System_String_" data-uid="Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(System.String)">
+  ParseArgbHex(string)
+  
+  </h3>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="markdown level1 summary"><p>Parses an ARGB hex string into a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ParseArgbHex(string hex)</code></pre>
+  </div>
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance with the specified opacity.</p>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The ARGB hex string to parse.</p>
+</dd>
+  </dl>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(System.String)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(System.String)' id='Tickblaze_Scripts_Api_Models_Color_ParseArgbHex_System_String_'>ParseArgbHex(string)   </h3>
- <p>Parses an ARGB hex string into a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance.</p>
-<pre><code class='lang-csharp'>public static Color ParseArgbHex(string hex)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>hex</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance representing the parsed hex string.</p>
+</dd>
+  </dl>
 
 
-<p>The ARGB hex string to parse.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance representing the parsed hex string.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(System.String)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(System.String)' id='Tickblaze_Scripts_Api_Models_Color_ParseRgbaHex_System_String_'>ParseRgbaHex(string)   </h3>
- <p>Parses an RGBA hex string into a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance.</p>
-<pre><code class='lang-csharp'>public static Color ParseRgbaHex(string hex)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>hex</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
-<p>The RGBA hex string to parse.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A new <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> instance representing the parsed hex string.</p>
+  <a id="Tickblaze_Scripts_Api_Models_Color_ParseRgbaHex_" data-uid="Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex*"></a>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.ToArgbHex' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.ToArgbHex' id='Tickblaze_Scripts_Api_Models_Color_ToArgbHex'>ToArgbHex()   </h3>
- <p>Converts the color to its ARGB hex representation.</p>
-<pre><code class='lang-csharp'>public string ToArgbHex()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_ParseRgbaHex_System_String_" data-uid="Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(System.String)">
+  ParseRgbaHex(string)
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Parses an RGBA hex string into a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-<p>A string representing the ARGB hex value of the color.</p>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ParseRgbaHex(string hex)</code></pre>
+  </div>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.ToRgbHex' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.ToRgbHex' id='Tickblaze_Scripts_Api_Models_Color_ToRgbHex'>ToRgbHex()   </h3>
- <p>Converts the color to its RGB hex representation.</p>
-<pre><code class='lang-csharp'>public string ToRgbHex()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The RGBA hex string to parse.</p>
+</dd>
+  </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> instance representing the parsed hex string.</p>
+</dd>
+  </dl>
 
-<p>A string representing the RGB hex value of the color.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.ToRgbaHex' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.ToRgbaHex' id='Tickblaze_Scripts_Api_Models_Color_ToRgbaHex'>ToRgbaHex()   </h3>
- <p>Converts the color to its RGBA hex representation.</p>
-<pre><code class='lang-csharp'>public string ToRgbaHex()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
-<p>A string representing the RGBA hex value of the color.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.TryParse(System.String,System.String,Tickblaze.Scripts.Api.Models.Color@)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.TryParse(System.String,System.String,Tickblaze.Scripts.Api.Models.Color@)' id='Tickblaze_Scripts_Api_Models_Color_TryParse_System_String_System_String_Tickblaze_Scripts_Api_Models_Color__'>TryParse(string, string, out Color)   </h3>
- <p>Tries to parse a color from a hex string or color name.</p>
-<pre><code class='lang-csharp'>public static bool TryParse(string hexOrName, string fallbackColorName, out Color color)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>hexOrName</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
-<p>The hex string or color name.</p>
 
-</dd><dt><code>fallbackColorName</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
 
-<p>The fallback color name if parsing fails.</p>
 
-</dd><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <a id="Tickblaze_Scripts_Api_Models_Color_ToArgbHex_" data-uid="Tickblaze.Scripts.Api.Models.Color.ToArgbHex*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_ToArgbHex" data-uid="Tickblaze.Scripts.Api.Models.Color.ToArgbHex">
+  ToArgbHex()
+  
+  </h3>
 
-<p>The resulting color.</p>
+  <div class="markdown level1 summary"><p>Converts the color to its ARGB hex representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToArgbHex()</code></pre>
+  </div>
 
 
-<p>True if the parsing was successful; otherwise, false.</p>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the ARGB hex value of the color.</p>
+</dd>
+  </dl>
 
-</dd></dl><h2 class='section'>Operators</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Equality(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Color)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Equality(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Color)' id='Tickblaze_Scripts_Api_Models_Color_op_Equality_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Models_Color_'>operator ==(Color, Color)   </h3>
- <p>Determines whether two <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> objects are equal.</p>
-<pre><code class='lang-csharp'>public static bool operator ==(Color left, Color right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>The first <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> to compare.</p>
 
-</dd><dt><code>right</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>The second <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> to compare.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
 
 
-<p><code>true</code> if the two <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> objects are equal; otherwise, <code>false</code>.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.String)~Tickblaze.Scripts.Api.Models.Color' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.String)~Tickblaze.Scripts.Api.Models.Color' id='Tickblaze_Scripts_Api_Models_Color_op_Implicit_System_String__Tickblaze_Scripts_Api_Models_Color'>implicit operator Color(string)   </h3>
- <p>Implicitly converts a hexadecimal color string to a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> object.</p>
-<pre><code class='lang-csharp'>public static implicit operator Color(string hex)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>hex</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
-<dd>
 
+  <a id="Tickblaze_Scripts_Api_Models_Color_ToRgbHex_" data-uid="Tickblaze.Scripts.Api.Models.Color.ToRgbHex*"></a>
 
-<p>The hexadecimal color string.</p>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_ToRgbHex" data-uid="Tickblaze.Scripts.Api.Models.Color.ToRgbHex">
+  ToRgbHex()
+  
+  </h3>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="markdown level1 summary"><p>Converts the color to its RGB hex representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToRgbHex()</code></pre>
+  </div>
 
-<p>A <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> corresponding to the provided hex string.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.Drawing.Color)~Tickblaze.Scripts.Api.Models.Color' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.Drawing.Color)~Tickblaze.Scripts.Api.Models.Color' id='Tickblaze_Scripts_Api_Models_Color_op_Implicit_System_Drawing_Color__Tickblaze_Scripts_Api_Models_Color'>implicit operator Color(Color)   </h3>
- <p>Implicitly converts a <span class="xref">System.Drawing.Color</span> to a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> object.</p>
-<pre><code class='lang-csharp'>public static implicit operator Color(Color color)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='https://learn.microsoft.com/dotnet/api/system.drawing.color'>Color</a>  </dt>
-<dd>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the RGB hex value of the color.</p>
+</dd>
+  </dl>
 
 
-<p>The <span class="xref">System.Drawing.Color</span> to convert.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>A <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> with the same color values as the <span class="xref">System.Drawing.Color</span>.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Implicit(Tickblaze.Scripts.Api.Models.Color)~System.Drawing.Color' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Implicit(Tickblaze.Scripts.Api.Models.Color)~System.Drawing.Color' id='Tickblaze_Scripts_Api_Models_Color_op_Implicit_Tickblaze_Scripts_Api_Models_Color__System_Drawing_Color'>implicit operator Color(Color)   </h3>
- <p>Implicitly converts a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> object to a <span class="xref">System.Drawing.Color</span>.</p>
-<pre><code class='lang-csharp'>public static implicit operator Color(Color color)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>The <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> to convert.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.drawing.color'>Color</a>  </dt>
-<dd>
 
 
-<p>A <span class="xref">System.Drawing.Color</span> with the same color values as the <span class="xref">Tickblaze.Scripts.Api.Models.Color</span>.</p>
+  <a id="Tickblaze_Scripts_Api_Models_Color_ToRgbaHex_" data-uid="Tickblaze.Scripts.Api.Models.Color.ToRgbaHex*"></a>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.Byte[])~Tickblaze.Scripts.Api.Models.Color' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.Byte[])~Tickblaze.Scripts.Api.Models.Color' id='Tickblaze_Scripts_Api_Models_Color_op_Implicit_System_Byte____Tickblaze_Scripts_Api_Models_Color'>implicit operator Color(byte[])   </h3>
- <p>Implicitly converts a byte array to a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> object.</p>
-<pre><code class='lang-csharp'>public static implicit operator Color(byte[] bytes)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>bytes</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>[]  </dt>
-<dd>
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_ToRgbaHex" data-uid="Tickblaze.Scripts.Api.Models.Color.ToRgbaHex">
+  ToRgbaHex()
+  
+  </h3>
 
+  <div class="markdown level1 summary"><p>Converts the color to its RGBA hex representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-<p>A byte array representing a color in RGBA or RGB format.</p>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToRgbaHex()</code></pre>
+  </div>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the RGBA hex value of the color.</p>
+</dd>
+  </dl>
 
-<p>A <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> based on the provided byte array.</p>
 
-</dd></dl><h4 class='section'>Exceptions</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.invalidoperationexception'>InvalidOperationException</a>  </dt>
-<dd>
 
 
-<p>Thrown when the byte array does not have 3 or 4 elements.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Implicit(Tickblaze.Scripts.Api.Models.Color)~System.Byte[]' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Implicit(Tickblaze.Scripts.Api.Models.Color)~System.Byte[]' id='Tickblaze_Scripts_Api_Models_Color_op_Implicit_Tickblaze_Scripts_Api_Models_Color__System_Byte__'>implicit operator byte[](Color)   </h3>
- <p>Implicitly converts a <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> object to a byte array.</p>
-<pre><code class='lang-csharp'>public static implicit operator byte[](Color color)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
 
 
-<p>The <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> to convert.</p>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>[]  </dt>
-<dd>
 
 
-<p>A byte array representing the color in RGBA format.</p>
 
-</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.Color.op_Inequality(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Color)' data-commentid='M:Tickblaze.Scripts.Api.Models.Color.op_Inequality(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Color)' id='Tickblaze_Scripts_Api_Models_Color_op_Inequality_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Models_Color_'>operator !=(Color, Color)   </h3>
- <p>Determines whether two <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> objects are not equal.</p>
-<pre><code class='lang-csharp'>public static bool operator !=(Color left, Color right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <a id="Tickblaze_Scripts_Api_Models_Color_TryParse_" data-uid="Tickblaze.Scripts.Api.Models.Color.TryParse*"></a>
 
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_TryParse_System_String_System_String_Tickblaze_Scripts_Api_Models_Color__" data-uid="Tickblaze.Scripts.Api.Models.Color.TryParse(System.String,System.String,Tickblaze.Scripts.Api.Models.Color@)">
+  TryParse(string, string, out Color)
+  
+  </h3>
 
-<p>The first <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> to compare.</p>
+  <div class="markdown level1 summary"><p>Tries to parse a color from a hex string or color name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
 
-</dd><dt><code>right</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
-<dd>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string hexOrName, string fallbackColorName, out Color color)</code></pre>
+  </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hexOrName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hex string or color name.</p>
+</dd>
+    <dt><code>fallbackColorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fallback color name if parsing fails.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The resulting color.</p>
+</dd>
+  </dl>
 
-<p>The second <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> to compare.</p>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the parsing was successful; otherwise, false.</p>
+</dd>
+  </dl>
 
-</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
-<dd>
 
 
-<p><code>true</code> if the two <span class="xref">Tickblaze.Scripts.Api.Models.Color</span> objects are not equal; otherwise, <code>false</code>.</p>
 
-</dd></dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Equality_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Equality*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Equality_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Models_Color_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Equality(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Color)">
+  operator ==(Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> objects are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Color left, Color right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The first <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> to compare.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The second <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the two <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> objects are equal; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_System_Byte____Tickblaze_Scripts_Api_Models_Color" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.Byte[])~Tickblaze.Scripts.Api.Models.Color">
+  implicit operator Color(byte[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a byte array to a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Color(byte[] bytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>A byte array representing a color in RGBA or RGB format.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> based on the provided byte array.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the byte array does not have 3 or 4 elements.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_System_Drawing_Color__Tickblaze_Scripts_Api_Models_Color" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.Drawing.Color)~Tickblaze.Scripts.Api.Models.Color">
+  implicit operator Color(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Color(Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> with the same color values as the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_System_String__Tickblaze_Scripts_Api_Models_Color" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit(System.String)~Tickblaze.Scripts.Api.Models.Color">
+  implicit operator Color(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a hexadecimal color string to a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Color(string hex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hexadecimal color string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> corresponding to the provided hex string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_Tickblaze_Scripts_Api_Models_Color__System_Byte__" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit(Tickblaze.Scripts.Api.Models.Color)~System.Byte[]">
+  implicit operator byte[](Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> object to a byte array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator byte[](Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>A byte array representing the color in RGBA format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Implicit_Tickblaze_Scripts_Api_Models_Color__System_Drawing_Color" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Implicit(Tickblaze.Scripts.Api.Models.Color)~System.Drawing.Color">
+  implicit operator Color(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> object to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Color(Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> with the same color values as the <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Color_op_Inequality_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Inequality*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Color_op_Inequality_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Models_Color_" data-uid="Tickblaze.Scripts.Api.Models.Color.op_Inequality(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Color)">
+  operator !=(Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> objects are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Color left, Color right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The first <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> to compare.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
+    <dd><p>The second <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the two <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a> objects are not equal; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
   </body>
 </html>
