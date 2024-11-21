@@ -76,111 +76,66 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Bases_IIndicator" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator" class="text-break">Interface IIndicator</h1>
-  <div class="markdown level0 summary"><p>Represents an indicator script that can be overlaid on a chart or displayed on a separate indicator panel.</p>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator' data-commentid='T:Tickblaze.Scripts.Api.Bases.IIndicator' id='Tickblaze_Scripts_Api_Bases_IIndicator'>Interface IIndicator   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Bases.html'>Tickblaze.Scripts.Api.Bases</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents an indicator script that can be overlaid on a chart or displayed on a separate indicator panel.</p>
+<pre><code class='lang-csharp'>public interface IIndicator : IScript, IDisposable</code></pre><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.IScript.html'>IScript</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_Initialize">IScript.Initialize()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_Metadata">IScript.Metadata</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_Parameters">IScript.Parameters</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_IsInitialized">IScript.IsInitialized</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.html">Bases</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Bases_IIndicator_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IIndicator : IScript, IDisposable</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_IIndicator_AutoRescale_" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.AutoRescale*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_IIndicator_AutoRescale" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.AutoRescale">AutoRescale</h4>
-  <div class="markdown level1 summary"><p>Indicates whether this instance automatically rescales the chart or not. Default value is true.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.idisposable'>IDisposable</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool AutoRescale { get; }</code></pre>
-  </div>
+
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator.AutoRescale' data-commentid='P:Tickblaze.Scripts.Api.Bases.IIndicator.AutoRescale' id='Tickblaze_Scripts_Api_Bases_IIndicator_AutoRescale'>AutoRescale   </h3>
+ <p>Indicates whether this instance automatically rescales the chart or not. Default value is true.</p>
+<pre><code class='lang-csharp'>bool AutoRescale { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_IIndicator_IsOverlay_" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.IsOverlay*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_IIndicator_IsOverlay" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.IsOverlay">IsOverlay</h4>
-  <div class="markdown level1 summary"><p>Indicates whether this instance is overlayed on the chart or plotted on a separate indicator panel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsOverlay { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator.IsOverlay' data-commentid='P:Tickblaze.Scripts.Api.Bases.IIndicator.IsOverlay' id='Tickblaze_Scripts_Api_Bases_IIndicator_IsOverlay'>IsOverlay   </h3>
+ <p>Indicates whether this instance is overlayed on the chart or plotted on a separate indicator panel.</p>
+<pre><code class='lang-csharp'>bool IsOverlay { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_IIndicator_IsPercentage_" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.IsPercentage*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_IIndicator_IsPercentage" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.IsPercentage">IsPercentage</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the indicator is a percentage indicator. The default value is false.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsPercentage { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator.IsPercentage' data-commentid='P:Tickblaze.Scripts.Api.Bases.IIndicator.IsPercentage' id='Tickblaze_Scripts_Api_Bases_IIndicator_IsPercentage'>IsPercentage   </h3>
+ <p>Indicates whether the indicator is a percentage indicator. The default value is false.</p>
+<pre><code class='lang-csharp'>bool IsPercentage { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_IIndicator_LevelsSerializable_" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.LevelsSerializable*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_IIndicator_LevelsSerializable" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.LevelsSerializable">LevelsSerializable</h4>
-  <div class="markdown level1 summary"><p>Gets the levels of the indicator as a serializable dictionary.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyOrder(8001)]
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator.LevelsSerializable' data-commentid='P:Tickblaze.Scripts.Api.Bases.IIndicator.LevelsSerializable' id='Tickblaze_Scripts_Api_Bases_IIndicator_LevelsSerializable'>LevelsSerializable   </h3>
+ <p>Gets the levels of the indicator as a serializable dictionary.</p>
+<pre><code class='lang-csharp'>[JsonPropertyOrder(8001)]
 [JsonPropertyName(&quot;Levels&quot;)]
-IReadOnlyDictionary&lt;string, PlotLevel&gt; LevelsSerializable { get; }</code></pre>
-  </div>
+IReadOnlyDictionary&lt;string, PlotLevel&gt; LevelsSerializable { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2'>IReadOnlyDictionary</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>, <a href='Tickblaze.Scripts.Api.Models.PlotLevel.html'>PlotLevel</a>&gt;  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_IIndicator_PlotsSerializable_" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.PlotsSerializable*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_IIndicator_PlotsSerializable" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.PlotsSerializable">PlotsSerializable</h4>
-  <div class="markdown level1 summary"><p>Gets the plots of the indicator as a serializable dictionary.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyOrder(8000)]
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator.PlotsSerializable' data-commentid='P:Tickblaze.Scripts.Api.Bases.IIndicator.PlotsSerializable' id='Tickblaze_Scripts_Api_Bases_IIndicator_PlotsSerializable'>PlotsSerializable   </h3>
+ <p>Gets the plots of the indicator as a serializable dictionary.</p>
+<pre><code class='lang-csharp'>[JsonPropertyOrder(8000)]
 [JsonPropertyName(&quot;Plots&quot;)]
-IReadOnlyDictionary&lt;string, IPlot&gt; PlotsSerializable { get; }</code></pre>
-  </div>
+IReadOnlyDictionary&lt;string, IPlot&gt; PlotsSerializable { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2'>IReadOnlyDictionary</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>, <a href='Tickblaze.Scripts.Api.Interfaces.IPlot.html'>IPlot</a>&gt;  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_IIndicator_ScalePrecision_" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.ScalePrecision*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_IIndicator_ScalePrecision" data-uid="Tickblaze.Scripts.Api.Bases.IIndicator.ScalePrecision">ScalePrecision</h4>
-  <div class="markdown level1 summary"><p>The number of decimals displayed on the price scale of the indicator panel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int? ScalePrecision { get; }</code></pre>
-  </div>
 
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.IIndicator.ScalePrecision' data-commentid='P:Tickblaze.Scripts.Api.Bases.IIndicator.ScalePrecision' id='Tickblaze_Scripts_Api_Bases_IIndicator_ScalePrecision'>ScalePrecision   </h3>
+ <p>The number of decimals displayed on the price scale of the indicator panel.</p>
+<pre><code class='lang-csharp'>int? ScalePrecision { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>?  </dt>
+<dd>
+
+
+
+</dd></dl>
 </article>
           </div>
 

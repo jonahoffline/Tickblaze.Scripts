@@ -76,87 +76,41 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartObject' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IChartObject' id='Tickblaze_Scripts_Api_Interfaces_IChartObject'>Interface IChartObject   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents an object displayed on a chart, including its scale, and rendering behavior.</p>
+<pre><code class='lang-csharp'>public interface IChartObject</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartObject.Chart' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IChartObject.Chart' id='Tickblaze_Scripts_Api_Interfaces_IChartObject_Chart'>Chart   </h3>
+ <p>The chart to which this object belongs.</p>
+<pre><code class='lang-csharp'>IChart? Chart { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChart.html'>IChart</a>?  </dt>
+<dd>
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IChartObject" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject" class="text-break">Interface IChartObject</h1>
-  <div class="markdown level0 summary"><p>Represents an object displayed on a chart, including its scale, and rendering behavior.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IChartObject_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IChartObject</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartObject.ChartScale' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IChartObject.ChartScale' id='Tickblaze_Scripts_Api_Interfaces_IChartObject_ChartScale'>ChartScale   </h3>
+ <p>The scale used by this object on the chart.</p>
+<pre><code class='lang-csharp'>IChartScale? ChartScale { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartScale.html'>IChartScale</a>?  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartObject_Chart_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.Chart*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartObject_Chart" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.Chart">Chart</h4>
-  <div class="markdown level1 summary"><p>The chart to which this object belongs.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IChart? Chart { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartObject.ShowOnChart' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IChartObject.ShowOnChart' id='Tickblaze_Scripts_Api_Interfaces_IChartObject_ShowOnChart'>ShowOnChart   </h3>
+ <p>Indicates whether the object is visible on the chart.</p>
+<pre><code class='lang-csharp'>bool ShowOnChart { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartObject_ChartScale_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.ChartScale*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartObject_ChartScale" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.ChartScale">ChartScale</h4>
-  <div class="markdown level1 summary"><p>The scale used by this object on the chart.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IChartScale? ChartScale { get; }</code></pre>
-  </div>
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartObject.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IChartObject.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)' id='Tickblaze_Scripts_Api_Interfaces_IChartObject_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_'>OnRender(IDrawingContext)   </h3>
+ <p>Draws the chart object using the specified drawing context.</p>
+<pre><code class='lang-csharp'>void OnRender(IDrawingContext context)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>context</code> <a href='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html'>IDrawingContext</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartObject_ShowOnChart_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.ShowOnChart*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartObject_ShowOnChart" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.ShowOnChart">ShowOnChart</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the object is visible on the chart.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool ShowOnChart { get; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
+<p>The context used for rendering.</p>
 
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartObject_OnRender_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.OnRender*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartObject_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartObject.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)">OnRender(IDrawingContext)</h4>
-  <div class="markdown level1 summary"><p>Draws the chart object using the specified drawing context.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnRender(IDrawingContext context)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html">IDrawingContext</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>The context used for rendering.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
+</dd></dl>
 </article>
           </div>
 

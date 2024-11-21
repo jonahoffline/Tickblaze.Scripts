@@ -9,7 +9,8 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Interface IChartPoint | Tickblaze ">
     
-    <meta name="description" content="Represents a point on a chart with a specific index, time, and value. Used to store data points on the chart, where each point has a unique index and associated time and value.">
+    <meta name="description" content="Represents a point on a chart with a specific index, time, and value.
+Used to store data points on the chart, where each point has a unique index and associated time and value.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,66 +77,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IChartPoint" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint" class="text-break">Interface IChartPoint</h1>
-  <div class="markdown level0 summary"><p>Represents a point on a chart with a specific index, time, and value.
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartPoint' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IChartPoint' id='Tickblaze_Scripts_Api_Interfaces_IChartPoint'>Interface IChartPoint   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents a point on a chart with a specific index, time, and value.
 Used to store data points on the chart, where each point has a unique index and associated time and value.</p>
+<pre><code class='lang-csharp'>public interface IChartPoint : IPoint</code></pre><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html#Tickblaze_Scripts_Api_Interfaces_IPoint_X">IPoint.X</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html#Tickblaze_Scripts_Api_Interfaces_IPoint_Y">IPoint.Y</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IChartPoint : IPoint</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartPoint.Index' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IChartPoint.Index' id='Tickblaze_Scripts_Api_Interfaces_IChartPoint_Index'>Index   </h3>
+ <p>The index of the chart point, which serves as the position identifier of the point in the chart's data series.</p>
+<pre><code class='lang-csharp'>int Index { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_Index_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint.Index*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_Index" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint.Index">Index</h4>
-  <div class="markdown level1 summary"><p>The index of the chart point, which serves as the position identifier of the point in the chart's data series.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Index { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartPoint.Time' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IChartPoint.Time' id='Tickblaze_Scripts_Api_Interfaces_IChartPoint_Time'>Time   </h3>
+ <p>The time associated with the chart point. It represents the time at which the data point occurred.</p>
+<pre><code class='lang-csharp'>IComparable Time { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.icomparable'>IComparable</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_Time_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint.Time*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_Time" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint.Time">Time</h4>
-  <div class="markdown level1 summary"><p>The time associated with the chart point. It represents the time at which the data point occurred.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IComparable Time { get; set; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartPoint.Value' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IChartPoint.Value' id='Tickblaze_Scripts_Api_Interfaces_IChartPoint_Value'>Value   </h3>
+ <p>The value associated with the chart point, representing the data value at the given time.</p>
+<pre><code class='lang-csharp'>IComparable Value { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.icomparable'>IComparable</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_Value_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint.Value*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartPoint_Value" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoint.Value">Value</h4>
-  <div class="markdown level1 summary"><p>The value associated with the chart point, representing the data value at the given time.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IComparable Value { get; set; }</code></pre>
-  </div>
 
+</dd></dl>
 </article>
           </div>
 

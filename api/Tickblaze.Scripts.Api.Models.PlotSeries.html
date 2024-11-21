@@ -76,413 +76,255 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Models_PlotSeries" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries" class="text-break">Class PlotSeries</h1>
-  <div class="markdown level0 summary"><p>Represents a series of plot data, including properties for color, line style, thickness, and visibility.</p>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries' data-commentid='T:Tickblaze.Scripts.Api.Models.PlotSeries' id='Tickblaze_Scripts_Api_Models_PlotSeries'>Class PlotSeries   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Models.html'>Tickblaze.Scripts.Api.Models</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents a series of plot data, including properties for color, line style, thickness, and visibility.</p>
+<pre><code class='lang-csharp'>public class PlotSeries : DataSeries, ISeries&lt;double&gt;, IReadOnlyList&lt;double&gt;, IReadOnlyCollection&lt;double&gt;, IEnumerable&lt;double&gt;, IEnumerable, IPlot, ICloneable</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html">Series</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
-    <div class="level2"><a class="xref" href="Tickblaze.Scripts.Api.Models.DataSeries.html">DataSeries</a></div>
-    <div class="level3"><span class="xref">PlotSeries</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
-    <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPlot.html">IPlot</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.DataSeries.html#Tickblaze_Scripts_Api_Models_DataSeries_get_DefaultValue">DataSeries.get_DefaultValue()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values">Series&lt;double&gt;.Values</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Last_System_Int32_">Series&lt;double&gt;.Last(int)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_">Series&lt;double&gt;.Append(double)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_GetEnumerator">Series&lt;double&gt;.GetEnumerator()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Count">Series&lt;double&gt;.Count</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Item_System_Int32_">Series&lt;double&gt;.this[int]</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.html">Models</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Models_PlotSeries_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlotSeries : DataSeries, ISeries&lt;double&gt;, IReadOnlyList&lt;double&gt;, IReadOnlyCollection&lt;double&gt;, IEnumerable&lt;double&gt;, IEnumerable, IPlot, ICloneable</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor">PlotSeries()</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> class.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html'>Series&lt;double&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries()</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_PlotStyle_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)">PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> class with the specified name, color, plot style, line style, thickness, and visibility.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.DataSeries.html'>DataSeries</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries(string name, Color color, PlotStyle plotStyle = PlotStyle.Line, LineStyle lineStyle = LineStyle.Solid, int thickness = 1, bool isVisible = true)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name of the plot series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the plot series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.PlotStyle.html">PlotStyle</a></td>
-        <td><span class="parametername">plotStyle</span></td>
-        <td><p>The style of the plot.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The line style for the plot series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">thickness</span></td>
-        <td><p>The thickness of the plot series line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">isVisible</span></td>
-        <td><p>Indicates whether the plot series is visible.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color)">PlotSeries(Color)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> class with the specified color.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.PlotSeries.html'>PlotSeries</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries(Color color)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the plot series.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
 
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)">PlotSeries(Color, LineStyle, int)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> class with the specified color, line style, and thickness.</p>
+</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries&lt;double&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries(Color color, LineStyle lineStyle = LineStyle.Solid, int thickness = 1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the plot series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The line style for the plot series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">thickness</span></td>
-        <td><p>The thickness of the plot series line.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_PlotStyle_System_Int32_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,System.Int32)">PlotSeries(Color, PlotStyle, int)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> class with the specified color, plot style, and thickness.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList&lt;double&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries(Color color, PlotStyle plotStyle = PlotStyle.Line, int thickness = 1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the plot series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.PlotStyle.html">PlotStyle</a></td>
-        <td><span class="parametername">plotStyle</span></td>
-        <td><p>The style of the plot.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">thickness</span></td>
-        <td><p>The thickness of the plot series line.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_Color_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Color*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_Color" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Color">Color</h4>
-  <div class="markdown level1 summary"><p>The color of the plot series.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1'>IReadOnlyCollection&lt;double&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color Color { get; set; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_Colors_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Colors*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_Colors" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Colors">Colors</h4>
-  <div class="markdown level1 summary"><p>The collection of plot colors.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1'>IEnumerable&lt;double&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries.PlotColors Colors { get; set; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_IsLineBreak_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.IsLineBreak*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_IsLineBreak" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.IsLineBreak">IsLineBreak</h4>
-  <div class="markdown level1 summary"><p>A series representing line break points in the plot series.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.ienumerable'>IEnumerable</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete]
-public Series&lt;bool&gt; IsLineBreak { get; set; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_IsVisible_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.IsVisible*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_IsVisible" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.IsVisible">IsVisible</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the plot series is visible.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.IPlot.html'>IPlot</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsVisible { get; set; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_LineStyle_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.LineStyle*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_LineStyle" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.LineStyle">LineStyle</h4>
-  <div class="markdown level1 summary"><p>The line style for the plot series.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.icloneable'>ICloneable</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LineStyle LineStyle { get; set; }</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_Name_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Name*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_Name" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the plot series.</p>
+</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.DataSeries.html#Tickblaze_Scripts_Api_Models_DataSeries_get_DefaultValue'>DataSeries.get_DefaultValue()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public string Name { get; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_PlotStyle_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.PlotStyle*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_PlotStyle" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.PlotStyle">PlotStyle</h4>
-  <div class="markdown level1 summary"><p>The style of the plot (line, bars, etc.).</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values'>Series&lt;double&gt;.Values</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotStyle PlotStyle { get; set; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_Thickness_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Thickness*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_Thickness" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Thickness">Thickness</h4>
-  <div class="markdown level1 summary"><p>The thickness of the plot series line.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_get_DefaultValue'>Series&lt;double&gt;.get_DefaultValue()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Thickness { get; set; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_PlotSeries_Clone_" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Clone*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_PlotSeries_Clone" data-uid="Tickblaze.Scripts.Api.Models.PlotSeries.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Creates a copy of the current <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> instance.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Last_System_Int32_'>Series&lt;double&gt;.Last(int)</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td><p>A new instance of <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a> with the same values.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries&lt;TItem&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>
-  </div>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPlot.html">IPlot</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_">CollectionExtensions.BinarySearch&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;, TItem)</a>
-  </div>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_'>Series&lt;double&gt;.Append(double)</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_GetEnumerator'>Series&lt;double&gt;.GetEnumerator()</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Count'>Series&lt;double&gt;.Count</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Item_System_Int32_'>Series&lt;double&gt;.this[int]</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone'>object.MemberwiseClone()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
+</div>
 
+</dd></dl><h4 class='section'>Extension Methods</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_'>CollectionExtensions.BinarySearch&lt;double&gt;(IReadOnlyList&lt;double&gt;, double)</a>
+</div>
+
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.#ctor' data-commentid='M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor' id='Tickblaze_Scripts_Api_Models_PlotSeries__ctor'>PlotSeries()   </h3>
+ <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> class.</p>
+<pre><code class='lang-csharp'>public PlotSeries()</code></pre><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color)' data-commentid='M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color)' id='Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_'>PlotSeries(Color)   </h3>
+ <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> class with the specified color.</p>
+<pre><code class='lang-csharp'>public PlotSeries(Color color)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the plot series.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)' data-commentid='M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)' id='Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_'>PlotSeries(Color, LineStyle, int)   </h3>
+ <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> class with the specified color, line style, and thickness.</p>
+<pre><code class='lang-csharp'>public PlotSeries(Color color, LineStyle lineStyle = LineStyle.Solid, int thickness = 1)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the plot series.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The line style for the plot series.</p>
+
+</dd><dt><code>thickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the plot series line.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,System.Int32)' data-commentid='M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,System.Int32)' id='Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_PlotStyle_System_Int32_'>PlotSeries(Color, PlotStyle, int)   </h3>
+ <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> class with the specified color, plot style, and thickness.</p>
+<pre><code class='lang-csharp'>public PlotSeries(Color color, PlotStyle plotStyle = PlotStyle.Line, int thickness = 1)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the plot series.</p>
+
+</dd><dt><code>plotStyle</code> <a href='Tickblaze.Scripts.Api.Enums.PlotStyle.html'>PlotStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the plot.</p>
+
+</dd><dt><code>thickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the plot series line.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)' data-commentid='M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)' id='Tickblaze_Scripts_Api_Models_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_PlotStyle_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_'>PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)   </h3>
+ <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> class with the specified name, color, plot style, line style, thickness, and visibility.</p>
+<pre><code class='lang-csharp'>public PlotSeries(string name, Color color, PlotStyle plotStyle = PlotStyle.Line, LineStyle lineStyle = LineStyle.Solid, int thickness = 1, bool isVisible = true)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>name</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The name of the plot series.</p>
+
+</dd><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the plot series.</p>
+
+</dd><dt><code>plotStyle</code> <a href='Tickblaze.Scripts.Api.Enums.PlotStyle.html'>PlotStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the plot.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The line style for the plot series.</p>
+
+</dd><dt><code>thickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the plot series line.</p>
+
+</dd><dt><code>isVisible</code> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+<p>Indicates whether the plot series is visible.</p>
+
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.Color' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.Color' id='Tickblaze_Scripts_Api_Models_PlotSeries_Color'>Color   </h3>
+ <p>The color of the plot series.</p>
+<pre><code class='lang-csharp'>public Color Color { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.Colors' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.Colors' id='Tickblaze_Scripts_Api_Models_PlotSeries_Colors'>Colors   </h3>
+ <p>The collection of plot colors.</p>
+<pre><code class='lang-csharp'>public PlotSeries.PlotColors Colors { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.PlotSeries.html'>PlotSeries</a>.<a href='Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.html'>PlotColors</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.IsLineBreak' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.IsLineBreak' id='Tickblaze_Scripts_Api_Models_PlotSeries_IsLineBreak'><span style='text-decoration: line-through'>IsLineBreak</span>  <span class='badge rounded-pill text-bg-danger' style='font-size: .4em; vertical-align: middle'>Deprecated</span>  </h3>
+ <p>A series representing line break points in the plot series.</p>
+<pre><code class='lang-csharp'>[Obsolete]
+public Series&lt;bool&gt; IsLineBreak { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Series-1.html'>Series</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>&gt;  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.IsVisible' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.IsVisible' id='Tickblaze_Scripts_Api_Models_PlotSeries_IsVisible'>IsVisible   </h3>
+ <p>Indicates whether the plot series is visible.</p>
+<pre><code class='lang-csharp'>public bool IsVisible { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.LineStyle' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.LineStyle' id='Tickblaze_Scripts_Api_Models_PlotSeries_LineStyle'>LineStyle   </h3>
+ <p>The line style for the plot series.</p>
+<pre><code class='lang-csharp'>public LineStyle LineStyle { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.Name' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.Name' id='Tickblaze_Scripts_Api_Models_PlotSeries_Name'>Name   </h3>
+ <p>The name of the plot series.</p>
+<pre><code class='lang-csharp'>[JsonIgnore]
+public string Name { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.PlotStyle' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.PlotStyle' id='Tickblaze_Scripts_Api_Models_PlotSeries_PlotStyle'>PlotStyle   </h3>
+ <p>The style of the plot (line, bars, etc.).</p>
+<pre><code class='lang-csharp'>public PlotStyle PlotStyle { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.PlotStyle.html'>PlotStyle</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.Thickness' data-commentid='P:Tickblaze.Scripts.Api.Models.PlotSeries.Thickness' id='Tickblaze_Scripts_Api_Models_PlotSeries_Thickness'>Thickness   </h3>
+ <p>The thickness of the plot series line.</p>
+<pre><code class='lang-csharp'>public int Thickness { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.PlotSeries.Clone' data-commentid='M:Tickblaze.Scripts.Api.Models.PlotSeries.Clone' id='Tickblaze_Scripts_Api_Models_PlotSeries_Clone'>Clone()   </h3>
+ <p>Creates a copy of the current <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> instance.</p>
+<pre><code class='lang-csharp'>public object Clone()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>  </dt>
+<dd>
+
+
+<p>A new instance of <span class="xref">Tickblaze.Scripts.Api.Models.PlotSeries</span> with the same values.</p>
+
+</dd></dl>
 </article>
           </div>
 

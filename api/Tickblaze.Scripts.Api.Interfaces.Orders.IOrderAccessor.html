@@ -76,120 +76,60 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor'>Interface IOrderAccessor   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.Orders.html'>Tickblaze.Scripts.Api.Interfaces.Orders</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Provides access to order-related information and functionality within the trading system.</p>
+<pre><code class='lang-csharp'>public interface IOrderAccessor</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Account' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Account' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Account'>Account   </h3>
+ <p>The account associated with the orders and position.</p>
+<pre><code class='lang-csharp'>IAccount Account { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IAccount.html'>IAccount</a>  </dt>
+<dd>
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor" class="text-break">Interface IOrderAccessor</h1>
-  <div class="markdown level0 summary"><p>Provides access to order-related information and functionality within the trading system.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.html">Orders</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IOrderAccessor</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.PendingOrders' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.PendingOrders' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_PendingOrders'>PendingOrders   </h3>
+ <p>A collection of orders that are currently pending execution.</p>
+<pre><code class='lang-csharp'>IReadOnlyList&lt;IOrder&gt; PendingOrders { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html'>IOrder</a>&gt;  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Account_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Account*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Account" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Account">Account</h4>
-  <div class="markdown level1 summary"><p>The account associated with the orders and position.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAccount Account { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Position' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Position' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Position'>Position   </h3>
+ <p>The position associated with the current symbol and account.</p>
+<pre><code class='lang-csharp'>IPosition Position { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html'>IPosition</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_PendingOrders_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.PendingOrders*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_PendingOrders" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.PendingOrders">PendingOrders</h4>
-  <div class="markdown level1 summary"><p>A collection of orders that are currently pending execution.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;IOrder&gt; PendingOrders { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Symbol' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Symbol' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Symbol'>Symbol   </h3>
+ <p>The financial symbol associated with the orders and position.</p>
+<pre><code class='lang-csharp'>ISymbol Symbol { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISymbol.html'>ISymbol</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Position_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Position*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Position" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Position">Position</h4>
-  <div class="markdown level1 summary"><p>The position associated with the current symbol and account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IPosition Position { get; }</code></pre>
-  </div>
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.GetExchangeRate(System.String,System.String)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.GetExchangeRate(System.String,System.String)' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_GetExchangeRate_System_String_System_String_'>GetExchangeRate(string, string)   </h3>
+ <p>Retrieves the exchange rate for converting one currency to another.</p>
+<pre><code class='lang-csharp'>double GetExchangeRate(string fromCurrency, string toCurrency)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>fromCurrency</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Symbol_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Symbol*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Symbol" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Symbol">Symbol</h4>
-  <div class="markdown level1 summary"><p>The financial symbol associated with the orders and position.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISymbol Symbol { get; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
+<p>The currency to convert from (e.g., &quot;USD&quot;).</p>
+
+</dd><dt><code>toCurrency</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_GetExchangeRate_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.GetExchangeRate*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_GetExchangeRate_System_String_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.GetExchangeRate(System.String,System.String)">GetExchangeRate(string, string)</h4>
-  <div class="markdown level1 summary"><p>Retrieves the exchange rate for converting one currency to another.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double GetExchangeRate(string fromCurrency, string toCurrency)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fromCurrency</span></td>
-        <td><p>The currency to convert from (e.g., &quot;USD&quot;).</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">toCurrency</span></td>
-        <td><p>The currency to convert to (e.g., &quot;EUR&quot;).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td><p>The exchange rate between the specified currencies.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The currency to convert to (e.g., &quot;EUR&quot;).</p>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
+
+
+<p>The exchange rate between the specified currencies.</p>
+
+</dd></dl>
 </article>
           </div>
 

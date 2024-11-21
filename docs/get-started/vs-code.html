@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting started using VS Code | Tickblaze </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting started using VS Code | Tickblaze ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="logo-img" src="../../images/logo.png" alt="Tickblaze">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-using-vs-code">Getting started using VS Code</h1>
+
+<p>Follow these steps to create your first custom indicator for Tickblaze using VS Code.</p>
+<blockquote>
+<p>Prerequisites</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+<li>Install <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET SDK</a> 8.0</li>
+</ul>
+</blockquote>
+<h3 id="1-create-a-new-class-library">1. Create a New Class Library</h3>
+<p>Create a new class class library targeting .NET 8.0:</p>
+<pre><code>dotnet new classlib -n CustomIndicator -f net8.0
+</code></pre>
+<p>And navigate to its directory:</p>
+<pre><code>cd CustomIndicator
+</code></pre>
+<h3 id="2-add-the-tickblazescripts-nuget-package">2. Add the Tickblaze.Scripts NuGet Package</h3>
+<p>Add the Tickblaze.Scripts.Api NuGet package to your project:</p>
+<pre><code>dotnet add package Tickblaze.Scripts.Api --version *
+</code></pre>
+<p>The <code>--version *</code> ensures you always get the latest version.</p>
+<h3 id="3-create-your-indicator">3. Create Your Indicator</h3>
+<p>Open the <em>Class1.cs</em> file in your project, and replace its contents with the following code:</p>
+<pre><code class="lang-cs">namespace CustomIndicator;
+
+/// &lt;summary&gt;
+/// A custom indicator that calculates the typical price for a bar.
+/// &lt;/summary&gt;
+public partial class TypicalPrice : Indicator
+{
+    [Plot(&quot;Result&quot;)]
+    public PlotSeries Result { get; set; } = new(Color.Blue, LineStyle.Solid, 1);
+
+    public TypicalPrice()
+    {
+        Name = &quot;Typical Price&quot;;
+        IsOverlay = true;
+    }
+
+    /// &lt;summary&gt;
+    /// Calculates the typical price for the given bar.
+    /// &lt;/summary&gt;
+    protected override void Calculate(int index)
+    {
+        var bar = Bars[index];
+
+        Result[index] = (bar.High + bar.Low + bar.Close) / 3;
+    }
+}
+</code></pre>
+<p>This code defines a new indicator called <strong>Typical Price</strong> that calculates the average of a bar's high, low, and close prices.</p>
+<h3 id="4-build-your-project">4. Build Your Project</h3>
+<p>Build your project to compile the indicator:</p>
+<pre><code>dotnet build
+</code></pre>
+<p>This will generate the necessary output files and prepare your indicator for use in Tickblaze.</p>
+<h3 id="5-run-the-indicator-in-tickblaze">5. Run the Indicator in Tickblaze</h3>
+<p>After building your project, the indicator should be automatically imported into Tickblaze. To use it:</p>
+<ol>
+<li><strong>Right-click</strong> on the chart in Tickblaze.</li>
+<li>Select <code>Indicators</code> and click <code>Add / Edit Settings</code>.</li>
+<li>From the dropdown menu, select <code>Typical Price</code>.</li>
+<li>Click the down arrow to add it to the chart.</li>
+<li>Click the <code>OK</code> button.</li>
+</ol>
+<h3 id="6-debug-the-indicator">6. Debug the Indicator</h3>
+<h4 id="start-debugging">Start Debugging</h4>
+<ol>
+<li><strong>Run Tickblaze</strong> as usual if not running yet.</li>
+<li>Attach your debugger to the <code>Tickblaze.View.exe</code> process:
+<ul>
+<li>Open the <strong>Run and Debug</strong> view in VS Code (<code>Ctrl+Shift+D</code>)</li>
+<li>Click <strong>Create a launch.json file</strong> if prompted, and configure it ot attach to an existing .NET process.</li>
+<li>In the <code>launch.json</code> file and add the following configuration:
+<pre><code class="lang-json">{
+  &quot;version&quot;: &quot;0.2.0&quot;,
+  &quot;configurations&quot;: [
+    {
+      &quot;name&quot;: &quot;Tickblaze Attach&quot;,
+      &quot;type&quot;: &quot;coreclr&quot;,
+      &quot;request&quot;: &quot;attach&quot;,
+      &quot;processName&quot;: &quot;Tickblaze.View.exe&quot;
+    }
+  ]
+}
+</code></pre>
+</li>
+<li>Click the green play button to attach the debugger.</li>
+</ul>
+</li>
+</ol>
+<h4 id="debugging-steps">Debugging Steps</h4>
+<ol>
+<li>Set breakpoints in your <code>TypicalPrice.cs</code> file by clicking to the left of the line numbers.</li>
+<li>Trigger the indicator in Tickblaze by adding it to a chart.</li>
+<li>Use the debugger controls in Visual Studio Code to step through your code, inspect variables, and analyze execution.</li>
+</ol>
+<h4 id="stop-debugging">Stop Debugging</h4>
+<p>When you’re done, stop debugging by clicking the <strong>Stop</strong> button in Visual Studio Code or by pressing <code>Shift+F5</code>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/get-started/vs-code.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -76,287 +76,180 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IAccount' id='Tickblaze_Scripts_Api_Interfaces_IAccount'>Interface IAccount   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents trading account with balance, margin, positions, and equity details.</p>
+<pre><code class='lang-csharp'>public interface IAccount</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.BaseCurrencyCode' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.BaseCurrencyCode' id='Tickblaze_Scripts_Api_Interfaces_IAccount_BaseCurrencyCode'>BaseCurrencyCode   </h3>
+ <p>The currency code for the account's base currency.</p>
+<pre><code class='lang-csharp'>string BaseCurrencyCode { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IAccount" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount" class="text-break">Interface IAccount</h1>
-  <div class="markdown level0 summary"><p>Represents trading account with balance, margin, positions, and equity details.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IAccount_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAccount</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.BuyingPower' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.BuyingPower' id='Tickblaze_Scripts_Api_Interfaces_IAccount_BuyingPower'>BuyingPower   </h3>
+ <p>The available buying power for the account.</p>
+<pre><code class='lang-csharp'>double BuyingPower { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_BaseCurrencyCode_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.BaseCurrencyCode*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_BaseCurrencyCode" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.BaseCurrencyCode">BaseCurrencyCode</h4>
-  <div class="markdown level1 summary"><p>The currency code for the account's base currency.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string BaseCurrencyCode { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.Cash' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.Cash' id='Tickblaze_Scripts_Api_Interfaces_IAccount_Cash'>Cash   </h3>
+ <p>The cash balance in the account.</p>
+<pre><code class='lang-csharp'>double Cash { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_BuyingPower_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.BuyingPower*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_BuyingPower" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.BuyingPower">BuyingPower</h4>
-  <div class="markdown level1 summary"><p>The available buying power for the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double BuyingPower { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.CashValue' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.CashValue' id='Tickblaze_Scripts_Api_Interfaces_IAccount_CashValue'>CashValue   </h3>
+ <p>The current cash value in the account.</p>
+<pre><code class='lang-csharp'>double CashValue { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_Cash_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Cash*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_Cash" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Cash">Cash</h4>
-  <div class="markdown level1 summary"><p>The cash balance in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double Cash { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.Equity' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.Equity' id='Tickblaze_Scripts_Api_Interfaces_IAccount_Equity'>Equity   </h3>
+ <p>The equity in the account, which is the value of the account's assets.</p>
+<pre><code class='lang-csharp'>double Equity { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_CashValue_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.CashValue*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_CashValue" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.CashValue">CashValue</h4>
-  <div class="markdown level1 summary"><p>The current cash value in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double CashValue { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessEquity' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessEquity' id='Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessEquity'>ExcessEquity   </h3>
+ <p>The excess equity available in the account.</p>
+<pre><code class='lang-csharp'>double ExcessEquity { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_Equity_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Equity*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_Equity" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Equity">Equity</h4>
-  <div class="markdown level1 summary"><p>The equity in the account, which is the value of the account's assets.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double Equity { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessInitialMargin' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessInitialMargin' id='Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessInitialMargin'>ExcessInitialMargin   </h3>
+ <p>The excess initial margin available in the account.</p>
+<pre><code class='lang-csharp'>double ExcessInitialMargin { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessEquity_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessEquity*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessEquity" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessEquity">ExcessEquity</h4>
-  <div class="markdown level1 summary"><p>The excess equity available in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double ExcessEquity { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessIntradayMargin' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessIntradayMargin' id='Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessIntradayMargin'>ExcessIntradayMargin   </h3>
+ <p>The excess intraday margin available in the account.</p>
+<pre><code class='lang-csharp'>double ExcessIntradayMargin { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessInitialMargin_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessInitialMargin*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessInitialMargin" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessInitialMargin">ExcessInitialMargin</h4>
-  <div class="markdown level1 summary"><p>The excess initial margin available in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double ExcessInitialMargin { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.GrossRealizedPnL' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.GrossRealizedPnL' id='Tickblaze_Scripts_Api_Interfaces_IAccount_GrossRealizedPnL'>GrossRealizedPnL   </h3>
+ <p>The gross realized profit and loss for the account.</p>
+<pre><code class='lang-csharp'>double GrossRealizedPnL { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessIntradayMargin_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessIntradayMargin*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_ExcessIntradayMargin" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.ExcessIntradayMargin">ExcessIntradayMargin</h4>
-  <div class="markdown level1 summary"><p>The excess intraday margin available in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double ExcessIntradayMargin { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.InitialCash' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.InitialCash' id='Tickblaze_Scripts_Api_Interfaces_IAccount_InitialCash'>InitialCash   </h3>
+ <p>The initial cash amount deposited into the account.</p>
+<pre><code class='lang-csharp'>double InitialCash { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_GrossRealizedPnL_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.GrossRealizedPnL*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_GrossRealizedPnL" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.GrossRealizedPnL">GrossRealizedPnL</h4>
-  <div class="markdown level1 summary"><p>The gross realized profit and loss for the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double GrossRealizedPnL { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMargin' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMargin' id='Tickblaze_Scripts_Api_Interfaces_IAccount_InitialMargin'>InitialMargin   </h3>
+ <p>The initial margin required for opening positions in the account.</p>
+<pre><code class='lang-csharp'>double InitialMargin { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_InitialCash_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.InitialCash*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_InitialCash" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.InitialCash">InitialCash</h4>
-  <div class="markdown level1 summary"><p>The initial cash amount deposited into the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double InitialCash { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMarginOvernight' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMarginOvernight' id='Tickblaze_Scripts_Api_Interfaces_IAccount_InitialMarginOvernight'>InitialMarginOvernight   </h3>
+ <p>The initial margin required for holding overnight positions.</p>
+<pre><code class='lang-csharp'>double InitialMarginOvernight { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_InitialMargin_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMargin*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_InitialMargin" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMargin">InitialMargin</h4>
-  <div class="markdown level1 summary"><p>The initial margin required for opening positions in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double InitialMargin { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.IntradayMargin' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.IntradayMargin' id='Tickblaze_Scripts_Api_Interfaces_IAccount_IntradayMargin'>IntradayMargin   </h3>
+ <p>The intraday margin requirement for the account.</p>
+<pre><code class='lang-csharp'>double IntradayMargin { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_InitialMarginOvernight_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMarginOvernight*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_InitialMarginOvernight" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.InitialMarginOvernight">InitialMarginOvernight</h4>
-  <div class="markdown level1 summary"><p>The initial margin required for holding overnight positions.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double InitialMarginOvernight { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMargin' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMargin' id='Tickblaze_Scripts_Api_Interfaces_IAccount_MaintenanceMargin'>MaintenanceMargin   </h3>
+ <p>The maintenance margin requirement for the account.</p>
+<pre><code class='lang-csharp'>double MaintenanceMargin { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_IntradayMargin_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.IntradayMargin*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_IntradayMargin" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.IntradayMargin">IntradayMargin</h4>
-  <div class="markdown level1 summary"><p>The intraday margin requirement for the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double IntradayMargin { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMarginOvernight' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMarginOvernight' id='Tickblaze_Scripts_Api_Interfaces_IAccount_MaintenanceMarginOvernight'>MaintenanceMarginOvernight   </h3>
+ <p>The maintenance margin required for holding overnight positions.</p>
+<pre><code class='lang-csharp'>double MaintenanceMarginOvernight { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_MaintenanceMargin_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMargin*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_MaintenanceMargin" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMargin">MaintenanceMargin</h4>
-  <div class="markdown level1 summary"><p>The maintenance margin requirement for the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double MaintenanceMargin { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.MarketValue' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.MarketValue' id='Tickblaze_Scripts_Api_Interfaces_IAccount_MarketValue'>MarketValue   </h3>
+ <p>The market value of all positions held in the account.</p>
+<pre><code class='lang-csharp'>double MarketValue { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_MaintenanceMarginOvernight_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMarginOvernight*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_MaintenanceMarginOvernight" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.MaintenanceMarginOvernight">MaintenanceMarginOvernight</h4>
-  <div class="markdown level1 summary"><p>The maintenance margin required for holding overnight positions.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double MaintenanceMarginOvernight { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.Name' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.Name' id='Tickblaze_Scripts_Api_Interfaces_IAccount_Name'>Name   </h3>
+ <p>The account name.</p>
+<pre><code class='lang-csharp'>string Name { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_MarketValue_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.MarketValue*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_MarketValue" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.MarketValue">MarketValue</h4>
-  <div class="markdown level1 summary"><p>The market value of all positions held in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double MarketValue { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidation' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidation' id='Tickblaze_Scripts_Api_Interfaces_IAccount_NetLiquidation'>NetLiquidation   </h3>
+ <p>The net liquidation value, which is the current total value of the account.</p>
+<pre><code class='lang-csharp'>double NetLiquidation { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_Name_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Name*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_Name" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The account name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidationValue' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidationValue' id='Tickblaze_Scripts_Api_Interfaces_IAccount_NetLiquidationValue'>NetLiquidationValue   </h3>
+ <p>The net liquidation value including all assets and liabilities in the account.</p>
+<pre><code class='lang-csharp'>double NetLiquidationValue { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_NetLiquidation_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidation*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_NetLiquidation" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidation">NetLiquidation</h4>
-  <div class="markdown level1 summary"><p>The net liquidation value, which is the current total value of the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double NetLiquidation { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.Positions' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.Positions' id='Tickblaze_Scripts_Api_Interfaces_IAccount_Positions'>Positions   </h3>
+ <p>A list of positions currently held in the account.</p>
+<pre><code class='lang-csharp'>IReadOnlyList&lt;IPosition&gt; Positions { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html'>IPosition</a>&gt;  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_NetLiquidationValue_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidationValue*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_NetLiquidationValue" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.NetLiquidationValue">NetLiquidationValue</h4>
-  <div class="markdown level1 summary"><p>The net liquidation value including all assets and liabilities in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double NetLiquidationValue { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.RealizedPnL' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.RealizedPnL' id='Tickblaze_Scripts_Api_Interfaces_IAccount_RealizedPnL'>RealizedPnL   </h3>
+ <p>The realized profit and loss, representing closed positions.</p>
+<pre><code class='lang-csharp'>double RealizedPnL { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_Positions_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Positions*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_Positions" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.Positions">Positions</h4>
-  <div class="markdown level1 summary"><p>A list of positions currently held in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;IPosition&gt; Positions { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.TotalNetValue' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.TotalNetValue' id='Tickblaze_Scripts_Api_Interfaces_IAccount_TotalNetValue'>TotalNetValue   </h3>
+ <p>The total net value of the account, which combines equity and any liabilities.</p>
+<pre><code class='lang-csharp'>double TotalNetValue { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_RealizedPnL_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.RealizedPnL*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_RealizedPnL" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.RealizedPnL">RealizedPnL</h4>
-  <div class="markdown level1 summary"><p>The realized profit and loss, representing closed positions.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double RealizedPnL { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.TotalPnL' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.TotalPnL' id='Tickblaze_Scripts_Api_Interfaces_IAccount_TotalPnL'>TotalPnL   </h3>
+ <p>The total profit and loss, combining both realized and unrealized profits/losses.</p>
+<pre><code class='lang-csharp'>double TotalPnL { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_TotalNetValue_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.TotalNetValue*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_TotalNetValue" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.TotalNetValue">TotalNetValue</h4>
-  <div class="markdown level1 summary"><p>The total net value of the account, which combines equity and any liabilities.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double TotalNetValue { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IAccount.UnrealizedPnL' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IAccount.UnrealizedPnL' id='Tickblaze_Scripts_Api_Interfaces_IAccount_UnrealizedPnL'>UnrealizedPnL   </h3>
+ <p>The unrealized profit and loss from open positions in the account.</p>
+<pre><code class='lang-csharp'>double UnrealizedPnL { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_TotalPnL_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.TotalPnL*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_TotalPnL" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.TotalPnL">TotalPnL</h4>
-  <div class="markdown level1 summary"><p>The total profit and loss, combining both realized and unrealized profits/losses.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double TotalPnL { get; }</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IAccount_UnrealizedPnL_" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.UnrealizedPnL*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IAccount_UnrealizedPnL" data-uid="Tickblaze.Scripts.Api.Interfaces.IAccount.UnrealizedPnL">UnrealizedPnL</h4>
-  <div class="markdown level1 summary"><p>The unrealized profit and loss from open positions in the account.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double UnrealizedPnL { get; }</code></pre>
-  </div>
-
+</dd></dl>
 </article>
           </div>
 

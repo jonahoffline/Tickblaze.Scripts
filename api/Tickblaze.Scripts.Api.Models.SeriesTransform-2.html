@@ -9,7 +9,8 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class SeriesTransform&lt;TSource, TDestination&gt; | Tickblaze ">
     
-    <meta name="description" content="Represents a transformation of a source series into a destination series, where each element of the source series is transformed using a selector function.">
+    <meta name="description" content="Represents a transformation of a source series into a destination series, 
+where each element of the source series is transformed using a selector function.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,250 +77,125 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2" class="text-break">Class SeriesTransform&lt;TSource, TDestination&gt;</h1>
-  <div class="markdown level0 summary"><p>Represents a transformation of a source series into a destination series,
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Models.SeriesTransform`2' data-commentid='T:Tickblaze.Scripts.Api.Models.SeriesTransform`2' id='Tickblaze_Scripts_Api_Models_SeriesTransform_2'>Class SeriesTransform&lt;TSource, TDestination&gt;   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Models.html'>Tickblaze.Scripts.Api.Models</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents a transformation of a source series into a destination series,
 where each element of the source series is transformed using a selector function.</p>
+<pre><code class='lang-csharp'>public sealed class SeriesTransform&lt;TSource, TDestination&gt; : ISeries&lt;TDestination&gt;, IReadOnlyList&lt;TDestination?&gt;, IReadOnlyCollection&lt;TDestination?&gt;, IEnumerable&lt;TDestination?&gt;, IEnumerable</code></pre><h4 class='section'>Type Parameters</h4><dl class='parameters'><dt><code>TSource</code>   </dt>
+<dd>
+
+
+<p>The type of the elements in the source series.</p>
+
+</dd><dt><code>TDestination</code>   </dt>
+<dd>
+
+
+<p>The type of the elements in the destination series.</p>
+
+</dd></dl><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">SeriesTransform&lt;TSource, TDestination&gt;</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;TDestination&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;TDestination&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;TDestination&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TDestination&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.html">Models</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SeriesTransform&lt;TSource, TDestination&gt; : ISeries&lt;TDestination&gt;, IReadOnlyList&lt;TDestination?&gt;, IReadOnlyCollection&lt;TDestination?&gt;, IEnumerable&lt;TDestination?&gt;, IEnumerable</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TSource</span></td>
-        <td><p>The type of the elements in the source series.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TDestination</span></td>
-        <td><p>The type of the elements in the destination series.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_SeriesTransform_2__ctor_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2__ctor_Tickblaze_Scripts_Api_Interfaces_ISeries__0__System_Func__0__1__" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.#ctor(Tickblaze.Scripts.Api.Interfaces.ISeries{`0},System.Func{`0,`1})">SeriesTransform(ISeries&lt;TSource&gt;, Func&lt;TSource, TDestination&gt;)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.SeriesTransform-2.html">SeriesTransform&lt;TSource, TDestination&gt;</a> class.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Models.SeriesTransform-2.html'>SeriesTransform&lt;TSource, TDestination&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SeriesTransform(ISeries&lt;TSource&gt; series, Func&lt;TSource, TDestination&gt; selector)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries</a>&lt;TSource&gt;</td>
-        <td><span class="parametername">series</span></td>
-        <td><p>The source series to transform.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TDestination&gt;</td>
-        <td><span class="parametername">selector</span></td>
-        <td><p>The function used to transform each element of the source series.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
 
-
-  <a id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_Count_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.Count*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_Count" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.Count">Count</h4>
-  <div class="markdown level1 summary"><p>The number of elements in the transformed series.</p>
+</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries&lt;TDestination&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_Item_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.Item*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_Item_System_Int32_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.Item(System.Int32)">this[int]</h4>
-  <div class="markdown level1 summary"><p>Retrieves the element at the specified index in the transformed series.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList&lt;TDestination?&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TDestination? this[int index] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">index</span></td>
-        <td><p>The index of the element to retrieve.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_GetEnumerator_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.GetEnumerator*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_GetEnumerator" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the transformed series.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1'>IReadOnlyCollection&lt;TDestination?&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator&lt;TDestination?&gt; GetEnumerator()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;TDestination&gt;</td>
-        <td><p>An enumerator for the transformed series.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_Last_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.Last*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Models_SeriesTransform_2_Last_System_Int32_" data-uid="Tickblaze.Scripts.Api.Models.SeriesTransform`2.Last(System.Int32)">Last(int)</h4>
-  <div class="markdown level1 summary"><p>Retrieves the last element in the transformed series, offset by the specified number of bars.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1'>IEnumerable&lt;TDestination?&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TDestination? Last(int barsAgo = 0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">barsAgo</span></td>
-        <td><p>The number of bars ago to retrieve the element from.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TDestination</span></td>
-        <td><p>The transformed last element.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISeries-1.html">ISeries&lt;TItem&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_">CollectionExtensions.BinarySearch&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;, TItem)</a>
-  </div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.ienumerable'>IEnumerable</a>
+</div>
 
+</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
+</div>
+
+</dd></dl><h4 class='section'>Extension Methods</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_'>CollectionExtensions.BinarySearch&lt;TDestination&gt;(IReadOnlyList&lt;TDestination&gt;, TDestination)</a>
+</div>
+
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.SeriesTransform`2.#ctor(Tickblaze.Scripts.Api.Interfaces.ISeries{`0},System.Func{`0,`1})' data-commentid='M:Tickblaze.Scripts.Api.Models.SeriesTransform`2.#ctor(Tickblaze.Scripts.Api.Interfaces.ISeries{`0},System.Func{`0,`1})' id='Tickblaze_Scripts_Api_Models_SeriesTransform_2__ctor_Tickblaze_Scripts_Api_Interfaces_ISeries__0__System_Func__0__1__'>SeriesTransform(ISeries&lt;TSource&gt;, Func&lt;TSource, TDestination&gt;)   </h3>
+ <p>Initializes a new instance of the <span class="xref">Tickblaze.Scripts.Api.Models.SeriesTransform`2</span> class.</p>
+<pre><code class='lang-csharp'>public SeriesTransform(ISeries&lt;TSource&gt; series, Func&lt;TSource, TDestination&gt; selector)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>series</code> <a href='Tickblaze.Scripts.Api.Interfaces.ISeries-1.html'>ISeries</a>&lt;TSource&gt;  </dt>
+<dd>
+
+
+<p>The source series to transform.</p>
+
+</dd><dt><code>selector</code> <a href='https://learn.microsoft.com/dotnet/api/system.func-2'>Func</a>&lt;TSource, TDestination&gt;  </dt>
+<dd>
+
+
+<p>The function used to transform each element of the source series.</p>
+
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.SeriesTransform`2.Count' data-commentid='P:Tickblaze.Scripts.Api.Models.SeriesTransform`2.Count' id='Tickblaze_Scripts_Api_Models_SeriesTransform_2_Count'>Count   </h3>
+ <p>The number of elements in the transformed series.</p>
+<pre><code class='lang-csharp'>public int Count { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.SeriesTransform`2.Item(System.Int32)' data-commentid='P:Tickblaze.Scripts.Api.Models.SeriesTransform`2.Item(System.Int32)' id='Tickblaze_Scripts_Api_Models_SeriesTransform_2_Item_System_Int32_'>this[int]   </h3>
+ <p>Retrieves the element at the specified index in the transformed series.</p>
+<pre><code class='lang-csharp'>public TDestination? this[int index] { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> TDestination?  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.SeriesTransform`2.GetEnumerator' data-commentid='M:Tickblaze.Scripts.Api.Models.SeriesTransform`2.GetEnumerator' id='Tickblaze_Scripts_Api_Models_SeriesTransform_2_GetEnumerator'>GetEnumerator()   </h3>
+ <p>Returns an enumerator that iterates through the transformed series.</p>
+<pre><code class='lang-csharp'>public IEnumerator&lt;TDestination?&gt; GetEnumerator()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1'>IEnumerator</a>&lt;TDestination?&gt;  </dt>
+<dd>
+
+
+<p>An enumerator for the transformed series.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Models.SeriesTransform`2.Last(System.Int32)' data-commentid='M:Tickblaze.Scripts.Api.Models.SeriesTransform`2.Last(System.Int32)' id='Tickblaze_Scripts_Api_Models_SeriesTransform_2_Last_System_Int32_'>Last(int)   </h3>
+ <p>Retrieves the last element in the transformed series, offset by the specified number of bars.</p>
+<pre><code class='lang-csharp'>public TDestination? Last(int barsAgo = 0)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>barsAgo</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The number of bars ago to retrieve the element from.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> TDestination?  </dt>
+<dd>
+
+
+<p>The transformed last element.</p>
+
+</dd></dl>
 </article>
           </div>
 

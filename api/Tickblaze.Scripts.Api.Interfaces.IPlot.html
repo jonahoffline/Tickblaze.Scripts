@@ -76,79 +76,48 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IPlot' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IPlot' id='Tickblaze_Scripts_Api_Interfaces_IPlot'>Interface IPlot   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Defines properties for a plot including visual appearance.</p>
+<pre><code class='lang-csharp'>public interface IPlot</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IPlot.Color' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IPlot.Color' id='Tickblaze_Scripts_Api_Interfaces_IPlot_Color'>Color   </h3>
+ <p>The color of the plot.</p>
+<pre><code class='lang-csharp'>Color Color { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IPlot" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot" class="text-break">Interface IPlot</h1>
-  <div class="markdown level0 summary"><p>Defines properties for a plot including visual appearance.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IPlot_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPlot</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IPlot.IsVisible' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IPlot.IsVisible' id='Tickblaze_Scripts_Api_Interfaces_IPlot_IsVisible'>IsVisible   </h3>
+ <p>Indicates whether the plot is visible.</p>
+<pre><code class='lang-csharp'>bool IsVisible { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IPlot_Color_" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.Color*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IPlot_Color" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.Color">Color</h4>
-  <div class="markdown level1 summary"><p>The color of the plot.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Color Color { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IPlot.LineStyle' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IPlot.LineStyle' id='Tickblaze_Scripts_Api_Interfaces_IPlot_LineStyle'>LineStyle   </h3>
+ <p>The line style of the plot.</p>
+<pre><code class='lang-csharp'>LineStyle LineStyle { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IPlot_IsVisible_" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.IsVisible*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IPlot_IsVisible" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.IsVisible">IsVisible</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the plot is visible.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsVisible { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IPlot.Name' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IPlot.Name' id='Tickblaze_Scripts_Api_Interfaces_IPlot_Name'>Name   </h3>
+ <p>The name of the plot.</p>
+<pre><code class='lang-csharp'>[JsonIgnore]
+string Name { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IPlot_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.LineStyle*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IPlot_LineStyle" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.LineStyle">LineStyle</h4>
-  <div class="markdown level1 summary"><p>The line style of the plot.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">LineStyle LineStyle { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IPlot.Thickness' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IPlot.Thickness' id='Tickblaze_Scripts_Api_Interfaces_IPlot_Thickness'>Thickness   </h3>
+ <p>The thickness of the plot's line.</p>
+<pre><code class='lang-csharp'>int Thickness { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IPlot_Name_" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.Name*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IPlot_Name" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the plot.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-string Name { get; }</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IPlot_Thickness_" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.Thickness*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IPlot_Thickness" data-uid="Tickblaze.Scripts.Api.Interfaces.IPlot.Thickness">Thickness</h4>
-  <div class="markdown level1 summary"><p>The thickness of the plot's line.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Thickness { get; }</code></pre>
-  </div>
-
+</dd></dl>
 </article>
           </div>
 

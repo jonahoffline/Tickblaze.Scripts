@@ -76,293 +76,184 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Bases.Drawing">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Bases_Drawing" data-uid="Tickblaze.Scripts.Api.Bases.Drawing" class="text-break">Class Drawing</h1>
-  <div class="markdown level0 summary"><p>Represents a base class for drawing objects that can be rendered on the chart.</p>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing' data-commentid='T:Tickblaze.Scripts.Api.Bases.Drawing' id='Tickblaze_Scripts_Api_Bases_Drawing'>Class Drawing   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Bases.html'>Tickblaze.Scripts.Api.Bases</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents a base class for drawing objects that can be rendered on the chart.</p>
+<pre><code class='lang-csharp'>public abstract class Drawing : Script, IScript, IDisposable, IMetadata, IChartObject</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a></div>
-    <div class="level2"><span class="xref">Drawing</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a></div>
-    <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartObject.html">IChartObject</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_OnDestroy">Script.OnDestroy()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem">Script.CreateChartToolbarMenuItem()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_">Script.Print(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Dispose">Script.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Name">Script.Name</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ShortName">Script.ShortName</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Description">Script.Description</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Metadata">Script.Metadata</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Parameters">Script.Parameters</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Bars">Script.Bars</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_IsInitialized">Script.IsInitialized</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_UiDispatcher">Script.UiDispatcher</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.html">Bases</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Bases_Drawing_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Drawing : Script, IScript, IDisposable, IMetadata, IChartObject</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing__ctor_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.#ctor*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing__ctor" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.#ctor">Drawing()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Drawing()</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_Chart_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.Chart*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_Chart" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.Chart">Chart</h4>
-  <div class="markdown level1 summary"><p>The chart to which this object belongs.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html'>Script</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IChart Chart { get; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_ChartScale_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.ChartScale*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_ChartScale" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.ChartScale">ChartScale</h4>
-  <div class="markdown level1 summary"><p>The scale used by this object on the chart.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Drawing.html'>Drawing</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IChartScale ChartScale { get; }</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_IsCreated_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.IsCreated*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_IsCreated" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.IsCreated">IsCreated</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the drawing object has been created.</p>
+</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.IScript.html'>IScript</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsCreated { get; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_Points_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.Points*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_Points" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.Points">Points</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IChartPoints Points { get; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_PointsCount_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.PointsCount*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_PointsCount" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.PointsCount">PointsCount</h4>
-  <div class="markdown level1 summary"><p>Gets the number of points in the drawing.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.idisposable'>IDisposable</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract int PointsCount { get; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_ShowOnChart_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.ShowOnChart*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_ShowOnChart" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.ShowOnChart">ShowOnChart</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the object is visible on the chart.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.IMetadata.html'>IMetadata</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ShowOnChart { get; set; }</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_SnapToBar_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.SnapToBar*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_SnapToBar" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.SnapToBar">SnapToBar</h4>
-  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the drawing is snapped to the bar.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.IChartObject.html'>IChartObject</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SnapToBar { get; set; }</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_Symbol_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.Symbol*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_Symbol" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.Symbol">Symbol</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ISymbol Symbol { get; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_OnCreated_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.OnCreated*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_OnCreated" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.OnCreated">OnCreated()</h4>
-  <div class="markdown level1 summary"><p>Performs actions when the drawing is created.</p>
+</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize'>Script.Initialize()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnCreated()</code></pre>
-  </div>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_OnRender_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.OnRender*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)">OnRender(IDrawingContext)</h4>
-  <div class="markdown level1 summary"><p>Draws the chart object using the specified drawing context.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_OnDestroy'>Script.OnDestroy()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void OnRender(IDrawingContext context)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html">IDrawingContext</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>The context used for rendering.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Drawing_SetPoint_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.SetPoint*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_Drawing_SetPoint_System_IComparable_System_IComparable_System_Int32_" data-uid="Tickblaze.Scripts.Api.Bases.Drawing.SetPoint(System.IComparable,System.IComparable,System.Int32)">SetPoint(IComparable, IComparable, int)</h4>
-  <div class="markdown level1 summary"><p>Sets a point on the drawing at the specified index.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem'>Script.CreateChartToolbarMenuItem()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void SetPoint(IComparable xDataValue, IComparable yDataValue, int index)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></td>
-        <td><span class="parametername">xDataValue</span></td>
-        <td><p>The x data value of the point.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></td>
-        <td><span class="parametername">yDataValue</span></td>
-        <td><p>The y data value of the point.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">index</span></td>
-        <td><p>The index of the point to set.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
-  </div>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a>
-  </div>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartObject.html">IChartObject</a>
-  </div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_'>Script.Print(object)</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Dispose'>Script.Dispose()</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Name'>Script.Name</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ShortName'>Script.ShortName</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Description'>Script.Description</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Metadata'>Script.Metadata</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Parameters'>Script.Parameters</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Bars'>Script.Bars</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_IsInitialized'>Script.IsInitialized</a>
+</div>
+<div>
+<a href='Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_UiDispatcher'>Script.UiDispatcher</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone'>object.MemberwiseClone()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
+</div>
 
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.#ctor' data-commentid='M:Tickblaze.Scripts.Api.Bases.Drawing.#ctor' id='Tickblaze_Scripts_Api_Bases_Drawing__ctor'>Drawing()   </h3>
+ <pre><code class='lang-csharp'>protected Drawing()</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.Chart' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.Chart' id='Tickblaze_Scripts_Api_Bases_Drawing_Chart'>Chart   </h3>
+ <p>The chart to which this object belongs.</p>
+<pre><code class='lang-csharp'>public IChart Chart { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChart.html'>IChart</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.ChartScale' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.ChartScale' id='Tickblaze_Scripts_Api_Bases_Drawing_ChartScale'>ChartScale   </h3>
+ <p>The scale used by this object on the chart.</p>
+<pre><code class='lang-csharp'>public IChartScale ChartScale { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartScale.html'>IChartScale</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.IsCreated' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.IsCreated' id='Tickblaze_Scripts_Api_Bases_Drawing_IsCreated'>IsCreated   </h3>
+ <p>Indicates whether the drawing object has been created.</p>
+<pre><code class='lang-csharp'>public bool IsCreated { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.Points' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.Points' id='Tickblaze_Scripts_Api_Bases_Drawing_Points'>Points   </h3>
+ <pre><code class='lang-csharp'>public IChartPoints Points { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.IChartPoints.html'>IChartPoints</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.PointsCount' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.PointsCount' id='Tickblaze_Scripts_Api_Bases_Drawing_PointsCount'>PointsCount   </h3>
+ <p>Gets the number of points in the drawing.</p>
+<pre><code class='lang-csharp'>public abstract int PointsCount { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.ShowOnChart' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.ShowOnChart' id='Tickblaze_Scripts_Api_Bases_Drawing_ShowOnChart'>ShowOnChart   </h3>
+ <p>Indicates whether the object is visible on the chart.</p>
+<pre><code class='lang-csharp'>public bool ShowOnChart { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.SnapToBar' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.SnapToBar' id='Tickblaze_Scripts_Api_Bases_Drawing_SnapToBar'>SnapToBar   </h3>
+ <p>Gets or sets a value indicating whether the drawing is snapped to the bar.</p>
+<pre><code class='lang-csharp'>public bool SnapToBar { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.Symbol' data-commentid='P:Tickblaze.Scripts.Api.Bases.Drawing.Symbol' id='Tickblaze_Scripts_Api_Bases_Drawing_Symbol'>Symbol   </h3>
+ <pre><code class='lang-csharp'>public ISymbol Symbol { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISymbol.html'>ISymbol</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.OnCreated' data-commentid='M:Tickblaze.Scripts.Api.Bases.Drawing.OnCreated' id='Tickblaze_Scripts_Api_Bases_Drawing_OnCreated'>OnCreated()   </h3>
+ <p>Performs actions when the drawing is created.</p>
+<pre><code class='lang-csharp'>public virtual void OnCreated()</code></pre><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)' data-commentid='M:Tickblaze.Scripts.Api.Bases.Drawing.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)' id='Tickblaze_Scripts_Api_Bases_Drawing_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_'>OnRender(IDrawingContext)   </h3>
+ <p>Draws the chart object using the specified drawing context.</p>
+<pre><code class='lang-csharp'>public abstract void OnRender(IDrawingContext context)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>context</code> <a href='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html'>IDrawingContext</a>  </dt>
+<dd>
+
+
+<p>The context used for rendering.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.Drawing.SetPoint(System.IComparable,System.IComparable,System.Int32)' data-commentid='M:Tickblaze.Scripts.Api.Bases.Drawing.SetPoint(System.IComparable,System.IComparable,System.Int32)' id='Tickblaze_Scripts_Api_Bases_Drawing_SetPoint_System_IComparable_System_IComparable_System_Int32_'>SetPoint(IComparable, IComparable, int)   </h3>
+ <p>Sets a point on the drawing at the specified index.</p>
+<pre><code class='lang-csharp'>public virtual void SetPoint(IComparable xDataValue, IComparable yDataValue, int index)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>xDataValue</code> <a href='https://learn.microsoft.com/dotnet/api/system.icomparable'>IComparable</a>  </dt>
+<dd>
+
+
+<p>The x data value of the point.</p>
+
+</dd><dt><code>yDataValue</code> <a href='https://learn.microsoft.com/dotnet/api/system.icomparable'>IComparable</a>  </dt>
+<dd>
+
+
+<p>The y data value of the point.</p>
+
+</dd><dt><code>index</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The index of the point to set.</p>
+
+</dd></dl>
 </article>
           </div>
 

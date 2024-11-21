@@ -76,75 +76,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IScript" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript" class="text-break">Interface IScript</h1>
-  <div class="markdown level0 summary"><p>Defines properties and methods for a script, including initialization and metadata.</p>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IScript' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IScript' id='Tickblaze_Scripts_Api_Interfaces_IScript'>Interface IScript   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Defines properties and methods for a script, including initialization and metadata.</p>
+<pre><code class='lang-csharp'>public interface IScript : IDisposable</code></pre><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.idisposable'>IDisposable</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IScript_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IScript : IDisposable</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IScript.IsInitialized' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IScript.IsInitialized' id='Tickblaze_Scripts_Api_Interfaces_IScript_IsInitialized'>IsInitialized   </h3>
+ <p>Indicates whether the script has been initialized.</p>
+<pre><code class='lang-csharp'>bool IsInitialized { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_IsInitialized_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.IsInitialized*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IScript_IsInitialized" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.IsInitialized">IsInitialized</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the script has been initialized.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsInitialized { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IScript.Metadata' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IScript.Metadata' id='Tickblaze_Scripts_Api_Interfaces_IScript_Metadata'>Metadata   </h3>
+ <p>The metadata associated with the script.</p>
+<pre><code class='lang-csharp'>Metadata Metadata { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Models.Metadata.html'>Metadata</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_Metadata_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Metadata*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IScript_Metadata" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Metadata">Metadata</h4>
-  <div class="markdown level1 summary"><p>The metadata associated with the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Metadata Metadata { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IScript.Parameters' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IScript.Parameters' id='Tickblaze_Scripts_Api_Interfaces_IScript_Parameters'>Parameters   </h3>
+ <p>The parameters for the script.</p>
+<pre><code class='lang-csharp'>Parameters Parameters { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Parameters.html'>Parameters</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_Parameters_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Parameters*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IScript_Parameters" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Parameters">Parameters</h4>
-  <div class="markdown level1 summary"><p>The parameters for the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Parameters Parameters { get; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
 
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_Initialize_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Initialize*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IScript_Initialize" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"><p>Initializes the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Initialize()</code></pre>
-  </div>
-
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IScript.Initialize' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IScript.Initialize' id='Tickblaze_Scripts_Api_Interfaces_IScript_Initialize'>Initialize()   </h3>
+ <p>Initializes the script.</p>
+<pre><code class='lang-csharp'>void Initialize()</code></pre>
 </article>
           </div>
 

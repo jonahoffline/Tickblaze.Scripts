@@ -76,121 +76,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase" class="text-break">Interface ITradeManagmentStrategyScriptBase</h1>
-  <div class="markdown level0 summary"><p>Interface for a trade management strategy script base, providing methods to start and stop the strategy.</p>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase' data-commentid='T:Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase' id='Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase'>Interface ITradeManagmentStrategyScriptBase   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Bases.html'>Tickblaze.Scripts.Api.Bases</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Interface for a trade management strategy script base, providing methods to start and stop the strategy.</p>
+<pre><code class='lang-csharp'>public interface ITradeManagmentStrategyScriptBase : IOrderManager, IOrderAccessor</code></pre><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html'>IOrderManager</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ExecuteMarketOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_">IOrderManager.ExecuteMarketOrder(OrderAction, double, TimeInForce, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceOrder_Tickblaze_Scripts_Api_Enums_OrderAction_Tickblaze_Scripts_Api_Enums_OrderType_System_Double_System_Nullable_System_Double__System_Nullable_System_Double__Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_">IOrderManager.PlaceOrder(OrderAction, OrderType, double, double?, double?, TimeInForce, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceLimitOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_">IOrderManager.PlaceLimitOrder(OrderAction, double, double, TimeInForce, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceStopOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_">IOrderManager.PlaceStopOrder(OrderAction, double, double, TimeInForce, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_PlaceStopLimitOrder_Tickblaze_Scripts_Api_Enums_OrderAction_System_Double_System_Double_System_Double_Tickblaze_Scripts_Api_Enums_TimeInForce_System_String_">IOrderManager.PlaceStopLimitOrder(OrderAction, double, double, double, TimeInForce, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLoss_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_">IOrderManager.SetStopLoss(IOrder, double, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLossTicks_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Int32_System_String_">IOrderManager.SetStopLossTicks(IOrder, int, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetStopLossPercent_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_">IOrderManager.SetStopLossPercent(IOrder, double, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfit_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_">IOrderManager.SetTakeProfit(IOrder, double, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfitTicks_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Int32_System_String_">IOrderManager.SetTakeProfitTicks(IOrder, int, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_SetTakeProfitPercent_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_">IOrderManager.SetTakeProfitPercent(IOrder, double, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ModifyOrder_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_Nullable_System_Double__System_Nullable_System_Double__Tickblaze_Scripts_Api_Enums_TimeInForce_">IOrderManager.ModifyOrder(IOrder, double, double?, double?, TimeInForce)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_CancelOrder_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_String_System_Boolean_">IOrderManager.CancelOrder(IOrder, string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_ClosePosition_System_String_">IOrderManager.ClosePosition(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderManager_GetOrderExpectedPrice_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_">IOrderManager.GetOrderExpectedPrice(IOrder)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_GetExchangeRate_System_String_System_String_">IOrderAccessor.GetExchangeRate(string, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Symbol">IOrderAccessor.Symbol</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Account">IOrderAccessor.Account</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_PendingOrders">IOrderAccessor.PendingOrders</a>
-    </div>
-    <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Position">IOrderAccessor.Position</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.html">Bases</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITradeManagmentStrategyScriptBase : IOrderManager, IOrderAccessor</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_IsActive_" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.IsActive*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_IsActive" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.IsActive">IsActive</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the strategy is currently active.</p>
+<div>
+<a href='Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html'>IOrderAccessor</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsActive { get; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
+
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.IsActive' data-commentid='P:Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.IsActive' id='Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_IsActive'>IsActive   </h3>
+ <p>Indicates whether the strategy is currently active.</p>
+<pre><code class='lang-csharp'>bool IsActive { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_Start_" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Start*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_Start" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Start">Start()</h4>
-  <div class="markdown level1 summary"><p>Starts the strategy.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Start()</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_Stop_" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Stop*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_Stop" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Stop">Stop()</h4>
-  <div class="markdown level1 summary"><p>Stops the strategy.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Stop()</code></pre>
-  </div>
-
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Start' data-commentid='M:Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Start' id='Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_Start'>Start()   </h3>
+ <p>Starts the strategy.</p>
+<pre><code class='lang-csharp'>void Start()</code></pre><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Stop' data-commentid='M:Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.Stop' id='Tickblaze_Scripts_Api_Bases_ITradeManagmentStrategyScriptBase_Stop'>Stop()   </h3>
+ <p>Stops the strategy.</p>
+<pre><code class='lang-csharp'>void Stop()</code></pre>
 </article>
           </div>
 

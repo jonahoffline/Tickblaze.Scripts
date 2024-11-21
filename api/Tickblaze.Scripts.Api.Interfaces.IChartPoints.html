@@ -9,7 +9,8 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Interface IChartPoints | Tickblaze ">
     
-    <meta name="description" content="Represents a collection of chart points that can be accessed and manipulated. Each chart point consists of X (time) and Y (value) data values.">
+    <meta name="description" content="Represents a collection of chart points that can be accessed and manipulated.
+Each chart point consists of X (time) and Y (value) data values.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,75 +77,46 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoints">
-
-
-
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IChartPoints" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoints" class="text-break">Interface IChartPoints</h1>
-  <div class="markdown level0 summary"><p>Represents a collection of chart points that can be accessed and manipulated.
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartPoints' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IChartPoints' id='Tickblaze_Scripts_Api_Interfaces_IChartPoints'>Interface IChartPoints   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents a collection of chart points that can be accessed and manipulated.
 Each chart point consists of X (time) and Y (value) data values.</p>
+<pre><code class='lang-csharp'>public interface IChartPoints : IReadOnlyList&lt;IChartPoint&gt;, IReadOnlyCollection&lt;IChartPoint&gt;, IEnumerable&lt;IChartPoint&gt;, IEnumerable</code></pre><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList&lt;IChartPoint&gt;</a>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">IReadOnlyList&lt;IChartPoint&gt;.this[int]</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1.count">IReadOnlyCollection&lt;IChartPoint&gt;.Count</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator">IEnumerable&lt;IChartPoint&gt;.GetEnumerator()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IChartPoints_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IChartPoints : IReadOnlyList&lt;IChartPoint&gt;, IReadOnlyCollection&lt;IChartPoint&gt;, IEnumerable&lt;IChartPoint&gt;, IEnumerable</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IChartPoints_Add_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoints.Add*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IChartPoints_Add_System_IComparable_System_IComparable_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChartPoints.Add(System.IComparable,System.IComparable)">Add(IComparable, IComparable)</h4>
-  <div class="markdown level1 summary"><p>Adds a new chart point to the collection with specified X and Y data values.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1'>IReadOnlyCollection&lt;IChartPoint&gt;</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Add(IComparable xDataValue, IComparable yDataValue)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></td>
-        <td><span class="parametername">xDataValue</span></td>
-        <td><p>The X coordinate (time) of the chart point.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></td>
-        <td><span class="parametername">yDataValue</span></td>
-        <td><p>The Y coordinate (value) of the chart point.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_">CollectionExtensions.BinarySearch&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;, TItem)</a>
-  </div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1'>IEnumerable&lt;IChartPoint&gt;</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.collections.ienumerable'>IEnumerable</a>
+</div>
 
+</dd></dl><h4 class='section'>Extension Methods</h4><dl class="typelist"><dd>
+<div>
+<a href='Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_'>CollectionExtensions.BinarySearch&lt;IChartPoint&gt;(IReadOnlyList&lt;IChartPoint&gt;, IChartPoint)</a>
+</div>
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IChartPoints.Add(System.IComparable,System.IComparable)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IChartPoints.Add(System.IComparable,System.IComparable)' id='Tickblaze_Scripts_Api_Interfaces_IChartPoints_Add_System_IComparable_System_IComparable_'>Add(IComparable, IComparable)   </h3>
+ <p>Adds a new chart point to the collection with specified X and Y data values.</p>
+<pre><code class='lang-csharp'>void Add(IComparable xDataValue, IComparable yDataValue)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>xDataValue</code> <a href='https://learn.microsoft.com/dotnet/api/system.icomparable'>IComparable</a>  </dt>
+<dd>
+
+
+<p>The X coordinate (time) of the chart point.</p>
+
+</dd><dt><code>yDataValue</code> <a href='https://learn.microsoft.com/dotnet/api/system.icomparable'>IComparable</a>  </dt>
+<dd>
+
+
+<p>The Y coordinate (value) of the chart point.</p>
+
+</dd></dl>
 </article>
           </div>
 

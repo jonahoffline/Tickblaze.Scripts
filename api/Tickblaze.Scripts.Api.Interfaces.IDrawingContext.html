@@ -76,535 +76,319 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.IDrawingContext' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext'>Interface IDrawingContext   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.html'>Tickblaze.Scripts.Api.Interfaces</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Defines a context for rendering graphical elements, including shapes, text, and lines.</p>
+<pre><code class='lang-csharp'>public interface IDrawingContext</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.RenderSize' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.RenderSize' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_RenderSize'>RenderSize   </h3>
+ <p>The size of the rendering area.</p>
+<pre><code class='lang-csharp'>ISize RenderSize { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISize.html'>ISize</a>  </dt>
+<dd>
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext" class="text-break">Interface IDrawingContext</h1>
-  <div class="markdown level0 summary"><p>Defines a context for rendering graphical elements, including shapes, text, and lines.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IDrawingContext</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawEllipse(IPoint, double, double, Color?, Color?, int, LineStyle)   </h3>
+ <p>Draws an ellipse with the specified dimensions and styling.</p>
+<pre><code class='lang-csharp'>void DrawEllipse(IPoint center, double radiusX, double radiusY, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>center</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_RenderSize_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.RenderSize*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_RenderSize" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.RenderSize">RenderSize</h4>
-  <div class="markdown level1 summary"><p>The size of the rendering area.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISize RenderSize { get; }</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
+<p>The center point of the ellipse.</p>
+
+</dd><dt><code>radiusX</code> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawEllipse(IPoint, double, double, Color?, Color?, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws an ellipse with the specified dimensions and styling.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawEllipse(IPoint center, double radiusX, double radiusY, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">center</span></td>
-        <td><p>The center point of the ellipse.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td><span class="parametername">radiusX</span></td>
-        <td><p>The horizontal radius of the ellipse.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td><span class="parametername">radiusY</span></td>
-        <td><p>The vertical radius of the ellipse.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">fillColor</span></td>
-        <td><p>The color used to fill the ellipse.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">lineColor</span></td>
-        <td><p>The color of the ellipse's outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">lineThickness</span></td>
-        <td><p>The thickness of the outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the outline.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The horizontal radius of the ellipse.</p>
+
+</dd><dt><code>radiusY</code> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawExtendedLine(IPoint, IPoint, Color, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws a line extended in both directions beyond its endpoints.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawExtendedLine(IPoint pointA, IPoint pointB, Color color, int thickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointA</span></td>
-        <td><p>The first point on the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointB</span></td>
-        <td><p>The second point on the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">thickness</span></td>
-        <td><p>The thickness of the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the line.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The vertical radius of the ellipse.</p>
+
+</dd><dt><code>fillColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawLine(IPoint, IPoint, Color, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws a line between two points.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawLine(IPoint pointA, IPoint pointB, Color color, int thickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointA</span></td>
-        <td><p>The first point of the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointB</span></td>
-        <td><p>The second point of the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">thickness</span></td>
-        <td><p>The thickness of the line.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the line.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The color used to fill the ellipse.</p>
+
+</dd><dt><code>lineColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawPolygon(IEnumerable&lt;IPoint&gt;, Color?, Color?, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws a polygon defined by a sequence of points.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawPolygon(IEnumerable&lt;IPoint&gt; points, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a>&gt;</td>
-        <td><span class="parametername">points</span></td>
-        <td><p>The vertices of the polygon.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">fillColor</span></td>
-        <td><p>The color used to fill the polygon.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">lineColor</span></td>
-        <td><p>The color of the polygon's outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">lineThickness</span></td>
-        <td><p>The thickness of the outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the outline.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The color of the ellipse's outline.</p>
+
+</dd><dt><code>lineThickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawRay(IPoint, IPoint, Color, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws a ray originating from a point and extending through a second point.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawRay(IPoint pointA, IPoint pointB, Color color, int thickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointA</span></td>
-        <td><p>The starting point of the ray.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointB</span></td>
-        <td><p>A point along the direction of the ray.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the ray.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">thickness</span></td>
-        <td><p>The thickness of the ray.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the ray.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The thickness of the outline.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawRectangle(IPoint, double, double, Color?, Color?, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws a rectangle at the specified location with the given dimensions and styling.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawRectangle(IPoint pointA, double width, double height, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointA</span></td>
-        <td><p>The top-left corner of the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td><span class="parametername">width</span></td>
-        <td><p>The width of the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td><span class="parametername">height</span></td>
-        <td><p>The height of the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">fillColor</span></td>
-        <td><p>The color used to fill the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">lineColor</span></td>
-        <td><p>The color of the rectangle's outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">lineThickness</span></td>
-        <td><p>The thickness of the outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the outline.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The style of the outline.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawExtendedLine(IPoint, IPoint, Color, int, LineStyle)   </h3>
+ <p>Draws a line extended in both directions beyond its endpoints.</p>
+<pre><code class='lang-csharp'>void DrawExtendedLine(IPoint pointA, IPoint pointB, Color color, int thickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>pointA</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">DrawRectangle(IPoint, IPoint, Color?, Color?, int, LineStyle)</h4>
-  <div class="markdown level1 summary"><p>Draws a rectangle defined by two points with the given styling.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawRectangle(IPoint pointA, IPoint pointB, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointA</span></td>
-        <td><p>The corner of the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">pointB</span></td>
-        <td><p>The opposite corner of the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">fillColor</span></td>
-        <td><p>The color used to fill the rectangle.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</td>
-        <td><span class="parametername">lineColor</span></td>
-        <td><p>The color of the rectangle's outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">lineThickness</span></td>
-        <td><p>The thickness of the outline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></td>
-        <td><span class="parametername">lineStyle</span></td>
-        <td><p>The style of the outline.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The first point on the line.</p>
+
+</dd><dt><code>pointB</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawText_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawText*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawText_Tickblaze_Scripts_Api_Interfaces_IPoint_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Models_Font_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawText(Tickblaze.Scripts.Api.Interfaces.IPoint,System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Font)">DrawText(IPoint, string, Color, Font?)</h4>
-  <div class="markdown level1 summary"><p>Draws text at the specified origin point.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DrawText(IPoint origin, string text, Color color, Font? font = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></td>
-        <td><span class="parametername">origin</span></td>
-        <td><p>The location where the text is drawn.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text to draw.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></td>
-        <td><span class="parametername">color</span></td>
-        <td><p>The color of the text.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></td>
-        <td><span class="parametername">font</span></td>
-        <td><p>The font used for rendering the text.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The second point on the line.</p>
+
+</dd><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_MeasureText_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.MeasureText*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_MeasureText_System_String_Tickblaze_Scripts_Api_Models_Font_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.MeasureText(System.String,Tickblaze.Scripts.Api.Models.Font)">MeasureText(string, Font)</h4>
-  <div class="markdown level1 summary"><p>Measures the dimensions of a given text string using the specified font.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISize MeasureText(string text, Font font)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text to measure.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></td>
-        <td><span class="parametername">font</span></td>
-        <td><p>The font used for measurement.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.ISize.html">ISize</a></td>
-        <td><p>The size of the rendered text.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+<p>The color of the line.</p>
 
+</dd><dt><code>thickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the line.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the line.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawLine(IPoint, IPoint, Color, int, LineStyle)   </h3>
+ <p>Draws a line between two points.</p>
+<pre><code class='lang-csharp'>void DrawLine(IPoint pointA, IPoint pointB, Color color, int thickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>pointA</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The first point of the line.</p>
+
+</dd><dt><code>pointB</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The second point of the line.</p>
+
+</dd><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the line.</p>
+
+</dd><dt><code>thickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the line.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the line.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawPolygon(IEnumerable&lt;IPoint&gt;, Color?, Color?, int, LineStyle)   </h3>
+ <p>Draws a polygon defined by a sequence of points.</p>
+<pre><code class='lang-csharp'>void DrawPolygon(IEnumerable&lt;IPoint&gt; points, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>points</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1'>IEnumerable</a>&lt;<a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>&gt;  </dt>
+<dd>
+
+
+<p>The vertices of the polygon.</p>
+
+</dd><dt><code>fillColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
+
+
+<p>The color used to fill the polygon.</p>
+
+</dd><dt><code>lineColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
+
+
+<p>The color of the polygon's outline.</p>
+
+</dd><dt><code>lineThickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the outline.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the outline.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawRay(IPoint, IPoint, Color, int, LineStyle)   </h3>
+ <p>Draws a ray originating from a point and extending through a second point.</p>
+<pre><code class='lang-csharp'>void DrawRay(IPoint pointA, IPoint pointB, Color color, int thickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>pointA</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The starting point of the ray.</p>
+
+</dd><dt><code>pointB</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>A point along the direction of the ray.</p>
+
+</dd><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the ray.</p>
+
+</dd><dt><code>thickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the ray.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the ray.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawRectangle(IPoint, double, double, Color?, Color?, int, LineStyle)   </h3>
+ <p>Draws a rectangle at the specified location with the given dimensions and styling.</p>
+<pre><code class='lang-csharp'>void DrawRectangle(IPoint pointA, double width, double height, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>pointA</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The top-left corner of the rectangle.</p>
+
+</dd><dt><code>width</code> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
+
+
+<p>The width of the rectangle.</p>
+
+</dd><dt><code>height</code> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
+
+
+<p>The height of the rectangle.</p>
+
+</dd><dt><code>fillColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
+
+
+<p>The color used to fill the rectangle.</p>
+
+</dd><dt><code>lineColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
+
+
+<p>The color of the rectangle's outline.</p>
+
+</dd><dt><code>lineThickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the outline.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the outline.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_'>DrawRectangle(IPoint, IPoint, Color?, Color?, int, LineStyle)   </h3>
+ <p>Draws a rectangle defined by two points with the given styling.</p>
+<pre><code class='lang-csharp'>void DrawRectangle(IPoint pointA, IPoint pointB, Color? fillColor, Color? lineColor = null, int lineThickness = 1, LineStyle lineStyle = LineStyle.Solid)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>pointA</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The corner of the rectangle.</p>
+
+</dd><dt><code>pointB</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The opposite corner of the rectangle.</p>
+
+</dd><dt><code>fillColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
+
+
+<p>The color used to fill the rectangle.</p>
+
+</dd><dt><code>lineColor</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>?  </dt>
+<dd>
+
+
+<p>The color of the rectangle's outline.</p>
+
+</dd><dt><code>lineThickness</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+<p>The thickness of the outline.</p>
+
+</dd><dt><code>lineStyle</code> <a href='Tickblaze.Scripts.Api.Enums.LineStyle.html'>LineStyle</a>  </dt>
+<dd>
+
+
+<p>The style of the outline.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawText(Tickblaze.Scripts.Api.Interfaces.IPoint,System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Font)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawText(Tickblaze.Scripts.Api.Interfaces.IPoint,System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Models.Font)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawText_Tickblaze_Scripts_Api_Interfaces_IPoint_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Models_Font_'>DrawText(IPoint, string, Color, Font?)   </h3>
+ <p>Draws text at the specified origin point.</p>
+<pre><code class='lang-csharp'>void DrawText(IPoint origin, string text, Color color, Font? font = null)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>origin</code> <a href='Tickblaze.Scripts.Api.Interfaces.IPoint.html'>IPoint</a>  </dt>
+<dd>
+
+
+<p>The location where the text is drawn.</p>
+
+</dd><dt><code>text</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The text to draw.</p>
+
+</dd><dt><code>color</code> <a href='Tickblaze.Scripts.Api.Models.Color.html'>Color</a>  </dt>
+<dd>
+
+
+<p>The color of the text.</p>
+
+</dd><dt><code>font</code> <a href='Tickblaze.Scripts.Api.Models.Font.html'>Font</a>?  </dt>
+<dd>
+
+
+<p>The font used for rendering the text.</p>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.IDrawingContext.MeasureText(System.String,Tickblaze.Scripts.Api.Models.Font)' data-commentid='M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.MeasureText(System.String,Tickblaze.Scripts.Api.Models.Font)' id='Tickblaze_Scripts_Api_Interfaces_IDrawingContext_MeasureText_System_String_Tickblaze_Scripts_Api_Models_Font_'>MeasureText(string, Font)   </h3>
+ <p>Measures the dimensions of a given text string using the specified font.</p>
+<pre><code class='lang-csharp'>ISize MeasureText(string text, Font font)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>text</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The text to measure.</p>
+
+</dd><dt><code>font</code> <a href='Tickblaze.Scripts.Api.Models.Font.html'>Font</a>  </dt>
+<dd>
+
+
+<p>The font used for measurement.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISize.html'>ISize</a>  </dt>
+<dd>
+
+
+<p>The size of the rendered text.</p>
+
+</dd></dl>
 </article>
           </div>
 

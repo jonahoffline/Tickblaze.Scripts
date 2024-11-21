@@ -76,133 +76,82 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder' data-commentid='T:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder'>Interface IOrder   </h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='Tickblaze.Scripts.Api.Interfaces.Orders.html'>Tickblaze.Scripts.Api.Interfaces.Orders</a></dd></dl><dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+</div><p>Represents an order within the trading system, containing details about the order's characteristics and state.</p>
+<pre><code class='lang-csharp'>public interface IOrder</code></pre><h2 class='section'>Properties</h2><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Direction'>Direction   </h3>
+ <p>The direction of the order (e.g., long, short).</p>
+<pre><code class='lang-csharp'>OrderDirection Direction { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.OrderDirection.html'>OrderDirection</a>  </dt>
+<dd>
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder" class="text-break">Interface IOrder</h1>
-  <div class="markdown level0 summary"><p>Represents an order within the trading system, containing details about the order's characteristics and state.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.html">Orders</a></h6>
-  <h6><strong>Assembly</strong>: Tickblaze.Scripts.Api.dll</h6>
-  <h5 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IOrder</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Index'>Index   </h3>
+ <p>The index of the order, providing a unique identifier within the system.</p>
+<pre><code class='lang-csharp'>int Index { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Direction_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Direction" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction">Direction</h4>
-  <div class="markdown level1 summary"><p>The direction of the order (e.g., long, short).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OrderDirection Direction { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_LimitPrice'>LimitPrice   </h3>
+ <p>The limit price for the order, if applicable.</p>
+<pre><code class='lang-csharp'>double LimitPrice { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Index_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Index" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index">Index</h4>
-  <div class="markdown level1 summary"><p>The index of the order, providing a unique identifier within the system.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Index { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Price'>Price   </h3>
+ <p>The execution price of the order.</p>
+<pre><code class='lang-csharp'>double Price { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_LimitPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_LimitPrice" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice">LimitPrice</h4>
-  <div class="markdown level1 summary"><p>The limit price for the order, if applicable.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double LimitPrice { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Quantity' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Quantity' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Quantity'>Quantity   </h3>
+ <p>The quantity of the order, representing the number of units to buy or sell.</p>
+<pre><code class='lang-csharp'>double Quantity { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Price_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Price" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price">Price</h4>
-  <div class="markdown level1 summary"><p>The execution price of the order.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double Price { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Status' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Status' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Status'>Status   </h3>
+ <p>The current status of the order (e.g., pending, executed, canceled).</p>
+<pre><code class='lang-csharp'>OrderStatus Status { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.OrderStatus.html'>OrderStatus</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Quantity_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Quantity*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Quantity" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Quantity">Quantity</h4>
-  <div class="markdown level1 summary"><p>The quantity of the order, representing the number of units to buy or sell.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double Quantity { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.StopPrice' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.StopPrice' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_StopPrice'>StopPrice   </h3>
+ <p>The stop price for the order, if applicable.</p>
+<pre><code class='lang-csharp'>double StopPrice { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.double'>double</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Status_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Status*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Status" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Status">Status</h4>
-  <div class="markdown level1 summary"><p>The current status of the order (e.g., pending, executed, canceled).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OrderStatus Status { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Symbol' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Symbol' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Symbol'>Symbol   </h3>
+ <p>The financial symbol associated with the order.</p>
+<pre><code class='lang-csharp'>ISymbol Symbol { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Interfaces.ISymbol.html'>ISymbol</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_StopPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.StopPrice*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_StopPrice" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.StopPrice">StopPrice</h4>
-  <div class="markdown level1 summary"><p>The stop price for the order, if applicable.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double StopPrice { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.TimeInForce' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.TimeInForce' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_TimeInForce'>TimeInForce   </h3>
+ <p>Specifies how long the order remains active in the market (e.g., Good Till Cancelled, Immediate or Cancel).</p>
+<pre><code class='lang-csharp'>TimeInForce TimeInForce { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.TimeInForce.html'>TimeInForce</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Symbol_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Symbol*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Symbol" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Symbol">Symbol</h4>
-  <div class="markdown level1 summary"><p>The financial symbol associated with the order.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISymbol Symbol { get; }</code></pre>
-  </div>
+
+</dd></dl><h3 class='section api' data-uid='Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Type' data-commentid='P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Type' id='Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Type'>Type   </h3>
+ <p>The type of the order (e.g., market, limit, stop).</p>
+<pre><code class='lang-csharp'>OrderType Type { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='Tickblaze.Scripts.Api.Enums.OrderType.html'>OrderType</a>  </dt>
+<dd>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_TimeInForce_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.TimeInForce*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_TimeInForce" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.TimeInForce">TimeInForce</h4>
-  <div class="markdown level1 summary"><p>Specifies how long the order remains active in the market (e.g., Good Till Cancelled, Immediate or Cancel).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TimeInForce TimeInForce { get; }</code></pre>
-  </div>
 
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Type_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Type*"></a>
-  <h4 id="Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Type" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of the order (e.g., market, limit, stop).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OrderType Type { get; }</code></pre>
-  </div>
-
+</dd></dl>
 </article>
           </div>
 
