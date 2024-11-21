@@ -9,10 +9,10 @@
         }
       ],
       "dest": "api",
+      "outputFormat": "apiPage",
       "basePath": "/Docs"
     }
   ],
-
   "build": {
     "content": [
       {

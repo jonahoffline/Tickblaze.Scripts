@@ -1,4 +1,20 @@
-- name: Introduction
-  href: introduction.md
 - name: Getting Started
-  href: getting-started.md
+  items:
+    - name: Visual Studio
+      href: ../index.md
+    - name: VS Code
+      href: get-started/vs-code.md
+    - name: CLI
+      href: get-started/cli.md
+- name: Examples
+  items:
+    - name: Drawings
+      href: https://github.com/Tickblaze/Tickblaze.Scripts/tree/main/src/Drawings
+    - name: Indicators
+      href: https://github.com/Tickblaze/Tickblaze.Scripts/tree/main/src/Indicators
+    - name: Position Sizers
+      href: https://github.com/Tickblaze/Tickblaze.Scripts/tree/main/src/PositionSizers
+    - name: Strategies
+      href: https://github.com/Tickblaze/Tickblaze.Scripts/tree/main/src/Strategies
+    - name: Trade Management Strategies
+      href: https://github.com/Tickblaze/Tickblaze.Scripts/tree/main/src/TradeManagementStrategies
