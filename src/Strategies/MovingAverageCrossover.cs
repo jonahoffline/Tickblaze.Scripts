@@ -20,7 +20,7 @@ public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 	public bool EnableLonging { get; set; } = true;
 
 	private MovingAverage _fastMovingAverage, _slowMovingAverage;
-	private Series<bool> _isBullishTrend;
+	private Series<bool?> _isBullishTrend;
     private bool _firstBar = true;
 
     public MovingAverageCrossover()
@@ -37,17 +37,11 @@ public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 		_slowMovingAverage = new MovingAverage(Bars.Close, SlowPeriod, MovingAverageType) { ShowOnChart = true };
 		_slowMovingAverage.Result.Color = Color.Green;
 
-		_isBullishTrend = new Series<bool>();
+		_isBullishTrend = new Series<bool?>();
 	}
 
 	protected override void OnBar(int index)
 	{
-        if (_firstBar)
-        {
-            _firstBar = false;
-            return;
-        }
-
         var fastMovingAverage = _fastMovingAverage[index];
 		var slowMovingAverage = _slowMovingAverage[index];
 
@@ -59,22 +53,17 @@ public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 		{
 			_isBullishTrend[index] = false;
 		}
-		else if (index > 0)
+		else
 		{
-			_isBullishTrend[index] = _isBullishTrend[index - 1];
+			_isBullishTrend[index] = index == 0 ? null : _isBullishTrend[index - 1];
 		}
 
-		if (index == 0)
-		{
-			return;
-		}
-
-		if (_isBullishTrend[index] == _isBullishTrend[index - 1])
+		if (index == 0 || _isBullishTrend[index] == _isBullishTrend[index - 1] || _isBullishTrend[index - 1] == null)
 		{
 			return;
 		}
 
-		var orderDirection = _isBullishTrend[index] ? OrderDirection.Long : OrderDirection.Short;
+		var orderDirection = _isBullishTrend[index]!.Value ? OrderDirection.Long : OrderDirection.Short;
 		var quantity = 1d;
 
 		// If take profits are enabled, they handle the exits exclusively
