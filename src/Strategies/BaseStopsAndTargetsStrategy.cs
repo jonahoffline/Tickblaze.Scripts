@@ -16,33 +16,54 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
     [Parameter("Take Profit"), NumericRange(0)]
     public double TakeProfit { get; set; } = 0;
 
-    protected double GetStopOrTargetDistanceMultiplier(double quantity, StopTargetDistanceType distanceType, int bar)
-    {
-        return distanceType switch
-        {
-            StopTargetDistanceType.Dollars => Symbol.PointSize / (Symbol.PointValue * quantity),
-            StopTargetDistanceType.DollarsPerQuantity => Symbol.PointSize / Symbol.PointValue,
-            StopTargetDistanceType.Ticks => Symbol.TickSize,
-            StopTargetDistanceType.Points => Symbol.PointSize,
-            StopTargetDistanceType.PercentOfPrice => Bars.Close[bar] / 100,
-            _ => throw new ArgumentOutOfRangeException(nameof(distanceType), distanceType, null)
-        };
-    }
-
     protected void PlaceStopLossAndTarget(IOrder order, double entryPrice, OrderDirection orderDirection)
     {
-        var exitMultiplier = orderDirection == OrderDirection.Long ? 1 : -1;
-
         if (StopLoss > 0)
         {
-            var stopLossPrice = entryPrice - StopLoss * GetStopOrTargetDistanceMultiplier(order.Quantity, StopLossType, Bars.Count - 1) * exitMultiplier;
-            SetStopLoss(order, Math.Max(Symbol.TickSize, stopLossPrice), "SL");
+            switch (StopLossType)
+            {
+                case StopTargetDistanceType.Dollars:
+                    SetStopLossTicks(order, (int)Math.Max(StopLoss / (Symbol.TickValue * order.Quantity), 1), "SL");
+                    break;
+                case StopTargetDistanceType.DollarsPerQuantity:
+                    SetStopLossTicks(order, (int)Math.Max(StopLoss / Symbol.TickValue, 1), "SL");
+                    break;
+                case StopTargetDistanceType.Ticks:
+                    SetStopLossTicks(order, (int)Math.Max(StopLoss, 1), "SL");
+                    break;
+                case StopTargetDistanceType.Points:
+                    SetStopLossTicks(order, (int)Math.Max(StopLoss * Symbol.TicksPerPoint, 1), "SL");
+                    break;
+                case StopTargetDistanceType.PercentOfPrice:
+                    SetStopLossPercent(order, Math.Max(StopLoss, 0.0001), "SL");
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         if (TakeProfit > 0)
         {
-            var takeProfitPrice = entryPrice + TakeProfit * GetStopOrTargetDistanceMultiplier(order.Quantity, TakeProfitType, Bars.Count - 1) * exitMultiplier;
-            SetTakeProfit(order, Math.Max(Symbol.TickSize, takeProfitPrice), "TP");
+            switch (TakeProfitType)
+            {
+                case StopTargetDistanceType.Dollars:
+                    SetTakeProfitTicks(order, (int)Math.Max(TakeProfit / (Symbol.TickValue * order.Quantity), 1), "TP");
+                    break;
+                case StopTargetDistanceType.DollarsPerQuantity:
+                    SetTakeProfitTicks(order, (int)Math.Max(TakeProfit / Symbol.TickValue, 1), "TP");
+                    break;
+                case StopTargetDistanceType.Ticks:
+                    SetTakeProfitTicks(order, (int)Math.Max(TakeProfit, 1), "TP");
+                    break;
+                case StopTargetDistanceType.Points:
+                    SetTakeProfitTicks(order, (int)Math.Max(TakeProfit * Symbol.TicksPerPoint, 1), "TP");
+                    break;
+                case StopTargetDistanceType.PercentOfPrice:
+                    SetTakeProfitPercent(order, Math.Max(TakeProfit, 0.0001), "TP");
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }
