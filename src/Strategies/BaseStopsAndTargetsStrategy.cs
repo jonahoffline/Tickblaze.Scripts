@@ -21,9 +21,11 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
         return distanceType switch
         {
             StopTargetDistanceType.Dollars => Symbol.PointSize / (Symbol.PointValue * quantity),
+            StopTargetDistanceType.DollarsPerQuantity => Symbol.PointSize / Symbol.PointValue,
             StopTargetDistanceType.Ticks => Symbol.TickSize,
             StopTargetDistanceType.Points => Symbol.PointSize,
-            StopTargetDistanceType.PercentOfPrice => Bars.Close[bar] / 100
+            StopTargetDistanceType.PercentOfPrice => Bars.Close[bar] / 100,
+            _ => throw new ArgumentOutOfRangeException(nameof(distanceType), distanceType, null)
         };
     }
 
@@ -34,13 +36,13 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
         if (StopLoss > 0)
         {
             var stopLossPrice = entryPrice - StopLoss * GetStopOrTargetDistanceMultiplier(order.Quantity, StopLossType, Bars.Count - 1) * exitMultiplier;
-            SetStopLoss(order, Math.Max(0, stopLossPrice), "SL");
+            SetStopLoss(order, Math.Max(Symbol.TickSize, stopLossPrice), "SL");
         }
 
         if (TakeProfit > 0)
         {
             var takeProfitPrice = entryPrice + TakeProfit * GetStopOrTargetDistanceMultiplier(order.Quantity, TakeProfitType, Bars.Count - 1) * exitMultiplier;
-            SetTakeProfit(order, Math.Max(0, takeProfitPrice), "TP");
+            SetTakeProfit(order, Math.Max(Symbol.TickSize, takeProfitPrice), "TP");
         }
     }
 }
@@ -49,6 +51,8 @@ public enum StopTargetDistanceType
 {
     [DisplayName("$")]
     Dollars,
+    [DisplayName("$/Unit")]
+    DollarsPerQuantity,
     Ticks,
     Points,
     [DisplayName("% of Price")]
