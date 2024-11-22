@@ -126,7 +126,6 @@
 <details class="typelist-details">
   <summary>{{__global.extensionMethods}}</summary>
 <dl class="typelist extensionMethods">
-  <dt>{{__global.extensionMethods}}</dt>
   <dd>
 {{/extensionMethods.0}}
 {{#extensionMethods}}
