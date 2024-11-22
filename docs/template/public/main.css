@@ -21,23 +21,3 @@ details.typelist-details summary::before {
 details[open].typelist-details summary::before {
     transform: rotate(90deg);;
 }
-
-/* This rule hides the display of inherited types */
-.inheritance {
-  /* display: none !important; */
-}
-
-/* This rule hides the display of inherited members */
-.inheritedMembers {
-  /* display: none !important; */
-}
-
-/* This rule hides the display of implemented types */
-.implements {
-  /* display: none !important; */
-}
-
-/* This rule hides the display of derived types */
-.derived {
-  /* display: none !important; */
-}
