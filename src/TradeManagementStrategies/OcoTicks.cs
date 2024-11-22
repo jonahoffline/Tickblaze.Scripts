@@ -227,8 +227,13 @@ public class OcoTicks : TradeManagementStrategy
 
 	public enum SizeType
 	{
+		[DisplayName("Fixed Size")]
 		Units,
+
+		[DisplayName("$ Risk")]
 		EquityRisk,
+
+		[DisplayName("% Risk")]
 		EquityRiskPercent
 	}
 	
