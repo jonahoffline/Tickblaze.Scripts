@@ -8,11 +8,11 @@ public class OcoTicks : TradeManagementStrategy
 	[Parameter("Stop-loss distance (ticks)", Description = "Enter the distance from your entry in ticks, that you would like to set your stop loss. Entering zero (0) means you have no stop loss.")]
 	public int StopLossTicks { get; set; } = 16;
 
-	[Parameter("Position size type")]
+	[Parameter("Position size type", Description = "Defines what your position size is based on.  Units will use a fixed number of shares/contracts etc. EquityRisk uses a fixed $ amount. EquityRiskPercent will use a fixed % of your account equity.")]
 	public SizeType PositionSizeType { get; set; } = SizeType.EquityRisk;
 
 	[NumericRange(0, double.MaxValue)]
-	[Parameter("Position size value")]
+	[Parameter("Position size value", Description = "The numeric value to use when calculating position size based on the option selected for Position Size Type.")]
 	public double PositionSize { get; set; } = 500;
 
 	[NumericRange(0, int.MaxValue)]
@@ -128,10 +128,10 @@ public class OcoTicks : TradeManagementStrategy
 
 		// Split our order into up to 3 (1 per take profit with valid settings, and one more for the remaining quantity if the take profits don't add up to 100%)
 		var orderSpecs = new List<OrderSpec>();
-		var remainingPercent = (decimal) 100;
+		var remainingPercent = (decimal)100;
 		for (var i = 0; i < takeProfits.Count + 1 && remainingPercent > 0; i++)
 		{
-			var orderGroupPercent = i < takeProfits.Count ? Math.Min((decimal) takeProfits[i].SizePercent, remainingPercent) : remainingPercent;
+			var orderGroupPercent = i < takeProfits.Count ? Math.Min((decimal)takeProfits[i].SizePercent, remainingPercent) : remainingPercent;
 			remainingPercent -= orderGroupPercent;
 			orderSpecs.Add(new OrderSpec
 			{
@@ -141,15 +141,15 @@ public class OcoTicks : TradeManagementStrategy
 		}
 
 		// Get the quantity we'd have left to allocate if all brackets were rounded down, then round them all down
-		var quantityToDistribute = (decimal) 0;
+		var quantityToDistribute = (decimal)0;
 		foreach (var spec in orderSpecs)
 		{
-			var newQuantity = Symbol.NormalizeVolume((double) spec.Quantity, RoundingMode.Down);
+			var newQuantity = Symbol.NormalizeVolume((double)spec.Quantity, RoundingMode.Down);
 			spec.Remainder = spec.Quantity - newQuantity;
 			quantityToDistribute += spec.Remainder;
 			spec.Quantity = newQuantity;
 		}
-		
+
 		// If two take profits, ensure second take profit has at least some quantity if there's anything left
 		if (takeProfits.Count == 2 && orderSpecs[1].Quantity == 0 && quantityToDistribute > 0)
 		{
@@ -177,10 +177,10 @@ public class OcoTicks : TradeManagementStrategy
 			{
 				Entry = order.Type switch
 				{
-					OrderType.Stop => PlaceStopOrder(action, (double) spec.Quantity, order.StopPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
-					OrderType.Limit => PlaceLimitOrder(action, (double) spec.Quantity, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
-					OrderType.StopLimit => PlaceStopLimitOrder(action, (double) spec.Quantity, order.StopPrice, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
-					OrderType.Market => ExecuteMarketOrder(action, (double) spec.Quantity, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.Stop => PlaceStopOrder(action, (double)spec.Quantity, order.StopPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.Limit => PlaceLimitOrder(action, (double)spec.Quantity, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.StopLimit => PlaceStopLimitOrder(action, (double)spec.Quantity, order.StopPrice, order.LimitPrice, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
+					OrderType.Market => ExecuteMarketOrder(action, (double)spec.Quantity, order.TimeInForce, $"{order.Direction.ToString()[0]}E"),
 					_ => throw new ArgumentOutOfRangeException()
 				}
 			});
@@ -236,7 +236,7 @@ public class OcoTicks : TradeManagementStrategy
 		[DisplayName("% Risk")]
 		EquityRiskPercent
 	}
-	
+
 	public class OrderData
 	{
 		public IOrder Entry;
