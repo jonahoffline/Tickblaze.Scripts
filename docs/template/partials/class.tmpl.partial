@@ -67,6 +67,7 @@
 </dl>
 {{/fieldValue}}
 
+<!--
 {{#propertyValue}}
 <h4 class="section">{{__global.propertyValue}}</h4>
 <dl class="parameters">
@@ -74,6 +75,7 @@
   <dd>{{{description}}}</dd>
 </dl>
 {{/propertyValue}}
+-->
 
 {{#eventType}}
 <h4 class="section">{{__global.eventType}}</h4>
