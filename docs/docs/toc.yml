@@ -7,6 +7,11 @@
       href: get-started/vs-code.md
     - name: CLI
       href: get-started/cli.md
+- name: Tutorials
+  expanded: true
+  items:
+    - name: Aroon Indicator
+      href: tutorials/aroon-indicator.md
 - name: Examples
   expanded: true
   items:
