@@ -125,21 +125,22 @@
 {{#extensionMethods.0}}
 <details class="typelist-details">
   <summary>{{__global.extensionMethods}}</summary>
-  <dl class="typelist extensionMethods">
-    <dd>
-  {{/extensionMethods.0}}
-  {{#extensionMethods}}
-  <div>
-    {{#definition}}
-      <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
-    {{/definition}}
-    {{^definition}}
-      <xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
-    {{/definition}}
-  </div>
-  {{/extensionMethods}}
-  {{#extensionMethods.0}}
-  </dl>
+<dl class="typelist extensionMethods">
+  <dt>{{__global.extensionMethods}}</dt>
+  <dd>
+{{/extensionMethods.0}}
+{{#extensionMethods}}
+<div>
+  {{#definition}}
+    <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
+  {{/definition}}
+  {{^definition}}
+    <xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
+  {{/definition}}
+</div>
+{{/extensionMethods}}
+{{#extensionMethods.0}}
+</dl>
 </details>
 {{/extensionMethods.0}}
 
