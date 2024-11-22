@@ -10,14 +10,14 @@ details.typelist-details summary {
 }
 
 details.typelist-details summary::before {
-    display: inline-block;
-    font-family: bootstrap-icons;
-    font-size: .8em;
-    content: "\f285";
-    transform-origin: .5em 50%;
-    margin-right: .2rem;
+  display: inline-block;
+  font-family: bootstrap-icons;
+  font-size: 0.8em;
+  content: "\f285";
+  transform-origin: 0.5em 50%;
+  margin-right: 0.2rem;
 }
 
 details[open].typelist-details summary::before {
-    transform: rotate(90deg);;
+  transform: rotate(90deg);
 }
