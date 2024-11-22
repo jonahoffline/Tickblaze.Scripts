@@ -917,6 +917,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/aroon-indicator.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/aroon-indicator.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/favicon.ico",
       "output": {

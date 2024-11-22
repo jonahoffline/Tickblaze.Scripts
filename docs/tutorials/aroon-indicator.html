@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Writing Aroon Indicator for Tickblaze | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Writing Aroon Indicator for Tickblaze | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/aroon-indicator.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="writing-aroon-indicator-for-tickblaze">Writing Aroon Indicator for Tickblaze</h1>
+
+<p>This guide walks you through writing the <strong>Aroon Indicator (ARN)</strong> for Tickblaze. We’ll explain the <strong>Tickblaze API</strong> syntax in detail to help new developers understand and build their custom indicators.</p>
+<hr>
+<h2 id="prerequisite-knowledge">Prerequisite Knowledge</h2>
+<p>Before proceeding, here are a few key concepts:</p>
+<ul>
+<li><strong>Tickblaze API</strong>: A powerful scripting API to build indicators, strategies, and other tools.</li>
+<li><strong>Bars</strong>: Represents a collection of price bars (e.g., candlesticks) with attributes like <code>High</code>, <code>Low</code>, and <code>Close</code>.</li>
+<li><strong>Indicators</strong>: Extend the <code>Indicator</code> base class, allowing you to define parameters, calculations, and plots.</li>
+</ul>
+<hr>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="1-define-the-namespace">1. Define the Namespace</h3>
+<p>Start by declaring a namespace for your indicator:</p>
+<pre><code class="lang-csharp">namespace MyScripts.Indicators;
+</code></pre>
+<p><strong>Why Use a Unique Namespace?</strong></p>
+<ul>
+<li><strong>Full Type Name</strong>: Tickblaze uses the fully qualified type name (e.g., <code>MyScripts.Indicators.Aroon</code>) to uniquely identify your script.</li>
+<li><strong>Avoid Name Conflicts</strong>: A well-structured namespace prevents conflicts with other indicators or scripts in the Tickblaze ecosystem.</li>
+<li><strong>Integration</strong>: Placing your indicator in the <code>MyScripts.Indicators.Aroon</code> namespace ensures it integrates seamlessly into the platform.</li>
+</ul>
+<h3 id="2-create-the-aroon-class">2. Create the Aroon Class</h3>
+<p>Define a new class named <code>Aroon</code> and inherit from the <code>Indicator</code> base class. Add the <code>partial</code> modifier to enable automatic constructor generation.</p>
+<pre><code class="lang-cs">public partial class Aroon : Indicator
+</code></pre>
+<p><strong>Why Use the <code>partial</code> modifier?</strong></p>
+<ul>
+<li>The <code>partial</code> modifier signals to the Tickblaze source generator that this class can have its code automatically extended. Specifically, constructors based on parameters (<code>[Parameter]</code>) will be generated for you.</li>
+</ul>
+<h3 id="3-add-parameters">3. Add Parameters</h3>
+<p>Parameters let users configure the indicator. Add a <strong>period parameter</strong>:</p>
+<pre><code class="lang-cs">[Parameter(&quot;Period&quot;), NumericRange(1, int.MaxValue)]
+public int Period { get; set; } = 14;
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>[Parameter(&quot;Period&quot;)]</code>:
+<ul>
+<li>Declares a user-configurable parameter named &quot;Period&quot; in the UI.</li>
+<li>Users can adjust this value when adding the indicator to a chart.</li>
+</ul>
+</li>
+<li><code>NumericRange(1, int.MaxValue)</code>:
+<ul>
+<li>Ensures the parameter value is always between 1 and the maximum possible integer, preventing invalid inputs.</li>
+</ul>
+</li>
+<li><code>public int Period</code>:
+<ul>
+<li><code>int</code> specifies this parameter is an integer.</li>
+<li>The default value is set to <code>14</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-define-output-plots">4. Define Output Plots</h3>
+<p>Plots represent lines or values drawn on the chart. Add two plots: <strong>Aroon Up</strong> and <strong>Aroon Down</strong>.</p>
+<pre><code class="lang-cs">[Plot(&quot;Aroon Up&quot;)]
+public PlotSeries Up { get; set; } = new(Color.Orange, PlotStyle.Line);
+
+[Plot(&quot;Aroon Down&quot;)]
+public PlotSeries Down { get; set; } = new(Color.Blue, PlotStyle.Line);
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>[Plot(&quot;Aroon Up&quot;)]</code>:
+<ul>
+<li>Registers a plot named &quot;Aroon Up&quot;.</li>
+<li>Displays this line in the chart’s legend.</li>
+</ul>
+</li>
+<li><code>PlotSeries</code>:
+<ul>
+<li>Represents the data series plotted on the chart.</li>
+<li>Accepts parameters like <code>Color</code> and <code>PlotStyle</code>.</li>
+</ul>
+</li>
+<li><code>new(Color.Orange, PlotStyle.Line)</code>:
+<ul>
+<li>Sets the line's color to orange and style to a solid line.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-add-the-constructor">5. Add the Constructor</h3>
+<p>Initialize the indicator with default metadata:</p>
+<pre><code class="lang-cs">public Aroon()
+{
+    Name = &quot;Aroon&quot;;
+    ShortName = &quot;ARN&quot;;
+    IsPercentage = true;
+}
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>Name</code>:
+<ul>
+<li>The full name of the indicator displayed in the UI.</li>
+</ul>
+</li>
+<li><code>ShortName</code>:
+<ul>
+<li>A short abbreviation for compact views.</li>
+</ul>
+</li>
+<li><code>IsPercentage</code>:
+<ul>
+<li>Indicates that the plot values are percentages (0-100).</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-implement-the-calculation-logic">6. Implement the Calculation Logic</h3>
+<p>The <code>Calculate</code> method contains the main logic for the indicator. Tickblaze automatically calls this method for each bar on the chart.</p>
+<pre><code class="lang-cs">protected override void Calculate(int index)
+</code></pre>
+<h4 id="parameters">Parameters:</h4>
+<ul>
+<li><code>int index</code>:
+<ul>
+<li>Represents the current bar being calculated.</li>
+<li>You can access the price data for this bar using <code>Bars</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="step-by-step-logic-inside-calculate">Step-by-Step Logic Inside <code>Calculate</code>:</h4>
+<p><strong>1. Skip Bars Without Enough Data</strong></p>
+<pre><code class="lang-cs">if (index &lt; Period)
+{
+   return;
+}
+</code></pre>
+<ul>
+<li>Ensures the logic only runs when there are enough bars to calculate the Aroon values.</li>
+</ul>
+<p><strong>2. Initialize Variables</strong></p>
+<pre><code class="lang-cs">var currentHigh = Bars.High[index];
+var currentLow = Bars.Low[index];
+var barsSinceHigh = 0;
+var barsSinceLow = 0;
+</code></pre>
+<ul>
+<li><code>Bars.High[index]</code>: Fetches the high price of the current bar.</li>
+<li><code>Bars.Low[index]</code>: Fetches the low price of the current bar.</li>
+<li><code>barsSinceHigh</code> and <code>barsSinceLow</code>: Track how many bars ago the highest and lowest prices occurred.</li>
+</ul>
+<p><strong>3. Loop Through the Period</strong></p>
+<pre><code class="lang-cs">for (var i = 0; i &lt; Period; i++)
+{
+    if (Bars.High[index - i] &gt;= currentHigh)
+    {
+        currentHigh = Bars.High[index - i];
+        barsSinceHigh = i;
+    }
+
+    if (Bars.Low[index - i] &lt;= currentLow)
+    {
+        currentLow = Bars.Low[index - i];
+        barsSinceLow = i;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Loop</strong>: Iterates through the last <code>Period</code> bars.</li>
+<li><strong>Update High/Low</strong>: If a new high or low is found, update <code>currentHigh</code> or <code>currentLow</code> and record the number of bars since it occurred.</li>
+</ul>
+<p><strong>4. Calculate Aroon Up and Down</strong></p>
+<pre><code class="lang-cs">Up[index] = (Period - barsSinceHigh - 1) * 100.0 / (Period - 1);
+Down[index] = (Period - barsSinceLow - 1) * 100.0 / (Period - 1);
+</code></pre>
+<ul>
+<li><strong>Aroon Up</strong>: The percentage of time since the most recent high.</li>
+<li><strong>Aroon Down</strong>: The percentage of time since the most recent low.</li>
+<li>Multiply by <code>100.0</code> to normalize the values to percentages.</li>
+</ul>
+<hr>
+<h2 id="full-source-code">Full Source Code</h2>
+<p>For your convenience, the complete source code of the <strong>Aroon Indicator</strong> is available on GitHub. You can review it, download it, or fork the repository to modify and enhance it further.</p>
+<p><a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/src/Indicators/Aroon.cs">View the Full Source Code on GitHub</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/aroon-indicator.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>
