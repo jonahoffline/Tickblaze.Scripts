@@ -6,11 +6,11 @@ namespace Tickblaze.Scripts.PositionSizers;
 public class FixedFractionalPercent : PositionSizer
 {
 	[NumericRange(0.0001, 100)]
-	[Parameter("Strategy Account %", Description = "The percentage of the strategies equity to risk")]
+	[Parameter("Risked Account %", Description = "The percentage of the strategies equity to risk")]
 	public double Fractional { get; set; } = 2;
 	
 	[NumericRange(1, int.MaxValue)]
-	[Parameter("% Price Change to Lose Strategy Account %", Description = "The percentage change in price that it would take to lose our risked equity")]
+	[Parameter("% Price Change to Lose Account Risk", Description = "The percentage change in price that it would take to lose our risked equity")]
 	public double PercentChangeToLoseFractional { get; set; } = 100;
 
 	[Parameter("Enable exit sizing", Description = "Use to indicate whether to enable the position sizing script to determine the size of exit orders.")]
