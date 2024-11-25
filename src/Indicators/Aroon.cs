@@ -18,6 +18,7 @@ public partial class Aroon : Indicator
 	{
 		Name = "Aroon";
 		ShortName = "ARN";
+		IsOverlay = false;
 		IsPercentage = true;
 	}
 

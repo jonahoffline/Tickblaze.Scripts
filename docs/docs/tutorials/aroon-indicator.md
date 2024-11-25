@@ -28,7 +28,6 @@ namespace MyScripts.Indicators;
 
 - **Full Type Name**: Tickblaze uses the fully qualified type name (e.g., `MyScripts.Indicators.Aroon`) to uniquely identify your script.
 - **Avoid Name Conflicts**: A well-structured namespace prevents conflicts with other indicators or scripts in the Tickblaze ecosystem.
-- **Integration**: Placing your indicator in the `MyScripts.Indicators.Aroon` namespace ensures it integrates seamlessly into the platform.
 
 ### 2. Create the Aroon Class
 
@@ -56,7 +55,7 @@ public int Period { get; set; } = 14;
 - `[Parameter("Period")]`:
   - Declares a user-configurable parameter named "Period" in the UI.
   - Users can adjust this value when adding the indicator to a chart.
-- `NumericRange(1, int.MaxValue)`:
+- `[NumericRange(1, int.MaxValue)]`:
   - Ensures the parameter value is always between 1 and the maximum possible integer, preventing invalid inputs.
 - `public int Period`:
   - `int` specifies this parameter is an integer.
@@ -94,6 +93,7 @@ public Aroon()
 {
     Name = "Aroon";
     ShortName = "ARN";
+    IsOverlay = false;
     IsPercentage = true;
 }
 ```
@@ -104,6 +104,8 @@ public Aroon()
   - The full name of the indicator displayed in the UI.
 - `ShortName`:
   - A short abbreviation for compact views.
+- `IsOverlay`:
+  - Indicates whether the indicator will overlay the bars or be placed in a new chart panel.
 - `IsPercentage`:
   - Indicates that the plot values are percentages (0-100).
 
