@@ -90,23 +90,17 @@ After building your project, the indicator should be automatically imported into
 ### 6. Debug the Indicator
 
 1. **Start Tickblaze** as usual if not running yet.
-
 2. **Attach to `Tickblaze.View.exe` process**:
    - Go to the **Debug** menu in Visual Studio and select **Attach to Process...**.
    - In the **Attach to Process** window, locate and select `Tickblaze.View.exe` from the list of available processes.
-   - You can filter the processes by name or use the search box to find `Tickblaze.View.exe` quickly.
-   
+   - You can filter the processes by name or use the search box to find `Tickblaze.View.exe` quickly.   
 3. **Choose the Correct Debugger**:
-   - In the **Attach to** section, ensure that the correct type of code is selected (for example, **.NET** for managed code).
-   
+   - In the **Attach to** section, ensure that the correct type of code is selected (for example, **.NET** for managed code).   
 4. **Attach**:
-   - Once selected, click **Attach**.
-   
+   - Once selected, click **Attach**.   
 5. **Set Breakpoints**:
-   - Set breakpoints in your code by clicking on the left margin next to the line of code where you want the debugger to pause.
-   
+   - Set breakpoints in your code by clicking on the left margin next to the line of code where you want the debugger to pause.   
 6. **Debug the Indicator**:
-   - Once attached, the debugger will stop at breakpoints in your code, allowing you to inspect variables, step through your code, and analyze the indicator's behavior.
-   
+   - Once attached, the debugger will stop at breakpoints in your code, allowing you to inspect variables, step through your code, and analyze the indicator's behavior.   
 7. **Stop Debugging**:
    - When finished, you can stop debugging by going to the **Debug** menu and selecting **Stop Debugging** or pressing `Shift+F5`.
