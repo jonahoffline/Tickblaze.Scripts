@@ -14,6 +14,9 @@ public partial class Momentum : Indicator
 	[Plot("Result")]
 	public PlotSeries Result { get; set; } = new(Color.Blue, PlotStyle.Line);
 
+	[Plot("Zero")]
+	public PlotLevel ZeroLevel { get; set; } = new(0, Color.Gray);
+
 	public Momentum()
 	{
 		Name = "Momentum";

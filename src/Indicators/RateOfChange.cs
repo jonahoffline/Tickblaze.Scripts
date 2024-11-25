@@ -14,6 +14,9 @@ public partial class RateOfChange : Indicator
 	[Plot("Result")]
 	public PlotSeries Result { get; set; } = new(Color.Blue, PlotStyle.Line);
 
+	[Plot("Zero")]
+	public PlotLevel ZeroLevel { get; set; } = new(0, Color.Gray);
+
 	public RateOfChange()
 	{
 		Name = "Rate Of Change";

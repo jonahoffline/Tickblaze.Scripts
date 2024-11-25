@@ -14,6 +14,9 @@ public partial class EaseOfMovement : Indicator
 	[Plot("Result")]
 	public PlotSeries Result { get; set; }
 
+	[Plot("Zero")]
+	public PlotLevel ZeroLevel { get; set; } = new(0, Color.Gray);
+
 	private double _smoothFactor;
 
 	public EaseOfMovement()
