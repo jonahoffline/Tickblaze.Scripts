@@ -11,11 +11,13 @@ Follow these steps to create your first custom indicator for Tickblaze using Vis
 1. **Open Visual Studio**.
 2. **Start a New Project**:
    - From the **Start Window**, click on **Create a new project**.
-   - Choose a **Class Library** project template and click **Next**.
+   - Choose a **Class Library** C# project template and click **Next**.
 3. **Configure the Project**:
    - Give your project a **name**.
    - Choose a **location** for your project.
    - Set the **Solution name** as desired.
+   - Click **Next**.
+   - Select the **.NET 8.0** framework
    - Click **Create**.
 
 ### 2. Add a NuGet Package
