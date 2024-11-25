@@ -36,7 +36,7 @@ public class FixedEquity : PositionSizer
 		}
 
 		var exchangeRate = GetExchangeRate(Symbol.CurrencyCode, Account.BaseCurrencyCode);
-		var size = Math.Floor(EquityPerTrade / (exchangeRate * price));
+		var size = Math.Floor(EquityPerTrade / (exchangeRate * price * Symbol.PointValue));
 
 		return size;
 	}
