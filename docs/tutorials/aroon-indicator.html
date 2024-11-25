@@ -106,7 +106,6 @@
 <ul>
 <li><strong>Full Type Name</strong>: Tickblaze uses the fully qualified type name (e.g., <code>MyScripts.Indicators.Aroon</code>) to uniquely identify your script.</li>
 <li><strong>Avoid Name Conflicts</strong>: A well-structured namespace prevents conflicts with other indicators or scripts in the Tickblaze ecosystem.</li>
-<li><strong>Integration</strong>: Placing your indicator in the <code>MyScripts.Indicators.Aroon</code> namespace ensures it integrates seamlessly into the platform.</li>
 </ul>
 <h3 id="2-create-the-aroon-class">2. Create the Aroon Class</h3>
 <p>Define a new class named <code>Aroon</code> and inherit from the <code>Indicator</code> base class. Add the <code>partial</code> modifier to enable automatic constructor generation.</p>
@@ -129,7 +128,7 @@ public int Period { get; set; } = 14;
 <li>Users can adjust this value when adding the indicator to a chart.</li>
 </ul>
 </li>
-<li><code>NumericRange(1, int.MaxValue)</code>:
+<li><code>[NumericRange(1, int.MaxValue)]</code>:
 <ul>
 <li>Ensures the parameter value is always between 1 and the maximum possible integer, preventing invalid inputs.</li>
 </ul>
@@ -175,6 +174,7 @@ public PlotSeries Down { get; set; } = new(Color.Blue, PlotStyle.Line);
 {
     Name = &quot;Aroon&quot;;
     ShortName = &quot;ARN&quot;;
+    IsOverlay = false;
     IsPercentage = true;
 }
 </code></pre>
@@ -188,6 +188,11 @@ public PlotSeries Down { get; set; } = new(Color.Blue, PlotStyle.Line);
 <li><code>ShortName</code>:
 <ul>
 <li>A short abbreviation for compact views.</li>
+</ul>
+</li>
+<li><code>IsOverlay</code>:
+<ul>
+<li>Indicates whether the indicator will overlay the bars or be placed in a new chart panel.</li>
 </ul>
 </li>
 <li><code>IsPercentage</code>:
