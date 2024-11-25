@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Tickblaze.Scripts.Indicators;
+namespace Tickblaze.Scripts.Tests;
 
 [Browsable(false)]
 public partial class NewSession : Indicator
@@ -19,9 +19,10 @@ public partial class NewSession : Indicator
 	protected override void Calculate(int index)
 	{
 		var time = Bars[index].Time;
+		var timeLocal = time.ToLocalTime();
 
 		Count[index] = double.IsNaN(Count[index]) ? 1 : Count[index] + 1;
-		Time[index] = time.Hour * 100 + time.Minute;
+		Time[index] = timeLocal.Hour * 100 + timeLocal.Minute;
 
 		var session = Bars.Symbol.ExchangeCalendar.GetSession(time);
 		if (session != _lastSession)

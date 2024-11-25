@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 
-namespace Tickblaze.Scripts.Indicators;
+namespace Tickblaze.Scripts.Tests;
 
 [Browsable(false)]
-public class TestIndicator : Indicator
+public class BarIndexColor : Indicator
 {
 	[Plot("Bar Index")]
 	public PlotSeries Result { get; set; } = new(Color.Transparent, PlotStyle.Histogram);
@@ -24,10 +24,10 @@ public class TestIndicator : Indicator
 		{
 			Result.Colors[index] = Color.Green;
 		}
-        else if (bar.Close < bar.Open)
-        {
+		else if (bar.Close < bar.Open)
+		{
 			Result.Colors[index] = Color.Red;
-        }
+		}
 		else
 		{
 			Result.Colors[index] = Color.White;
@@ -35,7 +35,7 @@ public class TestIndicator : Indicator
 
 		return;
 
-        if (_lastIndex > index)
+		if (_lastIndex > index)
 		{
 			Debugger.Break();
 		}
