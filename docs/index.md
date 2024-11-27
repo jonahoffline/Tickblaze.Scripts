@@ -8,6 +8,8 @@ Follow these steps to create your first custom indicator for Tickblaze using Vis
 
 ### 1. Create a New Solution and Project
 
+![image](images/tutorials/vs-new-project.webp)
+
 1. **Open Visual Studio**.
 2. **Start a New Project**:
    - From the **Start Window**, click on **Create a new project**.
@@ -22,6 +24,8 @@ Follow these steps to create your first custom indicator for Tickblaze using Vis
 
 ### 2. Add a NuGet Package
 
+![image](images/tutorials/vs-package-install.webp)
+
 1. **Open the NuGet Package Manager**:
    - Right-click on the **project** in the **Solution Explorer**.
    - Select **Manage NuGet Packages...**.
@@ -32,6 +36,8 @@ Follow these steps to create your first custom indicator for Tickblaze using Vis
 3. **Accept License Agreements** if prompted.
 
 ### 3. Create Your Indicator
+
+![image](images/tutorials/vs-new-class.webp)
 
 1. **Create a New Class**:
    - In **Solution Explorer**, right-click on the **project**.
@@ -88,6 +94,8 @@ After building your project, the indicator should be automatically imported into
 5. Click the `OK` button.
 
 ### 6. Debug the Indicator
+
+![image](images/tutorials/vs-debug.webp)
 
 1. **Start Tickblaze** as usual if not running yet.
 2. **Attach to `Tickblaze.View.exe` process**:
