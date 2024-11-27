@@ -947,6 +947,46 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/tutorials/vs-debug.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/tutorials/vs-debug.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tutorials/vs-new-class.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/tutorials/vs-new-class.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tutorials/vs-new-project.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/tutorials/vs-new-project.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tutorials/vs-package-install.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/tutorials/vs-package-install.webp"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
