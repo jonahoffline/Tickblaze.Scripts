@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Writing Ruler Drawing for Tickblaze | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Writing Ruler Drawing for Tickblaze | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/ruler-drawing.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="writing-ruler-drawing-for-tickblaze">Writing Ruler Drawing for Tickblaze</h1>
+
+<p>This guide walks you through writing the <strong>Ruler Drawing Tool</strong> for Tickblaze. The Ruler is a powerful drawing tool that measures price change, ticks, bars, and time across three user-defined points on the chart.</p>
+<hr>
+<h2 id="prerequisite-knowledge">Prerequisite Knowledge</h2>
+<p>Before proceeding, here are a few key concepts:</p>
+<ul>
+<li><strong>Tickblaze API</strong>: Provides tools for creating custom drawings, indicators, and strategies.</li>
+<li><strong>Drawing Class</strong>: Extend the <code>Drawing</code> base class to create custom graphical tools on the chart.</li>
+<li><strong>Points</strong>: Represents user-defined positions on the chart used for drawing shapes and annotations.</li>
+</ul>
+<hr>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="1-define-the-namespace">1. Define the Namespace</h3>
+<p>Start by declaring a namespace for your drawing:</p>
+<pre><code class="lang-csharp">namespace MyScripts.Drawings;
+</code></pre>
+<p><strong>Why Use a Unique Namespace?</strong></p>
+<ul>
+<li><strong>Full Type Name</strong>: Tickblaze uses the fully qualified type name (e.g., <code>MyScripts.Drawings.Ruler</code>) to uniquely identify your drawing.</li>
+<li><strong>Avoid Name Conflicts</strong>: A well-structured namespace prevents conflicts with other drawings or scripts.</li>
+</ul>
+<hr>
+<h3 id="2-create-the-ruler-class">2. Create the Ruler Class</h3>
+<p>Define a new class named <code>Ruler</code> and inherit from the <code>Drawing</code> base class:</p>
+<pre><code class="lang-csharp">public partial class Ruler : Drawing
+</code></pre>
+<hr>
+<h3 id="3-add-parameters">3. Add Parameters</h3>
+<p>Parameters let users customize the appearance and behavior of the Ruler tool. Define the parameters for color, thickness, font, and text styling:</p>
+<pre><code class="lang-csharp">[Parameter(&quot;Line Color&quot;, Description = &quot;Color and opacity of the drawn lines&quot;)]
+public Color LineColor { get; set; } = Color.Gray;
+
+[Parameter(&quot;Line Thickness&quot;, Description = &quot;Thickness of the drawn lines&quot;), NumericRange(1, 10)]
+public int LineThickness { get; set; } = 1;
+
+[Parameter(&quot;Lines style&quot;, Description = &quot;Line style of the drawn lines&quot;)]
+public LineStyle LineStyle { get; set; } = LineStyle.Dot;
+
+[Parameter(&quot;Text Font&quot;, Description = &quot;Font name and size for the text&quot;)]
+public Font TextFont { get; set; } = new(&quot;Arial&quot;, 10);
+
+[Parameter(&quot;Text Foreground&quot;, Description = &quot;Color and opacity of the text&quot;)]
+public Color TextForeground { get; set; } = Color.Silver;
+
+[Parameter(&quot;Text Background&quot;, Description = &quot;Color and opacity of the background fill&quot;)]
+public Color TextBackground { get; set; } = &quot;#33696969&quot;;
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>[Parameter(&quot;Line Color&quot;)]</code>:
+<ul>
+<li>Declares a user-configurable parameter for customizing the line color.</li>
+</ul>
+</li>
+<li><code>[NumericRange(1, 10)]</code>:
+<ul>
+<li>Restricts the <code>LineThickness</code> parameter to values between 1 and 10.</li>
+</ul>
+</li>
+<li>Defaults:
+<ul>
+<li><code>LineColor</code> is gray.</li>
+<li><code>TextFont</code> defaults to Arial with size 10.</li>
+<li><code>TextBackground</code> is a semi-transparent gray color.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-define-points">4. Define Points</h3>
+<p>Define the required points for the Ruler and specify how many are needed:</p>
+<pre><code class="lang-csharp">public override int PointsCount =&gt; 3;
+
+public IChartPoint PointA =&gt; Points[0];
+public IChartPoint PointB =&gt; Points[1];
+public IChartPoint PointC =&gt; Points[2];
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>PointsCount</code>:
+<ul>
+<li>Specifies that the Ruler requires three points.</li>
+</ul>
+</li>
+<li><code>PointA</code>, <code>PointB</code>, <code>PointC</code>:
+<ul>
+<li>Provide user-defined locations on the chart for drawing the ruler.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="5-implement-the-render-logic">5. Implement the Render Logic</h3>
+<p>The <code>OnRender</code> method contains the main logic for rendering the Ruler on the chart. Here’s the implementation:</p>
+<pre><code class="lang-csharp">public override void OnRender(IDrawingContext context)
+{
+    context.DrawPolygon(Points, null, LineColor, LineThickness, LineStyle);
+
+    if (Points.Count &lt; PointsCount)
+    {
+        return;
+    }
+
+    var price = new[] { (double)PointA.Value, (double)PointB.Value };
+    var change = price[1] - price[0];
+    var ticks = (int)Math.Round(Symbol.RoundToTick(change) / Symbol.TickSize);
+    var bars = Chart.GetBarIndexByXCoordinate(PointB.X) - Chart.GetBarIndexByXCoordinate(PointA.X);
+    var time = ((DateTime)PointB.Time).Subtract((DateTime)PointA.Time);
+    var text = $&quot;Bars:\t{bars}\nTime:\t{time}\nChange:\t{ChartScale.FormatPrice(change)}\nTicks:\t{ticks}&quot;;
+
+    var textSize = context.MeasureText(text, TextFont);
+    var textMargin = 5;
+    var textOrigin = new Point(PointC.X + textMargin, PointC.Y + textMargin);
+    var rectPointB = new Point(PointC.X + textSize.Width + textMargin * 2, PointC.Y + textSize.Height + textMargin * 2);
+
+    if (PointB.X &gt; PointC.X)
+    {
+        textOrigin.X -= textSize.Width + textMargin * 2;
+        rectPointB.X = textOrigin.X - textMargin;
+    }
+
+    if (PointB.Y &gt; PointC.Y)
+    {
+        textOrigin.Y -= textSize.Height + textMargin * 2;
+        rectPointB.Y = textOrigin.Y - textMargin;
+    }
+
+    context.DrawRectangle(PointC, rectPointB, TextBackground, LineColor, LineThickness);
+    context.DrawText(textOrigin, text, TextForeground, TextFont);
+}
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ol>
+<li><p><strong>Drawing Lines</strong>:</p>
+<ul>
+<li><code>context.DrawPolygon</code> draws the connecting lines between the three points using the specified color, thickness, and style.</li>
+</ul>
+</li>
+<li><p><strong>Measurements</strong>:</p>
+<ul>
+<li>Calculates:
+<ul>
+<li><strong>Bars</strong>: The number of bars between <code>PointA</code> and <code>PointB</code>.</li>
+<li><strong>Time</strong>: The time difference between <code>PointA</code> and <code>PointB</code>.</li>
+<li><strong>Change</strong>: The price difference between <code>PointA</code> and <code>PointB</code>.</li>
+<li><strong>Ticks</strong>: Tick-based change derived using <code>Symbol.RoundToTick</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Rendering Text</strong>:</p>
+<ul>
+<li>The calculated measurements are displayed next to <code>PointC</code> using <code>context.DrawText</code>.</li>
+<li><code>context.MeasureText</code> calculates the text size to align it correctly within a rectangle background.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="full-source-code">Full Source Code</h2>
+<p>The full source code for the <strong>Ruler Drawing Tool</strong> is available on GitHub. You can review, download, and modify it as needed.</p>
+<p><a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/src/Drawings/Ruler.cs">View the Full Source Code on GitHub</a></p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>You’ve successfully created the Ruler drawing tool for Tickblaze. The Ruler measures price, ticks, bars, and time across three points, making it a versatile tool for analyzing chart data. Experiment with parameters and extend it further to fit your trading needs!</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/ruler-drawing.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>
