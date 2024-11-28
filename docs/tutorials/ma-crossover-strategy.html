@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Writing a Moving Average Crossover Strategy for Tickblaze | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Writing a Moving Average Crossover Strategy for Tickblaze | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/ma-crossover-strategy.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="writing-a-moving-average-crossover-strategy-for-tickblaze">Writing a Moving Average Crossover Strategy for Tickblaze</h1>
+
+<p>This guide walks you through writing the <strong>Moving Average Crossover Strategy</strong> for Tickblaze. This strategy buys or sells short when a fast moving average crosses above or below a slow moving average. It also closes any existing positions before entering a new one.</p>
+<hr>
+<h2 id="prerequisite-knowledge">Prerequisite Knowledge</h2>
+<p>Before proceeding, here are a few key concepts:</p>
+<ul>
+<li><strong>Tickblaze API</strong>: A robust scripting API to build indicators, strategies, and tools.</li>
+<li><strong>Strategy Class</strong>: Extend the <code>Strategy</code> base class to define custom trading strategies.</li>
+<li><strong>Order Execution</strong>: Use API methods like <code>ExecuteMarketOrder</code> to place trades programmatically.</li>
+</ul>
+<hr>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="1-define-the-namespace">1. Define the Namespace</h3>
+<p>Start by declaring a namespace for your strategy:</p>
+<pre><code class="lang-csharp">namespace MyScripts.Strategies;
+</code></pre>
+<p><strong>Why Use a Unique Namespace?</strong></p>
+<ul>
+<li><strong>Full Type Name</strong>: Tickblaze uses the fully qualified type name (e.g., <code>MyScripts.Strategies.MovingAverageCrossover</code>) to uniquely identify your strategy.</li>
+<li><strong>Avoid Name Conflicts</strong>: A unique namespace ensures your strategy won’t conflict with others.</li>
+</ul>
+<hr>
+<h3 id="2-create-the-moving-average-crossover-class">2. Create the Moving Average Crossover Class</h3>
+<p>Define a new class named <code>MovingAverageCrossover</code> and inherit from the <code>Strategy</code> base class:</p>
+<pre><code class="lang-csharp">public class MovingAverageCrossover : Strategy
+</code></pre>
+<hr>
+<h3 id="3-add-parameters">3. Add Parameters</h3>
+<p>Parameters allow users to configure the moving average type and periods used in the strategy. Add the following:</p>
+<pre><code class="lang-csharp">[Parameter(&quot;MA Type&quot;)]
+public MovingAverageType MovingAverageType { get; set; } = MovingAverageType.Simple;
+
+[Parameter(&quot;Fast Period&quot;)]
+public int FastPeriod { get; set; } = 20;
+
+[Parameter(&quot;Slow Period&quot;)]
+public int SlowPeriod { get; set; } = 50;
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>[Parameter(&quot;MA Type&quot;)]</code>:
+<ul>
+<li>Lets users select the type of moving average (e.g., Simple, Exponential).</li>
+</ul>
+</li>
+<li><code>[Parameter(&quot;Fast Period&quot;)]</code>:
+<ul>
+<li>Specifies the period for the fast moving average.</li>
+<li>Defaults to 20 bars.</li>
+</ul>
+</li>
+<li><code>[Parameter(&quot;Slow Period&quot;)]</code>:
+<ul>
+<li>Specifies the period for the slow moving average.</li>
+<li>Defaults to 50 bars.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-initialize-moving-averages">4. Initialize Moving Averages</h3>
+<p>In the <code>Initialize</code> method, set up the fast and slow moving averages:</p>
+<pre><code class="lang-csharp">private MovingAverage _fastMovingAverage, _slowMovingAverage;
+
+protected override void Initialize()
+{
+    _fastMovingAverage = new MovingAverage(Bars.Close, FastPeriod, MovingAverageType);
+    _slowMovingAverage = new MovingAverage(Bars.Close, SlowPeriod, MovingAverageType);
+}
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>Bars.Close</code>:
+<ul>
+<li>Provides the closing prices of the bars, which are used as input for the moving averages.</li>
+</ul>
+</li>
+<li><code>MovingAverage</code>:
+<ul>
+<li>Represents a moving average instance. It takes the data series (<code>Bars.Close</code>), period, and type as parameters.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="5-implement-the-trading-logic">5. Implement the Trading Logic</h3>
+<p>The <code>OnBar</code> method contains the main strategy logic. Tickblaze automatically calls this method whenever a new bar is available.</p>
+<pre><code class="lang-csharp">protected override void OnBar(int index)
+{
+    if (index == 0)
+    {
+        return;
+    }
+
+    var fastLast = _fastMovingAverage[index];
+    var fastPrevious = _fastMovingAverage[index - 1];
+
+    var slowLast = _slowMovingAverage[index];
+    var slowPrevious = _slowMovingAverage[index - 1];
+
+    var isBullishCrossover = fastLast &gt; slowLast &amp;&amp; fastPrevious &lt;= slowPrevious;
+    if (isBullishCrossover)
+    {
+        ClosePosition();
+        ExecuteMarketOrder(OrderAction.Buy, 1);
+    }
+
+    var isBearishCrossover = fastLast &lt; slowLast &amp;&amp; fastPrevious &gt;= slowPrevious;
+    if (isBearishCrossover)
+    {
+        ClosePosition();
+        ExecuteMarketOrder(OrderAction.SellShort, 1);
+    }
+}
+</code></pre>
+<h4 id="step-by-step-logic-inside-onbar">Step-by-Step Logic Inside <code>OnBar</code>:</h4>
+<ol>
+<li><p><strong>Skip the First Bar</strong>:</p>
+<pre><code class="lang-csharp">if (index == 0)
+{
+    return;
+}
+</code></pre>
+<ul>
+<li>Ensures there’s enough historical data for comparison.</li>
+</ul>
+</li>
+<li><p><strong>Fetch Current and Previous Values</strong>:</p>
+<pre><code class="lang-csharp">var fastLast = _fastMovingAverage[index];
+var fastPrevious = _fastMovingAverage[index - 1];
+
+var slowLast = _slowMovingAverage[index];
+var slowPrevious = _slowMovingAverage[index - 1];
+</code></pre>
+<ul>
+<li>Retrieves the current and previous values for both moving averages.</li>
+</ul>
+</li>
+<li><p><strong>Detect Bullish Crossover</strong>:</p>
+<pre><code class="lang-csharp">var isBullishCrossover = fastLast &gt; slowLast &amp;&amp; fastPrevious &lt;= slowPrevious;
+if (isBullishCrossover)
+{
+    ClosePosition();
+    ExecuteMarketOrder(OrderAction.Buy, 1);
+}
+</code></pre>
+<ul>
+<li>A bullish crossover occurs when the fast moving average crosses above the slow moving average.</li>
+<li>Closes any existing position before entering a <strong>buy order</strong>.</li>
+</ul>
+</li>
+<li><p><strong>Detect Bearish Crossover</strong>:</p>
+<pre><code class="lang-csharp">var isBearishCrossover = fastLast &lt; slowLast &amp;&amp; fastPrevious &gt;= slowPrevious;
+if (isBearishCrossover)
+{
+    ClosePosition();
+    ExecuteMarketOrder(OrderAction.SellShort, 1);
+}
+</code></pre>
+<ul>
+<li>A bearish crossover occurs when the fast moving average crosses below the slow moving average.</li>
+<li>Closes any existing position before entering a <strong>sell short order</strong>.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>You’ve successfully created a <strong>Moving Average Crossover Strategy</strong> for Tickblaze. This updated logic ensures existing positions are closed before new ones are opened, making the strategy cleaner and more precise. Experiment with different moving average types and periods to optimize performance. Happy coding!</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/ma-crossover-strategy.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>

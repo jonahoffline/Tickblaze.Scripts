@@ -928,6 +928,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/ma-crossover-strategy.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/ma-crossover-strategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/tutorials/ruler-drawing.md",
       "output": {
         ".html": {
