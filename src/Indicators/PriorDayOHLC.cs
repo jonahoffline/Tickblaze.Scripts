@@ -126,10 +126,11 @@ public partial class PriorDayOHLC : Indicator
 		//set plots to prior day ohlc
 		if (_values != null)
 		{
-			Open[index] = 0;
-			High[index] = 0;
-			Low[index] = 0;
-			Close[index] = 0;
+			Open[index] = double.NaN;
+			High[index] = double.NaN;
+			Low[index] = double.NaN;
+			Close[index] = double.NaN;
+
 			if (ShowOpen)
 			{
 				Open[index] = _values.Item1;
