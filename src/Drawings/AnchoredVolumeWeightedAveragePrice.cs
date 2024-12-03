@@ -1,4 +1,5 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+﻿
+namespace Tickblaze.Scripts.Drawings;
 
 public class AnchoredVolumeWeightedAveragePrice : Drawing
 {
@@ -69,6 +70,35 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	public AnchoredVolumeWeightedAveragePrice()
 	{
 		Name = "Anchored VWAP";
+	}
+
+	protected override Parameters GetParameters(Parameters parameters)
+	{
+		if (BandEnabled1 is false)
+		{
+			parameters.Remove(nameof(BandMultiplier1));
+			parameters.Remove(nameof(BandColor1));
+			parameters.Remove(nameof(BandThickness1));
+			parameters.Remove(nameof(BandLineStyle1));
+		}
+
+		if (BandEnabled2 is false)
+		{
+			parameters.Remove(nameof(BandMultiplier2));
+			parameters.Remove(nameof(BandColor2));
+			parameters.Remove(nameof(BandThickness2));
+			parameters.Remove(nameof(BandLineStyle2));
+		}
+
+		if (BandEnabled3 is false)
+		{
+			parameters.Remove(nameof(BandMultiplier3));
+			parameters.Remove(nameof(BandColor3));
+			parameters.Remove(nameof(BandThickness3));
+			parameters.Remove(nameof(BandLineStyle3));
+		}
+
+		return parameters;
 	}
 
 	protected override void Initialize()

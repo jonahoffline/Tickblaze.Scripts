@@ -1,4 +1,5 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+﻿
+namespace Tickblaze.Scripts.Drawings;
 
 public class VolumeProfileExtended : VolumeProfile
 {
@@ -137,6 +138,39 @@ public class VolumeProfile : Drawing
 	public VolumeProfile()
 	{
 		Name = "Volume Profile - Manual";
+	}
+
+	protected override Parameters GetParameters(Parameters parameters)
+	{
+		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is RowsLayoutType.Count ? "Histo Rows Count" : "Histo Ticks Size";
+
+		if (VahLineVisible is false)
+		{
+			parameters.Remove(nameof(VahLineColor));
+			parameters.Remove(nameof(VahLineThickness));
+			parameters.Remove(nameof(VahLineStyle));
+		}
+
+		if (ValLineVisible is false)
+		{
+			parameters.Remove(nameof(ValLineColor));
+			parameters.Remove(nameof(ValLineThickness));
+			parameters.Remove(nameof(ValLineStyle));
+		}
+
+		if (PocLineVisible is false)
+		{
+			parameters.Remove(nameof(PocLineColor));
+			parameters.Remove(nameof(PocLineThickness));
+			parameters.Remove(nameof(PocLineStyle));
+		}
+
+		if (ShowPrices is false)
+		{
+			parameters.Remove(nameof(Font));
+		}
+
+		return parameters;
 	}
 
 	public override void SetPoint(IComparable xDataValue, IComparable yDataValue, int index)
