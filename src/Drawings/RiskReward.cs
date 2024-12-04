@@ -1,7 +1,4 @@
-﻿
-using System.Diagnostics;
-
-namespace Tickblaze.Scripts.Drawings;
+﻿namespace Tickblaze.Scripts.Drawings;
 
 public sealed class RiskReward : Drawing
 {
