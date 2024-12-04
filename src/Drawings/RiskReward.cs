@@ -1,4 +1,7 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+﻿
+using System.Diagnostics;
+
+namespace Tickblaze.Scripts.Drawings;
 
 public sealed class RiskReward : Drawing
 {
@@ -10,6 +13,10 @@ public sealed class RiskReward : Drawing
 
 	[Parameter("Stop Color", Description = "Color and opacity of the stoploss line")]
 	public Color StopColor { get; set; } = Color.Red;
+
+	[NumericRange(0, 100)]
+	[Parameter("Shading Opacity %", Description = "Opacity of the shading between lines")]
+	public int ShadingOpacity { get; set; } = 20;
 
 	[Parameter("T1 Enabled", Description = "Enable Target #1 line")]
 	public bool TargetEnabled1 { get; set; } = true;
@@ -97,11 +104,44 @@ public sealed class RiskReward : Drawing
 	}
 
 	private record Target(double Ratio, double ExitPercent, Color Color);
-	private record PriceLevel(double Price, string Text, Color Color);
+	private record PriceLevel(double Price, string Text, Color Color, double? ShadingStartPrice = null);
+
+	private float _shadingOpacity;
 
 	public RiskReward()
 	{
 		Name = "Risk Reward";
+	}
+
+	protected override Parameters GetParameters(Parameters parameters)
+	{
+		if (TargetEnabled1 is false)
+		{
+			parameters.Remove(nameof(TargetRewardRatio1));
+			parameters.Remove(nameof(TargetPercent1));
+			parameters.Remove(nameof(TargetColor1));
+		}
+
+		if (TargetEnabled2 is false)
+		{
+			parameters.Remove(nameof(TargetRewardRatio2));
+			parameters.Remove(nameof(TargetPercent2));
+			parameters.Remove(nameof(TargetColor2));
+		}
+
+		if (TargetEnabled3 is false)
+		{
+			parameters.Remove(nameof(TargetRewardRatio3));
+			parameters.Remove(nameof(TargetPercent3));
+			parameters.Remove(nameof(TargetColor3));
+		}
+
+		return parameters;
+	}
+
+	protected override void Initialize()
+	{
+		_shadingOpacity = ShadingOpacity / 100f;
 	}
 
 	public override void SetPoint(IComparable xDataValue, IComparable yDataValue, int index)
@@ -120,7 +160,7 @@ public sealed class RiskReward : Drawing
 		var levels = new List<PriceLevel>()
 		{
 			new(entryPrice, GetText(PriceLevelType.Entry, stopQuantity, entryPrice, 0,0), EntryColor),
-			new(stopPrice, GetText(PriceLevelType.StopLoss, stopQuantity, stopPrice, -stopTicks, -stopLoss), StopColor),
+			new(stopPrice, GetText(PriceLevelType.StopLoss, stopQuantity, stopPrice, -stopTicks, -stopLoss), StopColor, entryPrice),
 		};
 
 		var remainingQuantity = stopQuantity;
@@ -141,6 +181,8 @@ public sealed class RiskReward : Drawing
 			targets.Add(new(TargetRewardRatio3, TargetPercent3, TargetColor3));
 		}
 
+		var shadingStartPrice = entryPrice;
+
 		for (var i = 0; i < targets.Count; i++)
 		{
 			var target = targets[i];
@@ -155,7 +197,8 @@ public sealed class RiskReward : Drawing
 			var profit = (double)quantity * ticks * Symbol.TickValue;
 
 			remainingQuantity -= quantity;
-			levels.Add(new(price, GetText(PriceLevelType.TakeProfit, quantity, price, ticks, profit), target.Color));
+			levels.Add(new(price, GetText(PriceLevelType.TakeProfit, quantity, price, ticks, profit), target.Color, shadingStartPrice));
+			shadingStartPrice = price;
 		}
 
 		var minimumWidth = levels.Max(x => context.MeasureText(x.Text, TextFont).Width);
@@ -246,6 +289,14 @@ public sealed class RiskReward : Drawing
 			{
 				textOrigin.X = 3;
 			}
+		}
+
+		if (_shadingOpacity > 0 && level.ShadingStartPrice.HasValue)
+		{
+			var y2 = ChartScale.GetYCoordinateByValue(level.ShadingStartPrice.Value);
+			var color = Color.New(level.Color, _shadingOpacity);
+
+			context.DrawRectangle(pointA, new Point(pointB.X, y2), color);
 		}
 
 		context.DrawLine(pointA, pointB, level.Color, LineThickness, LineStyle);
