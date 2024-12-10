@@ -16,14 +16,6 @@ public sealed class Pitchfork : Line
 
 	public override int PointsCount => 3;
 
-	//public enum StyleType
-	//{
-	//	Original,
-	//	Schiff,
-	//	ModifiedSchiff,
-	//	Inside
-	//}
-
 	public Pitchfork()
 	{
 		Name = "Pitchfork";
