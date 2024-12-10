@@ -93,6 +93,18 @@ public class VolumeProfile : Drawing
 	[Parameter("Font", Description = "Font for displaying VAH/VAL/POC prices")]
 	public Font Font { get; set; } = new("Arial", 12);
 
+	[Parameter("VWAP Enabled?", Description = "Show/Hide the Volume Weighted Average Price (VWAP) line")]
+	public bool VwapEnabled { get; set; } = false;
+
+	[Parameter("VWAP Line Color", Description = "Color of the Volume Weighted Average Price (VWAP) line")]
+	public Color VwapLineColor { get; set; } = Color.Blue;
+
+	[Parameter("VWAP Line Thickness", Description = "Thickness of the Volume Weighted Average Price (VWAP) line")]
+	public int VwapLineThickness { get; set; } = 1;
+
+	[Parameter("VWAP Line Style", Description = "Style of the Volume Weighted Average Price (VWAP) line")]
+	public LineStyle VwapLineStyle { get; set; } = LineStyle.Solid;
+
 	public override int PointsCount => ExtendRight ? 1 : 2;
 
 	protected virtual bool ExtendRight => false;
@@ -134,6 +146,7 @@ public class VolumeProfile : Drawing
 	private Area _area;
 	private Volume[] _volumes;
 	private int _pocIndex, _vahIndex, _valIndex;
+	private double[] _vwap;
 
 	public VolumeProfile()
 	{
@@ -218,6 +231,7 @@ public class VolumeProfile : Drawing
 
 			AdjustAnchorPoints();
 			CalculateProfile(area);
+			CalculateVwap(area);
 		}
 
 		Render(context);
@@ -375,6 +389,36 @@ public class VolumeProfile : Drawing
 		}
 	}
 
+	private void CalculateVwap(Area area)
+	{
+		if (area.FromIndex == area.ToIndex)
+		{
+			_vwap = [];
+			return;
+		}
+
+		var cumulativeVolume = 0.0;
+		var cumulativeVolumePrice = 0.0;
+		var vwap = new List<double>();
+
+		for (var index = area.FromIndex; index <= area.ToIndex; index++)
+		{
+			var bar = Bars[index];
+			if (bar is null)
+			{
+				continue;
+			}
+
+			var typicalPrice = (bar.High + bar.Low + bar.Close) / 3;
+			cumulativeVolume += bar.Volume;
+			cumulativeVolumePrice += typicalPrice * bar.Volume;
+
+			vwap.Add(cumulativeVolumePrice / cumulativeVolume);
+		}
+
+		_vwap = [.. vwap];
+	}
+
 	private void Render(IDrawingContext context)
 	{
 		var area = _area;
@@ -447,6 +491,22 @@ public class VolumeProfile : Drawing
 			var color = i > _vahIndex ? ValueAreaAboveColor : i < _valIndex ? ValueAreaBelowColor : ValueAreaColor;
 
 			DrawColumn(context, new(x, y), barWidth, barHeight, color, lineThickness);
+		}
+
+		if (VwapEnabled && _vwap.Length > 0)
+		{
+			var points = new Point[_vwap.Length];
+
+			for (var i = 0; i < points.Length; i++)
+			{
+				points[i] = new Point
+				{
+					X = Chart.GetXCoordinateByBarIndex(area.FromIndex + i),
+					Y = ChartScale.GetYCoordinateByValue(_vwap[i])
+				};
+			}
+
+			context.DrawPolygon(points, null, VwapLineColor, VwapLineThickness, VwapLineStyle);
 		}
 	}
 
