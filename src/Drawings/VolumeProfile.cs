@@ -178,6 +178,13 @@ public class VolumeProfile : Drawing
 			parameters.Remove(nameof(PocLineStyle));
 		}
 
+		if (VwapEnabled is false)
+		{
+			parameters.Remove(nameof(VwapLineColor));
+			parameters.Remove(nameof(VwapLineThickness));
+			parameters.Remove(nameof(VwapLineStyle));
+		}
+
 		if (ShowPrices is false)
 		{
 			parameters.Remove(nameof(Font));
