@@ -33,10 +33,10 @@ public class CrossoverStrategy : BaseStopsAndTargetsStrategy
 	public double SecondFixedValue { get; set; } = 0;
 
 	[Parameter("Period", GroupName = FirstMaGroupName)]
-	public int FirstMaPeriod { get; set; } = 14;
+	public int FirstMavgPeriod { get; set; } = 14;
 
 	[Parameter("Type", GroupName = FirstMaGroupName)]
-	public MovingAverageType FirstMaType { get; set; } = MovingAverageType.Simple;
+	public MovingAverageType FirstMavgType { get; set; } = MovingAverageType.Simple;
 
 	[Parameter("Fast Period", GroupName = FirstMacdGroupName), NumericRange(1, int.MaxValue)]
 	public int FirstMacdFastPeriod { get; set; } = 12;
@@ -90,10 +90,10 @@ public class CrossoverStrategy : BaseStopsAndTargetsStrategy
 	public MovingAverageType FirstStochSmoothingType { get; set; } = MovingAverageType.Simple;
 
 	[Parameter("Period", GroupName = SecondMaGroupName)]
-	public int SecondMaPeriod { get; set; } = 14;
+	public int SecondMavgPeriod { get; set; } = 14;
 
 	[Parameter("Type", GroupName = SecondMaGroupName)]
-	public MovingAverageType SecondMaType { get; set; } = MovingAverageType.Simple;
+	public MovingAverageType SecondMavgType { get; set; } = MovingAverageType.Simple;
 
 	[Parameter("Fast Period", GroupName = SecondMacdGroupName), NumericRange(1, int.MaxValue)]
 	public int SecondMacdFastPeriod { get; set; } = 12;
@@ -266,7 +266,7 @@ public class CrossoverStrategy : BaseStopsAndTargetsStrategy
 	private static string GetParameterPrefix(SourceType type) => type switch
 	{
 		SourceType.OpenPrices or SourceType.HighPrices or SourceType.LowPrices or SourceType.ClosePrices or SourceType.Volume => type.ToString(),
-		SourceType.MovingAverage => "Ma",
+		SourceType.MovingAverage => "Mavg",
 		SourceType.MovingAverageConvergenceDivergence => "Macd",
 		SourceType.AverageTrueRange => "Atr",
 		SourceType.CommodityChannelIndex => "Cci",
@@ -290,7 +290,7 @@ public class CrossoverStrategy : BaseStopsAndTargetsStrategy
 		SourceType.LowPrices => Bars.Low,
 		SourceType.ClosePrices => Bars.Close,
 		SourceType.Volume => Bars.Volume,
-		SourceType.MovingAverage => GetMovingAverage(Bars.Close, FirstMaPeriod, FirstMaType),
+		SourceType.MovingAverage => GetMovingAverage(Bars.Close, FirstMavgPeriod, FirstMavgType),
 		SourceType.MovingAverageConvergenceDivergence => GetMacd(Bars.Close, FirstMacdFastPeriod, FirstMacdSlowPeriod, FirstMacdSignalPeriod, FirstMacdOutput),
 		SourceType.AverageTrueRange => GetAverageTrueRange(FirstAtrPeriod, FirstAtrSmoothingType),
 		SourceType.CommodityChannelIndex => GetCommodityChannelIndex(FirstCciPeriod),
@@ -308,7 +308,7 @@ public class CrossoverStrategy : BaseStopsAndTargetsStrategy
 		SourceType.LowPrices => Bars.Low,
 		SourceType.ClosePrices => Bars.Close,
 		SourceType.Volume => Bars.Volume,
-		SourceType.MovingAverage => GetMovingAverage(Bars.Close, SecondMaPeriod, SecondMaType),
+		SourceType.MovingAverage => GetMovingAverage(Bars.Close, SecondMavgPeriod, SecondMavgType),
 		SourceType.MovingAverageConvergenceDivergence => GetMacd(Bars.Close, SecondMacdFastPeriod, SecondMacdSlowPeriod, SecondMacdSignalPeriod, SecondMacdOutput),
 		SourceType.AverageTrueRange => GetAverageTrueRange(SecondAtrPeriod, SecondAtrSmoothingType),
 		SourceType.CommodityChannelIndex => GetCommodityChannelIndex(SecondCciPeriod),
