@@ -13,13 +13,12 @@ public class VolumeProfileExtended : VolumeProfile
 
 public class VolumeProfile : Drawing
 {
-	public const string InputsGroupName = "Inputs";
 	public const string StyleGroupName = "style";
 
-	[Parameter("Histo Size Type", Description = "Determines how histogram rows are calculated (by count or ticks)", GroupName = InputsGroupName)]
+	[Parameter("Histo Size Type", Description = "Determines how histogram rows are calculated (by count or ticks)")]
 	public RowsLayoutType RowsLayout { get; set; } = RowsLayoutType.Count;
 
-	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows", GroupName = InputsGroupName)]
+	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows")]
 	public int RowsSize { get; set; } = 24;
 
 	[NumericRange(0, 100)]
@@ -87,22 +86,22 @@ public class VolumeProfile : Drawing
 	[Parameter("POC Line Style", Description = "Style of the Point of Control (POC) line", GroupName = StyleGroupName)]
 	public LineStyle PocLineStyle { get; set; } = LineStyle.Solid;
 
-	[Parameter("Show VAH/VAL/POC Prices?", Description = "Displays prices for VAH, VAL, and POC levels")]
+	[Parameter("Show VAH/VAL/POC Prices?", Description = "Displays prices for VAH, VAL, and POC levels", GroupName = StyleGroupName)]
 	public bool ShowPrices { get; set; } = false;
 
-	[Parameter("Font", Description = "Font for displaying VAH/VAL/POC prices")]
+	[Parameter("Font", Description = "Font for displaying VAH/VAL/POC prices", GroupName = StyleGroupName)]
 	public Font Font { get; set; } = new("Arial", 12);
 
-	[Parameter("VWAP Enabled?", Description = "Show/Hide the Volume Weighted Average Price (VWAP) line")]
+	[Parameter("VWAP Enabled?", Description = "Show/Hide the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
 	public bool VwapEnabled { get; set; } = false;
 
-	[Parameter("VWAP Line Color", Description = "Color of the Volume Weighted Average Price (VWAP) line")]
+	[Parameter("VWAP Line Color", Description = "Color of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
 	public Color VwapLineColor { get; set; } = Color.Blue;
 
-	[Parameter("VWAP Line Thickness", Description = "Thickness of the Volume Weighted Average Price (VWAP) line")]
+	[Parameter("VWAP Line Thickness", Description = "Thickness of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
 	public int VwapLineThickness { get; set; } = 1;
 
-	[Parameter("VWAP Line Style", Description = "Style of the Volume Weighted Average Price (VWAP) line")]
+	[Parameter("VWAP Line Style", Description = "Style of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
 	public LineStyle VwapLineStyle { get; set; } = LineStyle.Solid;
 
 	public override int PointsCount => ExtendRight ? 1 : 2;
