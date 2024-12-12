@@ -29,7 +29,7 @@ public class VolumeProfile : Drawing
 	public PlacementType RowsPlacement { get; set; } = PlacementType.Left;
 
 	[NumericRange(0, 100)]
-	[Parameter("Value Area %", Description = "Percentage of total volume considered in the value area", GroupName = InputsGroupName)]
+	[Parameter("Value Area %", Description = "Percentage of total volume considered in the value area", GroupName = StyleGroupName)]
 	public double ValueAreaPercent { get; set; } = 70;
 
 	[Parameter("Value Area Color", Description = "Color of the value area", GroupName = StyleGroupName)]
