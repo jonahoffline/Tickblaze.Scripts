@@ -93,8 +93,14 @@ public sealed class RenkoBxt : BarType
 
 			// Start a new last bar (give it the minimum possible volume, as zero volume bars aren't displayed at all)
 			addedNewBars = true;
-			newClose = (direction == 1 ? trigUp : trigDown) + direction * Symbol.TickSize;
-			var newOpen = newClose - direction * BarSize * Symbol.TickSize;
+			
+			var newOpen = newClose - direction * Offset * Symbol.TickSize;
+			newClose = newOpen + direction * BarSize * Symbol.TickSize;
+			if (bar.Close.CompareTo(newClose) == -direction)
+			{
+				newClose = bar.Close;
+			}
+
 			AddBar(curLastBar = new Bar(bar.Time, newOpen, direction == 1 ? newClose : newOpen, direction == 1 ? newOpen : newClose, newClose, (double) Symbol.MinimumVolume)
 			{
 				EndTime = bar.EndTime
