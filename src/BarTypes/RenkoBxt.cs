@@ -2,13 +2,13 @@
 
 public sealed class RenkoBxt : BarType
 {
-	[Parameter("Bar Size (Ticks)")]
+	[Parameter("Bar Size (Ticks)", Description = "The base size of a bar")]
 	public int BarSize { get; set; } = 4;
 
-	[Parameter("Reversal Size (Ticks)")]
+	[Parameter("Reversal Size (Ticks)", Description = "The size required to reverse trend. Useful for ignoring smaller pullbacks")]
 	public int ReversalSize { get; set; } = 8;
 
-	[Parameter("Open Offset (Ticks)")]
+	[Parameter("Open Offset (Ticks)", Description = "The amount to offset the open of every bar against the current trend.")]
 	public int Offset { get; set; } = 2;
 
 	private int _trend;
@@ -18,6 +18,7 @@ public sealed class RenkoBxt : BarType
 	public RenkoBxt()
 	{
 		Source = SourceDataType.Tick;
+		Description = "A custom bar type which uses a standard Renko based construction for trends, and Range based construction for reversals.";
 	}
 
 	public override void OnDataPoint(Bar bar)
@@ -93,8 +94,14 @@ public sealed class RenkoBxt : BarType
 
 			// Start a new last bar (give it the minimum possible volume, as zero volume bars aren't displayed at all)
 			addedNewBars = true;
-			newClose = (direction == 1 ? trigUp : trigDown) + direction * Symbol.TickSize;
-			var newOpen = newClose - direction * BarSize * Symbol.TickSize;
+			
+			var newOpen = newClose - direction * Offset * Symbol.TickSize;
+			newClose = newOpen + direction * BarSize * Symbol.TickSize;
+			if (bar.Close.CompareTo(newClose) == -direction)
+			{
+				newClose = bar.Close;
+			}
+
 			AddBar(curLastBar = new Bar(bar.Time, newOpen, direction == 1 ? newClose : newOpen, direction == 1 ? newOpen : newClose, newClose, (double) Symbol.MinimumVolume)
 			{
 				EndTime = bar.EndTime

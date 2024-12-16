@@ -21,9 +21,9 @@ public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 
 	private MovingAverage _fastMovingAverage, _slowMovingAverage;
 	private Series<bool?> _isBullishTrend;
-    private bool _firstBar = true;
+	private bool _firstBar = true;
 
-    public MovingAverageCrossover()
+	public MovingAverageCrossover()
 	{
 		Name = "MA Crossover";
 		Description = "The Moving Average Crossover Strategy detects trends by tracking crossovers between fast and slow moving averages. A bullish crossover triggers a buy order, while a bearish crossover triggers a sell order, aiming to capture early trend changes.";
@@ -42,7 +42,7 @@ public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 
 	protected override void OnBar(int index)
 	{
-        var fastMovingAverage = _fastMovingAverage[index];
+		var fastMovingAverage = _fastMovingAverage[index];
 		var slowMovingAverage = _slowMovingAverage[index];
 
 		if (fastMovingAverage > slowMovingAverage)
