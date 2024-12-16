@@ -230,8 +230,8 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 			_cumulativeVolume[index] = _cumulativeVolume[index - 1] + volume;
 			_cumulativeTypicalVolume[index] = _cumulativeTypicalVolume[index - 1] + volume * typicalPrice;
 			_vwap[index] = _cumulativeTypicalVolume[index] / _cumulativeVolume[index];
-			_cumulativeVariance[index] = _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - _vwap[index], 2);
-			_deviation[index] = Math.Sqrt(_cumulativeVariance[index] / (index + 1 - _fromIndex.Value));
+			_cumulativeVariance[index] = _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - _vwap[index], 2) * volume;
+			_deviation[index] = Math.Sqrt(_cumulativeVariance[index] / _cumulativeVolume[index]);
 		}
 	}
 }
