@@ -430,7 +430,6 @@ public class VolumeProfile : Drawing
 		var area = _area;
 		if (area.FromIndex > Chart.LastVisibleBarIndex || area.ToIndex < Chart.FirstVisibleBarIndex)
 		{
-			System.Diagnostics.Debug.WriteLine("Hidden");
 			return;
 		}
 
