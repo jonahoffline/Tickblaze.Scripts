@@ -10,11 +10,11 @@
 - name: Tutorials
   expanded: true
   items:
-    - name: Aroon Indicator
+    - name: Indicators
       href: tutorials/aroon-indicator.md
-    - name: Ruler Drawing
+    - name: Drawings
       href: tutorials/ruler-drawing.md
-    - name: MA Crossover Strategy
+    - name: Strategies
       href: tutorials/ma-crossover-strategy.md
 - name: Examples
   expanded: true
