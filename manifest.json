@@ -968,6 +968,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/custom-rendering.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/custom-rendering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/tutorials/ma-crossover-strategy.md",
       "output": {
         ".html": {
