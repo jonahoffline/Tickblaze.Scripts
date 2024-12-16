@@ -102,7 +102,7 @@ Class BarType
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BarType : IMetadata</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BarType : Script, IScript, IDisposable, IMetadata</code></pre>
   </div>
 
 
@@ -113,6 +113,7 @@ Class BarType
   <dl class="typelist inheritance">
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a></div>
       <div><span class="xref">BarType</span></div>
     </dd>
   </dl>
@@ -122,6 +123,8 @@ Class BarType
     <summary>Implements</summary>
     <dl class="typelist implements">
       <dd>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a></div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a></div>
       </dd>
     </dl>
@@ -132,6 +135,39 @@ Class BarType
     <summary>Inherited Members</summary>
     <dl class="typelist inheritedMembers">
       <dd>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters">Script.GetParameters()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters_Tickblaze_Scripts_Api_Parameters_">Script.GetParameters(Parameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_OnDestroy">Script.OnDestroy()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem">Script.CreateChartToolbarMenuItem()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_">Script.Print(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Dispose">Script.Dispose()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Parameters">Script.Parameters</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_IsInitialized">Script.IsInitialized</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_UiDispatcher">Script.UiDispatcher</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Alert">Script.Alert</a>
+      </div>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
       </div>
@@ -198,40 +234,6 @@ Class BarType
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_BarType_BarSize_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.BarSize*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Bases_BarType_BarSize" data-uid="Tickblaze.Scripts.Api.Bases.BarType.BarSize">
-  BarSize
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The size of the bar.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double BarSize { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.Double" text="double"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
   <a id="Tickblaze_Scripts_Api_Bases_BarType_Bars_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.Bars*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Bases_BarType_Bars" data-uid="Tickblaze.Scripts.Api.Bases.BarType.Bars">
@@ -279,6 +281,40 @@ Class BarType
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Description { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.String" text="string"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_BarType_InputParameterDisplayString_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.InputParameterDisplayString*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_BarType_InputParameterDisplayString" data-uid="Tickblaze.Scripts.Api.Bases.BarType.InputParameterDisplayString">
+  InputParameterDisplayString
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A shorthand string to represent the input parameters, used in the data box, and anywhere else a short identifier is required</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string InputParameterDisplayString { get; }</code></pre>
   </div>
 
 
@@ -425,6 +461,40 @@ Class BarType
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.SourceDataType.html">SourceDataType</a></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_BarType_Symbol_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.Symbol*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_BarType_Symbol" data-uid="Tickblaze.Scripts.Api.Bases.BarType.Symbol">
+  Symbol
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series underlying instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Symbol Symbol { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Models.Symbol" text="Symbol"/></dt>
     <dd></dd>
   </dl>
   -->

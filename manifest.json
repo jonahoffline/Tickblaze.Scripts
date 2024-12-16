@@ -22,6 +22,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.AlertType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.AlertType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.IAlertAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.IAlertAdapter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.DisplayNameAttribute.yml",
       "output": {
         ".html": {
