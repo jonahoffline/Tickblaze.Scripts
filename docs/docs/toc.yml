@@ -16,6 +16,8 @@
       href: tutorials/ruler-drawing.md
     - name: Strategies
       href: tutorials/ma-crossover-strategy.md
+    - name: Custom Rendering
+      href: tutorials/custom-rendering.md
 - name: Examples
   expanded: true
   items:
