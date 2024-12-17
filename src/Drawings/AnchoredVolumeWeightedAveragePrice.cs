@@ -1,4 +1,4 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+namespace Tickblaze.Scripts.Drawings;
 
 public class AnchoredVolumeWeightedAveragePrice : Drawing
 {
@@ -66,7 +66,7 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	private Series<double> _cumulativeVolume, _cumulativeTypicalVolume, _cumulativeVariance;
 	private Series<double> _vwap, _deviation;
 	private List<LineSettings> _lineSettings;
-
+	private IExchangeSession? _currentSession;
 	public AnchoredVolumeWeightedAveragePrice()
 	{
 		Name = "Anchored VWAP";
@@ -215,15 +215,20 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 		var volume = bar.Volume;
 		var typicalPrice = (bar.High + bar.Low + bar.Close) / 3;
 
-		if (index == _fromIndex)
+		var currentSession = Symbol.ExchangeCalendar.GetSession(bar.Time);
+		if (index == _fromIndex || currentSession?.StartExchangeDateTime != _currentSession?.StartExchangeDateTime)
 		{
+			_currentSession = currentSession;
 			_cumulativeVolume[index] = volume;
 			_cumulativeTypicalVolume[index] = volume * typicalPrice;
 			_vwap[index] = typicalPrice;
 			_cumulativeVariance[index] = 0;
 			_deviation[index] = 0;
 
-			Point.Value = typicalPrice;
+			if (index == _fromIndex)
+			{
+				Point.Value = typicalPrice;
+			}
 		}
 		else
 		{
