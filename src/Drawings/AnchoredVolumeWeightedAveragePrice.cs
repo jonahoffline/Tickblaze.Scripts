@@ -1,4 +1,4 @@
-namespace Tickblaze.Scripts.Drawings;
+﻿namespace Tickblaze.Scripts.Drawings;
 
 public class AnchoredVolumeWeightedAveragePrice : Drawing
 {
@@ -212,15 +212,14 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	private void Calculate(int index)
 	{
 		var bar = Bars[index];
-		var volume = bar.Volume;
 		var typicalPrice = (bar.High + bar.Low + bar.Close) / 3;
 
 		var currentSession = Symbol.ExchangeCalendar.GetSession(bar.Time);
 		if (index == _fromIndex || currentSession?.StartExchangeDateTime != _currentSession?.StartExchangeDateTime)
 		{
 			_currentSession = currentSession;
-			_cumulativeVolume[index] = volume;
-			_cumulativeTypicalVolume[index] = volume * typicalPrice;
+			_cumulativeVolume[index] = bar.Volume;
+			_cumulativeTypicalVolume[index] = bar.Volume * typicalPrice;
 			_vwap[index] = typicalPrice;
 			_cumulativeVariance[index] = 0;
 			_deviation[index] = 0;
@@ -232,11 +231,17 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 		}
 		else
 		{
-			_cumulativeVolume[index] = _cumulativeVolume[index - 1] + volume;
-			_cumulativeTypicalVolume[index] = _cumulativeTypicalVolume[index - 1] + volume * typicalPrice;
-			_vwap[index] = _cumulativeTypicalVolume[index] / _cumulativeVolume[index];
-			_cumulativeVariance[index] = _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - _vwap[index], 2) * volume;
-			_deviation[index] = Math.Sqrt(_cumulativeVariance[index] / _cumulativeVolume[index]);
+			_cumulativeVolume[index] = _cumulativeVolume[index - 1] + bar.Volume;
+			_cumulativeTypicalVolume[index] = _cumulativeTypicalVolume[index - 1] + bar.Volume * typicalPrice;
+			_vwap[index] = _cumulativeTypicalVolume[index] == 0 
+				? double.NaN 
+				: _cumulativeTypicalVolume[index] / _cumulativeVolume[index];
+			_cumulativeVariance[index] = _vwap[index] is double.NaN 
+				? double.NaN
+				: _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - _vwap[index], 2) * bar.Volume;
+			_deviation[index] = _cumulativeVariance[index] is double.NaN 
+				? double.NaN
+				: Math.Sqrt(_cumulativeVariance[index] / _cumulativeVolume[index]);
 		}
 	}
 }
