@@ -56,7 +56,7 @@ public class RsiOverboughtOversold : BaseStopsAndTargetsStrategy
 
 			if (IsLongEnabled)
 			{
-				EnterMarket(OrderDirection.Long, comment);
+				TryEnterMarket(OrderDirection.Long, comment);
 			}
 			else if (Position?.Direction is OrderDirection.Short)
 			{
@@ -69,7 +69,7 @@ public class RsiOverboughtOversold : BaseStopsAndTargetsStrategy
 
 			if (IsShortEnabled)
 			{
-				EnterMarket(OrderDirection.Short, comment);
+				TryEnterMarket(OrderDirection.Short, comment);
 			}
 			else if (Position?.Direction is OrderDirection.Long)
 			{
@@ -77,18 +77,4 @@ public class RsiOverboughtOversold : BaseStopsAndTargetsStrategy
 			}
 		}
 	}
-
-	private void EnterMarket(OrderDirection direction, string comment = "")
-	{
-		if (Position?.Direction == direction)
-		{
-			return;
-		}
-
-		var action = direction is OrderDirection.Long ? OrderAction.Buy : OrderAction.SellShort;
-		var quantity = 1 + (Position?.Quantity ?? 0);
-		var marketOrder = ExecuteMarketOrder(action, quantity, TimeInForce.GoodTillCancel, comment);
-        PlaceStopLossAndTarget(marketOrder, Bars.Close[^1], direction);
-
-    }
 }
