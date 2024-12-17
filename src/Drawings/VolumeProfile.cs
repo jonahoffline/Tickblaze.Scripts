@@ -18,6 +18,7 @@ public class VolumeProfile : Drawing
 	[Parameter("Histo Size Type", Description = "Determines how histogram rows are calculated (by count or ticks)")]
 	public RowsLayoutType RowsLayout { get; set; } = RowsLayoutType.Count;
 
+	[NumericRange(1, int.MaxValue)]
 	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows")]
 	public int RowsSize { get; set; } = 24;
 
@@ -293,11 +294,15 @@ public class VolumeProfile : Drawing
 		{
 			area.Rows = 0;
 		}
-		else
+		else if (RowsLayout is RowsLayoutType.Ticks)
 		{
 			area.Low = Math.Floor(area.Low / area.RowSize) * area.RowSize;
 			area.High = Math.Ceiling(area.High / area.RowSize) * area.RowSize;
 			area.Rows = (int)Math.Round(area.Range / area.RowSize);
+		}
+		else
+		{
+			area.Rows = rows;
 		}
 
 		return area;
