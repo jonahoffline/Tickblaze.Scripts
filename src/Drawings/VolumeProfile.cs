@@ -456,10 +456,10 @@ public class VolumeProfile : Drawing
 		var x = RowsPlacement is PlacementType.Left ? leftX : rightX;
 		var boxWidth = RowsPlacement is PlacementType.Left ? rightX - leftX : leftX - rightX;
 
-		for (var i = 0; i < _volumes.Length; i++)
+		for (var i = 0; i < area.Rows; i++)
 		{
 			var volume = _volumes[i];
-			var y = lowY - i * area.RowSize * pixelsPerUnitY;
+			var y = lowY - i * area.RowSize * pixelsPerUnitY - 1;
 			if (y < 0)
 			{
 				break;
@@ -472,6 +472,11 @@ public class VolumeProfile : Drawing
 			if (y - barHeight > Chart.Height)
 			{
 				continue;
+			}
+
+			if (i == area.Rows - 1)
+			{
+				barHeight = y - ChartScale.GetYCoordinateByValue(area.High);
 			}
 
 			if (PocLineVisible && i == _pocIndex)
@@ -520,7 +525,7 @@ public class VolumeProfile : Drawing
 		}
 	}
 
-	private void DrawPriceLevel(IDrawingContext context, IPoint pointA, IPoint pointB, Color color, int thickness, LineStyle lineStyle)
+	private void DrawPriceLevel(IDrawingContext context, Point pointA, Point pointB, Color color, int thickness, LineStyle lineStyle)
 	{
 		context.DrawLine(pointA, pointB, color, thickness, lineStyle);
 
