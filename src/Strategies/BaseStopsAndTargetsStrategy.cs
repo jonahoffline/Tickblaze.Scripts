@@ -137,7 +137,7 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 
 	protected void TryEnterMarket(OrderDirection direction, string comment = "")
 	{
-		if (Position?.Direction == direction)
+		if (Position != null && Position.Direction == direction && Position.Quantity != 0)
 		{
 			return;
 		}
