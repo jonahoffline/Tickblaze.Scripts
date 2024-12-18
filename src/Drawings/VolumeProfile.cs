@@ -18,6 +18,7 @@ public class VolumeProfile : Drawing
 	[Parameter("Histo Size Type", Description = "Determines how histogram rows are calculated (by count or ticks)")]
 	public RowsLayoutType RowsLayout { get; set; } = RowsLayoutType.Count;
 
+	[NumericRange(1, int.MaxValue)]
 	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows")]
 	public int RowsSize { get; set; } = 24;
 
@@ -293,11 +294,15 @@ public class VolumeProfile : Drawing
 		{
 			area.Rows = 0;
 		}
-		else
+		else if (RowsLayout is RowsLayoutType.Ticks)
 		{
 			area.Low = Math.Floor(area.Low / area.RowSize) * area.RowSize;
 			area.High = Math.Ceiling(area.High / area.RowSize) * area.RowSize;
 			area.Rows = (int)Math.Round(area.Range / area.RowSize);
+		}
+		else
+		{
+			area.Rows = rows;
 		}
 
 		return area;
@@ -451,10 +456,10 @@ public class VolumeProfile : Drawing
 		var x = RowsPlacement is PlacementType.Left ? leftX : rightX;
 		var boxWidth = RowsPlacement is PlacementType.Left ? rightX - leftX : leftX - rightX;
 
-		for (var i = 0; i < _volumes.Length; i++)
+		for (var i = 0; i < area.Rows; i++)
 		{
 			var volume = _volumes[i];
-			var y = lowY - i * area.RowSize * pixelsPerUnitY;
+			var y = lowY - i * area.RowSize * pixelsPerUnitY - 1;
 			if (y < 0)
 			{
 				break;
@@ -467,6 +472,11 @@ public class VolumeProfile : Drawing
 			if (y - barHeight > Chart.Height)
 			{
 				continue;
+			}
+
+			if (i == area.Rows - 1)
+			{
+				barHeight = y - ChartScale.GetYCoordinateByValue(area.High);
 			}
 
 			if (PocLineVisible && i == _pocIndex)
@@ -515,7 +525,7 @@ public class VolumeProfile : Drawing
 		}
 	}
 
-	private void DrawPriceLevel(IDrawingContext context, IPoint pointA, IPoint pointB, Color color, int thickness, LineStyle lineStyle)
+	private void DrawPriceLevel(IDrawingContext context, Point pointA, Point pointB, Color color, int thickness, LineStyle lineStyle)
 	{
 		context.DrawLine(pointA, pointB, color, thickness, lineStyle);
 

@@ -1,9 +1,8 @@
-﻿using System.Xml.Linq;
-using System;
-using Tickblaze.Scripts.Indicators;
+﻿using Tickblaze.Scripts.Indicators;
 
 namespace Tickblaze.Scripts.Strategies;
 
+[System.ComponentModel.Browsable(false)]
 public class OverboughtOversoldStrategy : BaseStopsAndTargetsStrategy
 {
 	[Parameter("Oscillator")]
@@ -181,7 +180,7 @@ public class OverboughtOversoldStrategy : BaseStopsAndTargetsStrategy
 		_oscillator = GetOscillatorOutputSeries();
 	}
 
-	private ISeries<double> GetOscillatorOutputSeries()
+	private PlotSeries GetOscillatorOutputSeries()
 	{
 		if (OscillatorType is Oscillator.CommodityChannelIndex)
 		{
