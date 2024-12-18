@@ -1,4 +1,6 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+using Tickblaze.Scripts.Misc;
+
+namespace Tickblaze.Scripts.Drawings;
 
 public class AnchoredVolumeWeightedAveragePrice : Drawing
 {
@@ -62,11 +64,11 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	private record LineSettings(double Multiplier, Color Color, int Thickness, LineStyle LineStyle);
 
 	private int? _fromIndex;
-	private int _lastCalculatedIndex;
-	private Series<double> _cumulativeVolume, _cumulativeTypicalVolume, _cumulativeVariance;
 	private Series<double> _vwap, _deviation;
+	private VwapCalculator? _vwapCalculator;
 	private List<LineSettings> _lineSettings;
-	private IExchangeSession? _currentSession;
+	private int _lastCalculatedIndex = -1;
+
 	public AnchoredVolumeWeightedAveragePrice()
 	{
 		Name = "Anchored VWAP";
@@ -104,9 +106,6 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	protected override void Initialize()
 	{
 		_fromIndex = null;
-		_cumulativeVolume = new();
-		_cumulativeTypicalVolume = new();
-		_cumulativeVariance = new();
 		_vwap = new();
 		_deviation = new();
 
@@ -150,17 +149,21 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 		var fromIndex = Chart.GetBarIndexByXCoordinate((int)Point.X);
 		var toIndex = Bars.Count - 1;
 
-		if (!Nullable.Equals(_fromIndex, fromIndex))
+		if (_fromIndex != fromIndex)
 		{
-			_fromIndex = _lastCalculatedIndex = fromIndex;
-        }
+			_fromIndex = fromIndex;
+			_vwapCalculator = new VwapCalculator(Bars, Symbol);
+			_lastCalculatedIndex = fromIndex - 1;
+		}
 
-		while (_lastCalculatedIndex <= toIndex)
+		for (var i = Math.Min(_lastCalculatedIndex + 1, toIndex); i <= toIndex; i++)
 		{
-            Calculate(_lastCalculatedIndex);
+			_vwapCalculator!.Update(i);
+			_vwap[i] = _vwapCalculator.VWAP;
+			_deviation[i] = _vwapCalculator.Deviation;
+		}
 
-			_lastCalculatedIndex++;
-        }
+		_lastCalculatedIndex = toIndex;
 
 		var firstVisibleBarIndex = Chart.FirstVisibleBarIndex;
 		if (firstVisibleBarIndex > toIndex)
@@ -206,42 +209,6 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 		if ((DateTime)Point.Time >= Bars[^1].Time)
 		{
 			context.DrawEllipse(Point, 5, 5, "#80808080");
-		}
-	}
-
-	private void Calculate(int index)
-	{
-		var bar = Bars[index];
-		var typicalPrice = (bar.High + bar.Low + bar.Close) / 3;
-
-		var currentSession = Symbol.ExchangeCalendar.GetSession(bar.Time);
-		if (index == _fromIndex || currentSession?.StartExchangeDateTime != _currentSession?.StartExchangeDateTime)
-		{
-			_currentSession = currentSession;
-			_cumulativeVolume[index] = bar.Volume;
-			_cumulativeTypicalVolume[index] = bar.Volume * typicalPrice;
-			_vwap[index] = typicalPrice;
-			_cumulativeVariance[index] = 0;
-			_deviation[index] = 0;
-
-			if (index == _fromIndex)
-			{
-				Point.Value = typicalPrice;
-			}
-		}
-		else
-		{
-			_cumulativeVolume[index] = _cumulativeVolume[index - 1] + bar.Volume;
-			_cumulativeTypicalVolume[index] = _cumulativeTypicalVolume[index - 1] + bar.Volume * typicalPrice;
-			_vwap[index] = _cumulativeTypicalVolume[index] == 0 
-				? double.NaN 
-				: _cumulativeTypicalVolume[index] / _cumulativeVolume[index];
-			_cumulativeVariance[index] = _vwap[index] is double.NaN 
-				? double.NaN
-				: _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - _vwap[index], 2) * bar.Volume;
-			_deviation[index] = _cumulativeVariance[index] is double.NaN 
-				? double.NaN
-				: Math.Sqrt(_cumulativeVariance[index] / _cumulativeVolume[index]);
 		}
 	}
 }
