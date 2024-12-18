@@ -257,11 +257,11 @@ public class OverboughtOversoldStrategy : BaseStopsAndTargetsStrategy
 			return;
 		}
 
-		if (_oscillator[index] >= OverboughtLevel && _oscillator[index - 1] < OverboughtLevel)
+		if (_oscillator[index - 1] >= OverboughtLevel && _oscillator[index] < OverboughtLevel)
 		{
 			TryEnterMarket(OrderDirection.Short);
 		}
-		else if (_oscillator[index] <= OversoldLevel && _oscillator[index - 1] > OversoldLevel)
+		else if (_oscillator[index - 1] <= OversoldLevel && _oscillator[index] > OversoldLevel)
 		{
 			TryEnterMarket(OrderDirection.Long);
 		}
