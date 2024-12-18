@@ -1,12 +1,13 @@
-﻿namespace Tickblaze.Scripts.Indicators;
+﻿using System;
+using System.ComponentModel;
+using System.Linq.Expressions;
+
+namespace Tickblaze.Scripts.Indicators;
 /// <summary>
 /// Volume Weighted Average Price [VWAP]
 /// </summary>
 public partial class VolumeWeightedAveragePrice : Indicator
 {
-	[Parameter("Start Time (local)")]
-	public int StartTimeLocal { get; set; } = 1700;
-
 	[Parameter("Show Band 1")]
 	public bool ShowBand1 { get; set; } = false;
 	[Parameter("Band 1 deviations"), NumericRange(0, double.MaxValue)]
@@ -44,9 +45,11 @@ public partial class VolumeWeightedAveragePrice : Indicator
 	[Plot("Band3 Lower")]
 	public PlotSeries Band3Lower { get; set; } = new(Color.Red);
 
-	private Series<double> _volumeSum;
-	private Series<double> _typicalVolumeSum;
-	private Series<double> _varianceSum;
+	private int _lastRunIndex;
+	private IExchangeSession? _currentSession;
+	private Series<double> _cumulativeVolume;
+	private Series<double> _cumulativeTypicalVolume;
+	private Series<double> _cumulativeVariance;
 
 	public VolumeWeightedAveragePrice()
 	{
@@ -58,60 +61,80 @@ public partial class VolumeWeightedAveragePrice : Indicator
 
 	protected override void Initialize()
 	{
-		_volumeSum = new DataSeries();
-		_typicalVolumeSum = new DataSeries();
-		_varianceSum = new DataSeries();
+		_cumulativeVolume = new DataSeries();
+		_cumulativeTypicalVolume = new DataSeries();
+		_cumulativeVariance = new DataSeries();
 	}
 
 	protected override void Calculate(int index)
 	{
-		if (index < 1)
+		var bar = Bars[index];
+		if (bar == null)
 		{
 			return;
 		}
 
-		var time0 = ToInteger(Bars[index].Time.ToLocalTime()) / 100;
-		var time1 = ToInteger(Bars[index - 1].Time.ToLocalTime()) / 100;
-
-		var isNewDay = time1 < StartTimeLocal && time0 >= StartTimeLocal || time1 < StartTimeLocal && time0 < time1;
-		if (isNewDay)
-		{
-			_volumeSum[index - 1] = 0;
-			_typicalVolumeSum[index - 1] = 0;
-			_varianceSum[index - 1] = 0;
-		}
-
-		var bar = Bars[index];
 		var typicalPrice = Bars.TypicalPrice[index];
 
-		_typicalVolumeSum[index] = _typicalVolumeSum[index - 1] + bar.Volume * typicalPrice;
-		_volumeSum[index] = _volumeSum[index - 1] + bar.Volume;
+		double curVWAP;
+		var currentSession = Symbol.ExchangeCalendar.GetSession(bar.Time);
+		if (currentSession?.StartExchangeDateTime != _currentSession?.StartExchangeDateTime && _lastRunIndex != index)
+		{
+			_currentSession = currentSession;
+			_cumulativeVolume[index] = bar.Volume;
+			_cumulativeTypicalVolume[index] = typicalPrice * bar.Volume;
+			curVWAP = typicalPrice;
+			_cumulativeVariance[index] = 0;
+		}
+		else
+		{
+			_cumulativeVolume[index] = _cumulativeVolume[index - 1] + bar.Volume;
+			_cumulativeTypicalVolume[index] = _cumulativeTypicalVolume[index - 1] + bar.Volume * typicalPrice;
+			curVWAP = _cumulativeTypicalVolume[index] / _cumulativeVolume[index];
+			_cumulativeVariance[index] = _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - curVWAP, 2) * bar.Volume;
+		}
 
-		var curVWAP = _typicalVolumeSum[index] / _volumeSum[index];
-		var diff = typicalPrice - curVWAP;
-
-		_varianceSum[index] = _varianceSum[index - 1] + diff * diff;
-
-		var deviation = Math.Sqrt(Math.Max(_varianceSum[index] / (index + 1), 0));
-
+		_lastRunIndex = index;
 		Result[index] = curVWAP;
 
-		if (ShowBand1)
+		var deviation = Math.Sqrt(_cumulativeVariance[index] / _cumulativeVolume[index]);
+		for (var i = 0; i < 3; i++)
 		{
-			Band1Upper[index] = curVWAP + deviation * Band1Multiplier;
-			Band1Lower[index] = curVWAP - deviation * Band1Multiplier;
-		}
+			var showBand = i switch
+			{
+				0 => ShowBand1,
+				1 => ShowBand2,
+				2 => ShowBand3
+			};
 
-		if (ShowBand2)
-		{
-			Band2Upper[index] = curVWAP + deviation * Band2Multiplier;
-			Band2Lower[index] = curVWAP - deviation * Band2Multiplier;
-		}
+			if (!showBand)
+			{
+				continue;
+			}
 
-		if (ShowBand3)
-		{
-			Band3Upper[index] = curVWAP + deviation * Band3Multiplier;
-			Band3Lower[index] = curVWAP - deviation * Band3Multiplier;
+			var upperBand = i switch
+			{
+				0 => Band1Upper,
+				1 => Band2Upper,
+				2 => Band3Upper
+			};
+			
+			var lowerBand = i switch
+			{
+				0 => Band1Lower,
+				1 => Band2Lower,
+				2 => Band3Lower
+			};
+
+			var multiplier = i switch
+			{
+				0 => Band1Multiplier,
+				1 => Band2Multiplier,
+				2 => Band3Multiplier
+			};
+
+			upperBand[index] = curVWAP + deviation * multiplier;
+			lowerBand[index] = curVWAP - deviation * multiplier;
 		}
 	}
 
