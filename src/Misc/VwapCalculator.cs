@@ -52,14 +52,11 @@ internal class VwapCalculator(BarSeries bars, ISymbol symbol)
 			_closedCumulativeVariance = 0;
 		}
 
-		if (_lastCalculateIndex == index)
-		{
-			return;
-		}
-
-		// Bar has ended, calculate the appropriate metric using the last bar and our closed values
+		var prevLastCalculatedIndex = _lastCalculateIndex;
 		_lastCalculateIndex = index;
-		if (index == 0)
+
+		// On the close of any bar after the first, we append to our closed values
+		if (prevLastCalculatedIndex == index || index == 0 || prevLastCalculatedIndex == -1)
 		{
 			return;
 		}
