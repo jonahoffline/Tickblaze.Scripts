@@ -1,8 +1,7 @@
-﻿using System;
-using System.ComponentModel;
-using System.Linq.Expressions;
+﻿using Tickblaze.Scripts.Misc;
 
 namespace Tickblaze.Scripts.Indicators;
+
 /// <summary>
 /// Volume Weighted Average Price [VWAP]
 /// </summary>
@@ -45,11 +44,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 	[Plot("Band3 Lower")]
 	public PlotSeries Band3Lower { get; set; } = new(Color.Red);
 
-	private int _lastRunIndex;
-	private IExchangeSession? _currentSession;
-	private Series<double> _cumulativeVolume;
-	private Series<double> _cumulativeTypicalVolume;
-	private Series<double> _cumulativeVariance;
+	private VwapCalculator? _vwapTracker;
 
 	public VolumeWeightedAveragePrice()
 	{
@@ -61,9 +56,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 
 	protected override void Initialize()
 	{
-		_cumulativeVolume = new DataSeries();
-		_cumulativeTypicalVolume = new DataSeries();
-		_cumulativeVariance = new DataSeries();
+		_vwapTracker ??= new VwapCalculator(Bars, Symbol);
 	}
 
 	protected override void Calculate(int index)
@@ -74,30 +67,9 @@ public partial class VolumeWeightedAveragePrice : Indicator
 			return;
 		}
 
-		var typicalPrice = Bars.TypicalPrice[index];
+		_vwapTracker!.Update(index);
+		Result[index] = _vwapTracker.VWAP;
 
-		double curVWAP;
-		var currentSession = Symbol.ExchangeCalendar.GetSession(bar.Time);
-		if (currentSession?.StartExchangeDateTime != _currentSession?.StartExchangeDateTime && _lastRunIndex != index)
-		{
-			_currentSession = currentSession;
-			_cumulativeVolume[index] = bar.Volume;
-			_cumulativeTypicalVolume[index] = typicalPrice * bar.Volume;
-			curVWAP = typicalPrice;
-			_cumulativeVariance[index] = 0;
-		}
-		else
-		{
-			_cumulativeVolume[index] = _cumulativeVolume[index - 1] + bar.Volume;
-			_cumulativeTypicalVolume[index] = _cumulativeTypicalVolume[index - 1] + bar.Volume * typicalPrice;
-			curVWAP = _cumulativeTypicalVolume[index] / _cumulativeVolume[index];
-			_cumulativeVariance[index] = _cumulativeVariance[index - 1] + Math.Pow(typicalPrice - curVWAP, 2) * bar.Volume;
-		}
-
-		_lastRunIndex = index;
-		Result[index] = curVWAP;
-
-		var deviation = Math.Sqrt(_cumulativeVariance[index] / _cumulativeVolume[index]);
 		for (var i = 0; i < 3; i++)
 		{
 			var showBand = i switch
@@ -133,15 +105,8 @@ public partial class VolumeWeightedAveragePrice : Indicator
 				2 => Band3Multiplier
 			};
 
-			upperBand[index] = curVWAP + deviation * multiplier;
-			lowerBand[index] = curVWAP - deviation * multiplier;
+			upperBand[index] = _vwapTracker.VWAP + _vwapTracker.Deviation * multiplier;
+			lowerBand[index] = _vwapTracker.VWAP - _vwapTracker.Deviation * multiplier;
 		}
-	}
-
-	private static int ToInteger(DateTime t)
-	{
-		var hr = t.Hour * 10000;
-		var min = t.Minute * 100;
-		return hr + min + t.Second;
 	}
 }
