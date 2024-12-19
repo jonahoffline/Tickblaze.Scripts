@@ -75,7 +75,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 	
 	protected override void Initialize()
 	{
-		_vwapTracker ??= new VwapCalculator(Bars, Symbol);
+		_vwapTracker ??= new VwapCalculator(Bars, Symbol, true);
 
 		for (var i = 1; i <= 3; i++)
 		{
