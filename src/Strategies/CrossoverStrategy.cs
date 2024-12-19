@@ -424,24 +424,11 @@ public class CrossoverStrategy : BaseStopsAndTargetsStrategy
 
 		if (_series1[index] >= _series2[index] && _series1[index - 1] < _series2[index - 1])
 		{
-			if (Position?.Direction is not OrderDirection.Long)
-			{
-				ClosePosition();
-
-				var marketOrder = ExecuteMarketOrder(OrderAction.Buy, 1);
-				PlaceStopLossAndTarget(marketOrder, Bars.Close[^1], OrderDirection.Long);
-			}
+			TryEnterMarket(OrderDirection.Long);
 		}
 		else if(_series1[index] <= _series2[index] && _series1[index - 1] > _series2[index - 1])
 		{
-			if (Position?.Direction is not OrderDirection.Short)
-			{
-				ClosePosition();
-
-				var marketOrder = ExecuteMarketOrder(OrderAction.SellShort, 1);
-				PlaceStopLossAndTarget(marketOrder, Bars.Close[^1], OrderDirection.Short);
-
-			}
+			TryEnterMarket(OrderDirection.Short);
 		}
 	}
 }

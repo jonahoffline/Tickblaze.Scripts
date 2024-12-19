@@ -64,25 +64,23 @@ public class MovingAverageCrossover : BaseStopsAndTargetsStrategy
 		}
 
 		var orderDirection = _isBullishTrend[index]!.Value ? OrderDirection.Long : OrderDirection.Short;
-		var quantity = 1d;
 
 		// If take profits are enabled, they handle the exits exclusively
-		if (Position != null)
-		{
-			if (orderDirection == Position.Direction || TakeProfit > 0)
-			{
-				return;
-			}
-
-			quantity = Position.Quantity * 2;
-		}
-
-		if (orderDirection == OrderDirection.Long ? !EnableLonging : !EnableShorting)
+		if (Position != null && orderDirection != Position.Direction && TakeProfit > 0)
 		{
 			return;
 		}
 
-		var order = ExecuteMarketOrder(orderDirection == OrderDirection.Long ? OrderAction.Buy : OrderAction.Sell, quantity);
-		PlaceStopLossAndTarget(order, Bars.Close[^1], orderDirection);
+		if (orderDirection == OrderDirection.Long ? !EnableLonging : !EnableShorting)
+		{
+			if (Position != null)
+			{
+				ClosePosition();
+			}
+
+			return;
+		}
+
+		TryEnterMarket(orderDirection);
 	}
 }

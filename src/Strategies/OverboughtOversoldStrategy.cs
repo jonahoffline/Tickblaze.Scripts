@@ -9,52 +9,52 @@ public class OverboughtOversoldStrategy : BaseStopsAndTargetsStrategy
 	[Parameter("Oscillator")]
 	public Oscillator OscillatorType { get; set; } = Oscillator.CommodityChannelIndex;
 
-	[Parameter("Period"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period", GroupName = "CCI"), NumericRange(1, int.MaxValue)]
 	public int CciPeriod { get; set; } = 20;
 
-	[Parameter("Period"), NumericRange(2, int.MaxValue)]
+	[Parameter("Period", GroupName = "MFI"), NumericRange(2, int.MaxValue)]
 	public int MfiPeriod { get; set; } = 14;
 
-	[Parameter("Output")]
+	[Parameter("Output", GroupName = "RSI")]
 	public RsiOutputType RsiOutput { get; set; } = RsiOutputType.Result;
 
-	[Parameter("Period"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period", GroupName = "RSI"), NumericRange(1, int.MaxValue)]
 	public int RsiPeriod { get; set; } = 14;
 
-	[Parameter("Signal Type")]
+	[Parameter("Signal Type", GroupName = "RSI")]
 	public MovingAverageType RsiSignalType { get; set; } = MovingAverageType.Simple;
 
-	[Parameter("Signal Period"), NumericRange(1, int.MaxValue)]
+	[Parameter("Signal Period", GroupName = "RSI"), NumericRange(1, int.MaxValue)]
 	public int RsiSignalPeriod { get; set; } = 14;
 
-	[Parameter("Period 1"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period 1", GroupName = "DSS"), NumericRange(1, int.MaxValue)]
 	public int DssPeriod1 { get; set; } = 10;
 
-	[Parameter("Period 2"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period 2", GroupName = "DSS"), NumericRange(1, int.MaxValue)]
 	public int DssPeriod2 { get; set; } = 3;
 
-	[Parameter("Period 3"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period 3", GroupName = "DSS"), NumericRange(1, int.MaxValue)]
 	public int DssPeriod3 { get; set; } = 3;
 
-	[Parameter("Output")]
+	[Parameter("Output", GroupName = "Stoch")]
 	public StochOutputType StochOutput { get; set; } = StochOutputType.PercentK;
 
-	[Parameter("%K Periods"), NumericRange(1, int.MaxValue)]
+	[Parameter("%K Periods", GroupName = "Stoch"), NumericRange(1, int.MaxValue)]
 	public int StochKPeriods { get; set; } = 9;
 
-	[Parameter("%K Slowing"), NumericRange(1, int.MaxValue)]
+	[Parameter("%K Slowing", GroupName = "Stoch"), NumericRange(1, int.MaxValue)]
 	public int StochKSlowing { get; set; } = 3;
 
-	[Parameter("%D Periods"), NumericRange(1, int.MaxValue)]
+	[Parameter("%D Periods", GroupName = "Stoch"), NumericRange(1, int.MaxValue)]
 	public int StochDPeriods { get; set; } = 9;
 
-	[Parameter("MA Type")]
+	[Parameter("MA Type", GroupName = "Stoch")]
 	public MovingAverageType StochSmoothingType { get; set; } = MovingAverageType.Simple;
 
-	[Parameter("Period"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period", GroupName = "Stoch"), NumericRange(1, int.MaxValue)]
 	public int StochRsiPeriod { get; set; } = 14;
 
-	[Parameter("Period"), NumericRange(1, int.MaxValue)]
+	[Parameter("Period", GroupName = "Williams R%"), NumericRange(1, int.MaxValue)]
 	public int WprPeriod { get; set; } = 14;
 
 	[Parameter("Overbought Level")]
@@ -257,26 +257,13 @@ public class OverboughtOversoldStrategy : BaseStopsAndTargetsStrategy
 			return;
 		}
 
-		if (_oscillator[index] >= OverboughtLevel && _oscillator[index - 1] < OverboughtLevel)
+		if (_oscillator[index - 1] >= OverboughtLevel && _oscillator[index] < OverboughtLevel)
 		{
-			if (Position?.Direction is not OrderDirection.Short)
-			{
-				ClosePosition();
-				
-				var marketOrder = ExecuteMarketOrder(OrderAction.SellShort, 1);
-				PlaceStopLossAndTarget(marketOrder, Bars.Close[^1], OrderDirection.Short);
-
-			}
+			TryEnterMarket(OrderDirection.Short);
 		}
-		else if (_oscillator[index] <= OversoldLevel && _oscillator[index - 1] > OversoldLevel)
+		else if (_oscillator[index - 1] <= OversoldLevel && _oscillator[index] > OversoldLevel)
 		{
-			if (Position?.Direction is not OrderDirection.Long)
-			{
-				ClosePosition();
-				
-				var marketOrder = ExecuteMarketOrder(OrderAction.Buy, 1);
-				PlaceStopLossAndTarget(marketOrder, Bars.Close[^1], OrderDirection.Long);
-			}
+			TryEnterMarket(OrderDirection.Long);
 		}
 	}
 }
