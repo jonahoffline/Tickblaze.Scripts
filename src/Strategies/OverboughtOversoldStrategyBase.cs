@@ -8,10 +8,10 @@ public abstract class OverboughtOversoldStrategyBase : BaseStopsAndTargetsStrate
 	[Parameter("Oversold Level")]
 	public double OversoldLevel { get; set; } = 30;
 
-	[Parameter("Enable Long?")]
+	[Parameter("Enable Long")]
 	public bool IsLongEnabled { get; set; } = true;
 
-	[Parameter("Enable Short?")]
+	[Parameter("Enable Short")]
 	public bool IsShortEnabled { get; set; } = true;
 
 	protected abstract ISeries<double> Series { get; }

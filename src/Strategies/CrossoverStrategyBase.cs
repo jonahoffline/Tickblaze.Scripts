@@ -2,10 +2,10 @@
 
 public abstract class CrossoverStrategyBase : BaseStopsAndTargetsStrategy
 {
-	[Parameter("Enable Long?")]
+	[Parameter("Enable Long")]
 	public bool IsLongEnabled { get; set; } = true;
 
-	[Parameter("Enable Short?")]
+	[Parameter("Enable Short")]
 	public bool IsShortEnabled { get; set; } = true;
 
 	protected abstract ISeries<double> FastSeries { get; }
