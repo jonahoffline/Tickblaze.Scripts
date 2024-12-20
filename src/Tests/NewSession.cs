@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace Tickblaze.Scripts.Tests;
 
-//[Browsable(false)]
+[Browsable(false)]
 public partial class NewSession : Indicator
 {
 	[Plot("Result")]
