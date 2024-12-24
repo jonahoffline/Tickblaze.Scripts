@@ -36,8 +36,8 @@ public class VwapCrossover : CrossoverStrategyBase
 			PriceType.Low => Bars.Low,
 			_ => Bars.Close
 		};
-
-		_vwap = new VolumeWeightedAveragePrice(false, 1, false, 2, false, 3)
+		
+		_vwap = new VolumeWeightedAveragePrice(false, 1, 0, false, 2, 0, false, 3, 0)
 		{
 			ShowOnChart = true
 		};
