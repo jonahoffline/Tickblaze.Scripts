@@ -146,6 +146,7 @@ public class VolumeProfile : Drawing
 		public double Range => High - Low;
 		public double RowSize { get; set; }
 		public int Rows { get; set; }
+		public bool IsTickSize { get; set; }
 		public BarsRange Bars { get; set; } = null;
 	}
 
@@ -235,7 +236,7 @@ public class VolumeProfile : Drawing
 			_ => throw new NotImplementedException()
 		};
 
-		_bars = GetBarSeries(new()
+		_bars = SourceData is SourceDataType.Chart ? Bars : GetBarSeries(new()
 		{
 			Period = barPeriod,
 			SymbolCode = Bars.Symbol.Code,
@@ -325,8 +326,9 @@ public class VolumeProfile : Drawing
 		}
 
 		// Bar time offset by 1, temp fix for open time
-		var fromTime = Bars[area.FromIndex + 1].Time;
-		var toTime = area.ToIndex >= Bars.Count - 2 ? DateTime.MaxValue : Bars[area.ToIndex + 2].Time;
+		var barOffset = SourceData is SourceDataType.Chart ? 0 : 1;
+		var fromTime = Bars[Math.Min(Bars.Count - 1, area.FromIndex + barOffset)].Time;
+		var toTime = area.ToIndex >= Bars.Count - (1 + barOffset) ? DateTime.MaxValue : Bars[area.ToIndex + (1 + barOffset)].Time;
 
 		for (var i = 0; i < _bars.Count; i++)
 		{
@@ -353,16 +355,33 @@ public class VolumeProfile : Drawing
 			}
 		}
 
-		area.RowSize = Symbol.RoundToTick(RowsLayout is RowsLayoutType.Count
-			? Math.Max(Symbol.TickSize, area.Range / RowsSize)
-			: Symbol.TickSize * RowsSize);
+		if (RowsLayout is RowsLayoutType.Ticks)
+		{
+			area.RowSize = Symbol.TickSize * RowsSize;
+			area.IsTickSize = true;
+		}
+		else
+		{
+			area.RowSize = area.Range / RowsSize;
+
+			if (area.RowSize <= Symbol.TickSize)
+			{
+				area.RowSize = Symbol.TickSize;
+				area.IsTickSize = true;
+			}
+		}
 
 		var rows = (int)Math.Round(area.Range / area.RowSize);
 		var rowsMaximum = 500;
 
 		if (rows > rowsMaximum)
 		{
-			area.RowSize = Symbol.RoundToTick(area.Range / rowsMaximum);
+			area.RowSize = area.Range / rowsMaximum;
+
+			if (area.IsTickSize)
+			{
+				area.RowSize = Symbol.RoundToTick(area.RowSize);
+			}
 		}
 
 		if (area.RowSize <= 0)
@@ -371,9 +390,9 @@ public class VolumeProfile : Drawing
 		}
 		else if (RowsLayout is RowsLayoutType.Ticks)
 		{
-			area.Maximum = Math.Ceiling(area.High / area.RowSize) * area.RowSize;
-			area.Minimum = Math.Floor(area.Low / area.RowSize) * area.RowSize;
-			area.Rows = (int)Math.Round((area.Maximum - area.Minimum) / area.RowSize);
+			area.Minimum = area.Low;// - Symbol.TickSize / 2;
+			area.Maximum = area.Minimum + area.RowSize * rows;
+			area.Rows = rows + 1;
 		}
 		else
 		{
@@ -397,24 +416,8 @@ public class VolumeProfile : Drawing
 		for (var index = area.Bars.FromIndex; index <= _area.Bars.ToIndex; index++)
 		{
 			var bar = _bars[index];
-
-			int startLevel, endLevel;
-			double volumePerLevel;
-
 			var buyVolume = 0.0;
 			var sellVolume = 0.0;
-
-			if (bar.High == bar.Low)
-			{
-				startLevel = endLevel = Math.Max(0, Math.Min(_volumes.Length - 1, (int)Math.Floor((bar.High - area.Low) / area.RowSize)));
-				volumePerLevel = bar.Volume;
-			}
-			else
-			{
-				startLevel = Math.Max(0, (int)Math.Floor((bar.Low - area.Low) / area.RowSize));
-				endLevel = Math.Min(_volumes.Length - 1, (int)Math.Floor((bar.High - area.Low - Symbol.TickSize / 2) / area.RowSize));
-				volumePerLevel = bar.Volume / (endLevel - startLevel + 1);
-			}
 
 			if (SourceData is SourceDataType.Tick)
 			{
@@ -440,9 +443,30 @@ public class VolumeProfile : Drawing
 				{
 					buyVolume = sellVolume = bar.Volume / 2;
 				}
+
+				var level = (int)Math.Floor((bar.Close - area.Minimum) / area.RowSize);
+				level = Math.Max(0, Math.Min(_volumes.Length - 1, level));
+
+				_volumes[level] ??= new();
+				_volumes[level].Buy += buyVolume;
+				_volumes[level].Sell += sellVolume;
 			}
 			else
 			{
+				int startLevel, endLevel;
+
+				if (bar.High == bar.Low)
+				{
+					startLevel = endLevel = Math.Max(0, Math.Min(_volumes.Length - 1, (int)Math.Floor((bar.High - area.Minimum) / area.RowSize)));
+				}
+				else
+				{
+					startLevel = Math.Max(0, (int)Math.Floor((bar.Low - area.Minimum) / area.RowSize));
+					endLevel = Math.Min(_volumes.Length - 1, (int)Math.Floor((bar.High - area.Minimum - Symbol.TickSize / 2) / area.RowSize));
+				}
+
+				var volumePerLevel = bar.Volume / (endLevel - startLevel + 1);
+
 				if (bar.Close > bar.Open)
 				{
 					buyVolume = volumePerLevel;
@@ -455,17 +479,13 @@ public class VolumeProfile : Drawing
 				{
 					buyVolume = sellVolume = volumePerLevel / 2;
 				}
-			}
 
-			for (var level = startLevel; level <= endLevel; level++)
-			{
-				if (_volumes[level] is null)
+				for (var level = startLevel; level <= endLevel; level++)
 				{
-					_volumes[level] = new();
+					_volumes[level] ??= new();
+					_volumes[level].Buy += buyVolume;
+					_volumes[level].Sell += sellVolume;
 				}
-
-				_volumes[level].Buy += buyVolume;
-				_volumes[level].Sell += sellVolume;
 			}
 		}
 
@@ -534,18 +554,6 @@ public class VolumeProfile : Drawing
 				}
 			}
 
-			//if (_valIndex > 0 && (_vahIndex == _volumes.Length - 1 || _volumes[_valIndex - 1] >= _volumes[_vahIndex + 1]))
-			//{
-			//	accumulatedVolume += _volumes[--_valIndex];
-			//	expanded = true;
-			//}
-
-			//if (_vahIndex < _volumes.Length - 1 && (_valIndex == 0 || _volumes[_vahIndex + 1] >= _volumes[_valIndex - 1]))
-			//{
-			//	accumulatedVolume += _volumes[++_vahIndex];
-			//	expanded = true;
-			//}
-
 			if (expanded is false)
 			{
 				break;
@@ -589,8 +597,6 @@ public class VolumeProfile : Drawing
 
 		var highY = ChartScale.GetYCoordinateByValue(area.High);
 		var lowY = ChartScale.GetYCoordinateByValue(area.Low);
-		var maximumY = ChartScale.GetYCoordinateByValue(area.Maximum);
-		var minimumY = ChartScale.GetYCoordinateByValue(area.Minimum);
 		var leftX = Chart.GetXCoordinateByBarIndex(area.FromIndex);
 		var rightX = ExtendRight ? Chart.GetXCoordinateByBarIndex(area.ToIndex) : Math.Max(Points[0].X, Points[1].X);
 
@@ -604,7 +610,11 @@ public class VolumeProfile : Drawing
 			return;
 		}
 
-		var pixelsPerUnitY = Math.Abs(highY - lowY) / area.Range;
+		var offset = area.IsTickSize ? Symbol.TickSize / 2 : 0;
+		var maximumY = ChartScale.GetYCoordinateByValue(area.Maximum - offset);
+		var minimumY = ChartScale.GetYCoordinateByValue(area.Minimum - offset);
+
+		var pixelsPerUnitY = Math.Abs(maximumY - minimumY) / (area.Maximum - area.Minimum);
 		var adjustSpacing = area.RowSize * pixelsPerUnitY > 5;
 		var lineThickness = adjustSpacing ? 2 : 1;
 		var x = RowsPlacement is PlacementType.Left ? leftX : rightX;
@@ -627,11 +637,6 @@ public class VolumeProfile : Drawing
 			{
 				continue;
 			}
-
-			//if (i == area.Rows - 1)
-			//{
-			//	barHeight = y - ChartScale.GetYCoordinateByValue(area.Maximum);
-			//}
 
 			if (PocLineVisible && i == _pocIndex)
 			{
