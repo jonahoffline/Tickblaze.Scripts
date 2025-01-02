@@ -1,4 +1,4 @@
-﻿
+
 using System.Diagnostics;
 
 namespace Tickblaze.Scripts.Drawings;
@@ -595,7 +595,7 @@ public class VolumeProfile : Drawing
 		context.DrawRectangle(new Point(leftX, highY), new Point(rightX, lowY), null, BoxLineColor, BoxLineThickness, BoxLineStyle);
 
 		var barsUsed = area.Bars is null ? "null" : $"{(area.Bars.ToIndex - area.Bars.FromIndex)}/{_bars.Count}";
-		context.DrawText(new Point(leftX, lowY), $"Count: {area.Rows}, Size: {area.RowSize}, Bars: {barsUsed}, Volume: {area.Volume}, VAH: {_vahIndex}, VAL: {_valIndex}", BoxLineColor, Font);
+		context.DrawText(new Point(leftX, lowY), $"Count: {area.Rows}, Size: {area.RowSize:F}, Bars: {barsUsed}, Volume: {area.Volume}, VAH: {_vahIndex}, VAL: {_valIndex}", BoxLineColor, Font);
 
 		if (area.Rows == 0 || area.Bars is null)
 		{
