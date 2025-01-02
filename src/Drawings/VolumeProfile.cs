@@ -217,16 +217,8 @@ public class VolumeProfile : Drawing
 		return parameters;
 	}
 
-	private static bool _breakPointHit;
-
 	protected override void Initialize()
 	{
-		if (_breakPointHit is false)
-		{
-			_breakPointHit = true;
-			Debugger.Break();
-		}
-
 		var barPeriod = SourceData switch
 		{
 			SourceDataType.Chart => Bars.Period,
@@ -242,11 +234,11 @@ public class VolumeProfile : Drawing
 			SymbolCode = Bars.Symbol.Code,
 			Exchange = Bars.Symbol.Exchange,
 			InstrumentType = Bars.Symbol.Type,
-			Contract = new ContractSettings()
+			Contract = new ContractSettings
 			{
 				Type = ContractType.ContinuousByDataProvider
 			},
-			IsETH = Bars.IsETH,
+			IsETH = Bars.IsETH
 		});
 	}
 
