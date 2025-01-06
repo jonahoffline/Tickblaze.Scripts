@@ -1,4 +1,4 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+namespace Tickblaze.Scripts.Drawings;
 
 public class VolumeProfileExtended : VolumeProfile
 {
@@ -189,11 +189,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			SymbolCode = script.Bars.Symbol.Code,
 			Exchange = script.Bars.Symbol.Exchange,
 			InstrumentType = script.Bars.Symbol.Type,
-			Contract = new ContractSettings()
+			Contract = new ContractSettings
 			{
 				Type = ContractType.ContinuousByDataProvider
 			},
-			IsETH = script.Bars.IsETH,
+			IsETH = script.Bars.IsETH
 		};
 
 		return true;
