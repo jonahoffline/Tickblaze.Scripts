@@ -161,6 +161,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 	protected override void Initialize()
 	{
+		if (Bars == null)
+		{
+			return;
+		}
+
 		_bars = TryGetDataSeriesRequest(this, out var request) ? GetBarSeries(request) : Bars;
 	}
 
