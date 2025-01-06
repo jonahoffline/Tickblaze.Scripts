@@ -253,7 +253,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			(fromIndex, toIndex) = (toIndex, fromIndex);
 		}
 
-		_area ??= new Area<VolumeProfile>(this, fromIndex, toIndex, _bars);
+		if (_area == null || _area.Bars.Period != _bars.Period || _area.Bars.IsETH != _bars.IsETH)
+		{
+			_area = new Area<VolumeProfile>(this, fromIndex, toIndex, _bars);
+		}
+
 		_area.FromIndex = fromIndex;
 		_area.ToIndex = toIndex;
 	}
@@ -322,11 +326,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		public double Range { get; private set; }
 
 		private ISettings Settings => _script;
-		private Symbol Symbol => _bars.Symbol;
-		private double TickSize => _bars.Symbol.TickSize;
+		private Symbol Symbol => Bars.Symbol;
+		private double TickSize => Bars.Symbol.TickSize;
 
 		private readonly T _script = script ?? throw new ArgumentNullException(nameof(script));
-		private readonly BarSeries _bars = bars ?? throw new ArgumentNullException(nameof(bars));
+		public BarSeries Bars => bars ?? throw new ArgumentNullException(nameof(bars));
 		private Volume[] _volumes;
 		private BarsRange _range;
 		private int _pocIndex, _vahIndex, _valIndex;
@@ -372,7 +376,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			context.DrawRectangle(new Point(leftX, highY), new Point(rightX, lowY), null, Settings.BoxLineColor, Settings.BoxLineThickness, Settings.BoxLineStyle);
 
 			var rows = _volumes.Length;
-			var barsUsed = _range is null ? "null" : $"{_range.ToIndex - _range.FromIndex}/{_bars.Count}";
+			var barsUsed = _range is null ? "null" : $"{_range.ToIndex - _range.FromIndex}/{Bars.Count}";
 
 			if (false)
 			{
@@ -557,9 +561,9 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 			_range = null;
 
-			for (var i = 0; i < _bars.Count; i++)
+			for (var i = 0; i < Bars.Count; i++)
 			{
-				var bar = _bars[i];
+				var bar = Bars[i];
 				if (bar is null)
 				{
 					continue;
@@ -589,7 +593,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 			for (var index = _range.FromIndex; index <= _range.ToIndex; index++)
 			{
-				var bar = _bars[index];
+				var bar = Bars[index];
 				var buyVolume = 0.0;
 				var sellVolume = 0.0;
 
@@ -598,7 +602,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 					if (index > 0)
 					{
 						var currentPrice = bar.Close;
-						var previousPrice = _bars[index - 1].Close;
+						var previousPrice = Bars[index - 1].Close;
 
 						if (currentPrice > previousPrice)
 						{
