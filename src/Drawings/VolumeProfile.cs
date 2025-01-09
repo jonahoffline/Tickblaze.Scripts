@@ -362,6 +362,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private double TickSize => Bars.Symbol.TickSize;
 
 		private readonly T _script = script ?? throw new ArgumentNullException(nameof(script));
+		private readonly Drawing _drawing = script as Drawing;
 		public BarSeries Bars => bars ?? throw new ArgumentNullException(nameof(bars));
 		private Volume[] _volumes;
 		private BarsRange _range;
@@ -377,7 +378,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		public void Render(IDrawingContext context)
 		{
-			if (IsCalculated() is false)
+			if (IsCalculated() is false && _drawing is { IsUpdating: false })
 			{
 				CalculateRowSize();
 				CalculateVolumes();
@@ -396,7 +397,6 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 				return;
 			}
 
-
 			if (FromIndex > chart.LastVisibleBarIndex || ToIndex < chart.FirstVisibleBarIndex)
 			{
 				return;
@@ -409,7 +409,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 			context.DrawRectangle(new Point(leftX, highY), new Point(rightX, lowY), null, Settings.BoxLineColor, Settings.BoxLineThickness, Settings.BoxLineStyle);
 
-			var rows = _volumes.Length;
+			var rows = _volumes?.Length ?? 0;
 			var barsUsed = _range is null ? "null" : $"{_range.ToIndex - _range.FromIndex}/{Bars.Count}";
 
 			if (false)
@@ -419,7 +419,12 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 					Settings.BoxLineColor, Settings.Font);
 			}
 
-			if (rows == 0 || _range is null || _volumes is null || _volumes.Length == 0)
+			if (_script is Drawing drawing)
+			{
+				context.DrawText(new Point(leftX, lowY), $"IsSelected: {drawing.IsSelected}, IsUpdating: {drawing.IsUpdating}, _isTickSize: {_isTickSize}", Settings.BoxLineColor, Settings.Font);
+			}
+
+			if (rows == 0 || _range is null || _volumes is null || _volumes.Length == 0 || _drawing is { IsUpdating: true })
 			{
 				return;
 			}
@@ -502,7 +507,8 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		private bool IsCalculated()
 		{
-			if (_isCalculated && _isHistorical)
+			var isCalculated = _isCalculated && Settings.SourceData == _calculatedSourceDataType && Settings.RowsSize == _calculatedRowsSize;
+			if (isCalculated && _isHistorical)
 			{
 				return true;
 			}
@@ -524,9 +530,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 				volume += bar.Volume;
 			}
 
-			var isCalculated = _isCalculated
-			                   && Settings.SourceData == _calculatedSourceDataType && Settings.RowsSize == _calculatedRowsSize
-			                   && High == high && Low == low && _volume == volume;
+			isCalculated = isCalculated && High == high && Low == low && _volume == volume;
 
 			High = high;
 			Low = low;
@@ -539,6 +543,8 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		private void CalculateRowSize()
 		{
+			_isTickSize = false;
+			
 			if (Settings.RowsLayout is RowsLayoutType.Ticks)
 			{
 				_rowSize = TickSize * Settings.RowsSize;
