@@ -214,18 +214,18 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	{
 		var midPrice = (_area.High + _area.Low) / 2;
 
-        if (_bars.Count != 0)
-        {
-            foreach (var point in Points)
-            {
-                if (point.Value.Equals(midPrice) is false)
-                {
-                    point.Value = midPrice;
-                }
-            }
-        }
+		if (_bars.Count != 0)
+		{
+			foreach (var point in Points)
+			{
+				if (point.Value.Equals(midPrice) is false)
+				{
+					point.Value = midPrice;
+				}
+			}
+		}
 
-        var firstPoint = Points
+		var firstPoint = Points
 			.OrderBy(x => x.X)
 			.First();
 		var lastBarTime = Chart.GetTimeByXCoordinate(Chart.GetXCoordinateByBarIndex(Bars.Count - 1));
@@ -239,12 +239,12 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	public override void OnRender(IDrawingContext context)
 	{
 		UpdateArea();
-        if (Points.Count == 1)
-        {
-            AdjustAnchorPoints();
-        }
+		if (Points.Count == 1)
+		{
+			AdjustAnchorPoints();
+		}
 
-        _area.Render(context);
+		_area.Render(context);
 	}
 
 	private void UpdateArea()
@@ -323,8 +323,36 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	public class Area<T>(T script, int fromIndex, int toIndex, BarSeries bars)
 		where T : SymbolScript, IChartObject, ISettings
 	{
-		public int FromIndex { get; set; } = fromIndex;
-		public int ToIndex { get; set; } = toIndex;
+		public int FromIndex
+		{
+			get => _fromIndex;
+			set
+			{
+				if (_fromIndex == value)
+				{
+					return;
+				}
+
+				_isCalculated = false;
+				_fromIndex = value;
+			}
+		}
+
+		public int ToIndex
+		{
+			get => _toIndex;
+			set
+			{
+				if (_toIndex == value)
+				{
+					return;
+				}
+
+				_isCalculated = false;
+				_toIndex = value;
+			}
+		}
+
 		public double High { get; private set; }
 		public double Low { get; private set; }
 		public double Range { get; private set; }
@@ -343,7 +371,9 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private double[] _vwap;
 		private SourceDataType _calculatedSourceDataType;
 		private int _calculatedRowsSize;
-		private bool _isCalculated;
+		private bool _isCalculated, _isHistorical;
+		private int _fromIndex = fromIndex;
+		private int _toIndex = toIndex;
 
 		public void Render(IDrawingContext context)
 		{
@@ -385,7 +415,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			if (false)
 			{
 				context.DrawText(new Point(leftX, lowY),
-					$"Rows: {rows}, Size: {Symbol.FormatPrice(_rowSize)}, Bars: {barsUsed}, Volume: {_volume}, VAH: {_vahIndex}, VAL: {_valIndex}",
+					$"Rows: {rows}, Size: {Symbol.FormatPrice(_rowSize)}, Bars: {barsUsed}, Volume: {_volume}, VAH: {_vahIndex}, VAL: {_valIndex}, Historical: {_isHistorical}",
 					Settings.BoxLineColor, Settings.Font);
 			}
 
@@ -444,9 +474,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 					DrawPriceLevel(context, pointA, pointB, Settings.VahLineColor, Settings.VahLineThickness, Settings.VahLineStyle);
 				}
 
-				var color = i > _vahIndex 
-					? Settings.ValueAreaAboveColor 
-					: i < _valIndex ? Settings.ValueAreaBelowColor : Settings.ValueAreaColor;
+				var color = i > _vahIndex
+					? Settings.ValueAreaAboveColor
+					: i < _valIndex
+						? Settings.ValueAreaBelowColor
+						: Settings.ValueAreaColor;
 
 				DrawColumn(context, new Point(x, y), barWidth, barHeight, color, lineThickness);
 			}
@@ -470,6 +502,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		private bool IsCalculated()
 		{
+			if (_isCalculated && _isHistorical)
+			{
+				return true;
+			}
+
 			var high = double.MinValue;
 			var low = double.MaxValue;
 			var volume = 0.0;
@@ -563,6 +600,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 				? DateTime.MaxValue
 				: _script.Bars[ToIndex + (1 + barOffset)]!.Time;
 
+			_isHistorical = toTime < DateTime.MaxValue;
 			_range = null;
 
 			for (var i = 0; i < Bars.Count; i++)
