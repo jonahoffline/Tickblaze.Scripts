@@ -11,8 +11,8 @@
 
   <Target Name="CopyPackageFilesForDocs" AfterTargets="Build">
     <ItemGroup>
-      <SourceFiles Include="$(PkgTickblaze_Scripts_Api)\lib\net8.0\*.dll" />
-      <SourceFiles Include="$(PkgTickblaze_Scripts_Api)\lib\net8.0\*.xml" />
+      <SourceFiles Include="$(PkgTickblaze_Scripts_Api)\lib\net9.0\*.dll" />
+      <SourceFiles Include="$(PkgTickblaze_Scripts_Api)\lib\net9.0\*.xml" />
     </ItemGroup>
     <Copy SourceFiles="@(SourceFiles)" DestinationFolder="..\docs\src\" SkipUnchangedFiles="true" />
   </Target>
