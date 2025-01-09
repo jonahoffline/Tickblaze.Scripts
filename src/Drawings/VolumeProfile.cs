@@ -419,11 +419,6 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 					Settings.BoxLineColor, Settings.Font);
 			}
 
-			if (_script is Drawing drawing)
-			{
-				context.DrawText(new Point(leftX, lowY), $"IsSelected: {drawing.IsSelected}, IsUpdating: {drawing.IsUpdating}, _isTickSize: {_isTickSize}", Settings.BoxLineColor, Settings.Font);
-			}
-
 			if (rows == 0 || _range is null || _volumes is null || _volumes.Length == 0 || _drawing is { IsUpdating: true })
 			{
 				return;
