@@ -214,15 +214,18 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	{
 		var midPrice = (_area.High + _area.Low) / 2;
 
-		foreach (var point in Points)
-		{
-			if (point.Value.Equals(midPrice) is false)
-			{
-				point.Value = midPrice;
-			}
-		}
+        if (_bars.Count != 0)
+        {
+            foreach (var point in Points)
+            {
+                if (point.Value.Equals(midPrice) is false)
+                {
+                    point.Value = midPrice;
+                }
+            }
+        }
 
-		var firstPoint = Points
+        var firstPoint = Points
 			.OrderBy(x => x.X)
 			.First();
 		var lastBarTime = Chart.GetTimeByXCoordinate(Chart.GetXCoordinateByBarIndex(Bars.Count - 1));
@@ -236,8 +239,12 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	public override void OnRender(IDrawingContext context)
 	{
 		UpdateArea();
+        if (Points.Count == 1)
+        {
+            AdjustAnchorPoints();
+        }
 
-		_area.Render(context);
+        _area.Render(context);
 	}
 
 	private void UpdateArea()
