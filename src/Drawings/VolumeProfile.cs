@@ -182,7 +182,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		var barPeriod = script.SourceData switch
 		{
 			SourceDataType.Chart => script.Bars.Period,
-			SourceDataType.Minute => new BarPeriod(BarPeriod.SourceType.Trade, BarPeriod.PeriodType.Minute, 1),
+			SourceDataType.Minute => new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 1),
 			SourceDataType.Second => new BarPeriod(BarPeriod.SourceType.Trade, BarPeriod.PeriodType.Second, 1),
 			SourceDataType.Tick => new BarPeriod(BarPeriod.SourceType.Trade, BarPeriod.PeriodType.Tick, 1),
 			_ => throw new ArgumentOutOfRangeException()
