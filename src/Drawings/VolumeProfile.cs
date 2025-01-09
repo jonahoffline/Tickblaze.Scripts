@@ -371,6 +371,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private bool _isTickSize;
 		private double[] _vwap;
 		private SourceDataType _calculatedSourceDataType;
+		private RowsLayoutType _calculatedRowsLayoutType;
 		private int _calculatedRowsSize;
 		private bool _isCalculated, _isHistorical;
 		private int _fromIndex = fromIndex;
@@ -386,6 +387,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 				_isCalculated = true;
 				_calculatedSourceDataType = Settings.SourceData;
+				_calculatedRowsLayoutType = Settings.RowsLayout;
 				_calculatedRowsSize = Settings.RowsSize;
 			}
 
@@ -502,7 +504,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		private bool IsCalculated()
 		{
-			var isCalculated = _isCalculated && Settings.SourceData == _calculatedSourceDataType && Settings.RowsSize == _calculatedRowsSize;
+			var isCalculated = _isCalculated && Settings.SourceData == _calculatedSourceDataType && Settings.RowsLayout == _calculatedRowsLayoutType && Settings.RowsSize == _calculatedRowsSize;
 			if (isCalculated && _isHistorical)
 			{
 				return true;
