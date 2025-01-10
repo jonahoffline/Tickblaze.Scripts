@@ -9,10 +9,8 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 	[Parameter("Composition", Description = "Composition type (daily/weekly/monthly)")]
 	public CompositionType Composition { get; set; } = CompositionType.Daily;
 
-	[Parameter("Source Data", Description = "Data source for the volume profile")]
+	[Parameter("Data Source", Description = "Data source for the volume profile")]
 	public VolumeProfile.SourceDataType SourceData { get; set; } = VolumeProfile.SourceDataType.Chart;
-
-	public const string StyleGroupName = "style";
 
 	[Parameter("Histo Size Type", Description = "Determines how histogram rows are calculated (by count or ticks)")]
 	public VolumeProfile.RowsLayoutType RowsLayout { get; set; } = VolumeProfile.RowsLayoutType.Count;
@@ -20,6 +18,8 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 	[NumericRange(1, int.MaxValue)]
 	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows")]
 	public int RowsSize { get; set; } = 24;
+
+	public const string StyleGroupName = "Style";
 
 	[NumericRange(0, 100)]
 	[Parameter("Histo Width %", Description = "Width of the histogram as a percentage of box width", GroupName = StyleGroupName)]
@@ -50,7 +50,7 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 	[Parameter("Outline Style", Description = "Style of the volume profile outline box (solid, dashed, etc.)", GroupName = StyleGroupName)]
 	public LineStyle BoxLineStyle { get; set; } = LineStyle.Dot;
 
-	[Parameter("VAH Line Visible?", Description = "Show/Hide the Value Area High (VAH) line", GroupName = StyleGroupName)]
+	[Parameter("Show VAH Line?", Description = "Show/Hide the Value Area High (VAH) line", GroupName = StyleGroupName)]
 	public bool VahLineVisible { get; set; } = false;
 
 	[Parameter("VAH Line Color", Description = "Color of the Value Area High (VAH) line", GroupName = StyleGroupName)]
@@ -62,7 +62,7 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 	[Parameter("VAH Line Style", Description = "Style of the Value Area High (VAH) line", GroupName = StyleGroupName)]
 	public LineStyle VahLineStyle { get; set; } = LineStyle.Solid;
 
-	[Parameter("VAL Line Visible?", Description = "Show/Hide the Value Area Low (VAL) line", GroupName = StyleGroupName)]
+	[Parameter("Show VAL Line?", Description = "Show/Hide the Value Area Low (VAL) line", GroupName = StyleGroupName)]
 	public bool ValLineVisible { get; set; } = false;
 
 	[Parameter("VAL Line Color", Description = "Color of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
@@ -74,7 +74,7 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 	[Parameter("VAL Line Style", Description = "Style of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
 	public LineStyle ValLineStyle { get; set; } = LineStyle.Solid;
 
-	[Parameter("POC Line Visible?", Description = "Show/Hide the Point of Control (POC) line", GroupName = StyleGroupName)]
+	[Parameter("Show POC Line?", Description = "Show/Hide the Point of Control (POC) line", GroupName = StyleGroupName)]
 	public bool PocLineVisible { get; set; } = true;
 
 	[Parameter("POC Line Color", Description = "Color of the Point of Control (POC) line", GroupName = StyleGroupName)]
@@ -109,7 +109,7 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 		Daily,
 		Weekly,
 		Monthly,
-		Yearly,
+		Yearly
 	}
 
 	private BarSeries _bars;

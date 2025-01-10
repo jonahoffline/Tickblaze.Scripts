@@ -1,4 +1,4 @@
-﻿namespace Tickblaze.Scripts.Drawings;
+namespace Tickblaze.Scripts.Drawings;
 
 public class VolumeProfileExtended : VolumeProfile
 {
@@ -12,10 +12,8 @@ public class VolumeProfileExtended : VolumeProfile
 
 public class VolumeProfile : Drawing, VolumeProfile.ISettings
 {
-	[Parameter("Source Data", Description = "Data source for the volume profile")]
+	[Parameter("Data Source", Description = "Data source for the volume profile")]
 	public SourceDataType SourceData { get; set; } = SourceDataType.Chart;
-
-	public const string StyleGroupName = "style";
 
 	[Parameter("Histo Size Type", Description = "Determines how histogram rows are calculated (by count or ticks)")]
 	public RowsLayoutType RowsLayout { get; set; } = RowsLayoutType.Count;
@@ -23,6 +21,8 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	[NumericRange(1, int.MaxValue)]
 	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows")]
 	public int RowsSize { get; set; } = 24;
+
+	public const string StyleGroupName = "Style";
 
 	[NumericRange(0, 100)]
 	[Parameter("Histo Width %", Description = "Width of the histogram as a percentage of box width", GroupName = StyleGroupName)]
@@ -53,7 +53,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	[Parameter("Outline Style", Description = "Style of the volume profile outline box (solid, dashed, etc.)", GroupName = StyleGroupName)]
 	public LineStyle BoxLineStyle { get; set; } = LineStyle.Dot;
 
-	[Parameter("VAH Line Visible?", Description = "Show/Hide the Value Area High (VAH) line", GroupName = StyleGroupName)]
+	[Parameter("Show VAH Line?", Description = "Show/Hide the Value Area High (VAH) line", GroupName = StyleGroupName)]
 	public bool VahLineVisible { get; set; } = false;
 
 	[Parameter("VAH Line Color", Description = "Color of the Value Area High (VAH) line", GroupName = StyleGroupName)]
@@ -65,7 +65,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	[Parameter("VAH Line Style", Description = "Style of the Value Area High (VAH) line", GroupName = StyleGroupName)]
 	public LineStyle VahLineStyle { get; set; } = LineStyle.Solid;
 
-	[Parameter("VAL Line Visible?", Description = "Show/Hide the Value Area Low (VAL) line", GroupName = StyleGroupName)]
+	[Parameter("Show VAL Line?", Description = "Show/Hide the Value Area Low (VAL) line", GroupName = StyleGroupName)]
 	public bool ValLineVisible { get; set; } = false;
 
 	[Parameter("VAL Line Color", Description = "Color of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
@@ -77,7 +77,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	[Parameter("VAL Line Style", Description = "Style of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
 	public LineStyle ValLineStyle { get; set; } = LineStyle.Solid;
 
-	[Parameter("POC Line Visible?", Description = "Show/Hide the Point of Control (POC) line", GroupName = StyleGroupName)]
+	[Parameter("Show POC Line?", Description = "Show/Hide the Point of Control (POC) line", GroupName = StyleGroupName)]
 	public bool PocLineVisible { get; set; } = true;
 
 	[Parameter("POC Line Color", Description = "Color of the Point of Control (POC) line", GroupName = StyleGroupName)]
@@ -121,7 +121,9 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 	protected override Parameters GetParameters(Parameters parameters)
 	{
-		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is RowsLayoutType.Count ? "Histo Rows Count" : "Histo Ticks Size";
+		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is RowsLayoutType.Count 
+			? "Histo Rows Count" 
+			: "Histo Ticks Size";
 
 		if (VahLineVisible is false)
 		{
