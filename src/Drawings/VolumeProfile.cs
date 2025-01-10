@@ -379,7 +379,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		public void Render(IDrawingContext context)
 		{
-			if (IsCalculated() is false && _drawing is { IsUpdating: false })
+			if (IsCalculated() is false && _drawing is null or { IsUpdating: false })
 			{
 				CalculateRowSize();
 				CalculateVolumes();
