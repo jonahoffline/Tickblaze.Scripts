@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Delegate ISymbolScriptBaseAdapter.NewBarCallback | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Delegate ISymbolScriptBaseAdapter.NewBarCallback | Tickblaze ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback">
+
+
+
+  <h1 id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback" class="text-break">
+Delegate ISymbolScriptBaseAdapter.NewBarCallback  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Adapters.html">Adapters</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate void ISymbolScriptBaseAdapter.NewBarCallback(BarSeries barSeries, Bar bar, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barSeries</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
+    <dd></dd>
+    <dt><code>bar</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <details class="typelist-details">
+    <summary>Extension Methods</summary>
+  <dl class="typelist extensionMethods">
+    <dd>
+  <div>
+      <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
+  </div>
+  </dd></dl>
+  </details>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback__ctor_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.#ctor*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback__ctor_System_Object_System_IntPtr_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.#ctor(System.Object,System.IntPtr)">
+  NewBarCallback(object, nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NewBarCallback(object @object, nint method)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_BeginInvoke_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_BeginInvoke_Tickblaze_Scripts_Api_Models_BarSeries_Tickblaze_Scripts_Api_Models_Bar_System_Int32_System_AsyncCallback_System_Object_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(Tickblaze.Scripts.Api.Models.BarSeries,Tickblaze.Scripts.Api.Models.Bar,System.Int32,System.AsyncCallback,System.Object)">
+  BeginInvoke(BarSeries, Bar, int, AsyncCallback, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IAsyncResult BeginInvoke(BarSeries barSeries, Bar bar, int index, AsyncCallback callback, object @object)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barSeries</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
+    <dd></dd>
+    <dt><code>bar</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></dt>
+    <dd></dd>
+    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_EndInvoke_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_EndInvoke_System_IAsyncResult_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke(System.IAsyncResult)">
+  EndInvoke(IAsyncResult)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void EndInvoke(IAsyncResult result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_Invoke_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_Invoke_Tickblaze_Scripts_Api_Models_BarSeries_Tickblaze_Scripts_Api_Models_Bar_System_Int32_" data-uid="Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke(Tickblaze.Scripts.Api.Models.BarSeries,Tickblaze.Scripts.Api.Models.Bar,System.Int32)">
+  Invoke(BarSeries, Bar, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Invoke(BarSeries barSeries, Bar bar, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barSeries</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
+    <dd></dd>
+    <dt><code>bar</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>

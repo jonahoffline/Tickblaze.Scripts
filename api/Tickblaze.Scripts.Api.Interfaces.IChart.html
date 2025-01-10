@@ -124,6 +124,15 @@ Interface IChart
     </dd></dl>
   </details>
 
+  <details class="typelist-details">
+    <summary>Extension Methods</summary>
+  <dl class="typelist extensionMethods">
+    <dd>
+  <div>
+      <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
+  </div>
+  </dd></dl>
+  </details>
 
 
 
@@ -131,6 +140,40 @@ Interface IChart
 
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IChart_BarWidth_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IChart_BarWidth" data-uid="Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth">
+  BarWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The width of the bar as a value between 0.0 and 1.0 which defines the fraction of available space each bar should occupy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double BarWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Double" text="double"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
 
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IChart_FirstVisibleBarIndex_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChart.FirstVisibleBarIndex*"></a>
@@ -231,6 +274,47 @@ Interface IChart
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>A string representing the formatted datetime.</p>
+</dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IChart_GetBarIndexByTime_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IChart_GetBarIndexByTime_System_DateTime_" data-uid="Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime(System.DateTime)">
+  GetBarIndexByTime(DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the bar index by the specified time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetBarIndexByTime(DateTime time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The time to get the bar index for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The bar index corresponding to the specified time.</p>
 </dd>
   </dl>
 

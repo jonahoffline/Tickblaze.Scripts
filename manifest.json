@@ -22,6 +22,96 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.ContractType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.ContractType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.Exchange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.Exchange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.InstrumentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.InstrumentType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.PlotStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.PlotStyle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Extensions.TypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Extensions.TypeExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.ContractSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.ContractSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.AlertType.yml",
       "output": {
         ".html": {
@@ -46,6 +136,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html"
         }
       },
       "version": ""
@@ -152,6 +262,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.IStrategyScriptBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.IStrategyScriptBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.yml",
       "output": {
         ".html": {
@@ -206,6 +326,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Bases.Strategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.SymbolScript.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.SymbolScript.html"
         }
       },
       "version": ""
@@ -336,16 +466,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Enums.OrderType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.PlotStyle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Enums.PlotStyle.html"
         }
       },
       "version": ""
@@ -732,6 +852,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.ChartPoint.yml",
       "output": {
         ".html": {
@@ -756,6 +886,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Models.DataSeries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html"
         }
       },
       "version": ""
@@ -904,11 +1044,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -947,11 +1087,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "docs/toc.json"
-        },
         ".html": {
           "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
         }
       },
       "version": ""
@@ -1070,11 +1210,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SymbolScript | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SymbolScript | Tickblaze ">
+      
+      <meta name="description" content="Represents a base class for scripts that can interact with chart data, parameters, and initialization processes.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript">
+
+
+
+  <h1 id="Tickblaze_Scripts_Api_Bases_SymbolScript" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript" class="text-break">
+Class SymbolScript  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.html">Bases</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a base class for scripts that can interact with chart data, parameters, and initialization processes.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SymbolScript : Script, IScript, IDisposable, IMetadata</code></pre>
+  </div>
+
+
+
+
+  <details class="typelist-details">
+  <summary>Inheritance</summary>
+  <dl class="typelist inheritance">
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a></div>
+      <div><span class="xref">SymbolScript</span></div>
+    </dd>
+  </dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Implements</summary>
+    <dl class="typelist implements">
+      <dd>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a></div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a></div>
+      </dd>
+    </dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Derived</summary>
+    <dl class="typelist derived">
+      <dd>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Drawing.html">Drawing</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Indicator.html">Indicator</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.PositionSizer.html">PositionSizer</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.TradingScript.html">TradingScript</a></div>
+      </dd>
+    </dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Inherited Members</summary>
+    <dl class="typelist inheritedMembers">
+      <dd>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script__initializers">Script._initializers</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters">Script.GetParameters()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters_Tickblaze_Scripts_Api_Parameters_">Script.GetParameters(Parameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_OnDestroy">Script.OnDestroy()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem">Script.CreateChartToolbarMenuItem()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_">Script.Print(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Dispose">Script.Dispose()</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Name">Script.Name</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ShortName">Script.ShortName</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Description">Script.Description</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Metadata">Script.Metadata</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Parameters">Script.Parameters</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_IsInitialized">Script.IsInitialized</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_UiDispatcher">Script.UiDispatcher</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Alert">Script.Alert</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+      </div>
+    </dd></dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Extension Methods</summary>
+  <dl class="typelist extensionMethods">
+    <dd>
+  <div>
+      <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
+  </div>
+  </dd></dl>
+  </details>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_Bars_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.Bars*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_Bars" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.Bars">
+  Bars
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The bar series associated with the script.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarSeries Bars { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Models.BarSeries" text="BarSeries"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_Tickblaze_Scripts_Api_Models_BarSeriesRequest_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries(Tickblaze.Scripts.Api.Models.BarSeriesRequest)">
+  GetBarSeries(BarSeriesRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a bar series which will fill automatically and can be subscribed to for data updates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BarSeries GetBarSeries(BarSeriesRequest barSeriesRequest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barSeriesRequest</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeriesRequest.html">BarSeriesRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_FindSymbolRequest_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)">
+  GetSymbol(FindSymbolRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Symbol? GetSymbol(FindSymbolRequest findSymbolParams)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>findSymbolParams</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.FindSymbolRequest.html">FindSymbolRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Symbol.html">Symbol</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>

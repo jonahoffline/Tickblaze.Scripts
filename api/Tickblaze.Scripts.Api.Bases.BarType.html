@@ -102,7 +102,7 @@ Class BarType
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BarType : Script, IScript, IDisposable, IMetadata</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BarType : SymbolScript, IScript, IDisposable, IMetadata</code></pre>
   </div>
 
 
@@ -114,6 +114,7 @@ Class BarType
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a></div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html">SymbolScript</a></div>
       <div><span class="xref">BarType</span></div>
     </dd>
   </dl>
@@ -135,6 +136,15 @@ Class BarType
     <summary>Inherited Members</summary>
     <dl class="typelist inheritedMembers">
       <dd>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_FindSymbolRequest_">SymbolScript.GetSymbol(FindSymbolRequest)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_Tickblaze_Scripts_Api_Models_BarSeriesRequest_">SymbolScript.GetBarSeries(BarSeriesRequest)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script__initializers">Script._initializers</a>
+      </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters">Script.GetParameters()</a>
       </div>
@@ -192,6 +202,15 @@ Class BarType
     </dd></dl>
   </details>
 
+  <details class="typelist-details">
+    <summary>Extension Methods</summary>
+  <dl class="typelist extensionMethods">
+    <dd>
+  <div>
+      <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
+  </div>
+  </dd></dl>
+  </details>
 
 
 
@@ -268,6 +287,40 @@ Class BarType
 
 
 
+  <a id="Tickblaze_Scripts_Api_Bases_BarType_ContractSettings_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.ContractSettings*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_BarType_ContractSettings" data-uid="Tickblaze.Scripts.Api.Bases.BarType.ContractSettings">
+  ContractSettings
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series hours (If false, hours are RTH)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContractSettings ContractSettings { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Core.Models.ContractSettings" text="ContractSettings"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
   <a id="Tickblaze_Scripts_Api_Bases_BarType_Description_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.Description*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Bases_BarType_Description" data-uid="Tickblaze.Scripts.Api.Bases.BarType.Description">
@@ -325,6 +378,40 @@ Class BarType
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><xref uid="System.String" text="string"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_BarType_IsETH_" data-uid="Tickblaze.Scripts.Api.Bases.BarType.IsETH*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_BarType_IsETH" data-uid="Tickblaze.Scripts.Api.Bases.BarType.IsETH">
+  IsETH
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The series hours (If false, hours are RTH)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsETH { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Boolean" text="bool"/></dt>
     <dd></dd>
   </dl>
   -->

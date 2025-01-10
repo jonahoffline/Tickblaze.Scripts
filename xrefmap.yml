@@ -1,6 +1,438 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Tickblaze.Core.Enums
+  name: Tickblaze.Core.Enums
+  href: api/Tickblaze.Core.Enums.html
+  commentId: N:Tickblaze.Core.Enums
+  fullName: Tickblaze.Core.Enums
+  nameWithType: Tickblaze.Core.Enums
+- uid: Tickblaze.Core.Enums.ContractType
+  name: ContractType
+  href: api/Tickblaze.Core.Enums.ContractType.html
+  commentId: T:Tickblaze.Core.Enums.ContractType
+  fullName: Tickblaze.Core.Enums.ContractType
+  nameWithType: ContractType
+- uid: Tickblaze.Core.Enums.ContractType.CashSettled
+  name: CashSettled
+  href: api/Tickblaze.Core.Enums.ContractType.html#Tickblaze_Core_Enums_ContractType_CashSettled
+  commentId: F:Tickblaze.Core.Enums.ContractType.CashSettled
+  fullName: Tickblaze.Core.Enums.ContractType.CashSettled
+  nameWithType: ContractType.CashSettled
+- uid: Tickblaze.Core.Enums.ContractType.ContinuousBackAdjusted
+  name: ContinuousBackAdjusted
+  href: api/Tickblaze.Core.Enums.ContractType.html#Tickblaze_Core_Enums_ContractType_ContinuousBackAdjusted
+  commentId: F:Tickblaze.Core.Enums.ContractType.ContinuousBackAdjusted
+  fullName: Tickblaze.Core.Enums.ContractType.ContinuousBackAdjusted
+  nameWithType: ContractType.ContinuousBackAdjusted
+- uid: Tickblaze.Core.Enums.ContractType.ContinuousByDataProvider
+  name: ContinuousByDataProvider
+  href: api/Tickblaze.Core.Enums.ContractType.html#Tickblaze_Core_Enums_ContractType_ContinuousByDataProvider
+  commentId: F:Tickblaze.Core.Enums.ContractType.ContinuousByDataProvider
+  fullName: Tickblaze.Core.Enums.ContractType.ContinuousByDataProvider
+  nameWithType: ContractType.ContinuousByDataProvider
+- uid: Tickblaze.Core.Enums.ContractType.ContinuousNonBackAdjusted
+  name: ContinuousNonBackAdjusted
+  href: api/Tickblaze.Core.Enums.ContractType.html#Tickblaze_Core_Enums_ContractType_ContinuousNonBackAdjusted
+  commentId: F:Tickblaze.Core.Enums.ContractType.ContinuousNonBackAdjusted
+  fullName: Tickblaze.Core.Enums.ContractType.ContinuousNonBackAdjusted
+  nameWithType: ContractType.ContinuousNonBackAdjusted
+- uid: Tickblaze.Core.Enums.ContractType.SingleContract
+  name: SingleContract
+  href: api/Tickblaze.Core.Enums.ContractType.html#Tickblaze_Core_Enums_ContractType_SingleContract
+  commentId: F:Tickblaze.Core.Enums.ContractType.SingleContract
+  fullName: Tickblaze.Core.Enums.ContractType.SingleContract
+  nameWithType: ContractType.SingleContract
+- uid: Tickblaze.Core.Enums.Exchange
+  name: Exchange
+  href: api/Tickblaze.Core.Enums.Exchange.html
+  commentId: T:Tickblaze.Core.Enums.Exchange
+  fullName: Tickblaze.Core.Enums.Exchange
+  nameWithType: Exchange
+- uid: Tickblaze.Core.Enums.Exchange.AMEX
+  name: AMEX
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_AMEX
+  commentId: F:Tickblaze.Core.Enums.Exchange.AMEX
+  fullName: Tickblaze.Core.Enums.Exchange.AMEX
+  nameWithType: Exchange.AMEX
+- uid: Tickblaze.Core.Enums.Exchange.ARCA
+  name: ARCA
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_ARCA
+  commentId: F:Tickblaze.Core.Enums.Exchange.ARCA
+  fullName: Tickblaze.Core.Enums.Exchange.ARCA
+  nameWithType: Exchange.ARCA
+- uid: Tickblaze.Core.Enums.Exchange.BATS
+  name: BATS
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_BATS
+  commentId: F:Tickblaze.Core.Enums.Exchange.BATS
+  fullName: Tickblaze.Core.Enums.Exchange.BATS
+  nameWithType: Exchange.BATS
+- uid: Tickblaze.Core.Enums.Exchange.CBOE
+  name: CBOE
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_CBOE
+  commentId: F:Tickblaze.Core.Enums.Exchange.CBOE
+  fullName: Tickblaze.Core.Enums.Exchange.CBOE
+  nameWithType: Exchange.CBOE
+- uid: Tickblaze.Core.Enums.Exchange.CBOT
+  name: CBOT
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_CBOT
+  commentId: F:Tickblaze.Core.Enums.Exchange.CBOT
+  fullName: Tickblaze.Core.Enums.Exchange.CBOT
+  nameWithType: Exchange.CBOT
+- uid: Tickblaze.Core.Enums.Exchange.CME
+  name: CME
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_CME
+  commentId: F:Tickblaze.Core.Enums.Exchange.CME
+  fullName: Tickblaze.Core.Enums.Exchange.CME
+  nameWithType: Exchange.CME
+- uid: Tickblaze.Core.Enums.Exchange.COMEX
+  name: COMEX
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_COMEX
+  commentId: F:Tickblaze.Core.Enums.Exchange.COMEX
+  fullName: Tickblaze.Core.Enums.Exchange.COMEX
+  nameWithType: Exchange.COMEX
+- uid: Tickblaze.Core.Enums.Exchange.EUREX
+  name: EUREX
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_EUREX
+  commentId: F:Tickblaze.Core.Enums.Exchange.EUREX
+  fullName: Tickblaze.Core.Enums.Exchange.EUREX
+  nameWithType: Exchange.EUREX
+- uid: Tickblaze.Core.Enums.Exchange.NASDAQ
+  name: NASDAQ
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_NASDAQ
+  commentId: F:Tickblaze.Core.Enums.Exchange.NASDAQ
+  fullName: Tickblaze.Core.Enums.Exchange.NASDAQ
+  nameWithType: Exchange.NASDAQ
+- uid: Tickblaze.Core.Enums.Exchange.NYMEX
+  name: NYMEX
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_NYMEX
+  commentId: F:Tickblaze.Core.Enums.Exchange.NYMEX
+  fullName: Tickblaze.Core.Enums.Exchange.NYMEX
+  nameWithType: Exchange.NYMEX
+- uid: Tickblaze.Core.Enums.Exchange.NYSE
+  name: NYSE
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_NYSE
+  commentId: F:Tickblaze.Core.Enums.Exchange.NYSE
+  fullName: Tickblaze.Core.Enums.Exchange.NYSE
+  nameWithType: Exchange.NYSE
+- uid: Tickblaze.Core.Enums.Exchange.PINK
+  name: PINK
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_PINK
+  commentId: F:Tickblaze.Core.Enums.Exchange.PINK
+  fullName: Tickblaze.Core.Enums.Exchange.PINK
+  nameWithType: Exchange.PINK
+- uid: Tickblaze.Core.Enums.Exchange.Unknown
+  name: Unknown
+  href: api/Tickblaze.Core.Enums.Exchange.html#Tickblaze_Core_Enums_Exchange_Unknown
+  commentId: F:Tickblaze.Core.Enums.Exchange.Unknown
+  fullName: Tickblaze.Core.Enums.Exchange.Unknown
+  nameWithType: Exchange.Unknown
+- uid: Tickblaze.Core.Enums.InstrumentType
+  name: InstrumentType
+  href: api/Tickblaze.Core.Enums.InstrumentType.html
+  commentId: T:Tickblaze.Core.Enums.InstrumentType
+  fullName: Tickblaze.Core.Enums.InstrumentType
+  nameWithType: InstrumentType
+- uid: Tickblaze.Core.Enums.InstrumentType.Bond
+  name: Bond
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Bond
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Bond
+  fullName: Tickblaze.Core.Enums.InstrumentType.Bond
+  nameWithType: InstrumentType.Bond
+- uid: Tickblaze.Core.Enums.InstrumentType.CFD
+  name: CFD
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_CFD
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.CFD
+  fullName: Tickblaze.Core.Enums.InstrumentType.CFD
+  nameWithType: InstrumentType.CFD
+- uid: Tickblaze.Core.Enums.InstrumentType.CryptoCurrency
+  name: CryptoCurrency
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_CryptoCurrency
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.CryptoCurrency
+  fullName: Tickblaze.Core.Enums.InstrumentType.CryptoCurrency
+  nameWithType: InstrumentType.CryptoCurrency
+- uid: Tickblaze.Core.Enums.InstrumentType.ETF
+  name: ETF
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_ETF
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.ETF
+  fullName: Tickblaze.Core.Enums.InstrumentType.ETF
+  nameWithType: InstrumentType.ETF
+- uid: Tickblaze.Core.Enums.InstrumentType.Forex
+  name: Forex
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Forex
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Forex
+  fullName: Tickblaze.Core.Enums.InstrumentType.Forex
+  nameWithType: InstrumentType.Forex
+- uid: Tickblaze.Core.Enums.InstrumentType.Future
+  name: Future
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Future
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Future
+  fullName: Tickblaze.Core.Enums.InstrumentType.Future
+  nameWithType: InstrumentType.Future
+- uid: Tickblaze.Core.Enums.InstrumentType.Index
+  name: Index
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Index
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Index
+  fullName: Tickblaze.Core.Enums.InstrumentType.Index
+  nameWithType: InstrumentType.Index
+- uid: Tickblaze.Core.Enums.InstrumentType.MutualFund
+  name: MutualFund
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_MutualFund
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.MutualFund
+  fullName: Tickblaze.Core.Enums.InstrumentType.MutualFund
+  nameWithType: InstrumentType.MutualFund
+- uid: Tickblaze.Core.Enums.InstrumentType.Option
+  name: Option
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Option
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Option
+  fullName: Tickblaze.Core.Enums.InstrumentType.Option
+  nameWithType: InstrumentType.Option
+- uid: Tickblaze.Core.Enums.InstrumentType.Stock
+  name: Stock
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Stock
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Stock
+  fullName: Tickblaze.Core.Enums.InstrumentType.Stock
+  nameWithType: InstrumentType.Stock
+- uid: Tickblaze.Core.Enums.InstrumentType.Unknown
+  name: Unknown
+  href: api/Tickblaze.Core.Enums.InstrumentType.html#Tickblaze_Core_Enums_InstrumentType_Unknown
+  commentId: F:Tickblaze.Core.Enums.InstrumentType.Unknown
+  fullName: Tickblaze.Core.Enums.InstrumentType.Unknown
+  nameWithType: InstrumentType.Unknown
+- uid: Tickblaze.Core.Enums.PlotStyle
+  name: PlotStyle
+  href: api/Tickblaze.Core.Enums.PlotStyle.html
+  commentId: T:Tickblaze.Core.Enums.PlotStyle
+  fullName: Tickblaze.Core.Enums.PlotStyle
+  nameWithType: PlotStyle
+- uid: Tickblaze.Core.Enums.PlotStyle.Cross
+  name: Cross
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Cross
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Cross
+  fullName: Tickblaze.Core.Enums.PlotStyle.Cross
+  nameWithType: PlotStyle.Cross
+- uid: Tickblaze.Core.Enums.PlotStyle.Dot
+  name: Dot
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Dot
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Dot
+  fullName: Tickblaze.Core.Enums.PlotStyle.Dot
+  nameWithType: PlotStyle.Dot
+- uid: Tickblaze.Core.Enums.PlotStyle.Hash
+  name: Hash
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Hash
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Hash
+  fullName: Tickblaze.Core.Enums.PlotStyle.Hash
+  nameWithType: PlotStyle.Hash
+- uid: Tickblaze.Core.Enums.PlotStyle.Histogram
+  name: Histogram
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Histogram
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Histogram
+  fullName: Tickblaze.Core.Enums.PlotStyle.Histogram
+  nameWithType: PlotStyle.Histogram
+- uid: Tickblaze.Core.Enums.PlotStyle.Line
+  name: Line
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Line
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Line
+  fullName: Tickblaze.Core.Enums.PlotStyle.Line
+  nameWithType: PlotStyle.Line
+- uid: Tickblaze.Core.Enums.PlotStyle.Square
+  name: Square
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Square
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Square
+  fullName: Tickblaze.Core.Enums.PlotStyle.Square
+  nameWithType: PlotStyle.Square
+- uid: Tickblaze.Core.Enums.PlotStyle.Stair
+  name: Stair
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_Stair
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.Stair
+  fullName: Tickblaze.Core.Enums.PlotStyle.Stair
+  nameWithType: PlotStyle.Stair
+- uid: Tickblaze.Core.Enums.PlotStyle.TriangleDown
+  name: TriangleDown
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_TriangleDown
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.TriangleDown
+  fullName: Tickblaze.Core.Enums.PlotStyle.TriangleDown
+  nameWithType: PlotStyle.TriangleDown
+- uid: Tickblaze.Core.Enums.PlotStyle.TriangleLeft
+  name: TriangleLeft
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_TriangleLeft
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.TriangleLeft
+  fullName: Tickblaze.Core.Enums.PlotStyle.TriangleLeft
+  nameWithType: PlotStyle.TriangleLeft
+- uid: Tickblaze.Core.Enums.PlotStyle.TriangleRight
+  name: TriangleRight
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_TriangleRight
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.TriangleRight
+  fullName: Tickblaze.Core.Enums.PlotStyle.TriangleRight
+  nameWithType: PlotStyle.TriangleRight
+- uid: Tickblaze.Core.Enums.PlotStyle.TriangleUp
+  name: TriangleUp
+  href: api/Tickblaze.Core.Enums.PlotStyle.html#Tickblaze_Core_Enums_PlotStyle_TriangleUp
+  commentId: F:Tickblaze.Core.Enums.PlotStyle.TriangleUp
+  fullName: Tickblaze.Core.Enums.PlotStyle.TriangleUp
+  nameWithType: PlotStyle.TriangleUp
+- uid: Tickblaze.Core.Extensions
+  name: Tickblaze.Core.Extensions
+  href: api/Tickblaze.Core.Extensions.html
+  commentId: N:Tickblaze.Core.Extensions
+  fullName: Tickblaze.Core.Extensions
+  nameWithType: Tickblaze.Core.Extensions
+- uid: Tickblaze.Core.Extensions.TypeExtensions
+  name: TypeExtensions
+  href: api/Tickblaze.Core.Extensions.TypeExtensions.html
+  commentId: T:Tickblaze.Core.Extensions.TypeExtensions
+  fullName: Tickblaze.Core.Extensions.TypeExtensions
+  nameWithType: TypeExtensions
+- uid: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(System.Object)
+  name: IsNumericType(object)
+  href: api/Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_
+  commentId: M:Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(System.Object)
+  name.vb: IsNumericType(Object)
+  fullName: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(object)
+  fullName.vb: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(Object)
+  nameWithType: TypeExtensions.IsNumericType(object)
+  nameWithType.vb: TypeExtensions.IsNumericType(Object)
+- uid: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(System.Type)
+  name: IsNumericType(Type)
+  href: api/Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Type_
+  commentId: M:Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(System.Type)
+  fullName: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(System.Type)
+  nameWithType: TypeExtensions.IsNumericType(Type)
+- uid: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType*
+  name: IsNumericType
+  href: api/Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_
+  commentId: Overload:Tickblaze.Core.Extensions.TypeExtensions.IsNumericType
+  fullName: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType
+  nameWithType: TypeExtensions.IsNumericType
+- uid: Tickblaze.Core.Models
+  name: Tickblaze.Core.Models
+  href: api/Tickblaze.Core.Models.html
+  commentId: N:Tickblaze.Core.Models
+  fullName: Tickblaze.Core.Models
+  nameWithType: Tickblaze.Core.Models
+- uid: Tickblaze.Core.Models.ContractSettings
+  name: ContractSettings
+  href: api/Tickblaze.Core.Models.ContractSettings.html
+  commentId: T:Tickblaze.Core.Models.ContractSettings
+  fullName: Tickblaze.Core.Models.ContractSettings
+  nameWithType: ContractSettings
+- uid: Tickblaze.Core.Models.ContractSettings.Equals(System.Object)
+  name: Equals(object)
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Equals_System_Object_
+  commentId: M:Tickblaze.Core.Models.ContractSettings.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Core.Models.ContractSettings.Equals(object)
+  fullName.vb: Tickblaze.Core.Models.ContractSettings.Equals(Object)
+  nameWithType: ContractSettings.Equals(object)
+  nameWithType.vb: ContractSettings.Equals(Object)
+- uid: Tickblaze.Core.Models.ContractSettings.Equals(Tickblaze.Core.Models.ContractSettings)
+  name: Equals(ContractSettings)
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Equals_Tickblaze_Core_Models_ContractSettings_
+  commentId: M:Tickblaze.Core.Models.ContractSettings.Equals(Tickblaze.Core.Models.ContractSettings)
+  fullName: Tickblaze.Core.Models.ContractSettings.Equals(Tickblaze.Core.Models.ContractSettings)
+  nameWithType: ContractSettings.Equals(ContractSettings)
+- uid: Tickblaze.Core.Models.ContractSettings.Equals*
+  name: Equals
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Equals_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.Equals
+  fullName: Tickblaze.Core.Models.ContractSettings.Equals
+  nameWithType: ContractSettings.Equals
+- uid: Tickblaze.Core.Models.ContractSettings.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_GetHashCode
+  commentId: M:Tickblaze.Core.Models.ContractSettings.GetHashCode
+  fullName: Tickblaze.Core.Models.ContractSettings.GetHashCode()
+  nameWithType: ContractSettings.GetHashCode()
+- uid: Tickblaze.Core.Models.ContractSettings.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_GetHashCode_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.GetHashCode
+  fullName: Tickblaze.Core.Models.ContractSettings.GetHashCode
+  nameWithType: ContractSettings.GetHashCode
+- uid: Tickblaze.Core.Models.ContractSettings.Month
+  name: Month
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Month
+  commentId: P:Tickblaze.Core.Models.ContractSettings.Month
+  fullName: Tickblaze.Core.Models.ContractSettings.Month
+  nameWithType: ContractSettings.Month
+- uid: Tickblaze.Core.Models.ContractSettings.Month*
+  name: Month
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Month_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.Month
+  fullName: Tickblaze.Core.Models.ContractSettings.Month
+  nameWithType: ContractSettings.Month
+- uid: Tickblaze.Core.Models.ContractSettings.ToString
+  name: ToString()
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_ToString
+  commentId: M:Tickblaze.Core.Models.ContractSettings.ToString
+  fullName: Tickblaze.Core.Models.ContractSettings.ToString()
+  nameWithType: ContractSettings.ToString()
+- uid: Tickblaze.Core.Models.ContractSettings.ToString*
+  name: ToString
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_ToString_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.ToString
+  fullName: Tickblaze.Core.Models.ContractSettings.ToString
+  nameWithType: ContractSettings.ToString
+- uid: Tickblaze.Core.Models.ContractSettings.Type
+  name: Type
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Type
+  commentId: P:Tickblaze.Core.Models.ContractSettings.Type
+  fullName: Tickblaze.Core.Models.ContractSettings.Type
+  nameWithType: ContractSettings.Type
+- uid: Tickblaze.Core.Models.ContractSettings.Type*
+  name: Type
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Type_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.Type
+  fullName: Tickblaze.Core.Models.ContractSettings.Type
+  nameWithType: ContractSettings.Type
+- uid: Tickblaze.Core.Models.ContractSettings.Year
+  name: Year
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Year
+  commentId: P:Tickblaze.Core.Models.ContractSettings.Year
+  fullName: Tickblaze.Core.Models.ContractSettings.Year
+  nameWithType: ContractSettings.Year
+- uid: Tickblaze.Core.Models.ContractSettings.Year*
+  name: Year
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_Year_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.Year
+  fullName: Tickblaze.Core.Models.ContractSettings.Year
+  nameWithType: ContractSettings.Year
+- uid: Tickblaze.Core.Models.ContractSettings.op_Equality(Tickblaze.Core.Models.ContractSettings,Tickblaze.Core.Models.ContractSettings)
+  name: operator ==(ContractSettings, ContractSettings)
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_op_Equality_Tickblaze_Core_Models_ContractSettings_Tickblaze_Core_Models_ContractSettings_
+  commentId: M:Tickblaze.Core.Models.ContractSettings.op_Equality(Tickblaze.Core.Models.ContractSettings,Tickblaze.Core.Models.ContractSettings)
+  name.vb: =(ContractSettings, ContractSettings)
+  fullName: Tickblaze.Core.Models.ContractSettings.operator ==(Tickblaze.Core.Models.ContractSettings, Tickblaze.Core.Models.ContractSettings)
+  fullName.vb: Tickblaze.Core.Models.ContractSettings.=(Tickblaze.Core.Models.ContractSettings, Tickblaze.Core.Models.ContractSettings)
+  nameWithType: ContractSettings.operator ==(ContractSettings, ContractSettings)
+  nameWithType.vb: ContractSettings.=(ContractSettings, ContractSettings)
+- uid: Tickblaze.Core.Models.ContractSettings.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_op_Equality_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Core.Models.ContractSettings.operator ==
+  fullName.vb: Tickblaze.Core.Models.ContractSettings.=
+  nameWithType: ContractSettings.operator ==
+  nameWithType.vb: ContractSettings.=
+- uid: Tickblaze.Core.Models.ContractSettings.op_Inequality(Tickblaze.Core.Models.ContractSettings,Tickblaze.Core.Models.ContractSettings)
+  name: operator !=(ContractSettings, ContractSettings)
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_op_Inequality_Tickblaze_Core_Models_ContractSettings_Tickblaze_Core_Models_ContractSettings_
+  commentId: M:Tickblaze.Core.Models.ContractSettings.op_Inequality(Tickblaze.Core.Models.ContractSettings,Tickblaze.Core.Models.ContractSettings)
+  name.vb: <>(ContractSettings, ContractSettings)
+  fullName: Tickblaze.Core.Models.ContractSettings.operator !=(Tickblaze.Core.Models.ContractSettings, Tickblaze.Core.Models.ContractSettings)
+  fullName.vb: Tickblaze.Core.Models.ContractSettings.<>(Tickblaze.Core.Models.ContractSettings, Tickblaze.Core.Models.ContractSettings)
+  nameWithType: ContractSettings.operator !=(ContractSettings, ContractSettings)
+  nameWithType.vb: ContractSettings.<>(ContractSettings, ContractSettings)
+- uid: Tickblaze.Core.Models.ContractSettings.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Core.Models.ContractSettings.html#Tickblaze_Core_Models_ContractSettings_op_Inequality_
+  commentId: Overload:Tickblaze.Core.Models.ContractSettings.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Core.Models.ContractSettings.operator !=
+  fullName.vb: Tickblaze.Core.Models.ContractSettings.<>
+  nameWithType: ContractSettings.operator !=
+  nameWithType.vb: ContractSettings.<>
 - uid: Tickblaze.Scripts.Api
   name: Tickblaze.Scripts.Api
   href: api/Tickblaze.Scripts.Api.html
@@ -64,21 +496,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Adapters.IAlertAdapter.PlaySound
   fullName: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.PlaySound
   nameWithType: IAlertAdapter.PlaySound
-- uid: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail(System.String,System.String)
-  name: SendEmail(string, string)
-  href: api/Tickblaze.Scripts.Api.Adapters.IAlertAdapter.html#Tickblaze_Scripts_Api_Adapters_IAlertAdapter_SendEmail_System_String_System_String_
-  commentId: M:Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail(System.String,System.String)
-  name.vb: SendEmail(String, String)
-  fullName: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail(string, string)
-  fullName.vb: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail(String, String)
-  nameWithType: IAlertAdapter.SendEmail(string, string)
-  nameWithType.vb: IAlertAdapter.SendEmail(String, String)
-- uid: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail*
-  name: SendEmail
-  href: api/Tickblaze.Scripts.Api.Adapters.IAlertAdapter.html#Tickblaze_Scripts_Api_Adapters_IAlertAdapter_SendEmail_
-  commentId: Overload:Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail
-  fullName: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.SendEmail
-  nameWithType: IAlertAdapter.SendEmail
 - uid: Tickblaze.Scripts.Api.Adapters.IAlertAdapter.ShowDialog(Tickblaze.Scripts.Api.Adapters.AlertType,System.String)
   name: ShowDialog(AlertType, string)
   href: api/Tickblaze.Scripts.Api.Adapters.IAlertAdapter.html#Tickblaze_Scripts_Api_Adapters_IAlertAdapter_ShowDialog_Tickblaze_Scripts_Api_Adapters_AlertType_System_String_
@@ -127,6 +544,102 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.Script
   fullName: Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.Script
   nameWithType: IScriptBaseAdapter.Script
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter
+  name: ISymbolScriptBaseAdapter
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html
+  commentId: T:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter
+  nameWithType: ISymbolScriptBaseAdapter
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData(Tickblaze.Scripts.Api.Models.BarSeriesRequest,Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback)
+  name: AddData(BarSeriesRequest, NewBarCallback)
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_AddData_Tickblaze_Scripts_Api_Models_BarSeriesRequest_Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_
+  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData(Tickblaze.Scripts.Api.Models.BarSeriesRequest,Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback)
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData(Tickblaze.Scripts.Api.Models.BarSeriesRequest, Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback)
+  nameWithType: ISymbolScriptBaseAdapter.AddData(BarSeriesRequest, ISymbolScriptBaseAdapter.NewBarCallback)
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData*
+  name: AddData
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_AddData_
+  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData
+  nameWithType: ISymbolScriptBaseAdapter.AddData
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: GetSymbol(FindSymbolRequest)
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_GetSymbol_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: ISymbolScriptBaseAdapter.GetSymbol(FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol*
+  name: GetSymbol
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_GetSymbol_
+  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol
+  nameWithType: ISymbolScriptBaseAdapter.GetSymbol
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback
+  name: ISymbolScriptBaseAdapter.NewBarCallback
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html
+  commentId: T:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.#ctor(System.Object,System.IntPtr)
+  name: NewBarCallback(object, nint)
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback__ctor_System_Object_System_IntPtr_
+  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.#ctor(System.Object,System.IntPtr)
+  name.vb: New(Object, IntPtr)
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.NewBarCallback(object, nint)
+  fullName.vb: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.New(Object, System.IntPtr)
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.NewBarCallback(object, nint)
+  nameWithType.vb: ISymbolScriptBaseAdapter.NewBarCallback.New(Object, IntPtr)
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.#ctor*
+  name: NewBarCallback
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.NewBarCallback
+  fullName.vb: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.New
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.NewBarCallback
+  nameWithType.vb: ISymbolScriptBaseAdapter.NewBarCallback.New
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(Tickblaze.Scripts.Api.Models.BarSeries,Tickblaze.Scripts.Api.Models.Bar,System.Int32,System.AsyncCallback,System.Object)
+  name: BeginInvoke(BarSeries, Bar, int, AsyncCallback, object)
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_BeginInvoke_Tickblaze_Scripts_Api_Models_BarSeries_Tickblaze_Scripts_Api_Models_Bar_System_Int32_System_AsyncCallback_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(Tickblaze.Scripts.Api.Models.BarSeries,Tickblaze.Scripts.Api.Models.Bar,System.Int32,System.AsyncCallback,System.Object)
+  name.vb: BeginInvoke(BarSeries, Bar, Integer, AsyncCallback, Object)
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(Tickblaze.Scripts.Api.Models.BarSeries, Tickblaze.Scripts.Api.Models.Bar, int, System.AsyncCallback, object)
+  fullName.vb: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(Tickblaze.Scripts.Api.Models.BarSeries, Tickblaze.Scripts.Api.Models.Bar, Integer, System.AsyncCallback, Object)
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(BarSeries, Bar, int, AsyncCallback, object)
+  nameWithType.vb: ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke(BarSeries, Bar, Integer, AsyncCallback, Object)
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke*
+  name: BeginInvoke
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_BeginInvoke_
+  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.BeginInvoke
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke(System.IAsyncResult)
+  name: EndInvoke(IAsyncResult)
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_EndInvoke_System_IAsyncResult_
+  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke(System.IAsyncResult)
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke(System.IAsyncResult)
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke(IAsyncResult)
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke*
+  name: EndInvoke
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_EndInvoke_
+  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.EndInvoke
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke(Tickblaze.Scripts.Api.Models.BarSeries,Tickblaze.Scripts.Api.Models.Bar,System.Int32)
+  name: Invoke(BarSeries, Bar, int)
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_Invoke_Tickblaze_Scripts_Api_Models_BarSeries_Tickblaze_Scripts_Api_Models_Bar_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke(Tickblaze.Scripts.Api.Models.BarSeries,Tickblaze.Scripts.Api.Models.Bar,System.Int32)
+  name.vb: Invoke(BarSeries, Bar, Integer)
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke(Tickblaze.Scripts.Api.Models.BarSeries, Tickblaze.Scripts.Api.Models.Bar, int)
+  fullName.vb: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke(Tickblaze.Scripts.Api.Models.BarSeries, Tickblaze.Scripts.Api.Models.Bar, Integer)
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.Invoke(BarSeries, Bar, int)
+  nameWithType.vb: ISymbolScriptBaseAdapter.NewBarCallback.Invoke(BarSeries, Bar, Integer)
+- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke*
+  name: Invoke
+  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_NewBarCallback_Invoke_
+  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke
+  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.Invoke
+  nameWithType: ISymbolScriptBaseAdapter.NewBarCallback.Invoke
 - uid: Tickblaze.Scripts.Api.Attributes
   name: Tickblaze.Scripts.Api.Attributes
   href: api/Tickblaze.Scripts.Api.Attributes.html
@@ -379,6 +892,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.BarType.Bars
   fullName: Tickblaze.Scripts.Api.Bases.BarType.Bars
   nameWithType: BarType.Bars
+- uid: Tickblaze.Scripts.Api.Bases.BarType.ContractSettings
+  name: ContractSettings
+  href: api/Tickblaze.Scripts.Api.Bases.BarType.html#Tickblaze_Scripts_Api_Bases_BarType_ContractSettings
+  commentId: P:Tickblaze.Scripts.Api.Bases.BarType.ContractSettings
+  fullName: Tickblaze.Scripts.Api.Bases.BarType.ContractSettings
+  nameWithType: BarType.ContractSettings
+- uid: Tickblaze.Scripts.Api.Bases.BarType.ContractSettings*
+  name: ContractSettings
+  href: api/Tickblaze.Scripts.Api.Bases.BarType.html#Tickblaze_Scripts_Api_Bases_BarType_ContractSettings_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.BarType.ContractSettings
+  fullName: Tickblaze.Scripts.Api.Bases.BarType.ContractSettings
+  nameWithType: BarType.ContractSettings
 - uid: Tickblaze.Scripts.Api.Bases.BarType.Description
   name: Description
   href: api/Tickblaze.Scripts.Api.Bases.BarType.html#Tickblaze_Scripts_Api_Bases_BarType_Description
@@ -403,6 +928,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.BarType.InputParameterDisplayString
   fullName: Tickblaze.Scripts.Api.Bases.BarType.InputParameterDisplayString
   nameWithType: BarType.InputParameterDisplayString
+- uid: Tickblaze.Scripts.Api.Bases.BarType.IsETH
+  name: IsETH
+  href: api/Tickblaze.Scripts.Api.Bases.BarType.html#Tickblaze_Scripts_Api_Bases_BarType_IsETH
+  commentId: P:Tickblaze.Scripts.Api.Bases.BarType.IsETH
+  fullName: Tickblaze.Scripts.Api.Bases.BarType.IsETH
+  nameWithType: BarType.IsETH
+- uid: Tickblaze.Scripts.Api.Bases.BarType.IsETH*
+  name: IsETH
+  href: api/Tickblaze.Scripts.Api.Bases.BarType.html#Tickblaze_Scripts_Api_Bases_BarType_IsETH_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.BarType.IsETH
+  fullName: Tickblaze.Scripts.Api.Bases.BarType.IsETH
+  nameWithType: BarType.IsETH
 - uid: Tickblaze.Scripts.Api.Bases.BarType.Metadata
   name: Metadata
   href: api/Tickblaze.Scripts.Api.Bases.BarType.html#Tickblaze_Scripts_Api_Bases_BarType_Metadata
@@ -571,6 +1108,30 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Drawing.IsCreated
   fullName: Tickblaze.Scripts.Api.Bases.Drawing.IsCreated
   nameWithType: Drawing.IsCreated
+- uid: Tickblaze.Scripts.Api.Bases.Drawing.IsSelected
+  name: IsSelected
+  href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_IsSelected
+  commentId: P:Tickblaze.Scripts.Api.Bases.Drawing.IsSelected
+  fullName: Tickblaze.Scripts.Api.Bases.Drawing.IsSelected
+  nameWithType: Drawing.IsSelected
+- uid: Tickblaze.Scripts.Api.Bases.Drawing.IsSelected*
+  name: IsSelected
+  href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_IsSelected_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Drawing.IsSelected
+  fullName: Tickblaze.Scripts.Api.Bases.Drawing.IsSelected
+  nameWithType: Drawing.IsSelected
+- uid: Tickblaze.Scripts.Api.Bases.Drawing.IsUpdating
+  name: IsUpdating
+  href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_IsUpdating
+  commentId: P:Tickblaze.Scripts.Api.Bases.Drawing.IsUpdating
+  fullName: Tickblaze.Scripts.Api.Bases.Drawing.IsUpdating
+  nameWithType: Drawing.IsUpdating
+- uid: Tickblaze.Scripts.Api.Bases.Drawing.IsUpdating*
+  name: IsUpdating
+  href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_IsUpdating_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Drawing.IsUpdating
+  fullName: Tickblaze.Scripts.Api.Bases.Drawing.IsUpdating
+  nameWithType: Drawing.IsUpdating
 - uid: Tickblaze.Scripts.Api.Bases.Drawing.OnCreated
   name: OnCreated()
   href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_OnCreated
@@ -595,6 +1156,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Drawing.OnRender
   fullName: Tickblaze.Scripts.Api.Bases.Drawing.OnRender
   nameWithType: Drawing.OnRender
+- uid: Tickblaze.Scripts.Api.Bases.Drawing.PendingAdditionalDataDownload
+  name: PendingAdditionalDataDownload
+  href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_PendingAdditionalDataDownload
+  commentId: P:Tickblaze.Scripts.Api.Bases.Drawing.PendingAdditionalDataDownload
+  fullName: Tickblaze.Scripts.Api.Bases.Drawing.PendingAdditionalDataDownload
+  nameWithType: Drawing.PendingAdditionalDataDownload
+- uid: Tickblaze.Scripts.Api.Bases.Drawing.PendingAdditionalDataDownload*
+  name: PendingAdditionalDataDownload
+  href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_PendingAdditionalDataDownload_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Drawing.PendingAdditionalDataDownload
+  fullName: Tickblaze.Scripts.Api.Bases.Drawing.PendingAdditionalDataDownload
+  nameWithType: Drawing.PendingAdditionalDataDownload
 - uid: Tickblaze.Scripts.Api.Bases.Drawing.Points
   name: Points
   href: api/Tickblaze.Scripts.Api.Bases.Drawing.html#Tickblaze_Scripts_Api_Bases_Drawing_Points
@@ -748,6 +1321,12 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.IIndicator.ScalePrecision
   fullName: Tickblaze.Scripts.Api.Bases.IIndicator.ScalePrecision
   nameWithType: IIndicator.ScalePrecision
+- uid: Tickblaze.Scripts.Api.Bases.IStrategyScriptBase
+  name: IStrategyScriptBase
+  href: api/Tickblaze.Scripts.Api.Bases.IStrategyScriptBase.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.IStrategyScriptBase
+  fullName: Tickblaze.Scripts.Api.Bases.IStrategyScriptBase
+  nameWithType: IStrategyScriptBase
 - uid: Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase
   name: ITradeManagmentStrategyScriptBase
   href: api/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.html
@@ -796,15 +1375,15 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Bases.Indicator
   fullName: Tickblaze.Scripts.Api.Bases.Indicator
   nameWithType: Indicator
-- uid: Tickblaze.Scripts.Api.Bases.Indicator.#ctor
-  name: Indicator()
-  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator__ctor
-  commentId: M:Tickblaze.Scripts.Api.Bases.Indicator.#ctor
-  name.vb: New()
-  fullName: Tickblaze.Scripts.Api.Bases.Indicator.Indicator()
-  fullName.vb: Tickblaze.Scripts.Api.Bases.Indicator.New()
-  nameWithType: Indicator.Indicator()
-  nameWithType.vb: Indicator.New()
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.#ctor(Tickblaze.Scripts.Api.Models.BarSeries)
+  name: Indicator(BarSeries?)
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator__ctor_Tickblaze_Scripts_Api_Models_BarSeries_
+  commentId: M:Tickblaze.Scripts.Api.Bases.Indicator.#ctor(Tickblaze.Scripts.Api.Models.BarSeries)
+  name.vb: New(BarSeries)
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.Indicator(Tickblaze.Scripts.Api.Models.BarSeries?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.Indicator.New(Tickblaze.Scripts.Api.Models.BarSeries)
+  nameWithType: Indicator.Indicator(BarSeries?)
+  nameWithType.vb: Indicator.New(BarSeries)
 - uid: Tickblaze.Scripts.Api.Bases.Indicator.#ctor*
   name: Indicator
   href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator__ctor_
@@ -1351,18 +1930,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.Alert
   fullName: Tickblaze.Scripts.Api.Bases.Script.Alert
   nameWithType: Script.Alert
-- uid: Tickblaze.Scripts.Api.Bases.Script.Bars
-  name: Bars
-  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Bars
-  commentId: P:Tickblaze.Scripts.Api.Bases.Script.Bars
-  fullName: Tickblaze.Scripts.Api.Bases.Script.Bars
-  nameWithType: Script.Bars
-- uid: Tickblaze.Scripts.Api.Bases.Script.Bars*
-  name: Bars
-  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Bars_
-  commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.Bars
-  fullName: Tickblaze.Scripts.Api.Bases.Script.Bars
-  nameWithType: Script.Bars
 - uid: Tickblaze.Scripts.Api.Bases.Script.CreateChartToolbarMenuItem
   name: CreateChartToolbarMenuItem()
   href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_CreateChartToolbarMenuItem
@@ -1528,6 +2095,12 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.UiDispatcher
   fullName: Tickblaze.Scripts.Api.Bases.Script.UiDispatcher
   nameWithType: Script.UiDispatcher
+- uid: Tickblaze.Scripts.Api.Bases.Script._initializers
+  name: _initializers
+  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script__initializers
+  commentId: F:Tickblaze.Scripts.Api.Bases.Script._initializers
+  fullName: Tickblaze.Scripts.Api.Bases.Script._initializers
+  nameWithType: Script._initializers
 - uid: Tickblaze.Scripts.Api.Bases.Strategy
   name: Strategy
   href: api/Tickblaze.Scripts.Api.Bases.Strategy.html
@@ -1639,6 +2212,48 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.ShowOnChart
   fullName: Tickblaze.Scripts.Api.Bases.Strategy.ShowOnChart
   nameWithType: Strategy.ShowOnChart
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript
+  name: SymbolScript
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.SymbolScript
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript
+  nameWithType: SymbolScript
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
+  name: Bars
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_Bars
+  commentId: P:Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
+  nameWithType: SymbolScript.Bars
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.Bars*
+  name: Bars
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_Bars_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
+  nameWithType: SymbolScript.Bars
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name: GetBarSeries(BarSeriesRequest)
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_Tickblaze_Scripts_Api_Models_BarSeriesRequest_
+  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  nameWithType: SymbolScript.GetBarSeries(BarSeriesRequest)
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries*
+  name: GetBarSeries
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries
+  nameWithType: SymbolScript.GetBarSeries
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: GetSymbol(FindSymbolRequest)
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: SymbolScript.GetSymbol(FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol*
+  name: GetSymbol
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol
+  nameWithType: SymbolScript.GetSymbol
 - uid: Tickblaze.Scripts.Api.Bases.TradeManagementStrategy
   name: TradeManagementStrategy
   href: api/Tickblaze.Scripts.Api.Bases.TradeManagementStrategy.html
@@ -2578,78 +3193,6 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Enums.OrderType.StopLimit
   fullName: Tickblaze.Scripts.Api.Enums.OrderType.StopLimit
   nameWithType: OrderType.StopLimit
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle
-  name: PlotStyle
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html
-  commentId: T:Tickblaze.Scripts.Api.Enums.PlotStyle
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle
-  nameWithType: PlotStyle
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Cross
-  name: Cross
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Cross
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Cross
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Cross
-  nameWithType: PlotStyle.Cross
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Dot
-  name: Dot
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Dot
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Dot
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Dot
-  nameWithType: PlotStyle.Dot
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Hash
-  name: Hash
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Hash
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Hash
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Hash
-  nameWithType: PlotStyle.Hash
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Histogram
-  name: Histogram
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Histogram
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Histogram
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Histogram
-  nameWithType: PlotStyle.Histogram
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Line
-  name: Line
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Line
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Line
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Line
-  nameWithType: PlotStyle.Line
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Square
-  name: Square
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Square
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Square
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Square
-  nameWithType: PlotStyle.Square
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.Stair
-  name: Stair
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_Stair
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.Stair
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.Stair
-  nameWithType: PlotStyle.Stair
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleDown
-  name: TriangleDown
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_TriangleDown
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleDown
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleDown
-  nameWithType: PlotStyle.TriangleDown
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleLeft
-  name: TriangleLeft
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_TriangleLeft
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleLeft
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleLeft
-  nameWithType: PlotStyle.TriangleLeft
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleRight
-  name: TriangleRight
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_TriangleRight
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleRight
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleRight
-  nameWithType: PlotStyle.TriangleRight
-- uid: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleUp
-  name: TriangleUp
-  href: api/Tickblaze.Scripts.Api.Enums.PlotStyle.html#Tickblaze_Scripts_Api_Enums_PlotStyle_TriangleUp
-  commentId: F:Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleUp
-  fullName: Tickblaze.Scripts.Api.Enums.PlotStyle.TriangleUp
-  nameWithType: PlotStyle.TriangleUp
 - uid: Tickblaze.Scripts.Api.Enums.PositionStatus
   name: PositionStatus
   href: api/Tickblaze.Scripts.Api.Enums.PositionStatus.html
@@ -3097,6 +3640,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.IChart
   fullName: Tickblaze.Scripts.Api.Interfaces.IChart
   nameWithType: IChart
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth
+  name: BarWidth
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_BarWidth
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth
+  nameWithType: IChart.BarWidth
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth*
+  name: BarWidth
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_BarWidth_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth
+  nameWithType: IChart.BarWidth
 - uid: Tickblaze.Scripts.Api.Interfaces.IChart.FirstVisibleBarIndex
   name: FirstVisibleBarIndex
   href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_FirstVisibleBarIndex
@@ -3124,6 +3679,21 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IChart.FormatTime
   fullName: Tickblaze.Scripts.Api.Interfaces.IChart.FormatTime
   nameWithType: IChart.FormatTime
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime(System.DateTime)
+  name: GetBarIndexByTime(DateTime)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_GetBarIndexByTime_System_DateTime_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime(System.DateTime)
+  name.vb: GetBarIndexByTime(Date)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime(System.DateTime)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime(Date)
+  nameWithType: IChart.GetBarIndexByTime(DateTime)
+  nameWithType.vb: IChart.GetBarIndexByTime(Date)
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime*
+  name: GetBarIndexByTime
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_GetBarIndexByTime_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByTime
+  nameWithType: IChart.GetBarIndexByTime
 - uid: Tickblaze.Scripts.Api.Interfaces.IChart.GetBarIndexByXCoordinate(System.Double)
   name: GetBarIndexByXCoordinate(double)
   href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_GetBarIndexByXCoordinate_System_Double_
@@ -4047,6 +4617,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.ISymbol
   fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol
   nameWithType: ISymbol
+- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Code
+  name: Code
+  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Code
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.ISymbol.Code
+  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Code
+  nameWithType: ISymbol.Code
+- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Code*
+  name: Code
+  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Code_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.Code
+  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Code
+  nameWithType: ISymbol.Code
 - uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.CurrencyCode
   name: CurrencyCode
   href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_CurrencyCode
@@ -4083,6 +4665,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.Description
   fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Description
   nameWithType: ISymbol.Description
+- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Exchange
+  name: Exchange
+  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Exchange
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.ISymbol.Exchange
+  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Exchange
+  nameWithType: ISymbol.Exchange
+- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Exchange*
+  name: Exchange
+  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Exchange_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.Exchange
+  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Exchange
+  nameWithType: ISymbol.Exchange
 - uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.ExchangeCalendar
   name: ExchangeCalendar
   href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_ExchangeCalendar
@@ -4122,18 +4716,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.MinimumVolume
   fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.MinimumVolume
   nameWithType: ISymbol.MinimumVolume
-- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Name
-  name: Name
-  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Name
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.ISymbol.Name
-  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Name
-  nameWithType: ISymbol.Name
-- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Name*
-  name: Name
-  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Name_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.Name
-  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Name
-  nameWithType: ISymbol.Name
 - uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.NormalizeVolume(System.Double,Tickblaze.Scripts.Api.Enums.RoundingMode)
   name: NormalizeVolume(double, RoundingMode)
   href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_NormalizeVolume_System_Double_Tickblaze_Scripts_Api_Enums_RoundingMode_
@@ -4224,6 +4806,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.TicksPerPoint
   fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.TicksPerPoint
   nameWithType: ISymbol.TicksPerPoint
+- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
+  name: Type
+  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Type
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
+  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
+  nameWithType: ISymbol.Type
+- uid: Tickblaze.Scripts.Api.Interfaces.ISymbol.Type*
+  name: Type
+  href: api/Tickblaze.Scripts.Api.Interfaces.ISymbol.html#Tickblaze_Scripts_Api_Interfaces_ISymbol_Type_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
+  fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
+  nameWithType: ISymbol.Type
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders
   name: Tickblaze.Scripts.Api.Interfaces.Orders
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.html
@@ -5127,6 +5721,57 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.New
   nameWithType: BarPeriod.BarPeriod
   nameWithType.vb: BarPeriod.New
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct(Tickblaze.Scripts.Api.Models.BarPeriod.SourceType@,Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType@,System.Double@)
+  name: Deconstruct(out SourceType, out PeriodType, out double)
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_Deconstruct_Tickblaze_Scripts_Api_Models_BarPeriod_SourceType__Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType__System_Double__
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct(Tickblaze.Scripts.Api.Models.BarPeriod.SourceType@,Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType@,System.Double@)
+  name.vb: Deconstruct(SourceType, PeriodType, Double)
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct(out Tickblaze.Scripts.Api.Models.BarPeriod.SourceType, out Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType, out double)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct(Tickblaze.Scripts.Api.Models.BarPeriod.SourceType, Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType, Double)
+  nameWithType: BarPeriod.Deconstruct(out BarPeriod.SourceType, out BarPeriod.PeriodType, out double)
+  nameWithType.vb: BarPeriod.Deconstruct(BarPeriod.SourceType, BarPeriod.PeriodType, Double)
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct*
+  name: Deconstruct
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_Deconstruct_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.Deconstruct
+  nameWithType: BarPeriod.Deconstruct
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.Equals(Object)
+  nameWithType: BarPeriod.Equals(object?)
+  nameWithType.vb: BarPeriod.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.Equals(Tickblaze.Scripts.Api.Models.BarPeriod)
+  name: Equals(BarPeriod?)
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_Equals_Tickblaze_Scripts_Api_Models_BarPeriod_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.Equals(Tickblaze.Scripts.Api.Models.BarPeriod)
+  name.vb: Equals(BarPeriod)
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.Equals(Tickblaze.Scripts.Api.Models.BarPeriod?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.Equals(Tickblaze.Scripts.Api.Models.BarPeriod)
+  nameWithType: BarPeriod.Equals(BarPeriod?)
+  nameWithType.vb: BarPeriod.Equals(BarPeriod)
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.Equals
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.Equals
+  nameWithType: BarPeriod.Equals
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.GetHashCode()
+  nameWithType: BarPeriod.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.GetHashCode
+  nameWithType: BarPeriod.GetHashCode
 - uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType
   name: BarPeriod.PeriodType
   href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html
@@ -5211,54 +5856,6 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.PointAndFigureHighLow
   fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.PointAndFigureHighLow
   nameWithType: BarPeriod.PeriodType.PointAndFigureHighLow
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileDay
-  name: ProfileDay
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileDay
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileDay
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileDay
-  nameWithType: BarPeriod.PeriodType.ProfileDay
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileMinute
-  name: ProfileMinute
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileMinute
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileMinute
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileMinute
-  nameWithType: BarPeriod.PeriodType.ProfileMinute
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileMonth
-  name: ProfileMonth
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileMonth
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileMonth
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileMonth
-  nameWithType: BarPeriod.PeriodType.ProfileMonth
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileRange
-  name: ProfileRange
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileRange
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileRange
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileRange
-  nameWithType: BarPeriod.PeriodType.ProfileRange
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileTick
-  name: ProfileTick
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileTick
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileTick
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileTick
-  nameWithType: BarPeriod.PeriodType.ProfileTick
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileVolume
-  name: ProfileVolume
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileVolume
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileVolume
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileVolume
-  nameWithType: BarPeriod.PeriodType.ProfileVolume
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileWeek
-  name: ProfileWeek
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileWeek
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileWeek
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileWeek
-  nameWithType: BarPeriod.PeriodType.ProfileWeek
-- uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileYear
-  name: ProfileYear
-  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_ProfileYear
-  commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileYear
-  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.ProfileYear
-  nameWithType: BarPeriod.PeriodType.ProfileYear
 - uid: Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.Range
   name: Range
   href: api/Tickblaze.Scripts.Api.Models.BarPeriod.PeriodType.html#Tickblaze_Scripts_Api_Models_BarPeriod_PeriodType_Range
@@ -5367,6 +5964,18 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Models.BarPeriod.SourceType.Trade
   fullName: Tickblaze.Scripts.Api.Models.BarPeriod.SourceType.Trade
   nameWithType: BarPeriod.SourceType.Trade
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_ToString
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.ToString
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.ToString()
+  nameWithType: BarPeriod.ToString()
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.ToString
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.ToString
+  nameWithType: BarPeriod.ToString
 - uid: Tickblaze.Scripts.Api.Models.BarPeriod.Type
   name: Type
   href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_Type
@@ -5379,21 +5988,57 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.Type
   fullName: Tickblaze.Scripts.Api.Models.BarPeriod.Type
   nameWithType: BarPeriod.Type
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.op_Equality(Tickblaze.Scripts.Api.Models.BarPeriod,Tickblaze.Scripts.Api.Models.BarPeriod)
+  name: operator ==(BarPeriod?, BarPeriod?)
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_op_Equality_Tickblaze_Scripts_Api_Models_BarPeriod_Tickblaze_Scripts_Api_Models_BarPeriod_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.op_Equality(Tickblaze.Scripts.Api.Models.BarPeriod,Tickblaze.Scripts.Api.Models.BarPeriod)
+  name.vb: =(BarPeriod, BarPeriod)
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.operator ==(Tickblaze.Scripts.Api.Models.BarPeriod?, Tickblaze.Scripts.Api.Models.BarPeriod?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.=(Tickblaze.Scripts.Api.Models.BarPeriod, Tickblaze.Scripts.Api.Models.BarPeriod)
+  nameWithType: BarPeriod.operator ==(BarPeriod?, BarPeriod?)
+  nameWithType.vb: BarPeriod.=(BarPeriod, BarPeriod)
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.=
+  nameWithType: BarPeriod.operator ==
+  nameWithType.vb: BarPeriod.=
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.op_Inequality(Tickblaze.Scripts.Api.Models.BarPeriod,Tickblaze.Scripts.Api.Models.BarPeriod)
+  name: operator !=(BarPeriod?, BarPeriod?)
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_op_Inequality_Tickblaze_Scripts_Api_Models_BarPeriod_Tickblaze_Scripts_Api_Models_BarPeriod_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarPeriod.op_Inequality(Tickblaze.Scripts.Api.Models.BarPeriod,Tickblaze.Scripts.Api.Models.BarPeriod)
+  name.vb: <>(BarPeriod, BarPeriod)
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.operator !=(Tickblaze.Scripts.Api.Models.BarPeriod?, Tickblaze.Scripts.Api.Models.BarPeriod?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.<>(Tickblaze.Scripts.Api.Models.BarPeriod, Tickblaze.Scripts.Api.Models.BarPeriod)
+  nameWithType: BarPeriod.operator !=(BarPeriod?, BarPeriod?)
+  nameWithType.vb: BarPeriod.<>(BarPeriod, BarPeriod)
+- uid: Tickblaze.Scripts.Api.Models.BarPeriod.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Models.BarPeriod.html#Tickblaze_Scripts_Api_Models_BarPeriod_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarPeriod.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Models.BarPeriod.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarPeriod.<>
+  nameWithType: BarPeriod.operator !=
+  nameWithType.vb: BarPeriod.<>
 - uid: Tickblaze.Scripts.Api.Models.BarSeries
   name: BarSeries
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html
   commentId: T:Tickblaze.Scripts.Api.Models.BarSeries
   fullName: Tickblaze.Scripts.Api.Models.BarSeries
   nameWithType: BarSeries
-- uid: Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod)
-  name: BarSeries(Symbol, BarPeriod)
-  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_
-  commentId: M:Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod)
-  name.vb: New(Symbol, BarPeriod)
-  fullName: Tickblaze.Scripts.Api.Models.BarSeries.BarSeries(Tickblaze.Scripts.Api.Models.Symbol, Tickblaze.Scripts.Api.Models.BarPeriod)
-  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.New(Tickblaze.Scripts.Api.Models.Symbol, Tickblaze.Scripts.Api.Models.BarPeriod)
-  nameWithType: BarSeries.BarSeries(Symbol, BarPeriod)
-  nameWithType.vb: BarSeries.New(Symbol, BarPeriod)
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod,System.Boolean,Tickblaze.Core.Models.ContractSettings)
+  name: BarSeries(Symbol, BarPeriod, bool, ContractSettings)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_System_Boolean_Tickblaze_Core_Models_ContractSettings_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod,System.Boolean,Tickblaze.Core.Models.ContractSettings)
+  name.vb: New(Symbol, BarPeriod, Boolean, ContractSettings)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.BarSeries(Tickblaze.Scripts.Api.Models.Symbol, Tickblaze.Scripts.Api.Models.BarPeriod, bool, Tickblaze.Core.Models.ContractSettings)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.New(Tickblaze.Scripts.Api.Models.Symbol, Tickblaze.Scripts.Api.Models.BarPeriod, Boolean, Tickblaze.Core.Models.ContractSettings)
+  nameWithType: BarSeries.BarSeries(Symbol, BarPeriod, bool, ContractSettings)
+  nameWithType.vb: BarSeries.New(Symbol, BarPeriod, Boolean, ContractSettings)
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.#ctor*
   name: BarSeries
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries__ctor_
@@ -5403,6 +6048,21 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.New
   nameWithType: BarSeries.BarSeries
   nameWithType.vb: BarSeries.New
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.Append(System.DateTime,System.Double,System.Double,System.Double,System.Double,System.Double)
+  name: Append(DateTime, double, double, double, double, double)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Append_System_DateTime_System_Double_System_Double_System_Double_System_Double_System_Double_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeries.Append(System.DateTime,System.Double,System.Double,System.Double,System.Double,System.Double)
+  name.vb: Append(Date, Double, Double, Double, Double, Double)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.Append(System.DateTime, double, double, double, double, double)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.Append(Date, Double, Double, Double, Double, Double)
+  nameWithType: BarSeries.Append(DateTime, double, double, double, double, double)
+  nameWithType.vb: BarSeries.Append(Date, Double, Double, Double, Double, Double)
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.Append*
+  name: Append
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Append_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.Append
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.Append
+  nameWithType: BarSeries.Append
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.BarClosed
   name: BarClosed
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_BarClosed
@@ -5457,6 +6117,12 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.Index
   fullName: Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.Index
   nameWithType: BarSeries.BarEventArgs.Index
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.BarUpdated
+  name: BarUpdated
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_BarUpdated
+  commentId: E:Tickblaze.Scripts.Api.Models.BarSeries.BarUpdated
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.BarUpdated
+  nameWithType: BarSeries.BarUpdated
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.Close
   name: Close
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Close
@@ -5469,6 +6135,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.Close
   fullName: Tickblaze.Scripts.Api.Models.BarSeries.Close
   nameWithType: BarSeries.Close
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.ContractSettings
+  name: ContractSettings
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_ContractSettings
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeries.ContractSettings
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.ContractSettings
+  nameWithType: BarSeries.ContractSettings
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.ContractSettings*
+  name: ContractSettings
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_ContractSettings_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.ContractSettings
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.ContractSettings
+  nameWithType: BarSeries.ContractSettings
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.High
   name: High
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_High
@@ -5481,6 +6159,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.High
   fullName: Tickblaze.Scripts.Api.Models.BarSeries.High
   nameWithType: BarSeries.High
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.IsETH
+  name: IsETH
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_IsETH
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeries.IsETH
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.IsETH
+  nameWithType: BarSeries.IsETH
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.IsETH*
+  name: IsETH
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_IsETH_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.IsETH
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.IsETH
+  nameWithType: BarSeries.IsETH
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.Item(System.Int32)
   name: this[int]
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Item_System_Int32_
@@ -5610,6 +6300,204 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.Volume
   fullName: Tickblaze.Scripts.Api.Models.BarSeries.Volume
   nameWithType: BarSeries.Volume
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest
+  name: BarSeriesRequest
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html
+  commentId: T:Tickblaze.Scripts.Api.Models.BarSeriesRequest
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest
+  nameWithType: BarSeriesRequest
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.#ctor
+  name: BarSeriesRequest()
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest__ctor
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.BarSeriesRequest()
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.New()
+  nameWithType: BarSeriesRequest.BarSeriesRequest()
+  nameWithType.vb: BarSeriesRequest.New()
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.#ctor(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name: BarSeriesRequest(BarSeriesRequest)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest__ctor_Tickblaze_Scripts_Api_Models_BarSeriesRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.#ctor(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name.vb: New(BarSeriesRequest)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.BarSeriesRequest(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.New(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  nameWithType: BarSeriesRequest.BarSeriesRequest(BarSeriesRequest)
+  nameWithType.vb: BarSeriesRequest.New(BarSeriesRequest)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.#ctor*
+  name: BarSeriesRequest
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.BarSeriesRequest
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.New
+  nameWithType: BarSeriesRequest.BarSeriesRequest
+  nameWithType.vb: BarSeriesRequest.New
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EndTimeUtc
+  name: EndTimeUtc
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_EndTimeUtc
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeriesRequest.EndTimeUtc
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EndTimeUtc
+  nameWithType: BarSeriesRequest.EndTimeUtc
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EndTimeUtc*
+  name: EndTimeUtc
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_EndTimeUtc_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.EndTimeUtc
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EndTimeUtc
+  nameWithType: BarSeriesRequest.EndTimeUtc
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_EqualityContract
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeriesRequest.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EqualityContract
+  nameWithType: BarSeriesRequest.EqualityContract
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_EqualityContract_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.EqualityContract
+  nameWithType: BarSeriesRequest.EqualityContract
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Object)
+  nameWithType: BarSeriesRequest.Equals(object?)
+  nameWithType.vb: BarSeriesRequest.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name: Equals(BarSeriesRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_Equals_Tickblaze_Scripts_Api_Models_BarSeriesRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name.vb: Equals(BarSeriesRequest)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.BarSeriesRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  nameWithType: BarSeriesRequest.Equals(BarSeriesRequest?)
+  nameWithType.vb: BarSeriesRequest.Equals(BarSeriesRequest)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: Equals(FindSymbolRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_Equals_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name.vb: Equals(FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: BarSeriesRequest.Equals(FindSymbolRequest?)
+  nameWithType.vb: BarSeriesRequest.Equals(FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Equals
+  nameWithType: BarSeriesRequest.Equals
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.GetHashCode()
+  nameWithType: BarSeriesRequest.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.GetHashCode
+  nameWithType: BarSeriesRequest.GetHashCode
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.IsETH
+  name: IsETH
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_IsETH
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeriesRequest.IsETH
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.IsETH
+  nameWithType: BarSeriesRequest.IsETH
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.IsETH*
+  name: IsETH
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_IsETH_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.IsETH
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.IsETH
+  nameWithType: BarSeriesRequest.IsETH
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Period
+  name: Period
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_Period
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeriesRequest.Period
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Period
+  nameWithType: BarSeriesRequest.Period
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Period*
+  name: Period
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_Period_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.Period
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.Period
+  nameWithType: BarSeriesRequest.Period
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.PrintMembers(System.Text.StringBuilder)
+  nameWithType: BarSeriesRequest.PrintMembers(StringBuilder)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_PrintMembers_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.PrintMembers
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.PrintMembers
+  nameWithType: BarSeriesRequest.PrintMembers
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.StartTimeUtc
+  name: StartTimeUtc
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_StartTimeUtc
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeriesRequest.StartTimeUtc
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.StartTimeUtc
+  nameWithType: BarSeriesRequest.StartTimeUtc
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.StartTimeUtc*
+  name: StartTimeUtc
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_StartTimeUtc_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.StartTimeUtc
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.StartTimeUtc
+  nameWithType: BarSeriesRequest.StartTimeUtc
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_ToString
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.ToString
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.ToString()
+  nameWithType: BarSeriesRequest.ToString()
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.ToString
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.ToString
+  nameWithType: BarSeriesRequest.ToString
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Equality(Tickblaze.Scripts.Api.Models.BarSeriesRequest,Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name: operator ==(BarSeriesRequest?, BarSeriesRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_op_Equality_Tickblaze_Scripts_Api_Models_BarSeriesRequest_Tickblaze_Scripts_Api_Models_BarSeriesRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Equality(Tickblaze.Scripts.Api.Models.BarSeriesRequest,Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name.vb: =(BarSeriesRequest, BarSeriesRequest)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.operator ==(Tickblaze.Scripts.Api.Models.BarSeriesRequest?, Tickblaze.Scripts.Api.Models.BarSeriesRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.=(Tickblaze.Scripts.Api.Models.BarSeriesRequest, Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  nameWithType: BarSeriesRequest.operator ==(BarSeriesRequest?, BarSeriesRequest?)
+  nameWithType.vb: BarSeriesRequest.=(BarSeriesRequest, BarSeriesRequest)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.=
+  nameWithType: BarSeriesRequest.operator ==
+  nameWithType.vb: BarSeriesRequest.=
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Inequality(Tickblaze.Scripts.Api.Models.BarSeriesRequest,Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name: operator !=(BarSeriesRequest?, BarSeriesRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_op_Inequality_Tickblaze_Scripts_Api_Models_BarSeriesRequest_Tickblaze_Scripts_Api_Models_BarSeriesRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Inequality(Tickblaze.Scripts.Api.Models.BarSeriesRequest,Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  name.vb: <>(BarSeriesRequest, BarSeriesRequest)
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.operator !=(Tickblaze.Scripts.Api.Models.BarSeriesRequest?, Tickblaze.Scripts.Api.Models.BarSeriesRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.<>(Tickblaze.Scripts.Api.Models.BarSeriesRequest, Tickblaze.Scripts.Api.Models.BarSeriesRequest)
+  nameWithType: BarSeriesRequest.operator !=(BarSeriesRequest?, BarSeriesRequest?)
+  nameWithType.vb: BarSeriesRequest.<>(BarSeriesRequest, BarSeriesRequest)
+- uid: Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html#Tickblaze_Scripts_Api_Models_BarSeriesRequest_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeriesRequest.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Models.BarSeriesRequest.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeriesRequest.<>
+  nameWithType: BarSeriesRequest.operator !=
+  nameWithType.vb: BarSeriesRequest.<>
 - uid: Tickblaze.Scripts.Api.Models.ChartPoint
   name: ChartPoint
   href: api/Tickblaze.Scripts.Api.Models.ChartPoint.html
@@ -6229,6 +7117,195 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.DataSeries.DefaultValue
   fullName: Tickblaze.Scripts.Api.Models.DataSeries.DefaultValue
   nameWithType: DataSeries.DefaultValue
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest
+  name: FindSymbolRequest
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html
+  commentId: T:Tickblaze.Scripts.Api.Models.FindSymbolRequest
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest
+  nameWithType: FindSymbolRequest
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.#ctor
+  name: FindSymbolRequest()
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest__ctor
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.FindSymbolRequest()
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.New()
+  nameWithType: FindSymbolRequest.FindSymbolRequest()
+  nameWithType.vb: FindSymbolRequest.New()
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.#ctor(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: FindSymbolRequest(FindSymbolRequest)
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest__ctor_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.#ctor(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name.vb: New(FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.FindSymbolRequest(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.New(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: FindSymbolRequest.FindSymbolRequest(FindSymbolRequest)
+  nameWithType.vb: FindSymbolRequest.New(FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.#ctor*
+  name: FindSymbolRequest
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.FindSymbolRequest
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.New
+  nameWithType: FindSymbolRequest.FindSymbolRequest
+  nameWithType.vb: FindSymbolRequest.New
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Contract
+  name: Contract
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Contract
+  commentId: P:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Contract
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Contract
+  nameWithType: FindSymbolRequest.Contract
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Contract*
+  name: Contract
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Contract_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Contract
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Contract
+  nameWithType: FindSymbolRequest.Contract
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_EqualityContract
+  commentId: P:Tickblaze.Scripts.Api.Models.FindSymbolRequest.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.EqualityContract
+  nameWithType: FindSymbolRequest.EqualityContract
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_EqualityContract_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.EqualityContract
+  nameWithType: FindSymbolRequest.EqualityContract
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(Object)
+  nameWithType: FindSymbolRequest.Equals(object?)
+  nameWithType.vb: FindSymbolRequest.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: Equals(FindSymbolRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Equals_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name.vb: Equals(FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals(Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: FindSymbolRequest.Equals(FindSymbolRequest?)
+  nameWithType.vb: FindSymbolRequest.Equals(FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Equals
+  nameWithType: FindSymbolRequest.Equals
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Exchange
+  name: Exchange
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Exchange
+  commentId: P:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Exchange
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Exchange
+  nameWithType: FindSymbolRequest.Exchange
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Exchange*
+  name: Exchange
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_Exchange_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.Exchange
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.Exchange
+  nameWithType: FindSymbolRequest.Exchange
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.GetHashCode()
+  nameWithType: FindSymbolRequest.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.GetHashCode
+  nameWithType: FindSymbolRequest.GetHashCode
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.InstrumentType
+  name: InstrumentType
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_InstrumentType
+  commentId: P:Tickblaze.Scripts.Api.Models.FindSymbolRequest.InstrumentType
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.InstrumentType
+  nameWithType: FindSymbolRequest.InstrumentType
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.InstrumentType*
+  name: InstrumentType
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_InstrumentType_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.InstrumentType
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.InstrumentType
+  nameWithType: FindSymbolRequest.InstrumentType
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.PrintMembers(System.Text.StringBuilder)
+  nameWithType: FindSymbolRequest.PrintMembers(StringBuilder)
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_PrintMembers_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.PrintMembers
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.PrintMembers
+  nameWithType: FindSymbolRequest.PrintMembers
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.SymbolCode
+  name: SymbolCode
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_SymbolCode
+  commentId: P:Tickblaze.Scripts.Api.Models.FindSymbolRequest.SymbolCode
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.SymbolCode
+  nameWithType: FindSymbolRequest.SymbolCode
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.SymbolCode*
+  name: SymbolCode
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_SymbolCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.SymbolCode
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.SymbolCode
+  nameWithType: FindSymbolRequest.SymbolCode
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_ToString
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.ToString
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.ToString()
+  nameWithType: FindSymbolRequest.ToString()
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.ToString
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.ToString
+  nameWithType: FindSymbolRequest.ToString
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Equality(Tickblaze.Scripts.Api.Models.FindSymbolRequest,Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: operator ==(FindSymbolRequest?, FindSymbolRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_op_Equality_Tickblaze_Scripts_Api_Models_FindSymbolRequest_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Equality(Tickblaze.Scripts.Api.Models.FindSymbolRequest,Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name.vb: =(FindSymbolRequest, FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.operator ==(Tickblaze.Scripts.Api.Models.FindSymbolRequest?, Tickblaze.Scripts.Api.Models.FindSymbolRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.=(Tickblaze.Scripts.Api.Models.FindSymbolRequest, Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: FindSymbolRequest.operator ==(FindSymbolRequest?, FindSymbolRequest?)
+  nameWithType.vb: FindSymbolRequest.=(FindSymbolRequest, FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.=
+  nameWithType: FindSymbolRequest.operator ==
+  nameWithType.vb: FindSymbolRequest.=
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Inequality(Tickblaze.Scripts.Api.Models.FindSymbolRequest,Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name: operator !=(FindSymbolRequest?, FindSymbolRequest?)
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_op_Inequality_Tickblaze_Scripts_Api_Models_FindSymbolRequest_Tickblaze_Scripts_Api_Models_FindSymbolRequest_
+  commentId: M:Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Inequality(Tickblaze.Scripts.Api.Models.FindSymbolRequest,Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  name.vb: <>(FindSymbolRequest, FindSymbolRequest)
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.operator !=(Tickblaze.Scripts.Api.Models.FindSymbolRequest?, Tickblaze.Scripts.Api.Models.FindSymbolRequest?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.<>(Tickblaze.Scripts.Api.Models.FindSymbolRequest, Tickblaze.Scripts.Api.Models.FindSymbolRequest)
+  nameWithType: FindSymbolRequest.operator !=(FindSymbolRequest?, FindSymbolRequest?)
+  nameWithType.vb: FindSymbolRequest.<>(FindSymbolRequest, FindSymbolRequest)
+- uid: Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html#Tickblaze_Scripts_Api_Models_FindSymbolRequest_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.FindSymbolRequest.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Models.FindSymbolRequest.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Models.FindSymbolRequest.<>
+  nameWithType: FindSymbolRequest.operator !=
+  nameWithType.vb: FindSymbolRequest.<>
 - uid: Tickblaze.Scripts.Api.Models.Font
   name: Font
   href: api/Tickblaze.Scripts.Api.Models.Font.html
@@ -6550,13 +7627,13 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New()
   nameWithType: PlotSeries.PlotSeries()
   nameWithType.vb: PlotSeries.New()
-- uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
+- uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
   name: PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)
-  href: api/Tickblaze.Scripts.Api.Models.PlotSeries.html#Tickblaze_Scripts_Api_Models_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_PlotStyle_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_
-  commentId: M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
+  href: api/Tickblaze.Scripts.Api.Models.PlotSeries.html#Tickblaze_Scripts_Api_Models_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_
+  commentId: M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
   name.vb: New(String, Color, PlotStyle, LineStyle, Integer, Boolean)
-  fullName: Tickblaze.Scripts.Api.Models.PlotSeries.PlotSeries(string, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.PlotStyle, Tickblaze.Scripts.Api.Enums.LineStyle, int, bool)
-  fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New(String, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.PlotStyle, Tickblaze.Scripts.Api.Enums.LineStyle, Integer, Boolean)
+  fullName: Tickblaze.Scripts.Api.Models.PlotSeries.PlotSeries(string, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Scripts.Api.Enums.LineStyle, int, bool)
+  fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New(String, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Scripts.Api.Enums.LineStyle, Integer, Boolean)
   nameWithType: PlotSeries.PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)
   nameWithType.vb: PlotSeries.New(String, Color, PlotStyle, LineStyle, Integer, Boolean)
 - uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color)
@@ -6568,6 +7645,15 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color)
   nameWithType: PlotSeries.PlotSeries(Color)
   nameWithType.vb: PlotSeries.New(Color)
+- uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,System.Int32)
+  name: PlotSeries(Color, PlotStyle, int)
+  href: api/Tickblaze.Scripts.Api.Models.PlotSeries.html#Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,System.Int32)
+  name.vb: New(Color, PlotStyle, Integer)
+  fullName: Tickblaze.Scripts.Api.Models.PlotSeries.PlotSeries(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, int)
+  fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Integer)
+  nameWithType: PlotSeries.PlotSeries(Color, PlotStyle, int)
+  nameWithType.vb: PlotSeries.New(Color, PlotStyle, Integer)
 - uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
   name: PlotSeries(Color, LineStyle, int)
   href: api/Tickblaze.Scripts.Api.Models.PlotSeries.html#Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_
@@ -6577,15 +7663,6 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, Integer)
   nameWithType: PlotSeries.PlotSeries(Color, LineStyle, int)
   nameWithType.vb: PlotSeries.New(Color, LineStyle, Integer)
-- uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,System.Int32)
-  name: PlotSeries(Color, PlotStyle, int)
-  href: api/Tickblaze.Scripts.Api.Models.PlotSeries.html#Tickblaze_Scripts_Api_Models_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_PlotStyle_System_Int32_
-  commentId: M:Tickblaze.Scripts.Api.Models.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.PlotStyle,System.Int32)
-  name.vb: New(Color, PlotStyle, Integer)
-  fullName: Tickblaze.Scripts.Api.Models.PlotSeries.PlotSeries(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.PlotStyle, int)
-  fullName.vb: Tickblaze.Scripts.Api.Models.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.PlotStyle, Integer)
-  nameWithType: PlotSeries.PlotSeries(Color, PlotStyle, int)
-  nameWithType.vb: PlotSeries.New(Color, PlotStyle, Integer)
 - uid: Tickblaze.Scripts.Api.Models.PlotSeries.#ctor*
   name: PlotSeries
   href: api/Tickblaze.Scripts.Api.Models.PlotSeries.html#Tickblaze_Scripts_Api_Models_PlotSeries__ctor_
@@ -7151,6 +8228,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Models.Symbol
   fullName: Tickblaze.Scripts.Api.Models.Symbol
   nameWithType: Symbol
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Code
+  name: Code
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Code
+  commentId: P:Tickblaze.Scripts.Api.Models.Symbol.Code
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Code
+  nameWithType: Symbol.Code
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Code*
+  name: Code
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Code_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.Code
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Code
+  nameWithType: Symbol.Code
 - uid: Tickblaze.Scripts.Api.Models.Symbol.CurrencyCode
   name: CurrencyCode
   href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_CurrencyCode
@@ -7187,6 +8276,33 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.Description
   fullName: Tickblaze.Scripts.Api.Models.Symbol.Description
   nameWithType: Symbol.Description
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.Symbol.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Symbol.Equals(Object)
+  nameWithType: Symbol.Equals(object?)
+  nameWithType.vb: Symbol.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.Equals
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Equals
+  nameWithType: Symbol.Equals
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Exchange
+  name: Exchange
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Exchange
+  commentId: P:Tickblaze.Scripts.Api.Models.Symbol.Exchange
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Exchange
+  nameWithType: Symbol.Exchange
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Exchange*
+  name: Exchange
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Exchange_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.Exchange
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Exchange
+  nameWithType: Symbol.Exchange
 - uid: Tickblaze.Scripts.Api.Models.Symbol.ExchangeCalendar
   name: ExchangeCalendar
   href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_ExchangeCalendar
@@ -7226,18 +8342,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.MinimumVolume
   fullName: Tickblaze.Scripts.Api.Models.Symbol.MinimumVolume
   nameWithType: Symbol.MinimumVolume
-- uid: Tickblaze.Scripts.Api.Models.Symbol.Name
-  name: Name
-  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Name
-  commentId: P:Tickblaze.Scripts.Api.Models.Symbol.Name
-  fullName: Tickblaze.Scripts.Api.Models.Symbol.Name
-  nameWithType: Symbol.Name
-- uid: Tickblaze.Scripts.Api.Models.Symbol.Name*
-  name: Name
-  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Name_
-  commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.Name
-  fullName: Tickblaze.Scripts.Api.Models.Symbol.Name
-  nameWithType: Symbol.Name
 - uid: Tickblaze.Scripts.Api.Models.Symbol.NormalizeVolume(System.Double,Tickblaze.Scripts.Api.Enums.RoundingMode)
   name: NormalizeVolume(double, RoundingMode)
   href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_NormalizeVolume_System_Double_Tickblaze_Scripts_Api_Enums_RoundingMode_
@@ -7328,6 +8432,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.TicksPerPoint
   fullName: Tickblaze.Scripts.Api.Models.Symbol.TicksPerPoint
   nameWithType: Symbol.TicksPerPoint
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Type
+  name: Type
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Type
+  commentId: P:Tickblaze.Scripts.Api.Models.Symbol.Type
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Type
+  nameWithType: Symbol.Type
+- uid: Tickblaze.Scripts.Api.Models.Symbol.Type*
+  name: Type
+  href: api/Tickblaze.Scripts.Api.Models.Symbol.html#Tickblaze_Scripts_Api_Models_Symbol_Type_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Symbol.Type
+  fullName: Tickblaze.Scripts.Api.Models.Symbol.Type
+  nameWithType: Symbol.Type
 - uid: Tickblaze.Scripts.Api.Parameter
   name: Parameter
   href: api/Tickblaze.Scripts.Api.Parameter.html

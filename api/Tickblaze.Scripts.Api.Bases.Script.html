@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Script | Tickblaze ">
       
-      <meta name="description" content="Represents a base class for scripts that can interact with chart data, parameters, and initialization processes.">
+      
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,8 +97,7 @@ Class Script
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a base class for scripts that can interact with chart data, parameters, and initialization processes.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -133,11 +132,7 @@ Class Script
     <summary>Derived</summary>
     <dl class="typelist derived">
       <dd>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Drawing.html">Drawing</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Indicator.html">Indicator</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.PositionSizer.html">PositionSizer</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.TradingScript.html">TradingScript</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html">SymbolScript</a></div>
       </dd>
     </dl>
   </details>
@@ -169,6 +164,51 @@ Class Script
       </div>
     </dd></dl>
   </details>
+
+  <details class="typelist-details">
+    <summary>Extension Methods</summary>
+  <dl class="typelist extensionMethods">
+    <dd>
+  <div>
+      <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
+  </div>
+  </dd></dl>
+  </details>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Script__initializers" data-uid="Tickblaze.Scripts.Api.Bases.Script._initializers">
+  _initializers
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static readonly List&lt;Script&gt; _initializers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <!--
+  -->
+
+
 
 
 
@@ -202,40 +242,6 @@ Class Script
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><xref uid="Tickblaze.Scripts.Api.Adapters.IAlertAdapter" text="IAlertAdapter"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_Script_Bars_" data-uid="Tickblaze.Scripts.Api.Bases.Script.Bars*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Bases_Script_Bars" data-uid="Tickblaze.Scripts.Api.Bases.Script.Bars">
-  Bars
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The bar series associated with the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarSeries Bars { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Models.BarSeries" text="BarSeries"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -293,7 +299,7 @@ Class Script
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsInitialized { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsInitialized { get; protected set; }</code></pre>
   </div>
 
 
