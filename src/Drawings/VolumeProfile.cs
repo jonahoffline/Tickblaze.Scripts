@@ -44,6 +44,9 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	[Parameter("Below Value Area Color", Description = "Color of area below the value area", GroupName = StyleGroupName)]
 	public Color ValueAreaBelowColor { get; set; } = "#80ff0000";
 
+	[Parameter("Show Outline?", Description = "Show/Hide the outline", GroupName = StyleGroupName)]
+	public bool BoxVisible { get; set; } = true;
+
 	[Parameter("Outline Color", Description = "Color of the volume profile outline box", GroupName = StyleGroupName)]
 	public Color BoxLineColor { get; set; } = "#80ffffff";
 
@@ -124,6 +127,13 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is RowsLayoutType.Count 
 			? "Histo Rows Count" 
 			: "Histo Ticks Size";
+
+		if (BoxVisible is false)
+		{
+			parameters.Remove(nameof(BoxLineColor));
+			parameters.Remove(nameof(BoxLineThickness));
+			parameters.Remove(nameof(BoxLineStyle));
+		}
 
 		if (VahLineVisible is false)
 		{
@@ -279,6 +289,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		Color ValueAreaColor { get; set; }
 		Color ValueAreaAboveColor { get; set; }
 		Color ValueAreaBelowColor { get; set; }
+		public bool BoxVisible { get; set; }
 		Color BoxLineColor { get; set; }
 		int BoxLineThickness { get; set; }
 		LineStyle BoxLineStyle { get; set; }
@@ -411,7 +422,10 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			var leftX = chart.GetXCoordinateByBarIndex(FromIndex);
 			var rightX = chart.GetXCoordinateByBarIndex(ToIndex);
 
-			context.DrawRectangle(new Point(leftX, highY), new Point(rightX, lowY), null, Settings.BoxLineColor, Settings.BoxLineThickness, Settings.BoxLineStyle);
+			if (_script.BoxVisible)
+			{
+				context.DrawRectangle(new Point(leftX, highY), new Point(rightX, lowY), null, Settings.BoxLineColor, Settings.BoxLineThickness, Settings.BoxLineStyle);
+			}
 
 			var rows = _volumes?.Length ?? 0;
 			var barsUsed = _range is null ? "null" : $"{_range.ToIndex - _range.FromIndex}/{Bars.Count}";

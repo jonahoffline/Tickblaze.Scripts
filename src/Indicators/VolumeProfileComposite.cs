@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Globalization;
 using Tickblaze.Scripts.Drawings;
 
@@ -40,6 +40,9 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 
 	[Parameter("Below Value Area Color", Description = "Color of area below the value area", GroupName = StyleGroupName)]
 	public Color ValueAreaBelowColor { get; set; } = "#80ff0000";
+
+	[Parameter("Show Outline?", Description = "Show/Hide the outline", GroupName = StyleGroupName)]
+	public bool BoxVisible { get; set; }
 
 	[Parameter("Outline Color", Description = "Color of the volume profile outline box", GroupName = StyleGroupName)]
 	public Color BoxLineColor { get; set; } = "#80ffffff";
@@ -128,6 +131,13 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is VolumeProfile.RowsLayoutType.Count
 			? "Histo Rows Count"
 			: "Histo Ticks Size";
+
+		if (BoxVisible is false)
+		{
+			parameters.Remove(nameof(BoxLineColor));
+			parameters.Remove(nameof(BoxLineThickness));
+			parameters.Remove(nameof(BoxLineStyle));
+		}
 
 		if (VahLineVisible is false)
 		{
