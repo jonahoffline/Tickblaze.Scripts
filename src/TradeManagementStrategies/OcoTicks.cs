@@ -1,4 +1,5 @@
-﻿using Tickblaze.Scripts.Api.Adapters;
+﻿using System.Diagnostics;
+using Tickblaze.Scripts.Api.Adapters;
 using Tickblaze.Scripts.Api.Interfaces.Orders;
 
 namespace Tickblaze.Scripts.TradeManagementStrategies;
@@ -49,6 +50,12 @@ public class OcoTicks : TradeManagementStrategy
 	{
 		get
 		{
+			// Don't stop if we're still waiting for our entry order to be filled.
+			if (_orderData.Any(x => x.Entry.Status is OrderStatus.Pending))
+			{
+				return false;
+			}
+
 			// Stop immediately if there is no break even.
 			if (!BreakEvenValid)
 			{
@@ -111,19 +118,19 @@ public class OcoTicks : TradeManagementStrategy
 		{
 			// TODO Add alert here when added to API
 			CancelOrder(order, "TMS aborted due to max risk settings");
-            Alert?.ShowDialog(AlertType.Bad, "TMS aborted due to max risk settings");
+			Alert?.ShowDialog(AlertType.Bad, "TMS aborted due to max risk settings");
 			Stop();
 			return;
 		}
 
 		CancelOrder(order, "Order replaced by TMS", true);
 
-        if (Position is { Direction: var positionDirection } && positionDirection != order.Direction)
-        {
-            Alert?.ShowDialog(AlertType.Bad, "Can't submit TMS orders opposing current position");
-            Stop();
-            return;
-        }
+		if (Position is { Direction: var positionDirection } && positionDirection != order.Direction)
+		{
+			Alert?.ShowDialog(AlertType.Bad, "Can't submit TMS orders opposing current position");
+			Stop();
+			return;
+		}
 
 		var takeProfits = Enumerable.Range(0, 2)
 			.Select(i => (Ticks: i == 0 ? FirstTakeProfitTicks : SecondTakeProfitTicks, SizePercent: i == 0 ? FirstTakeProfitSizePercent : SecondTakeProfitSizePercent))
@@ -197,9 +204,11 @@ public class OcoTicks : TradeManagementStrategy
 			if (spec.TakeProfitTicks != null)
 			{
 				_orderData[^1].ProfitTarget = SetTakeProfit(_orderData[^1].Entry, order.Price + spec.TakeProfitTicks.Value * Symbol.TickSize * DirectionAsInt);
+				_orderData[^1].ProfitTargetTicks = spec.TakeProfitTicks.Value;
 			}
 
 			_orderData[^1].StopLoss = SetStopLoss(_orderData[^1].Entry, order.Price - StopLossTicks * Symbol.TickSize * DirectionAsInt);
+			_orderData[^1].StopLossTicks = StopLossTicks;
 		}
 
 		if (ShouldStopTradeManagementStrategy)
@@ -221,6 +230,44 @@ public class OcoTicks : TradeManagementStrategy
 
 	protected override void OnOrderUpdate(IOrder order)
 	{
+		var orderData = _orderData.FirstOrDefault(x => x.Entry == order || x.StopLoss == order || x.ProfitTarget == order);
+		if (orderData != null)
+		{
+			var entry = orderData.Entry;
+			var direction = entry.Direction is OrderDirection.Long ? 1 : -1;
+
+			if (order == entry)
+			{
+				if (order.Status is OrderStatus.Cancelled or OrderStatus.Executed)
+				{
+					_orderData.Remove(orderData);
+				}
+				else
+				{
+					if (orderData.StopLoss.Status is OrderStatus.Pending)
+					{
+						ModifyOrder(orderData.StopLoss, orderData.StopLoss.Quantity, entry.Price - StopLossTicks * Symbol.TickSize * direction, null);
+					}
+
+					if (orderData.ProfitTarget.Status is OrderStatus.Pending)
+					{
+						ModifyOrder(orderData.ProfitTarget, orderData.ProfitTarget.Quantity, null, entry.Price + orderData.ProfitTargetTicks * Symbol.TickSize * direction);
+					}
+				}
+			}
+			else if (order.Status is OrderStatus.Pending)
+			{
+				if (order == orderData.StopLoss)
+				{
+					orderData.StopLossTicks = (int)Math.Round((entry.Price - order.StopPrice) / Symbol.TickSize * direction);
+				}
+				else if (order == orderData.ProfitTarget)
+				{
+					orderData.ProfitTargetTicks = (int)Math.Round((order.LimitPrice - entry.Price) / Symbol.TickSize * direction);
+				}
+			}
+		}
+
 		TryMoveToBreakEven();
 	}
 
@@ -236,14 +283,11 @@ public class OcoTicks : TradeManagementStrategy
 
 	public enum SizeType
 	{
-		[DisplayName("Fixed Size")]
-		Units,
+		[DisplayName("Fixed Size")] Units,
 
-		[DisplayName("$ Risk")]
-		EquityRisk,
+		[DisplayName("$ Risk")] EquityRisk,
 
-		[DisplayName("% Risk")]
-		EquityRiskPercent
+		[DisplayName("% Risk")] EquityRiskPercent
 	}
 
 	public class OrderData
@@ -251,6 +295,9 @@ public class OcoTicks : TradeManagementStrategy
 		public IOrder Entry;
 		public IOrder StopLoss;
 		public IOrder ProfitTarget;
+
+		public int StopLossTicks { get; set; }
+		public int ProfitTargetTicks { get; set; }
 	}
 
 	private class OrderSpec
