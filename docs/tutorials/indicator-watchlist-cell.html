@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Configuring Watchlist Cells in an Indicator | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Configuring Watchlist Cells in an Indicator | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/indicator-watchlist-cell.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="configuring-watchlist-cells-in-an-indicator">Configuring Watchlist Cells in an Indicator</h1>
+
+<p>In this tutorial, you will learn how to customize the display of watchlist cells in an indicator. By default, watchlist cells display the value of an indicator as plain text. However, you can override this behavior to display custom text and modify colors. This is particularly useful for creating visually intuitive watchlists that provide quick insights into market conditions.</p>
+<p>We will use the <code>WatchlistIndicator</code> example provided to demonstrate how to configure watchlist cells.</p>
+<hr>
+<h2 id="step-1-create-the-indicator-class">Step 1: Create the Indicator Class</h2>
+<p>Start by creating a new indicator class that inherits from the <code>Indicator</code> base class. This class will calculate a value based on the bar's close and open prices and display custom text and colors in the watchlist cell.</p>
+<pre><code class="lang-csharp">namespace Tickblaze.Scripts.Tutorials;
+
+public class WatchlistIndicator : Indicator
+{
+    [Plot(&quot;Result&quot;)] 
+    public PlotSeries Result { get; set; }
+
+    protected override void Calculate(int index)
+    {
+        var bar = Bars[index]!;
+
+        // Calculate the indicator value
+        Result[index] = bar.Close &gt; bar.Open ? 1 : -1;
+    }
+}
+</code></pre>
+<h3 id="explanation">Explanation:</h3>
+<ul>
+<li><code>Result</code>: A <code>PlotSeries</code> property that stores the calculated values of the indicator.</li>
+<li><code>Calculate(int index)</code>: This method is called for each bar to compute the indicator value. In this example, the value is <code>1</code> if the close price is greater than the open price (bullish) and <code>-1</code> otherwise (bearish).</li>
+</ul>
+<hr>
+<h2 id="step-2-override-configurewatchlistcell">Step 2: Override <code>ConfigureWatchlistCell</code></h2>
+<p>To customize the watchlist cell, override the <code>ConfigureWatchlistCell</code> method. This method provides a <code>WatchlistCellString</code> object, which allows you to set the displayed text, background color, and foreground color.</p>
+<pre><code class="lang-csharp">public override void ConfigureWatchlistCell(WatchlistCellString cellString)
+{
+    if (Result.Last() &gt; 0)
+    {
+        cellString.Value = &quot;Bullish&quot;;
+        cellString.Background = Color.Green;
+        cellString.Foreground = Color.Black;
+    }
+    else
+    {
+        cellString.Value = &quot;Bearish&quot;;
+        cellString.Background = Color.Red;
+        cellString.Foreground = Color.White;
+    }
+}
+</code></pre>
+<h3 id="explanation-1">Explanation:</h3>
+<ul>
+<li><code>Result.Last()</code>: Retrieves the most recent value of the <code>Result</code> series.</li>
+<li><code>cellString.Value</code>: Sets the text displayed in the watchlist cell.</li>
+<li><code>cellString.Background</code>: Sets the background color of the cell.</li>
+<li><code>cellString.Foreground</code>: Sets the text color of the cell.</li>
+</ul>
+<p>In this example:</p>
+<ul>
+<li>If the last value of <code>Result</code> is greater than <code>0</code>, the cell displays &quot;Bullish&quot; with a green background and black text.</li>
+<li>If the last value of <code>Result</code> is less than or equal to <code>0</code>, the cell displays &quot;Bearish&quot; with a red background and white text.</li>
+</ul>
+<hr>
+<h2 id="step-3-complete-indicator-code">Step 3: Complete Indicator Code</h2>
+<p>Here is the complete code for the <code>WatchlistIndicator</code>:</p>
+<pre><code class="lang-csharp">namespace Tickblaze.Scripts.Tutorials;
+
+public class WatchlistIndicator : Indicator
+{
+    [Plot(&quot;Result&quot;)] 
+    public PlotSeries Result { get; set; }
+
+    protected override void Calculate(int index)
+    {
+        var bar = Bars[index]!;
+
+        // Calculate the indicator value
+        Result[index] = bar.Close &gt; bar.Open ? 1 : -1;
+    }
+
+    public override void ConfigureWatchlistCell(WatchlistCellString cellString)
+    {
+        if (Result.Last() &gt; 0)
+        {
+            cellString.Value = &quot;Bullish&quot;;
+            cellString.Background = Color.Green;
+            cellString.Foreground = Color.Black;
+        }
+        else
+        {
+            cellString.Value = &quot;Bearish&quot;;
+            cellString.Background = Color.Red;
+            cellString.Foreground = Color.White;
+        }
+    }
+}
+</code></pre>
+<hr>
+<h2 id="step-4-add-the-indicator-to-a-watchlist">Step 4: Add the Indicator to a Watchlist</h2>
+<ol>
+<li>Compile the script and ensure there are no errors.</li>
+<li>Open Tickblaze and create or open a watchlist.</li>
+<li>Add the <code>WatchlistIndicator</code> to the watchlist as a column.
+<ol>
+<li>Right-click and select <code>Script Columns</code></li>
+<li>Click the <code>+</code> sign in the top right corner.</li>
+<li>Under the <code>Script</code>, select the <code>WatchlistIndicator</code>.</li>
+<li>Configure bar type, size, and source as desired.</li>
+<li>Hit <code>Ok</code>.</li>
+</ol>
+</li>
+<li>Observe the custom text and colors in the watchlist cell based on the indicator's calculation.</li>
+</ol>
+<hr>
+<h2 id="example-output">Example Output</h2>
+<ul>
+<li><p>If the last bar is bullish (close &gt; open), the watchlist cell will display:</p>
+<ul>
+<li><strong>Text</strong>: &quot;Bullish&quot;</li>
+<li><strong>Background</strong>: Green</li>
+<li><strong>Text Color</strong>: Black</li>
+</ul>
+</li>
+<li><p>If the last bar is bearish (close &lt;= open), the watchlist cell will display:</p>
+<ul>
+<li><strong>Text</strong>: &quot;Bearish&quot;</li>
+<li><strong>Background</strong>: Red</li>
+<li><strong>Text Color</strong>: White</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>By overriding the <code>ConfigureWatchlistCell</code> method, you can create highly customized and visually appealing watchlist cells that provide meaningful insights at a glance. This tutorial demonstrated how to display bullish/bearish signals with custom colors, but the possibilities are endless. Experiment with different configurations to suit your trading style and preferences.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/indicator-watchlist-cell.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>

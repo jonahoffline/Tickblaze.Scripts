@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Writting Trade Management System (TMS) for Tickbklaze | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Writting Trade Management System (TMS) for Tickbklaze | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/trade-management-strategy.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="writting-trade-management-system-tms-for-tickbklaze">Writting Trade Management System (TMS) for Tickbklaze</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The <code>TradeManagementStrategy</code> is a base class allowing you to automate order management.</p>
+<p>The strategy remains active (i.e., continues to process updates and trigger logic) until the <code>Stop()</code> function is explicitly called. This ensures that all overridden methods (<code>OnEntryOrder</code>, <code>OnOrderUpdate</code>, <code>OnPositionUpdate</code>, and <code>OnBarUpdate</code>) are continuously called, allowing the strategy to execute its logic dynamically.</p>
+<hr>
+<h2 id="basic-example">Basic Example</h2>
+<p>The <code>BasicTradeManagementStrategy</code> is a trading strategy class designed to manage trades by setting take profit and stop loss levels. It also supports trailing stop functionality to lock in profits as the market moves in favor of the trade.</p>
+<h3 id="source-code">Source Code</h3>
+<p>Below is the complete source code for the <code>BasicTradeManagementStrategy</code> class:</p>
+<pre><code class="lang-csharp">using Tickblaze.Scripts.Api.Interfaces.Orders;
+
+namespace Tickblaze.Scripts.Tutorials;
+
+public class BasicTradeManagementStrategy : TradeManagementStrategy
+{
+    [Parameter(&quot;Take Profit (Ticks)&quot;), NumericRange(0, int.MaxValue)]
+    public int TakeProfitTicks { get; set; } = 16;
+
+    [Parameter(&quot;Stop Loss (Ticks)&quot;), NumericRange(0, int.MaxValue)]
+    public int StopLossTicks { get; set; } = 8;
+
+    [Parameter(&quot;Trailing Stop&quot;)] 
+    public bool TrailingStopEnabled { get; set; } = true;
+
+    private IOrder _entryOrder, _takeProfitOrder, _stopLossOrder;
+    private int _takeProfitTicks, _stopLossTicks, _ticksInProfit;
+
+    protected override void OnEntryOrder(IOrder order)
+    {
+        var direction = order.Direction is OrderDirection.Long ? 1 : -1;
+
+        _entryOrder = order;
+
+        if (TakeProfitTicks &gt; 0)
+        {
+            _takeProfitOrder = SetTakeProfit(order, order.Price + TakeProfitTicks * Symbol.TickSize * direction, &quot;Take Profit&quot;);
+            _takeProfitTicks = TakeProfitTicks;
+        }
+
+        if (StopLossTicks &gt; 0)
+        {
+            _stopLossOrder = SetStopLoss(_entryOrder, order.Price - StopLossTicks * Symbol.TickSize * direction, &quot;Stop Loss&quot;);
+            _stopLossTicks = StopLossTicks;
+        }
+    }
+
+    protected override void OnOrderUpdate(IOrder order)
+    {
+        var direction = _entryOrder.Direction is OrderDirection.Long ? 1 : -1;
+
+        if (order.Status is OrderStatus.Pending)
+        {
+            if (order == _entryOrder)
+            {
+                if (_stopLossOrder?.Status is OrderStatus.Pending)
+                {
+                    var stopPrice = _entryOrder.Price - _stopLossTicks * Symbol.TickSize * direction;
+                    ModifyOrder(_stopLossOrder, _stopLossOrder.Quantity, stopPrice, null);
+                }
+
+                if (_takeProfitOrder?.Status is OrderStatus.Pending)
+                {
+                    var limitPrice = _entryOrder.Price + _takeProfitTicks * Symbol.TickSize * direction;
+                    ModifyOrder(_takeProfitOrder, _takeProfitOrder.Quantity, null, limitPrice);
+                }
+            }
+            else if (order == _takeProfitOrder)
+            {
+                _takeProfitTicks = (int)Math.Round((order.LimitPrice - _entryOrder.Price) / Symbol.TickSize * direction);
+            }
+            else if (order == _stopLossOrder)
+            {
+                _stopLossTicks = (int)Math.Round((_entryOrder.Price - order.StopPrice) / Symbol.TickSize * direction);
+            }
+        }
+
+        if (order == _entryOrder &amp;&amp; order.Status is OrderStatus.Cancelled)
+        {
+            Stop();
+        }
+        else if (order == _stopLossOrder &amp;&amp; order.Status is OrderStatus.Executed)
+        {
+            Stop();
+        }
+    }
+
+    protected override void OnPositionUpdate()
+    {
+        if (_entryOrder.Status is OrderStatus.Executed &amp;&amp; Position is null)
+        {
+            Stop();
+        }
+    }
+
+    protected override void OnBarUpdate()
+    {
+        if (TrailingStopEnabled is false)
+        {
+            return;
+        }
+        
+        if (Position is null || _stopLossOrder?.Status is not OrderStatus.Pending)
+        {
+            return;
+        }
+
+        var direction = _entryOrder.Direction is OrderDirection.Long ? 1 : -1;
+        var ticksInProfit = (int)Math.Round((Bars[^1].Close - Position.EntryPrice) / Symbol.TickSize * direction);
+        if (ticksInProfit &lt;= _ticksInProfit)
+        {
+            return;
+        }
+
+        var difference = ticksInProfit - _ticksInProfit;
+
+        _stopLossTicks -= difference;
+        _ticksInProfit = ticksInProfit;
+
+        var stopPrice = _entryOrder.Price - _stopLossTicks * Symbol.TickSize * direction;
+
+        ModifyOrder(_stopLossOrder, _stopLossOrder.Quantity, stopPrice, null);
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<p>The strategy exposes the following configurable parameters:</p>
+<ol>
+<li><p><strong>Take Profit (Ticks)</strong></p>
+<ul>
+<li>Type: <code>int</code></li>
+<li>Description: The number of ticks away from the entry price to set the take profit level.</li>
+<li>Default Value: <code>16</code></li>
+<li>Range: <code>0</code> to <code>int.MaxValue</code></li>
+</ul>
+</li>
+<li><p><strong>Stop Loss (Ticks)</strong></p>
+<ul>
+<li>Type: <code>int</code></li>
+<li>Description: The number of ticks away from the entry price to set the stop loss level.</li>
+<li>Default Value: <code>8</code></li>
+<li>Range: <code>0</code> to <code>int.MaxValue</code></li>
+</ul>
+</li>
+<li><p><strong>Trailing Stop</strong></p>
+<ul>
+<li>Type: <code>bool</code></li>
+<li>Description: Enables or disables the trailing stop functionality.</li>
+<li>Default Value: <code>true</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fields">Fields</h2>
+<ul>
+<li><code>_entryOrder</code>: Stores the entry order for the trade.</li>
+<li><code>_takeProfitOrder</code>: Stores the take profit order.</li>
+<li><code>_stopLossOrder</code>: Stores the stop loss order.</li>
+<li><code>_takeProfitTicks</code>: Stores the current take profit distance in ticks.</li>
+<li><code>_stopLossTicks</code>: Stores the current stop loss distance in ticks.</li>
+<li><code>_ticksInProfit</code>: Tracks the number of ticks in profit for trailing stop calculations.</li>
+</ul>
+<hr>
+<h2 id="methods">Methods</h2>
+<h3 id="onentryorderiorder-order"><code>OnEntryOrder(IOrder order)</code></h3>
+<ul>
+<li><strong>Description</strong>: Called when an entry order is placed. Initializes the take profit and stop loss orders based on the configured parameters.</li>
+<li><strong>Parameters</strong>:
+<ul>
+<li><code>order</code> (Type: <code>IOrder</code>): The entry order.</li>
+</ul>
+</li>
+<li><strong>Behavior</strong>:
+<ul>
+<li>Sets the <code>_entryOrder</code> field.</li>
+<li>If <code>TakeProfitTicks</code> is greater than 0, creates a take profit order.</li>
+<li>If <code>StopLossTicks</code> is greater than 0, creates a stop loss order.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="onorderupdateiorder-order"><code>OnOrderUpdate(IOrder order)</code></h3>
+<ul>
+<li><strong>Description</strong>: Called when an order is updated. Manages modifications to the stop loss and take profit orders based on the entry order's status.</li>
+<li><strong>Parameters</strong>:
+<ul>
+<li><code>order</code> (Type: <code>IOrder</code>): The updated order.</li>
+</ul>
+</li>
+<li><strong>Behavior</strong>:
+<ul>
+<li>Updates the stop loss and take profit orders if the entry order is pending.</li>
+<li>Tracks the current take profit and stop loss distances in ticks.</li>
+<li>Calls <code>Stop()</code> to terminate the strategy if:
+<ul>
+<li>The entry order is canceled.</li>
+<li>The stop loss order is executed.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="onpositionupdate"><code>OnPositionUpdate()</code></h3>
+<ul>
+<li><strong>Description</strong>: Called when the position is updated. Stops the strategy if the position is closed.</li>
+<li><strong>Behavior</strong>:
+<ul>
+<li>Checks if the entry order is executed and the position is null (closed). If true, calls <code>Stop()</code> to terminate the strategy.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="onbarupdate"><code>OnBarUpdate()</code></h3>
+<ul>
+<li><strong>Description</strong>: Called on every bar update. Implements trailing stop functionality if enabled.</li>
+<li><strong>Behavior</strong>:
+<ul>
+<li>If <code>TrailingStopEnabled</code> is <code>true</code>, adjusts the stop loss order to lock in profits as the market moves in favor of the trade.</li>
+<li>Calculates the new stop loss price based on the current profit in ticks and modifies the stop loss order accordingly.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="stop"><code>Stop()</code></h3>
+<ul>
+<li><strong>Description</strong>: Terminates the strategy. Once <code>Stop()</code> is called, the strategy stops processing updates, and no further logic is executed in the overridden methods (<code>OnEntryOrder</code>, <code>OnOrderUpdate</code>, <code>OnPositionUpdate</code>, <code>OnBarUpdate</code>).</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>Called internally when:
+<ul>
+<li>The entry order is canceled.</li>
+<li>The stop loss order is executed.</li>
+<li>The position is closed.</li>
+</ul>
+</li>
+<li>Can also be called manually to stop the strategy.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="usage-example">Usage Example</h2>
+<p>To use the <code>BasicTradeManagementStrategy</code>, select the TMS from the <code>Trade Pad</code>, configure the parameters and place an order. The strategy will automatically manage the trade by setting and adjusting take profit and stop loss levels.</p>
+<p>The strategy remains active and processes updates until the <code>Stop()</code> function is called, either internally (e.g., when the stop loss is hit) or manually.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/trade-management-strategy.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>
