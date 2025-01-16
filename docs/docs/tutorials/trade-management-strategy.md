@@ -1,4 +1,4 @@
-# Writting Trade Management System (TMS) for Tickbklaze
+# Writing Trade Management System (TMS) for Tickblaze
 
 ## Overview
 
