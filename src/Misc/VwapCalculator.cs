@@ -1,6 +1,20 @@
+using System.Globalization;
+
 namespace Tickblaze.Scripts.Misc;
 
-internal class VwapCalculator(BarSeries bars, ISymbol symbol, bool resetsAtOpen)
+public enum VwapResetPeriod
+{
+	[DisplayName("Day")]
+	Day,
+
+	[DisplayName("Week")]
+	Week,
+
+	[DisplayName("Month")]
+	Month,
+}
+
+internal class VwapCalculator(BarSeries bars, ISymbol symbol, VwapResetPeriod? resetPeriod)
 {
 	private double CumulativeVolume => _closedCumulativeVolume + _curVolume;
 
@@ -43,15 +57,7 @@ internal class VwapCalculator(BarSeries bars, ISymbol symbol, bool resetsAtOpen)
 		_curVolume = bar.Volume;
 		_curTypical = typicalPrice;
 
-		var currentSession = symbol.ExchangeCalendar.GetSession(bar.Time);
-		var reset = resetsAtOpen && currentSession?.StartExchangeDateTime != _currentSession?.StartExchangeDateTime;
-		if (reset)
-		{
-			_currentSession = currentSession;
-			_closedCumulativeVolume = 0;
-			_closedCumulativeTypicalVolume = 0;
-			_closedCumulativeVariance = 0;
-		}
+		var reset = TryReset(index);
 
 		var prevLastCalculatedIndex = _lastCalculateIndex;
 		_lastCalculateIndex = index;
@@ -69,5 +75,52 @@ internal class VwapCalculator(BarSeries bars, ISymbol symbol, bool resetsAtOpen)
 
 		var closedVwap = _closedCumulativeTypicalVolume / _closedCumulativeVolume;
 		_closedCumulativeVariance += Math.Pow(lastTypical - closedVwap, 2) * lastBar.Volume;
+	}
+
+	private bool TryReset(int barIndex)
+	{
+		var bar = bars[barIndex];
+		var exchangeCalendar = symbol.ExchangeCalendar;
+		
+		var previousSession = _currentSession;
+		
+		var currentSession = exchangeCalendar.GetSession(bar.Time);
+
+		_currentSession = currentSession;
+
+		if (previousSession is null
+			|| currentSession is null
+			|| DateTime.Equals(currentSession.StartUtcDateTime, previousSession.StartUtcDateTime))
+		{
+			return false;
+		}
+
+		var currentTimeUtc = GetMiddleTimeUtc(currentSession);
+		var previousTimeUtc = GetMiddleTimeUtc(previousSession);
+
+		var calendar = CultureInfo.InvariantCulture.Calendar;
+
+		var currentWeekNumber = calendar.GetWeekOfYear(currentTimeUtc, CalendarWeekRule.FirstFullWeek, DayOfWeek.Saturday);
+		var previousWeekNumber = calendar.GetWeekOfYear(previousTimeUtc, CalendarWeekRule.FirstFullWeek, DayOfWeek.Saturday);
+		
+		var isResetNeeded = resetPeriod is VwapResetPeriod.Day
+			|| resetPeriod is VwapResetPeriod.Week && currentWeekNumber != previousWeekNumber
+			|| resetPeriod is VwapResetPeriod.Month && currentTimeUtc.Month != previousTimeUtc.Month;
+
+		if (isResetNeeded)
+		{
+			_closedCumulativeVolume = 0;
+			_closedCumulativeVariance = 0;
+			_closedCumulativeTypicalVolume = 0;
+		}
+
+		return isResetNeeded;
+	}
+
+	private static DateTime GetMiddleTimeUtc(IExchangeSession exchangeSession)
+	{
+		var deltaTimeSpan = (exchangeSession.EndUtcDateTime - exchangeSession.StartUtcDateTime) / 2.0;
+
+		return exchangeSession.StartUtcDateTime + deltaTimeSpan;
 	}
 }
