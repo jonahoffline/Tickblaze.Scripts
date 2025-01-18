@@ -7,26 +7,35 @@ namespace Tickblaze.Scripts.Indicators;
 /// </summary>
 public partial class VolumeWeightedAveragePrice : Indicator
 {
+	[Parameter("Reset Period")]
+	public VwapResetPeriod ResetPeriod { get; set; } = VwapResetPeriod.Day;
+
 	[Parameter("Show Band 1")]
-	public bool ShowBand1 { get; set; } = false;
+	public bool ShowBand1 { get; set; }
+	
 	[Parameter("Band 1 deviations"), NumericRange(0, double.MaxValue)]
 	public double Band1Multiplier { get; set; } = 0.75;
+	
 	[NumericRange(0, 100)]
 	[Parameter("Band 1 Fill Shading Opacity %", Description = "Opacity of the shading between VWAP and band 1")]
 	public int Band1FillShadingOpacity { get; set; } = 20;
 
 	[Parameter("Show Band 2")]
-	public bool ShowBand2 { get; set; } = false;
+	public bool ShowBand2 { get; set; }
+	
 	[Parameter("Band 2 deviations"), NumericRange(0, double.MaxValue)]
 	public double Band2Multiplier { get; set; } = 1.75;
+	
 	[NumericRange(0, 100)]
 	[Parameter("Band 2 Fill Shading Opacity %", Description = "Opacity of the shading between band 1 and 2")]
 	public int Band2FillShadingOpacity { get; set; } = 10;
 
 	[Parameter("Show Band 3")]
-	public bool ShowBand3 { get; set; } = false;
+	public bool ShowBand3 { get; set; }
+	
 	[Parameter("Band 3 deviations"), NumericRange(0, double.MaxValue)]
 	public double Band3Multiplier { get; set; } = 2.75;
+	
 	[NumericRange(0, 100)]
 	[Parameter("Band 3 Fill Shading Opacity %", Description = "Opacity of the shading between band 2 and 3")]
 	public int Band3FillShadingOpacity { get; set; } = 5;
@@ -52,7 +61,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 	[Plot("Band3 Lower")]
 	public PlotSeries Band3Lower { get; set; } = new(Color.Red);
 
-	private VwapCalculator? _vwapTracker;
+	private VwapCalculator _vwapCalculator;
 
 	public VolumeWeightedAveragePrice()
 	{
@@ -75,7 +84,7 @@ public partial class VolumeWeightedAveragePrice : Indicator
 	
 	protected override void Initialize()
 	{
-		_vwapTracker ??= new VwapCalculator(Bars, Symbol, true);
+		_vwapCalculator = new VwapCalculator(Bars, Symbol, ResetPeriod);
 
 		for (var i = 1; i <= 3; i++)
 		{
@@ -114,46 +123,23 @@ public partial class VolumeWeightedAveragePrice : Indicator
 			return;
 		}
 
-		_vwapTracker!.Update(index);
-		Result[index] = _vwapTracker.VWAP;
+		_vwapCalculator.Update(index);
+		
+		Result[index] = _vwapCalculator.VWAP;
 
-		for (var i = 0; i < 3; i++)
+		CalculateBand(index, ShowBand1, Band1Lower, Band1Upper, Band1Multiplier);
+		CalculateBand(index, ShowBand2, Band2Lower, Band2Upper, Band2Multiplier);
+		CalculateBand(index, ShowBand3, Band3Lower, Band3Upper, Band3Multiplier);
+	}
+
+	private void CalculateBand(int barIndex, bool showBand, PlotSeries lowerBand, PlotSeries upperBand, double bandMultiplier)
+	{
+		if (!showBand)
 		{
-			var showBand = i switch
-			{
-				0 => ShowBand1,
-				1 => ShowBand2,
-				2 => ShowBand3
-			};
-
-			if (!showBand)
-			{
-				continue;
-			}
-
-			var upperBand = i switch
-			{
-				0 => Band1Upper,
-				1 => Band2Upper,
-				2 => Band3Upper
-			};
-			
-			var lowerBand = i switch
-			{
-				0 => Band1Lower,
-				1 => Band2Lower,
-				2 => Band3Lower
-			};
-
-			var multiplier = i switch
-			{
-				0 => Band1Multiplier,
-				1 => Band2Multiplier,
-				2 => Band3Multiplier
-			};
-
-			upperBand[index] = _vwapTracker.VWAP + _vwapTracker.Deviation * multiplier;
-			lowerBand[index] = _vwapTracker.VWAP - _vwapTracker.Deviation * multiplier;
+			return;
 		}
+
+		upperBand[barIndex] = _vwapCalculator.VWAP + bandMultiplier * _vwapCalculator.Deviation;
+		lowerBand[barIndex] = _vwapCalculator.VWAP - bandMultiplier * _vwapCalculator.Deviation;
 	}
 }

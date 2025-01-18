@@ -37,9 +37,12 @@ public class VwapCrossover : CrossoverStrategyBase
 			_ => Bars.Close
 		};
 		
-		_vwap = new VolumeWeightedAveragePrice(false, 1, 0, false, 2, 0, false, 3, 0)
+		_vwap = new VolumeWeightedAveragePrice
 		{
-			ShowOnChart = true
+			ShowOnChart = true,
+			Band1Multiplier = 1,
+			Band2Multiplier = 2,
+			Band3Multiplier = 3,
 		};
 	}
 }
