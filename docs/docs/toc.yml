@@ -23,6 +23,8 @@
       href: tutorials/custom-rendering.md
     - name: Trade Management Strategies
       href: tutorials/trade-management-strategy.md
+    - name: Conditional Parameters (UI)
+      href: tutorials/paramaters-override.md
 - name: Examples
   expanded: true
   items:
