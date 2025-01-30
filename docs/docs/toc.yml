@@ -12,12 +12,19 @@
   items:
     - name: Indicators
       href: tutorials/aroon-indicator.md
+      items:
+      - name: Configuring Watchlist Cell
+        href: tutorials/indicator-watchlist-cell.md
     - name: Drawings
       href: tutorials/ruler-drawing.md
     - name: Strategies
       href: tutorials/ma-crossover-strategy.md
     - name: Custom Rendering
       href: tutorials/custom-rendering.md
+    - name: Trade Management Strategies
+      href: tutorials/trade-management-strategy.md
+    - name: Conditional Parameters (UI)
+      href: tutorials/paramaters-override.md
 - name: Examples
   expanded: true
   items:
