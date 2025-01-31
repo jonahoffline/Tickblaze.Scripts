@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Accessing Secondary Data | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Accessing Secondary Data | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/multi-timeframe.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="accessing-secondary-data">Accessing Secondary Data</h1>
+
+<p>In this tutorial, you will learn how to access secondary data (e.g., bars from different timeframes) using the <code>GetBars()</code> method in Tickblaze. This is particularly useful for creating multi-timeframe (MTF) indicators, where you need to analyze data from multiple timeframes simultaneously.</p>
+<p>We will use the <code>MtfMovingAverage</code> example provided to demonstrate how to retrieve bars from different timeframes (1-minute, 5-minute, and 15-minute) and calculate moving averages for each timeframe.</p>
+<hr>
+<h2 id="step-1-create-the-indicator-class">Step 1: Create the Indicator Class</h2>
+<p>Start by creating a new indicator class that inherits from the <code>Indicator</code> base class. Define the necessary properties and plot series for the moving averages.</p>
+<pre><code class="lang-csharp">using Tickblaze.Scripts.Indicators;
+
+namespace Tickblaze.Scripts.Tests;
+
+public class MtfMovingAverage : Indicator
+{
+    // Plot series for 1-minute SMA
+    [Plot(&quot;SMA Minute-1&quot;)]
+    public PlotSeries SMA1 { get; set; } = new PlotSeries(Color.Red);
+
+    // Plot series for 5-minute SMA
+    [Plot(&quot;SMA Minute-5&quot;)]
+    public PlotSeries SMA5 { get; set; } = new PlotSeries(Color.Green);
+
+    // Plot series for 15-minute SMA
+    [Plot(&quot;SMA Minute-15&quot;)]
+    public PlotSeries SMA15 { get; set; } = new PlotSeries(Color.Blue);
+
+    // Bar series for different timeframes
+    private BarSeries _minute1, _minute5, _minute15;
+
+    // Moving average indicators for each timeframe
+    private SimpleMovingAverage _sma1, _sma5, _sma15;
+}
+</code></pre>
+<hr>
+<h2 id="step-2-initialize-secondary-data-in-the-initialize-method">Step 2: Initialize Secondary Data in the <code>Initialize()</code> Method</h2>
+<p>The <code>Initialize()</code> method is where you set up the secondary data series using the <code>GetBars()</code> method. This method allows you to request bars for a specific symbol and timeframe.</p>
+<pre><code class="lang-csharp">protected override void Initialize()
+{
+    // Create a BarSeriesRequest object with the current symbol and contract settings
+    var barSeriesRequest = new BarSeriesRequest
+    {
+        SymbolCode = Bars.Symbol.Code,
+        Exchange = Bars.Symbol.Exchange,
+        InstrumentType = Bars.Symbol.Type,
+        Contract = Bars.ContractSettings,
+        IsETH = Bars.IsETH
+    };
+
+    // Request 1-minute bars
+    _minute1 = GetBars(barSeriesRequest with
+    {
+        Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 1)
+    });
+
+    // Request 5-minute bars
+    _minute5 = GetBars(barSeriesRequest with
+    {
+        Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 5)
+    });
+
+    // Request 15-minute bars
+    _minute15 = GetBars(barSeriesRequest with
+    {
+        Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 15)
+    });
+
+    // Initialize moving averages for each timeframe
+    _sma1 = new SimpleMovingAverage(_minute1.Close, 20) { Bars = _minute1 };
+    _sma5 = new SimpleMovingAverage(_minute5.Close, 20) { Bars = _minute5 };
+    _sma15 = new SimpleMovingAverage(_minute15.Close, 20) { Bars = _minute15 };
+}
+</code></pre>
+<h3 id="explanation">Explanation:</h3>
+<ul>
+<li><strong><code>BarSeriesRequest</code></strong>: This object specifies the symbol, exchange, instrument type, contract settings, and session type (ETH or RTH) for the requested bars.</li>
+<li><strong><code>GetBars()</code></strong>: This method retrieves bars for the specified timeframe. The <code>BarPeriod</code> object defines the timeframe (e.g., 1-minute, 5-minute, 15-minute).</li>
+<li><strong><code>SimpleMovingAverage</code></strong>: A built-in indicator that calculates the simple moving average (SMA) for the specified bar series.</li>
+</ul>
+<hr>
+<h2 id="step-3-calculate-the-moving-averages-in-the-calculate-method">Step 3: Calculate the Moving Averages in the <code>Calculate()</code> Method</h2>
+<p>The <code>Calculate()</code> method is called for each bar in the primary series (the series the indicator is applied to). Here, we calculate the moving averages for each secondary timeframe and assign them to the corresponding plot series.</p>
+<pre><code class="lang-csharp">protected override void Calculate(int index)
+{
+    // Calculate and assign the 1-minute SMA
+    if (_minute1.Count &gt; 0)
+    {
+        SMA1[index] = _sma1[_minute1.Count - 1];
+    }
+
+    // Calculate and assign the 5-minute SMA
+    if (_minute5.Count &gt; 0)
+    {
+        SMA5[index] = _sma5[_minute5.Count - 1];
+    }
+
+    // Calculate and assign the 15-minute SMA
+    if (_minute15.Count &gt; 0)
+    {
+        SMA15[index] = _sma15[_minute15.Count - 1];
+    }
+}
+</code></pre>
+<h3 id="explanation-1">Explanation:</h3>
+<ul>
+<li><strong><code>_minute1.Count &gt; 0</code></strong>: Ensures that there are bars available in the secondary series before attempting to access them.</li>
+<li><strong><code>_sma1[_minute1.Count - 1]</code></strong>: Retrieves the most recent value of the 1-minute SMA.</li>
+<li>The same logic is applied to the 5-minute and 15-minute SMAs.</li>
+</ul>
+<hr>
+<h2 id="step-4-complete-indicator-code">Step 4: Complete Indicator Code</h2>
+<p>Here is the complete code for the <code>MtfMovingAverage</code> indicator:</p>
+<pre><code class="lang-csharp">using Tickblaze.Scripts.Indicators;
+
+namespace Tickblaze.Scripts.Tests;
+
+public class MtfMovingAverage : Indicator
+{
+    [Plot(&quot;SMA Minute-1&quot;)]
+    public PlotSeries SMA1 { get; set; } = new PlotSeries(Color.Red);
+
+    [Plot(&quot;SMA Minute-5&quot;)]
+    public PlotSeries SMA5 { get; set; } = new PlotSeries(Color.Green);
+
+    [Plot(&quot;SMA Minute-15&quot;)]
+    public PlotSeries SMA15 { get; set; } = new PlotSeries(Color.Blue);
+
+    private BarSeries _minute1, _minute5, _minute15;
+    private SimpleMovingAverage _sma1, _sma5, _sma15;
+
+    protected override void Initialize()
+    {
+        var barSeriesRequest = new BarSeriesRequest
+        {
+            SymbolCode = Bars.Symbol.Code,
+            Exchange = Bars.Symbol.Exchange,
+            InstrumentType = Bars.Symbol.Type,
+            Contract = Bars.ContractSettings,
+            IsETH = Bars.IsETH
+        };
+
+        _minute1 = GetBars(barSeriesRequest with
+        {
+            Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 1)
+        });
+
+        _minute5 = GetBars(barSeriesRequest with
+        {
+            Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 5)
+        });
+
+        _minute15 = GetBars(barSeriesRequest with
+        {
+            Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 15)
+        });
+
+        _sma1 = new SimpleMovingAverage(_minute1.Close, 20) { Bars = _minute1 };
+        _sma5 = new SimpleMovingAverage(_minute5.Close, 20) { Bars = _minute5 };
+        _sma15 = new SimpleMovingAverage(_minute15.Close, 20) { Bars = _minute15 };
+    }
+
+    protected override void Calculate(int index)
+    {
+        if (_minute1.Count &gt; 0)
+        {
+            SMA1[index] = _sma1[_minute1.Count - 1];
+        }
+
+        if (_minute5.Count &gt; 0)
+        {
+            SMA5[index] = _sma5[_minute5.Count - 1];
+        }
+
+        if (_minute15.Count &gt; 0)
+        {
+            SMA15[index] = _sma15[_minute15.Count - 1];
+        }
+    }
+}
+</code></pre>
+<hr>
+<h2 id="step-5-using-the-indicator">Step 5: Using the Indicator</h2>
+<ol>
+<li>Compile the script and ensure there are no errors.</li>
+<li>Add the <code>MtfMovingAverage</code> indicator to your chart.</li>
+<li>Observe the moving averages for the 1-minute, 5-minute, and 15-minute timeframes plotted on the chart.</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This tutorial demonstrated how to access secondary data using the <code>GetBars()</code> method and create a multi-timeframe indicator. By leveraging this approach, you can build powerful indicators that analyze data across multiple timeframes simultaneously.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/multi-timeframe.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>

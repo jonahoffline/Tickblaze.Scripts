@@ -1138,6 +1138,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/multi-timeframe.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/multi-timeframe.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/parameters-override.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/parameters-override.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/tutorials/ruler-drawing.md",
       "output": {
         ".html": {
