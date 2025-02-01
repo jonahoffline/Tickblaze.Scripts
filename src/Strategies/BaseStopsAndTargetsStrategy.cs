@@ -1,6 +1,6 @@
+using Tickblaze.Core.Extensions;
 using Tickblaze.Scripts.Api.Adapters;
 using Tickblaze.Scripts.Api.Interfaces.Orders;
-using Tickblaze.Scripts.Extensions;
 
 namespace Tickblaze.Scripts.Strategies;
 

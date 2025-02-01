@@ -177,7 +177,7 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 
 	protected override void Initialize()
 	{
-		_bars = VolumeProfile.TryGetDataSeriesRequest(this, out var request) ? GetBarSeries(request) : Bars;
+		_bars = VolumeProfile.TryGetDataSeriesRequest(this, out var request) ? GetBars(request) : Bars;
 	}
 
 	protected override void Calculate(int index)
@@ -221,8 +221,8 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 
 	private static bool IsNewWeek(DateTime time1, DateTime time2)
 	{
-		var week1 = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time1, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-		var week2 = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time2, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+		var week1 = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time1, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
+		var week2 = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time2, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
 
 		return week1 != week2;
 	}

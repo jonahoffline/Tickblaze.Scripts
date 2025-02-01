@@ -49,6 +49,8 @@ public partial class PriorDayOHLC : Indicator
 				High[index] = _high;
 				Low[index] = _low;
 				Close[index] = _close;
+
+				Open.IsLineBreak[index] = High.IsLineBreak[index] = Low.IsLineBreak[index] = Close.IsLineBreak[index] = true;
 			}
 
 			_lastSession = currentSession;

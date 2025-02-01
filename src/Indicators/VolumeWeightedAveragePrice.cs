@@ -123,8 +123,13 @@ public partial class VolumeWeightedAveragePrice : Indicator
 			return;
 		}
 
-		_vwapCalculator.Update(index);
+		_vwapCalculator.Update(index, out var isReset);
 		
+		if (isReset)
+		{
+			Result.IsLineBreak[index] = true;
+		}
+
 		Result[index] = _vwapCalculator.VWAP;
 
 		CalculateBand(index, ShowBand1, Band1Lower, Band1Upper, Band1Multiplier);

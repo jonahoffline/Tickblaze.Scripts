@@ -21,7 +21,7 @@ public sealed class RenkoBxt : BarType
 		Description = "A custom bar type which uses a standard Renko based construction for trends, and Range based construction for reversals.";
 	}
 
-	public override void OnDataPoint(Bar bar)
+	protected override void OnDataPoint(Bar bar)
 	{
 		if (Bars.Count == 0 || bar.Time > _currentSession?.EndUtcDateTime)
 		{
