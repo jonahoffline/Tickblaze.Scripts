@@ -32,14 +32,17 @@ public partial class StandardDeviation : Indicator
 
 	protected override void Calculate(int index)
 	{
-		var period = Math.Min(Period, Source.Count);
-		var sum = 0.0;
-		var sma = _movingAverage[index];
+		int period;
 
-		for (var i = 0; i < period; i++)
-		{
-			sum += Math.Pow(Source[index - i] - sma, 2.0);
-		}
+		period = Math.Min(Period, index + 1);
+		period = Math.Min(period, Source.Count);
+
+		var movingAverageValue = _movingAverage[index];
+
+		var sum = Enumerable.Range(0, period)
+			.Select(barShift => Source[index - barShift])
+			.Select(sourceValue => Math.Pow(sourceValue - movingAverageValue, 2.0))
+			.Sum();
 
 		Result[index] = Math.Sqrt(sum / period);
 	}

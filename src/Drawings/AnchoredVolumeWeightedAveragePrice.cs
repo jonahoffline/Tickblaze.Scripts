@@ -158,7 +158,7 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 
 		for (var i = Math.Min(_lastCalculatedIndex + 1, toIndex); i <= toIndex; i++)
 		{
-			_vwapCalculator!.Update(i);
+			_vwapCalculator!.Update(i, out _);
 			_vwap[i] = _vwapCalculator.VWAP;
 			_deviation[i] = _vwapCalculator.Deviation;
 		}

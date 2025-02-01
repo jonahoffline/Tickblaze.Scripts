@@ -178,7 +178,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			return;
 		}
 
-		_bars = TryGetDataSeriesRequest(this, out var request) ? GetBarSeries(request) : Bars;
+		_bars = TryGetDataSeriesRequest(this, out var request) ? GetBars(request) : Bars;
 	}
 
 	public static bool TryGetDataSeriesRequest<T>(T script, out BarSeriesRequest request)
@@ -199,6 +199,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			SourceDataType.Tick => new BarPeriod(BarPeriod.SourceType.Trade, BarPeriod.PeriodType.Tick, 1),
 			_ => throw new ArgumentOutOfRangeException()
 		};
+
+		if (barPeriod == script.Bars.Period)
+		{
+			return false;
+		}
 
 		request = new BarSeriesRequest
 		{
@@ -386,13 +391,14 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private SourceDataType _calculatedSourceDataType;
 		private RowsLayoutType _calculatedRowsLayoutType;
 		private int _calculatedRowsSize;
+		private bool _calculatedVwapShown;
 		private bool _isCalculated, _isHistorical;
 		private int _fromIndex = fromIndex;
 		private int _toIndex = toIndex;
 
 		public void Render(IDrawingContext context)
 		{
-			if (IsCalculated() is false && _drawing is null or { IsUpdating: false })
+			if (!IsCalculated() && _drawing is not { IsUpdating: true })
 			{
 				CalculateRowSize();
 				CalculateVolumes();
@@ -402,6 +408,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 				_calculatedSourceDataType = Settings.SourceData;
 				_calculatedRowsLayoutType = Settings.RowsLayout;
 				_calculatedRowsSize = Settings.RowsSize;
+				_calculatedVwapShown = Settings.VwapEnabled;
 			}
 
 			var chart = _script.Chart;
@@ -520,7 +527,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 		private bool IsCalculated()
 		{
-			var isCalculated = _isCalculated && Settings.SourceData == _calculatedSourceDataType && Settings.RowsLayout == _calculatedRowsLayoutType && Settings.RowsSize == _calculatedRowsSize;
+			var isCalculated = _isCalculated && Settings.SourceData == _calculatedSourceDataType && Settings.RowsLayout == _calculatedRowsLayoutType && Settings.RowsSize == _calculatedRowsSize && Settings.VwapEnabled == _calculatedVwapShown;
 			if (isCalculated && _isHistorical)
 			{
 				return true;
@@ -530,7 +537,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			var low = double.MaxValue;
 			var volume = 0.0;
 
-			for (var index = FromIndex; index <= ToIndex; index++)
+			for (var index = FromIndex; index <= Math.Min(ToIndex, _script.Bars.Count - 1); index++)
 			{
 				var bar = _script.Bars[index];
 				if (bar is null)
@@ -809,7 +816,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			var cumulativeVolumePrice = 0.0;
 			var vwap = new List<double>();
 
-			for (var index = FromIndex; index <= ToIndex; index++)
+			for (var index = FromIndex; index <= Math.Min(ToIndex, _script.Bars.Count - 1); index++)
 			{
 				var bar = _script.Bars[index];
 				var typicalPrice = (bar.High + bar.Low + bar.Close) / 3;

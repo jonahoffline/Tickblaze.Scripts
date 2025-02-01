@@ -45,8 +45,10 @@ internal class VwapCalculator(BarSeries bars, ISymbol symbol, VwapResetPeriod? r
 	private double _curVolume;
 	private double _curTypical;
 
-	public void Update(int index)
+	public void Update(int index, out bool isReset)
 	{
+		isReset = false;
+
 		var bar = bars[index];
 		if (bar == null)
 		{
@@ -57,13 +59,13 @@ internal class VwapCalculator(BarSeries bars, ISymbol symbol, VwapResetPeriod? r
 		_curVolume = bar.Volume;
 		_curTypical = typicalPrice;
 
-		var reset = TryReset(index);
+		isReset = TryReset(index);
 
 		var prevLastCalculatedIndex = _lastCalculateIndex;
 		_lastCalculateIndex = index;
 
 		// On the close of any bar after the first, we append to our closed values
-		if (prevLastCalculatedIndex == index || index == 0 || reset || prevLastCalculatedIndex == -1)
+		if (prevLastCalculatedIndex == index || index == 0 || isReset || prevLastCalculatedIndex == -1)
 		{
 			return;
 		}

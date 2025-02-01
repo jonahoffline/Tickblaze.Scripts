@@ -1,5 +1,4 @@
-﻿
-namespace Tickblaze.Scripts.Indicators;
+﻿namespace Tickblaze.Scripts.Indicators;
 
 /// <summary>
 /// Standard Error [STE]
