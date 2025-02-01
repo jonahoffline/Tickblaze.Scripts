@@ -249,7 +249,7 @@ Class SymbolScript
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarSeries Bars { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public BarSeries Bars { get; init; }</code></pre>
   </div>
 
 
@@ -275,10 +275,53 @@ Class SymbolScript
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries*"></a>
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_Tickblaze_Scripts_Api_Models_BarSeriesRequest_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBarSeries(Tickblaze.Scripts.Api.Models.BarSeriesRequest)">
-  GetBarSeries(BarSeriesRequest)
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Bases_BarType_System_Nullable_System_DateTime__System_Nullable_System_DateTime__" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Bases.BarType,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+  GetBars(BarType, DateTime?, DateTime?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BarSeries GetBars(BarType barType, DateTime? startTimeUtc = null, DateTime? endTimeUtc = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barType</code> <a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a></dt>
+    <dd></dd>
+    <dt><code>startTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+    <dt><code>endTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
+    <dd><p><a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a> which will fill automatically and can be subscribed to for data updates</p>
+</dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Models_BarSeriesRequest_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Models.BarSeriesRequest)">
+  GetBars(BarSeriesRequest)
   
   </h3>
 
@@ -287,7 +330,7 @@ Class SymbolScript
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BarSeries GetBarSeries(BarSeriesRequest barSeriesRequest)</code></pre>
+    <pre><code class="lang-csharp hljs">protected BarSeries GetBars(BarSeriesRequest barSeriesRequest)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

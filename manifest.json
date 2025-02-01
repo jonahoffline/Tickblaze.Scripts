@@ -72,6 +72,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Extensions.MathExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Extensions.MathExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Core.Extensions.TypeExtensions.yml",
       "output": {
         ".html": {
@@ -142,16 +152,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.NewBarCallback.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.yml",
       "output": {
         ".html": {
@@ -196,6 +196,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.html"
         }
       },
       "version": ""
@@ -272,10 +282,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagmentStrategyScriptBase.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.html"
         }
       },
       "version": ""
@@ -386,6 +396,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.CollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.ComparisonExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.ComparisonExtensions.html"
         }
       },
       "version": ""
@@ -962,6 +982,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.PriceMarker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.PriceMarker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Series-1.yml",
       "output": {
         ".html": {
@@ -1026,6 +1056,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Parameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.SeriesExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.SeriesExtensions.html"
         }
       },
       "version": ""

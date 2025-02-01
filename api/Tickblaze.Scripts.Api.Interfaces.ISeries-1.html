@@ -102,7 +102,7 @@ Interface ISeries&lt;TItem&gt;
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISeries&lt;out TItem&gt; : IReadOnlyList&lt;TItem?&gt;, IReadOnlyCollection&lt;TItem?&gt;, IEnumerable&lt;TItem?&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISeries&lt;out TItem&gt; : IReadOnlyList&lt;TItem&gt;, IReadOnlyCollection&lt;TItem&gt;, IEnumerable&lt;TItem&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -143,53 +143,11 @@ Interface ISeries&lt;TItem&gt;
   <div>
       <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
   </div>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Last__1_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Int32_">SeriesExtensions.Last&lt;TItem&gt;(ISeries&lt;TItem&gt;, int)</a>
+  </div>
   </dd></dl>
   </details>
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_ISeries_1_Last_" data-uid="Tickblaze.Scripts.Api.Interfaces.ISeries`1.Last*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_ISeries_1_Last_System_Int32_" data-uid="Tickblaze.Scripts.Api.Interfaces.ISeries`1.Last(System.Int32)">
-  Last(int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Retrieves the last item in the series, optionally going back a specified number of bars.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TItem? Last(int barsAgo = 0)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>barsAgo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of bars ago to retrieve the item from.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">TItem</span></dt>
-    <dd><p>The item at the specified position in the series, or null if not found.</p>
-</dd>
-  </dl>
-
-
-
-  <!--
-  -->
-
-
-
 
 
 

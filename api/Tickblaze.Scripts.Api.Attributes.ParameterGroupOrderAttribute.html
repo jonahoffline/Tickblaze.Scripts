@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ParameterAttribute | Tickblaze </title>
+      <title>Class ParameterGroupOrderAttribute | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ParameterAttribute | Tickblaze ">
+      <meta name="title" content="Class ParameterGroupOrderAttribute | Tickblaze ">
       
-      <meta name="description" content="Specifies metadata for parameter property.">
+      <meta name="description" content="Specifies the order of the parameter group.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute">
+        <article data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute">
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute" class="text-break">
-Class ParameterAttribute  
+  <h1 id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute" class="text-break">
+Class ParameterGroupOrderAttribute  
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,13 @@ Class ParameterAttribute
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies metadata for parameter property.</p>
+  <div class="markdown summary"><p>Specifies the order of the parameter group.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
-public class ParameterAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+public class ParameterGroupOrderAttribute : Attribute</code></pre>
   </div>
 
 
@@ -115,7 +115,7 @@ public class ParameterAttribute : Attribute</code></pre>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
-      <div><span class="xref">ParameterAttribute</span></div>
+      <div><span class="xref">ParameterGroupOrderAttribute</span></div>
     </dd>
   </dl>
   </details>
@@ -273,25 +273,28 @@ public class ParameterAttribute : Attribute</code></pre>
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute__ctor_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.#ctor*"></a>
+  <a id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute__ctor_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute__ctor_System_String_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.#ctor(System.String)">
-  ParameterAttribute(string)
+  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute__ctor_System_String_System_Int32_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.#ctor(System.String,System.Int32)">
+  ParameterGroupOrderAttribute(string, int)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Specifies metadata for parameter property.</p>
+  <div class="markdown level1 summary"><p>Specifies the order of the parameter group.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ParameterAttribute(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public ParameterGroupOrderAttribute(string groupName, int order)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The display name of the parameter.</p>
+    <dt><code>groupName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The group name.</p>
+</dd>
+    <dt><code>order</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The group order.</p>
 </dd>
   </dl>
 
@@ -312,53 +315,19 @@ public class ParameterAttribute : Attribute</code></pre>
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_Description_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Description*"></a>
+  <a id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute_GroupName_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.GroupName*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_Description" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Description">
-  Description
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Description of the parameter.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Description { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.String" text="string"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_GroupName_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.GroupName*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_GroupName" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.GroupName">
+  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute_GroupName" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.GroupName">
   GroupName
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Group name of the parameter.</p>
+  <div class="markdown level1 summary"><p>The group name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? GroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string GroupName { get; }</code></pre>
   </div>
 
 
@@ -380,53 +349,19 @@ public class ParameterAttribute : Attribute</code></pre>
 
 
 
-  <a id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_Name_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Name*"></a>
+  <a id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute_Order_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.Order*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_Name" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Name">
-  Name
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Display name of the parameter.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.String" text="string"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_Order_" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Order*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterAttribute_Order" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Order">
+  <h3 id="Tickblaze_Scripts_Api_Attributes_ParameterGroupOrderAttribute_Order" data-uid="Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.Order">
   Order
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Order of the parameter.</p>
+  <div class="markdown level1 summary"><p>The group order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Order { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Order { get; }</code></pre>
   </div>
 
 

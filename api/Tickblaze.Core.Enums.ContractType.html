@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum ContractType | Tickblaze ">
       
-      <meta name="description" content="The algorithm used to merge price data between different futures expiries.">
+      <meta name="description" content="The algorithm used to adjust and serve price data between different futures expiries.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -98,7 +98,7 @@ Enum ContractType
   <dl><dt>Assembly</dt><dd>Tickblaze.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The algorithm used to merge price data between different futures expiries.</p>
+  <div class="markdown summary"><p>The algorithm used to adjust and serve price data between different futures expiries.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -129,13 +129,17 @@ Enum ContractType
     <dt id="Tickblaze_Core_Enums_ContractType_CashSettled"><code>CashSettled = 0</code></dt>
     <dd></dd>
     <dt id="Tickblaze_Core_Enums_ContractType_ContinuousBackAdjusted"><code>ContinuousBackAdjusted = 1</code></dt>
-    <dd></dd>
+    <dd><p>Data is downloaded per contract and merged by Tickblaze before being served</p>
+</dd>
     <dt id="Tickblaze_Core_Enums_ContractType_ContinuousByDataProvider"><code>ContinuousByDataProvider = 2</code></dt>
-    <dd></dd>
+    <dd><p>Data is downloaded back adjusted by the data provider served without adjustment</p>
+</dd>
     <dt id="Tickblaze_Core_Enums_ContractType_ContinuousNonBackAdjusted"><code>ContinuousNonBackAdjusted = 3</code></dt>
-    <dd></dd>
+    <dd><p>Data is downloaded per contract and served without adjustment</p>
+</dd>
     <dt id="Tickblaze_Core_Enums_ContractType_SingleContract"><code>SingleContract = 4</code></dt>
-    <dd></dd>
+    <dd><p>Data is downloaded for a single contract and is served without adjustment</p>
+</dd>
   </dl>
 
 

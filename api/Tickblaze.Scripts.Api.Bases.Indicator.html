@@ -142,7 +142,10 @@ Class Indicator
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_FindSymbolRequest_">SymbolScript.GetSymbol(FindSymbolRequest)</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBarSeries_Tickblaze_Scripts_Api_Models_BarSeriesRequest_">SymbolScript.GetBarSeries(BarSeriesRequest)</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Models_BarSeriesRequest_">SymbolScript.GetBars(BarSeriesRequest)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Bases_BarType_System_Nullable_System_DateTime__System_Nullable_System_DateTime__">SymbolScript.GetBars(BarType, DateTime?, DateTime?)</a>
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_Bars">SymbolScript.Bars</a>
@@ -239,8 +242,8 @@ Class Indicator
 
   <a id="Tickblaze_Scripts_Api_Bases_Indicator__ctor_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator__ctor_Tickblaze_Scripts_Api_Models_BarSeries_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.#ctor(Tickblaze.Scripts.Api.Models.BarSeries)">
-  Indicator(BarSeries?)
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator__ctor" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.#ctor">
+  Indicator()
   
   </h3>
 
@@ -249,14 +252,9 @@ Class Indicator
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Indicator(BarSeries? bars = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Indicator()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>bars</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -282,7 +280,7 @@ Class Indicator
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether this instance automatically rescales the chart or not. Default value is true.</p>
+  <div class="markdown level1 summary"><p>Indicates whether this instance automatically rescales the chart or not.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -298,6 +296,40 @@ Class Indicator
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><xref uid="System.Boolean" text="bool"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_BackgroundColor_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.BackgroundColor*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_BackgroundColor" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.BackgroundColor">
+  BackgroundColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the background color of the chart panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Series&lt;Color?&gt; BackgroundColor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html">Series</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?&gt;</dt>
     <dd></dd>
   </dl>
   -->
@@ -729,8 +761,7 @@ public IReadOnlyDictionary&lt;string, IPlot&gt; PlotsSerializable { get; }</code
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Calculates the values for the indicator.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -771,6 +802,39 @@ public IReadOnlyDictionary&lt;string, IPlot&gt; PlotsSerializable { get; }</code
     <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The index of the calculated value.</p>
 </dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Indicator_CalculateUntill_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.CalculateUntill*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Indicator_CalculateUntill_System_Int32_" data-uid="Tickblaze.Scripts.Api.Bases.Indicator.CalculateUntill(System.Int32)">
+  CalculateUntill(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CalculateUntill(int lastBarIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lastBarIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
   </dl>
 
 

@@ -102,7 +102,7 @@ Class BarSeries
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BarSeries : Series&lt;Bar&gt;, ISeries&lt;Bar&gt;, IReadOnlyList&lt;Bar?&gt;, IReadOnlyCollection&lt;Bar?&gt;, IEnumerable&lt;Bar?&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class BarSeries : Series&lt;Bar&gt;, ISeries&lt;Bar&gt;, IReadOnlyList&lt;Bar&gt;, IReadOnlyCollection&lt;Bar&gt;, IEnumerable&lt;Bar&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -139,9 +139,6 @@ Class BarSeries
       <dd>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values">Series&lt;Bar&gt;.Values</a>
-      </div>
-      <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Last_System_Int32_">Series&lt;Bar&gt;.Last(int)</a>
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_">Series&lt;Bar&gt;.Append(Bar)</a>
@@ -189,6 +186,9 @@ Class BarSeries
   <div>
       <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
   </div>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Last__1_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Int32_">SeriesExtensions.Last&lt;TItem&gt;(ISeries&lt;TItem&gt;, int)</a>
+  </div>
   </dd></dl>
   </details>
 
@@ -202,8 +202,8 @@ Class BarSeries
 
   <a id="Tickblaze_Scripts_Api_Models_BarSeries__ctor_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_System_Boolean_Tickblaze_Core_Models_ContractSettings_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod,System.Boolean,Tickblaze.Core.Models.ContractSettings)">
-  BarSeries(Symbol, BarPeriod, bool, ContractSettings)
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_System_Boolean_Tickblaze_Core_Models_ContractSettings_Tickblaze_Scripts_Api_Bases_BarType_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod,System.Boolean,Tickblaze.Core.Models.ContractSettings,Tickblaze.Scripts.Api.Bases.BarType)">
+  BarSeries(Symbol, BarPeriod, bool, ContractSettings, BarType)
   
   </h3>
 
@@ -212,7 +212,7 @@ Class BarSeries
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarSeries(Symbol symbol, BarPeriod period, bool isEth, ContractSettings contractSettings)</code></pre>
+    <pre><code class="lang-csharp hljs">public BarSeries(Symbol symbol, BarPeriod period, bool isEth, ContractSettings contractSettings, BarType barType)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -227,7 +227,11 @@ Class BarSeries
     <dd><p>True if series represents ETH data</p>
 </dd>
     <dt><code>contractSettings</code> <a class="xref" href="Tickblaze.Core.Models.ContractSettings.html">ContractSettings</a></dt>
-    <dd></dd>
+    <dd><p>The specifics of how data is merged, or which futures contract the series represents</p>
+</dd>
+    <dt><code>barType</code> <a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a></dt>
+    <dd><p>A shallow copy of the bar type script creating this series bars</p>
+</dd>
   </dl>
 
 
@@ -245,6 +249,40 @@ Class BarSeries
 
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_BarType_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.BarType*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_BarType" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.BarType">
+  BarType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A shallow copy of the bar type script creating this series bars</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarType BarType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Bases.BarType" text="BarType"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
 
 
   <a id="Tickblaze_Scripts_Api_Models_BarSeries_Close_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Close*"></a>
@@ -288,7 +326,8 @@ Class BarSeries
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>For futures symbols, details which kind of contract data this series represents (which specific contract if single contract, data merge rule otherwise)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -355,7 +394,8 @@ Class BarSeries
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if the bar series represents ETH hours (vs RTH)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -787,45 +827,13 @@ Class BarSeries
 
 
 
-  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_BarClosed" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.BarClosed">
-  BarClosed
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Event triggered when a bar is closed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;BarSeries.BarEventArgs&gt; BarClosed</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  -->
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a>.<a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.html">BarEventArgs</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_BarUpdated" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.BarUpdated">
   BarUpdated
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Triggered every bar update (only on bar close for non-primary bar series)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
