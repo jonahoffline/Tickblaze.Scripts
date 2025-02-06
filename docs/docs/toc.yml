@@ -24,7 +24,7 @@
     - name: Trade Management Strategies
       href: tutorials/trade-management-strategy.md
     - name: Conditional Parameters (UI)
-      href: tutorials/paramaters-override.md
+      href: tutorials/parameters-override.md
     - name: Accesing Secondary Data
       href: tutorials/multi-timeframe.md
 - name: Examples
