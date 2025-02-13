@@ -98,7 +98,7 @@ public partial class MovingAverage : Indicator
 			MovingAverageType.SineWeighted => new SineWeightedMovingAverage(Source, Period).Result,
 			MovingAverageType.Smoothed => new SmoothedMovingAverage(Source, Period).Result,
 			MovingAverageType.Weighted => new WeightedMovingAverage(Source, Period).Result,
-			MovingAverageType.WellesWilder => new WellesWilderMovingAverage(Source, Period).Result,
+			MovingAverageType.WellesWilder => new ExponentialMovingAverage(Source, 2 * Period - 1).Result,
 			MovingAverageType.Hull => new HullMovingAverage(Source, Period).Result,
 			MovingAverageType.VolumeWeighted => new VolumeWeightedMovingAverage(Source, Period).Result,
 			_ => throw new NotImplementedException(),

@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Tickblaze.Scripts.Api.Adapters;
+﻿using Tickblaze.Scripts.Api.Adapters;
 using Tickblaze.Scripts.Api.Interfaces.Orders;
 
 namespace Tickblaze.Scripts.TradeManagementStrategies;
@@ -100,13 +99,12 @@ public class OcoTicks : TradeManagementStrategy
 			return;
 		}
 
+		Stop();
 		var stopPrice = Position.EntryPrice + BreakevenOffsetTicks * DirectionAsInt * Symbol.TickSize;
-		foreach (var group in _orderData)
+		foreach (var group in _orderData.Where(d => d.StopLoss != null))
 		{
 			ModifyOrder(group.StopLoss, group.StopLoss.Quantity, stopPrice, null);
 		}
-
-		Stop();
 	}
 
 	protected override void OnEntryOrder(IOrder order)
@@ -231,44 +229,67 @@ public class OcoTicks : TradeManagementStrategy
 	protected override void OnOrderUpdate(IOrder order)
 	{
 		var orderData = _orderData.FirstOrDefault(x => x.Entry == order || x.StopLoss == order || x.ProfitTarget == order);
-		if (orderData != null)
+		if (orderData == null)
 		{
-			var entry = orderData.Entry;
-			var direction = entry.Direction is OrderDirection.Long ? 1 : -1;
+			TryMoveToBreakEven();
+			return;
+		}
 
-			if (order == entry)
+		var entry = orderData.Entry;
+		var direction = entry.Direction is OrderDirection.Long ? 1 : -1;
+
+		if (order == entry)
+		{
+			if (order.Status is OrderStatus.Cancelled)
 			{
-				if (order.Status is OrderStatus.Cancelled or OrderStatus.Executed)
-				{
-					_orderData.Remove(orderData);
-				}
-				else
-				{
-					if (orderData.StopLoss.Status is OrderStatus.Pending)
-					{
-						ModifyOrder(orderData.StopLoss, orderData.StopLoss.Quantity, entry.Price - StopLossTicks * Symbol.TickSize * direction, null);
-					}
-
-					if (orderData.ProfitTarget.Status is OrderStatus.Pending)
-					{
-						ModifyOrder(orderData.ProfitTarget, orderData.ProfitTarget.Quantity, null, entry.Price + orderData.ProfitTargetTicks * Symbol.TickSize * direction);
-					}
-				}
+				_orderData.Remove(orderData);
 			}
-			else if (order.Status is OrderStatus.Pending)
+			else
 			{
-				if (order == orderData.StopLoss)
+				if (orderData.StopLoss?.Status is OrderStatus.Pending)
 				{
-					orderData.StopLossTicks = (int)Math.Round((entry.Price - order.StopPrice) / Symbol.TickSize * direction);
+					ModifyOrder(orderData.StopLoss, orderData.StopLoss.Quantity, entry.Price - StopLossTicks * Symbol.TickSize * direction, null);
 				}
-				else if (order == orderData.ProfitTarget)
+
+				if (orderData.ProfitTarget?.Status is OrderStatus.Pending)
 				{
-					orderData.ProfitTargetTicks = (int)Math.Round((order.LimitPrice - entry.Price) / Symbol.TickSize * direction);
+					ModifyOrder(orderData.ProfitTarget, orderData.ProfitTarget.Quantity, null, entry.Price + orderData.ProfitTargetTicks * Symbol.TickSize * direction);
 				}
 			}
 		}
+		else if (order.Status is OrderStatus.Pending)
+		{
+			if (order == orderData.StopLoss)
+			{
+				orderData.StopLossTicks = (int)Math.Round((entry.Price - order.StopPrice) / Symbol.TickSize * direction);
+			}
+			else if (order == orderData.ProfitTarget)
+			{
+				orderData.ProfitTargetTicks = (int)Math.Round((order.LimitPrice - entry.Price) / Symbol.TickSize * direction);
+			}
+		}
+		else if (order.Status is OrderStatus.Cancelled)
+		{
+			if (order == orderData.StopLoss)
+			{
+				orderData.StopLoss = null;
+			}
+			else if (order == orderData.ProfitTarget)
+			{
+				orderData.ProfitTarget = null;
+			}
+		}
 
-		TryMoveToBreakEven();
+		// If our stop loss and profit target are both cancelled or weren't set, cancel that bracket tier
+		if (orderData is { StopLoss: null, ProfitTarget: null })
+		{
+			_orderData.Remove(orderData);
+		}
+
+		if (_orderData.Count == 0)
+		{
+			Stop();
+		}
 	}
 
 	protected override void OnPositionUpdate()

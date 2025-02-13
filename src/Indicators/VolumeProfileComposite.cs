@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using System.Globalization;
 using Tickblaze.Scripts.Drawings;
 
@@ -115,7 +114,9 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 		Yearly
 	}
 
+	private bool _isIntraday, _hasInvalidConfiguration;
 	private BarSeries _bars;
+	private DateTime _lastBarTime;
 	private IExchangeSession _lastSession;
 	private VolumeProfile.Area<VolumeProfileComposite> _currentArea;
 	private readonly List<VolumeProfile.Area<VolumeProfileComposite>> _areas = [];
@@ -177,46 +178,113 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 
 	protected override void Initialize()
 	{
-		_bars = VolumeProfile.TryGetDataSeriesRequest(this, out var request) ? GetBars(request) : Bars;
+		_isIntraday = Bars.Period is not { Source: BarPeriod.SourceType.Day };
+
+		if (_isIntraday is false)
+		{
+			_hasInvalidConfiguration = Composition switch
+			{
+				CompositionType.Daily => Bars.Period is { Type: BarPeriod.PeriodType.Day or BarPeriod.PeriodType.Week or BarPeriod.PeriodType.Month or BarPeriod.PeriodType.Year },
+				CompositionType.Weekly => Bars.Period is { Type: BarPeriod.PeriodType.Week or BarPeriod.PeriodType.Month or BarPeriod.PeriodType.Year },
+				CompositionType.Monthly => Bars.Period is { Type: BarPeriod.PeriodType.Month or BarPeriod.PeriodType.Year },
+				CompositionType.Yearly => Bars.Period is { Type: BarPeriod.PeriodType.Year },
+				_ => false,
+			};
+		}
+
+		if (_hasInvalidConfiguration is false)
+		{
+			_bars = VolumeProfile.TryGetDataSeriesRequest(this, out var request) ? GetBars(request) : Bars;
+		}
 	}
 
 	protected override void Calculate(int index)
 	{
-		var bar = Bars[index];
-		var time = bar.Time;
-
-		var session = Bars.Symbol.ExchangeCalendar.GetSession(time);
-		if (session != _lastSession)
+		if (_hasInvalidConfiguration)
 		{
-			var isNewProfile = _lastSession is null;
-			if (isNewProfile is false)
-			{
-				var lastSessionStart = _lastSession.StartExchangeDateTime;
-				var sessionStart = session!.StartExchangeDateTime;
+			return;
+		}
 
-				isNewProfile = Composition switch
-				{
-					CompositionType.Daily => true,
-					CompositionType.Weekly => IsNewWeek(lastSessionStart, sessionStart),
-					CompositionType.Monthly => lastSessionStart.Month != sessionStart.Month,
-					CompositionType.Yearly => lastSessionStart.Year < sessionStart.Year,
-					_ => throw new ArgumentOutOfRangeException()
-				};
-			}
-
-			if (isNewProfile)
-			{
-				_currentArea = new VolumeProfile.Area<VolumeProfileComposite>(this, index, index, _bars);
-				_areas.Add(_currentArea);
-			}
-
-			_lastSession = session;
+		var isNewSession = IsNewSession(index);
+		if (isNewSession)
+		{
+			_currentArea = new VolumeProfile.Area<VolumeProfileComposite>(this, index, index, _bars);
+			_areas.Add(_currentArea);
 		}
 
 		if (_currentArea is not null)
 		{
 			_currentArea.ToIndex = index;
 		}
+	}
+
+	private bool IsNewSession(int index)
+	{
+		var bar = Bars[index];
+		var time = bar.Time;
+
+		if (index == 0)
+		{
+			_lastBarTime = bar.Time;
+
+			if (_isIntraday)
+			{
+				_lastSession = Bars.Symbol.ExchangeCalendar.GetSession(time);
+			}
+
+			return true;
+		}
+
+		if (bar.Time == _lastBarTime)
+		{
+			return false;
+		}
+
+		if (_isIntraday)
+		{
+			_lastBarTime = bar.Time;
+
+			var session = Bars.Symbol.ExchangeCalendar.GetSession(time);
+			if (session != _lastSession)
+			{
+				var isNewSession = _lastSession is null;
+				if (isNewSession is false)
+				{
+					var lastSessionStart = _lastSession.StartExchangeDateTime;
+					var sessionStart = session!.StartExchangeDateTime;
+
+					isNewSession = Composition switch
+					{
+						CompositionType.Daily => true,
+						CompositionType.Weekly => IsNewWeek(lastSessionStart, sessionStart),
+						CompositionType.Monthly => lastSessionStart.Month != sessionStart.Month || lastSessionStart.Year < sessionStart.Year,
+						CompositionType.Yearly => lastSessionStart.Year < sessionStart.Year,
+						_ => throw new NotImplementedException()
+					};
+				}
+
+				_lastSession = session;
+
+				return isNewSession;
+			}
+		}
+		else
+		{
+			var lastBarTime = _lastBarTime;
+
+			_lastBarTime = time;
+
+			return Composition switch
+			{
+				CompositionType.Daily => lastBarTime < time,
+				CompositionType.Weekly => IsNewWeek(lastBarTime, time),
+				CompositionType.Monthly => lastBarTime.Month != time.Month || lastBarTime.Year < time.Year,
+				CompositionType.Yearly => lastBarTime.Year < time.Year,
+				_ => throw new NotImplementedException()
+			};
+		}
+
+		return false;
 	}
 
 	private static bool IsNewWeek(DateTime time1, DateTime time2)

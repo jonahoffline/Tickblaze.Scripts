@@ -56,11 +56,17 @@ public class MaCrossover : CrossoverStrategyBase
 		var fastSource = GetSourceSeries(FastSource);
 		var slowSource = GetSourceSeries(SlowSource);
 
-		_maFast = new(fastSource, FastPeriod, FastType) { ShowOnChart = true };
-		_maFast.Result.Color = Color.Blue;
-
-		_maSlow = new(slowSource, SlowPeriod, SlowType) { ShowOnChart = true };
-		_maSlow.Result.Color = Color.Orange;
+		_maFast = new(fastSource, FastPeriod, FastType)
+		{
+			ShowOnChart = true,
+			Result = new("Fast MA", Color.Blue),
+		};
+		
+		_maSlow = new(slowSource, SlowPeriod, SlowType)
+		{
+			ShowOnChart = true,
+			Result = new("Slow MA", Color.Orange),
+		};
 	}
 
 	private ISeries<double> GetSourceSeries(SourceType source) => source switch

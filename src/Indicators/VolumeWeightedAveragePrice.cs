@@ -12,33 +12,33 @@ public partial class VolumeWeightedAveragePrice : Indicator
 
 	[Parameter("Show Band 1")]
 	public bool ShowBand1 { get; set; }
-	
+
 	[Parameter("Band 1 deviations"), NumericRange(0, double.MaxValue)]
-	public double Band1Multiplier { get; set; } = 0.75;
-	
+	public double Band1Multiplier { get; set; } = 1;
+
 	[NumericRange(0, 100)]
 	[Parameter("Band 1 Fill Shading Opacity %", Description = "Opacity of the shading between VWAP and band 1")]
 	public int Band1FillShadingOpacity { get; set; } = 20;
 
 	[Parameter("Show Band 2")]
 	public bool ShowBand2 { get; set; }
-	
+
 	[Parameter("Band 2 deviations"), NumericRange(0, double.MaxValue)]
-	public double Band2Multiplier { get; set; } = 1.75;
-	
+	public double Band2Multiplier { get; set; } = 2;
+
 	[NumericRange(0, 100)]
 	[Parameter("Band 2 Fill Shading Opacity %", Description = "Opacity of the shading between band 1 and 2")]
-	public int Band2FillShadingOpacity { get; set; } = 10;
+	public int Band2FillShadingOpacity { get; set; } = 15;
 
 	[Parameter("Show Band 3")]
 	public bool ShowBand3 { get; set; }
-	
+
 	[Parameter("Band 3 deviations"), NumericRange(0, double.MaxValue)]
-	public double Band3Multiplier { get; set; } = 2.75;
-	
+	public double Band3Multiplier { get; set; } = 3;
+
 	[NumericRange(0, 100)]
 	[Parameter("Band 3 Fill Shading Opacity %", Description = "Opacity of the shading between band 2 and 3")]
-	public int Band3FillShadingOpacity { get; set; } = 5;
+	public int Band3FillShadingOpacity { get; set; } = 10;
 
 	[Plot("Vwap")]
 	public PlotSeries Result { get; set; } = new(Color.Cyan);
@@ -71,47 +71,33 @@ public partial class VolumeWeightedAveragePrice : Indicator
 		AutoRescale = false;
 	}
 
-	private PlotSeries GetBand(int band, int side)
-	{
-		return band switch
-		{
-			0 => Result,
-			1 => side == 1 ? Band1Upper : Band1Lower,
-			2 => side == 1 ? Band2Upper : Band2Lower,
-			3 => side == 1 ? Band3Upper : Band3Lower
-		};
-	}
-	
 	protected override void Initialize()
 	{
 		_vwapCalculator = new VwapCalculator(Bars, Symbol, ResetPeriod);
 
+		var upperLast = Result;
+		var lowerLast = Result;
+
 		for (var i = 1; i <= 3; i++)
 		{
-			for (var side = -1; side <= 1; side += 2)
+			var (show, opacity, upperBand, lowerBand) = i switch
 			{
-				var showOuterBand = i switch
-				{
-					1 => ShowBand1,
-					2 => ShowBand2,
-					3 => ShowBand3
-				};
+				1 => (ShowBand1, Band1FillShadingOpacity, Band1Upper, Band1Lower),
+				2 => (ShowBand2, Band2FillShadingOpacity, Band2Upper, Band2Lower),
+				3 => (ShowBand3, Band3FillShadingOpacity, Band3Upper, Band3Lower),
+				_ => throw new NotImplementedException(),
+			};
 
-				if (!showOuterBand)
-				{
-					continue;
-				}
-
-				var outerBand = GetBand(i, side);
-				var opacity = i switch
-				{
-					1 => Band1FillShadingOpacity,
-					2 => Band2FillShadingOpacity,
-					3 => Band3FillShadingOpacity
-				};
-
-				ShadeBetween(GetBand(i - 1, side), outerBand, outerBand.Color, outerBand.Color, opacity / 100f);
+			if (!show)
+			{
+				continue;
 			}
+
+			ShadeBetween(upperBand, upperLast, upperBand.Color, upperBand.Color, opacity / 100f);
+			ShadeBetween(lowerBand, lowerLast, lowerBand.Color, lowerBand.Color, opacity / 100f);
+
+			upperLast = upperBand;
+			lowerLast = lowerBand;
 		}
 	}
 
@@ -124,10 +110,13 @@ public partial class VolumeWeightedAveragePrice : Indicator
 		}
 
 		_vwapCalculator.Update(index, out var isReset);
-		
+
 		if (isReset)
 		{
-			Result.IsLineBreak[index] = true;
+			foreach (var plot in Plots)
+			{
+				plot.IsLineBreak[index] = true;
+			}
 		}
 
 		Result[index] = _vwapCalculator.VWAP;
