@@ -113,7 +113,7 @@ Class BarSeries
   <dl class="typelist inheritance">
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html">Series</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Series-1.html">Series</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Bar.html">Bar</a>&gt;</div>
       <div><span class="xref">BarSeries</span></div>
     </dd>
   </dl>
@@ -138,19 +138,16 @@ Class BarSeries
     <dl class="typelist inheritedMembers">
       <dd>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values">Series&lt;Bar&gt;.Values</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1__values">Series&lt;Bar&gt;._values</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_">Series&lt;Bar&gt;.Append(Bar)</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_GetEnumerator">Series&lt;Bar&gt;.GetEnumerator()</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_GetEnumerator">Series&lt;Bar&gt;.GetEnumerator()</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_DefaultValue">Series&lt;Bar&gt;.DefaultValue</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_DefaultValue">Series&lt;Bar&gt;.DefaultValue</a>
-      </div>
-      <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Count">Series&lt;Bar&gt;.Count</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_Count">Series&lt;Bar&gt;.Count</a>
       </div>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -181,6 +178,9 @@ Class BarSeries
   <dl class="typelist extensionMethods">
     <dd>
   <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_AsSeries__1_System_Collections_Generic_IReadOnlyList___0__">CollectionExtensions.AsSeries&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_">CollectionExtensions.BinarySearch&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;, TItem)</a>
   </div>
   <div>
@@ -188,6 +188,12 @@ Class BarSeries
   </div>
   <div>
       <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Last__1_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Int32_">SeriesExtensions.Last&lt;TItem&gt;(ISeries&lt;TItem&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Select__2_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Func_System_Int32___0___1__">SeriesExtensions.Select&lt;TSource, TDestination&gt;(ISeries&lt;TSource&gt;, Func&lt;int, TSource, TDestination&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Select__2_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Func___0___1__">SeriesExtensions.Select&lt;TSource, TDestination&gt;(ISeries&lt;TSource&gt;, Func&lt;TSource, TDestination&gt;)</a>
   </div>
   </dd></dl>
   </details>
@@ -263,7 +269,7 @@ Class BarSeries
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarType BarType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public BarType BarType { get; }</code></pre>
   </div>
 
 
@@ -433,7 +439,7 @@ Class BarSeries
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Bar? this[int index] { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override Bar this[int index] { get; set; }</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -598,6 +604,40 @@ Class BarSeries
 
 
 
+  <a id="Tickblaze_Scripts_Api_Models_BarSeries_StartTimeUtc_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.StartTimeUtc*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_StartTimeUtc" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.StartTimeUtc">
+  StartTimeUtc
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The start of the data series</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime StartTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.DateTime" text="DateTime"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
   <a id="Tickblaze_Scripts_Api_Models_BarSeries_Symbol_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Symbol*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Symbol" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Symbol">
@@ -736,49 +776,6 @@ Class BarSeries
 
   <h2 class="section" id="methods">Methods
 </h2>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_BarSeries_Append_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Append*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_BarSeries_Append_System_DateTime_System_Double_System_Double_System_Double_System_Double_System_Double_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Append(System.DateTime,System.Double,System.Double,System.Double,System.Double,System.Double)">
-  Append(DateTime, double, double, double, double, double)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Append(DateTime time, double open, double high, double low, double close, double volume)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
-    <dt><code>open</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-    <dt><code>high</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-    <dt><code>low</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-    <dt><code>close</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <!--
-  -->
-
-
-
-
-
-
 
 
   <a id="Tickblaze_Scripts_Api_Models_BarSeries_Slice_" data-uid="Tickblaze.Scripts.Api.Models.BarSeries.Slice*"></a>

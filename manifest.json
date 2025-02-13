@@ -402,6 +402,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.ColorSeries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.ColorSeries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.ComparisonExtensions.yml",
       "output": {
         ".html": {
@@ -872,10 +882,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.yml",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeriesInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeriesRequest.html"
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.BarSeriesInfo.html"
         }
       },
       "version": ""
@@ -912,16 +922,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Models.FindSymbolRequest.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Font.yml",
       "output": {
         ".html": {
@@ -952,26 +952,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.PlotColors.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Models.PlotSeries.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Point.yml",
       "output": {
         ".html": {
@@ -992,26 +972,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Series-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Models.Series-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.SeriesTransform-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Models.SeriesTransform-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Size.yml",
       "output": {
         ".html": {
@@ -1026,6 +986,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Tickblaze.Scripts.Api.Models.Symbol.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.SymbolInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.SymbolInfo.html"
         }
       },
       "version": ""
@@ -1062,6 +1032,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.PlotSeries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.PlotSeries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Series-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Series-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.SeriesExtensions.yml",
       "output": {
         ".html": {
@@ -1084,11 +1074,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -1127,11 +1117,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/toc.html"
-        },
         ".json": {
           "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
         }
       },
       "version": ""
@@ -1290,11 +1280,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

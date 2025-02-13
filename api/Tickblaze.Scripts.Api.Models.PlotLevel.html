@@ -102,7 +102,7 @@ Class PlotLevel
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlotLevel : IPlot, ICloneable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PlotLevel : IPlot</code></pre>
   </div>
 
 
@@ -123,7 +123,6 @@ Class PlotLevel
     <dl class="typelist implements">
       <dd>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPlot.html">IPlot</a></div>
-        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
       </dd>
     </dl>
   </details>
@@ -135,9 +134,6 @@ Class PlotLevel
       <dd>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-      </div>
-      <div>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
       </div>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -538,13 +534,13 @@ public string Name { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
+    <pre><code class="lang-csharp hljs">public PlotLevel Clone()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.PlotLevel.html">PlotLevel</a></dt>
     <dd><p>A new instance of <a class="xref" href="Tickblaze.Scripts.Api.Models.PlotLevel.html">PlotLevel</a> with the same values.</p>
 </dd>
   </dl>

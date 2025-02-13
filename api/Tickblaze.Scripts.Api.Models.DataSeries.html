@@ -113,7 +113,7 @@ Class DataSeries
   <dl class="typelist inheritance">
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html">Series</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
+      <div><a class="xref" href="Tickblaze.Scripts.Api.Series-1.html">Series</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
       <div><span class="xref">DataSeries</span></div>
     </dd>
   </dl>
@@ -136,7 +136,7 @@ Class DataSeries
     <summary>Derived</summary>
     <dl class="typelist derived">
       <dd>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Models.PlotSeries.html">PlotSeries</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.PlotSeries.html">PlotSeries</a></div>
       </dd>
     </dl>
   </details>
@@ -146,19 +146,19 @@ Class DataSeries
     <dl class="typelist inheritedMembers">
       <dd>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Values">Series&lt;double&gt;.Values</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1__values">Series&lt;double&gt;._values</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Append__0_">Series&lt;double&gt;.Append(double)</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_GetEnumerator">Series&lt;double&gt;.GetEnumerator()</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_GetEnumerator">Series&lt;double&gt;.GetEnumerator()</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_DefaultValue">Series&lt;double&gt;.DefaultValue</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Count">Series&lt;double&gt;.Count</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_Count">Series&lt;double&gt;.Count</a>
       </div>
       <div>
-        <a class="xref" href="Tickblaze.Scripts.Api.Models.Series-1.html#Tickblaze_Scripts_Api_Models_Series_1_Item_System_Int32_">Series&lt;double&gt;.this[int]</a>
+        <a class="xref" href="Tickblaze.Scripts.Api.Series-1.html#Tickblaze_Scripts_Api_Series_1_Item_System_Int32_">Series&lt;double&gt;.this[int]</a>
       </div>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -189,6 +189,9 @@ Class DataSeries
   <dl class="typelist extensionMethods">
     <dd>
   <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_AsSeries__1_System_Collections_Generic_IReadOnlyList___0__">CollectionExtensions.AsSeries&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="Tickblaze.Scripts.Api.CollectionExtensions.html#Tickblaze_Scripts_Api_CollectionExtensions_BinarySearch__1_System_Collections_Generic_IReadOnlyList___0____0_">CollectionExtensions.BinarySearch&lt;TItem&gt;(IReadOnlyList&lt;TItem&gt;, TItem)</a>
   </div>
   <div>
@@ -196,6 +199,12 @@ Class DataSeries
   </div>
   <div>
       <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Last__1_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Int32_">SeriesExtensions.Last&lt;TItem&gt;(ISeries&lt;TItem&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Select__2_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Func___0___1__">SeriesExtensions.Select&lt;TSource, TDestination&gt;(ISeries&lt;TSource&gt;, Func&lt;TSource, TDestination&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Tickblaze.Scripts.Api.SeriesExtensions.html#Tickblaze_Scripts_Api_SeriesExtensions_Select__2_Tickblaze_Scripts_Api_Interfaces_ISeries___0__System_Func_System_Int32___0___1__">SeriesExtensions.Select&lt;TSource, TDestination&gt;(ISeries&lt;TSource&gt;, Func&lt;int, TSource, TDestination&gt;)</a>
   </div>
   </dd></dl>
   </details>
@@ -215,7 +224,8 @@ Class DataSeries
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.Models.DataSeries.html">DataSeries</a> class that is empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -227,44 +237,6 @@ Class DataSeries
 
 
   <!--
-  -->
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Tickblaze_Scripts_Api_Models_DataSeries_DefaultValue_" data-uid="Tickblaze.Scripts.Api.Models.DataSeries.DefaultValue*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_DataSeries_DefaultValue" data-uid="Tickblaze.Scripts.Api.Models.DataSeries.DefaultValue">
-  DefaultValue
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The default value for the series, which is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override double DefaultValue { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.Double" text="double"/></dt>
-    <dd></dd>
-  </dl>
   -->
 
 
