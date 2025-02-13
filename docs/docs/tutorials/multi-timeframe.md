@@ -44,30 +44,20 @@ The `Initialize()` method is where you set up the secondary data series using th
 ```csharp
 protected override void Initialize()
 {
-    // Create a BarSeriesRequest object with the current symbol and contract settings
-    var barSeriesRequest = new BarSeriesRequest
-    {
-        SymbolCode = Bars.Symbol.Code,
-        Exchange = Bars.Symbol.Exchange,
-        InstrumentType = Bars.Symbol.Type,
-        Contract = Bars.ContractSettings,
-        IsETH = Bars.IsETH
-    };
-
     // Request 1-minute bars
-    _minute1 = GetBars(barSeriesRequest with
+    _minute1 = GetBars(new BarSeriesInfo
     {
         Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 1)
     });
 
     // Request 5-minute bars
-    _minute5 = GetBars(barSeriesRequest with
+    _minute5 = GetBars(new BarSeriesInfo
     {
         Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 5)
     });
 
     // Request 15-minute bars
-    _minute15 = GetBars(barSeriesRequest with
+    _minute15 = GetBars(new BarSeriesInfo
     {
         Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 15)
     });
@@ -143,26 +133,17 @@ public class MtfMovingAverage : Indicator
 
     protected override void Initialize()
     {
-        var barSeriesRequest = new BarSeriesRequest
-        {
-            SymbolCode = Bars.Symbol.Code,
-            Exchange = Bars.Symbol.Exchange,
-            InstrumentType = Bars.Symbol.Type,
-            Contract = Bars.ContractSettings,
-            IsETH = Bars.IsETH
-        };
-
-        _minute1 = GetBars(barSeriesRequest with
+        _minute1 = GetBars(new BarSeriesInfo
         {
             Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 1)
         });
 
-        _minute5 = GetBars(barSeriesRequest with
+        _minute5 = GetBars(new BarSeriesInfo
         {
             Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 5)
         });
 
-        _minute15 = GetBars(barSeriesRequest with
+        _minute15 = GetBars(new BarSeriesInfo
         {
             Period = new BarPeriod(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 15)
         });
