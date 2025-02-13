@@ -16,17 +16,19 @@ public partial class TrueRange : Indicator
 
 	protected override void Calculate(int index)
 	{
-		var bar = Bars[index];
+		var currentLow = Bars.Low[index];
+		var currentHigh = Bars.High[index];
 
-		if (index == 0)
-		{
-			Result[index] = bar.High - bar.Low;
-		}
-		else
-		{
-			var previousClose = Bars[index - 1].Close;
+		var trueRange = currentHigh - currentLow;
 
-			Result[index] = Math.Max(bar.High, previousClose) - Math.Min(bar.Low, previousClose);
+		if (index is not 0)
+		{
+			var previousClose = Bars.Close[index - 1];
+			
+			trueRange = Math.Max(trueRange, Math.Abs(currentLow - previousClose));
+			trueRange = Math.Max(trueRange, Math.Abs(currentHigh - previousClose));
 		}
+		
+		Result[index] = trueRange;
 	}
 }

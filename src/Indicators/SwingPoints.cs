@@ -16,10 +16,10 @@ public partial class SwingPoints : Indicator
 	private int _currentIndex;
 
 	[AllowNull]
-	private Series<double> _swingLows;
+	private DataSeries _swingLows;
 
 	[AllowNull]
-	private Series<double> _swingHighs;
+	private DataSeries _swingHighs;
 
 	[NumericRange(MinValue = 1, MaxValue = 256)]
 	[Parameter("Swing Strength", Description = "Number of bars used to identify a swing high or low")]
@@ -46,8 +46,6 @@ public partial class SwingPoints : Indicator
 
 	protected override void Calculate(int barIndex)
 	{
-		_swingLows[barIndex] = _swingHighs[barIndex] = double.NaN;
-
 		if (_currentIndex >= barIndex)
 		{
 			return;

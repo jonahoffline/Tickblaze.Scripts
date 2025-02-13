@@ -26,14 +26,21 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 	[Parameter("Position Sizing Input", GroupName = GroupName), NumericRange(0.00001)]
 	public double SizingStrategyInput { get; set; } = 1;
 
+	[Parameter("Enable Position Reversal", GroupName = GroupName, Description = "Enables position reversal when a reversal signal is hit")]
+	public bool EnablePositionReversal { get; set; } = true;
+
+	private bool ReversalsAllowed => EnablePositionReversal || (TakeProfit == 0 && StopLoss == 0);
+
 	protected void PlaceStopLossAndTarget(IOrder order, double entryPrice, OrderDirection orderDirection)
 	{
+		var entryQuantity = GetEntryQuantity(entryPrice);
+
 		if (StopLoss > 0)
 		{
 			switch (StopLossType)
 			{
 				case StopTargetDistanceType.Dollars:
-					SetStopLossTicks(order, (int)Math.Max(StopLoss / (Symbol.TickValue * order.Quantity), 1), "SL");
+					SetStopLossTicks(order, (int)Math.Max(StopLoss / (Symbol.TickValue * entryQuantity), 1), "SL");
 					break;
 				case StopTargetDistanceType.DollarsPerQuantity:
 					SetStopLossTicks(order, (int)Math.Max(StopLoss / Symbol.TickValue, 1), "SL");
@@ -57,7 +64,7 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 			switch (TakeProfitType)
 			{
 				case StopTargetDistanceType.Dollars:
-					SetTakeProfitTicks(order, (int)Math.Max(TakeProfit / (Symbol.TickValue * order.Quantity), 1), "TP");
+					SetTakeProfitTicks(order, (int)Math.Max(TakeProfit / (Symbol.TickValue * entryQuantity), 1), "TP");
 					break;
 				case StopTargetDistanceType.DollarsPerQuantity:
 					SetTakeProfitTicks(order, (int)Math.Max(TakeProfit / Symbol.TickValue, 1), "TP");
@@ -79,6 +86,11 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 
 	protected override Parameters GetParameters(Parameters parameters)
 	{
+		if (StopLoss == 0 && TakeProfit == 0)
+		{
+			parameters.Remove(nameof(EnablePositionReversal));
+		}
+
 		if (StopLoss == 0 && SizingStrategy != SizingStrategy.FixedQuantity)
 		{
 			Alert?.ShowDialog(AlertType.Bad, "Stop loss required for equity sizing strategies. Reverting to fixed quantity sizing strategy.");
@@ -106,8 +118,18 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 
 	protected double GetTradeQuantity(double entryPrice)
 	{
+		var entryQuantity = GetEntryQuantity(entryPrice);
+		
+		var exitQuantity = Position?.Quantity ?? 0;
+		
+		return exitQuantity + entryQuantity;
+	}
+
+	protected double GetEntryQuantity(double entryPrice)
+	{
 		double entryQuantity;
-		if (SizingStrategy == SizingStrategy.FixedQuantity)
+		
+		if (SizingStrategy is SizingStrategy.FixedQuantity)
 		{
 			entryQuantity = SizingStrategyInput;
 		}
@@ -120,9 +142,8 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 			entryQuantity = totalRisk / riskPerContract;
 		}
 
-		entryQuantity = entryQuantity.FloorToNearestMultiple((double)Symbol.MinimumVolume);
-		var exitQuantity = Position?.Quantity ?? 0;
-		return exitQuantity + entryQuantity;
+		entryQuantity = entryQuantity.RoundToNearestMultiple((double)Symbol.MinimumVolume);
+		return entryQuantity;
 	}
 
 	private double GetStopLossDist(double price)
@@ -139,7 +160,7 @@ public abstract class BaseStopsAndTargetsStrategy : Strategy
 
 	protected void TryEnterMarket(OrderDirection direction, string comment = "")
 	{
-		if (Position != null && Position.Direction == direction && Position.Quantity != 0)
+		if (Position != null && Position.Quantity != 0 && (Position.Direction == direction || !ReversalsAllowed))
 		{
 			return;
 		}

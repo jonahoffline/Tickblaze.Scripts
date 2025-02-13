@@ -1,17 +1,9 @@
 namespace Tickblaze.Scripts.Drawings;
 
-public class VolumeProfileExtended : VolumeProfile
+public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 {
-	protected override bool ExtendRight => true;
+	public const string StyleGroupName = "Style";
 
-	public VolumeProfileExtended()
-	{
-		Name = "Volume Profile - Realtime";
-	}
-}
-
-public class VolumeProfile : Drawing, VolumeProfile.ISettings
-{
 	[Parameter("Data Source", Description = "Data source for the volume profile")]
 	public SourceDataType SourceData { get; set; } = SourceDataType.Chart;
 
@@ -21,8 +13,6 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 	[NumericRange(1, int.MaxValue)]
 	[Parameter("Histo Size Value", Description = "Defines the size of the histogram rows")]
 	public int RowsSize { get; set; } = 24;
-
-	public const string StyleGroupName = "Style";
 
 	[NumericRange(0, 100)]
 	[Parameter("Histo Width %", Description = "Width of the histogram as a percentage of box width", GroupName = StyleGroupName)]
@@ -124,8 +114,8 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 	protected override Parameters GetParameters(Parameters parameters)
 	{
-		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is RowsLayoutType.Count 
-			? "Histo Rows Count" 
+		parameters[nameof(RowsSize)].Attributes.Name = RowsLayout is RowsLayoutType.Count
+			? "Histo Rows Count"
 			: "Histo Ticks Size";
 
 		if (BoxVisible is false)
@@ -181,10 +171,9 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		_bars = TryGetDataSeriesRequest(this, out var request) ? GetBars(request) : Bars;
 	}
 
-	public static bool TryGetDataSeriesRequest<T>(T script, out BarSeriesRequest request)
-		where T : SymbolScript, ISettings
+	public static bool TryGetDataSeriesRequest<T>(T script, out BarSeriesInfo info) where T : SymbolScript, ISettings
 	{
-		request = null;
+		info = null;
 
 		if (script.SourceData is SourceDataType.Chart)
 		{
@@ -205,15 +194,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 			return false;
 		}
 
-		request = new BarSeriesRequest
-		{
-			Period = barPeriod,
-			SymbolCode = script.Bars.Symbol.Code,
-			Exchange = script.Bars.Symbol.Exchange,
-			InstrumentType = script.Bars.Symbol.Type,
-			Contract = script.Bars.ContractSettings,
-			IsETH = script.Bars.IsETH
-		};
+		info = new BarSeriesInfo { Period = barPeriod };
 
 		return true;
 	}
@@ -283,41 +264,6 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		_area.ToIndex = toIndex;
 	}
 
-	public interface ISettings
-	{
-		SourceDataType SourceData { get; set; }
-		RowsLayoutType RowsLayout { get; set; }
-		int RowsSize { get; set; }
-		double RowsWidthPercent { get; set; }
-		PlacementType RowsPlacement { get; set; }
-		double ValueAreaPercent { get; set; }
-		Color ValueAreaColor { get; set; }
-		Color ValueAreaAboveColor { get; set; }
-		Color ValueAreaBelowColor { get; set; }
-		public bool BoxVisible { get; set; }
-		Color BoxLineColor { get; set; }
-		int BoxLineThickness { get; set; }
-		LineStyle BoxLineStyle { get; set; }
-		bool VahLineVisible { get; set; }
-		Color VahLineColor { get; set; }
-		int VahLineThickness { get; set; }
-		LineStyle VahLineStyle { get; set; }
-		bool ValLineVisible { get; set; }
-		Color ValLineColor { get; set; }
-		int ValLineThickness { get; set; }
-		LineStyle ValLineStyle { get; set; }
-		bool PocLineVisible { get; set; }
-		Color PocLineColor { get; set; }
-		int PocLineThickness { get; set; }
-		LineStyle PocLineStyle { get; set; }
-		bool ShowPrices { get; set; }
-		Font Font { get; set; }
-		bool VwapEnabled { get; set; }
-		Color VwapLineColor { get; set; }
-		int VwapLineThickness { get; set; }
-		LineStyle VwapLineStyle { get; set; }
-	}
-
 	public enum SourceDataType
 	{
 		Chart,
@@ -338,8 +284,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		Right
 	}
 
-	public class Area<T>(T script, int fromIndex, int toIndex, BarSeries bars)
-		where T : SymbolScript, IChartObject, ISettings
+	public class Area<T>(T script, int fromIndex, int toIndex, BarSeries bars) where T : SymbolScript, IChartObject, ISettings
 	{
 		public int FromIndex
 		{
@@ -424,10 +369,11 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 				return;
 			}
 
+			var halfBarWidth = chart.DatapointWidth / 2 * chart.BarWidth;
 			var highY = chartScale.GetYCoordinateByValue(High);
 			var lowY = chartScale.GetYCoordinateByValue(Low);
-			var leftX = chart.GetXCoordinateByBarIndex(FromIndex);
-			var rightX = chart.GetXCoordinateByBarIndex(ToIndex);
+			var leftX = chart.GetXCoordinateByBarIndex(FromIndex) - halfBarWidth;
+			var rightX = chart.GetXCoordinateByBarIndex(ToIndex) + halfBarWidth;
 
 			if (_script.BoxVisible)
 			{
@@ -564,7 +510,7 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private void CalculateRowSize()
 		{
 			_isTickSize = false;
-			
+
 			if (Settings.RowsLayout is RowsLayoutType.Ticks)
 			{
 				_rowSize = TickSize * Settings.RowsSize;
@@ -619,12 +565,10 @@ public class VolumeProfile : Drawing, VolumeProfile.ISettings
 				return;
 			}
 
-			// Bar time offset by 1, temp fix for open time
-			var barOffset = Settings.SourceData is SourceDataType.Chart ? 0 : 1;
-			var fromTime = _script.Bars[Math.Min(_script.Bars.Count - 1, FromIndex + barOffset)]!.Time;
-			var toTime = ToIndex >= _script.Bars.Count - (1 + barOffset)
+			var fromTime = _script.Bars[Math.Min(_script.Bars.Count - 1, FromIndex)]!.Time;
+			var toTime = ToIndex >= _script.Bars.Count - 1
 				? DateTime.MaxValue
-				: _script.Bars[ToIndex + (1 + barOffset)]!.Time;
+				: _script.Bars[ToIndex + 1]!.Time;
 
 			_isHistorical = toTime < DateTime.MaxValue;
 			_range = null;
