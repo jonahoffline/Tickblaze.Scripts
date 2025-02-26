@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace Tickblaze.Scripts.Indicators;
 
@@ -75,6 +76,7 @@ public partial class PivotPoints : Indicator
 
 	private IExchangeSession _lastSession;
 	private double _open, _high, _low, _close;
+	private double _pp, _r1, _r2, _r3, _r4, _s1, _s2, _s3, _s4;
 
 	public PivotPoints()
 	{
@@ -82,6 +84,11 @@ public partial class PivotPoints : Indicator
 		ShortName = "PP";
 		IsOverlay = true;
 		AutoRescale = false;
+	}
+
+	protected override void Initialize()
+	{
+		_pp = _r1 = _r2 = _r3 = _r4 = _s1 = _s2 = _s3 = _s4 = double.NaN;
 	}
 
 	protected override void Calculate(int index)
@@ -117,17 +124,7 @@ public partial class PivotPoints : Indicator
 					plot.IsLineBreak[index] = true;
 				}
 
-				var result = Calculate(_open, _high, _low, _close, Type);
-
-				PP[index] = result.PP;
-				R1[index] = result.R1;
-				R2[index] = result.R2;
-				R3[index] = result.R3;
-				R4[index] = result.R4;
-				S1[index] = result.S1;
-				S2[index] = result.S2;
-				S3[index] = result.S3;
-				S4[index] = result.S4;
+				Calculate(_open, _high, _low, _close, Type);
 			}
 
 			_open = bar.Open;
@@ -140,12 +137,17 @@ public partial class PivotPoints : Indicator
 			_high = Math.Max(_high, bar.High);
 			_low = Math.Min(_low, bar.Low);
 			_close = bar.Close;
-
-			foreach (var plot in Plots)
-			{
-				plot[index] = plot[index - 1];
-			}
 		}
+
+		PP[index] = _pp;
+		R1[index] = _r1;
+		R2[index] = _r2;
+		R3[index] = _r3;
+		R4[index] = _r4;
+		S1[index] = _s1;
+		S2[index] = _s2;
+		S3[index] = _s3;
+		S4[index] = _s4;
 
 		_lastSession = session;
 	}
@@ -208,75 +210,72 @@ public partial class PivotPoints : Indicator
 		return week1 != week2;
 	}
 
-	private static (double PP, double R1, double R2, double R3, double R4, double S1, double S2, double S3, double S4) Calculate(double open, double high, double low, double close, CalculationType type)
+	private void Calculate(double open, double high, double low, double close, CalculationType type)
 	{
-		double pp, r1, r2, r3, r4, s1, s2, s3, s4;
-		pp = r1 = r2 = r3 = r4 = s1 = s2 = s3 = s4 = double.NaN;
+		_pp = _r1 = _r2 = _r3 = _r4 = _s1 = _s2 = _s3 = _s4 = double.NaN;
 
 		switch (type)
 		{
 		case CalculationType.Floor:
 		{
-			pp = (high + low + close) / 3;
-			r1 = 2 * pp - low;
-			r2 = pp + (high - low);
-			r3 = high + 2 * (pp - low);
-			s1 = 2 * pp - high;
-			s2 = pp - (high - low);
-			s3 = low - 2 * (high - pp);
+			_pp = (high + low + close) / 3;
+			_r1 = 2 * _pp - low;
+			_r2 = _pp + (high - low);
+			_r3 = high + 2 * (_pp - low);
+			_s1 = 2 * _pp - high;
+			_s2 = _pp - (high - low);
+			_s3 = low - 2 * (high - _pp);
 			break;
 		}
 		case CalculationType.Woodie:
 		{
-			pp = (high + low + 2 * close) / 4;
-			r1 = 2 * pp - low;
-			r2 = pp + (high - low);
-			r3 = high + 2 * (pp - low);
-			s1 = 2 * pp - high;
-			s2 = pp - (high - low);
-			s3 = low - 2 * (high - pp);
+			_pp = (high + low + 2 * close) / 4;
+			_r1 = 2 * _pp - low;
+			_r2 = _pp + (high - low);
+			_r3 = high + 2 * (_pp - low);
+			_s1 = 2 * _pp - high;
+			_s2 = _pp - (high - low);
+			_s3 = low - 2 * (high - _pp);
 			break;
 		}
 		case CalculationType.Camarilla:
 		{
-			pp = close;
-			r1 = close + (high - low) * 1.1 / 12;
-			r2 = close + (high - low) * 1.1 / 6;
-			r3 = close + (high - low) * 1.1 / 4;
-			r4 = close + (high - low) * 1.1 / 2;
-			s1 = close - (high - low) * 1.1 / 12;
-			s2 = close - (high - low) * 1.1 / 6;
-			s3 = close - (high - low) * 1.1 / 4;
-			s4 = close - (high - low) * 1.1 / 2;
+			_pp = close;
+			_r1 = close + (high - low) * 1.1 / 12;
+			_r2 = close + (high - low) * 1.1 / 6;
+			_r3 = close + (high - low) * 1.1 / 4;
+			_r4 = close + (high - low) * 1.1 / 2;
+			_s1 = close - (high - low) * 1.1 / 12;
+			_s2 = close - (high - low) * 1.1 / 6;
+			_s3 = close - (high - low) * 1.1 / 4;
+			_s4 = close - (high - low) * 1.1 / 2;
 			break;
 		}
 		case CalculationType.TomDeMark:
 		{
 			var x = close > open ? 2 * high + low + close : close < open ? 2 * low + high + close : 2 * close + high + low;
-			pp = x / 4;
-			r1 = x / 2 - low;
-			r2 = high - low + x / 4;
-			r3 = high - low * 2 + x / 2;
-			s1 = x / 2 - high;
-			s2 = low - high + x / 4;
-			s3 = low - high * 2 + x / 2;
+			_pp = x / 4;
+			_r1 = x / 2 - low;
+			_r2 = high - low + x / 4;
+			_r3 = high - low * 2 + x / 2;
+			_s1 = x / 2 - high;
+			_s2 = low - high + x / 4;
+			_s3 = low - high * 2 + x / 2;
 			break;
 		}
 		case CalculationType.Fibonacci:
 		{
-			pp = (high + low + close) / 3;
-			r1 = pp + ((high - low) * 0.382);
-			r2 = pp + ((high - low) * 0.618);
-			r3 = pp + ((high - low) * 1.000);
-			s1 = pp - ((high - low) * 0.382);
-			s2 = pp - ((high - low) * 0.618);
-			s3 = pp - ((high - low) * 1.000);
+			_pp = (high + low + close) / 3;
+			_r1 = _pp + ((high - low) * 0.382);
+			_r2 = _pp + ((high - low) * 0.618);
+			_r3 = _pp + ((high - low) * 1.000);
+			_s1 = _pp - ((high - low) * 0.382);
+			_s2 = _pp - ((high - low) * 0.618);
+			_s3 = _pp - ((high - low) * 1.000);
 			break;
 		}
 		default:
 			break;
 		}
-
-		return (pp, r1, r2, r3, r4, s1, s2, s3, s4);
 	}
 }

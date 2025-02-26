@@ -59,11 +59,6 @@ public sealed class RenkoBxt : BarType
 			var direction = bar.Close.CompareTo(trigUp) == 1 ? 1 : bar.Close.CompareTo(trigDown) == -1 ? -1 : 0;
 			if (direction == 0)
 			{
-				// Since every bar starts with min volume, we need to account for that
-				var barVolume = curLastBar.Volume + bar.Volume;
-				if (addedNewBars)
-					barVolume -= (double) Symbol.MinimumVolume;
-
 				var newHigh = Math.Max(curLastBar.High, bar.High);
 				var newLow = Math.Min(curLastBar.Low, bar.Low);
 				UpdateBar(curLastBar! with
@@ -71,7 +66,7 @@ public sealed class RenkoBxt : BarType
 					High = newHigh,
 					Low = newLow,
 					Close = bar.Close,
-					Volume = barVolume,
+					Volume = curLastBar.Volume + bar.Volume,
 					EndTime = bar.EndTime
 				});
 
@@ -91,9 +86,6 @@ public sealed class RenkoBxt : BarType
 				Close = newClose,
 				EndTime = bar.EndTime
 			});
-
-			// Start a new last bar (give it the minimum possible volume, as zero volume bars aren't displayed at all)
-			addedNewBars = true;
 			
 			var newOpen = newClose - direction * Offset * Symbol.TickSize;
 			newClose = newOpen + direction * BarSize * Symbol.TickSize;
@@ -102,7 +94,7 @@ public sealed class RenkoBxt : BarType
 				newClose = bar.Close;
 			}
 
-			AddBar(curLastBar = new Bar(bar.Time, newOpen, direction == 1 ? newClose : newOpen, direction == 1 ? newOpen : newClose, newClose, (double) Symbol.MinimumVolume)
+			AddBar(curLastBar = new Bar(bar.Time, newOpen, direction == 1 ? newClose : newOpen, direction == 1 ? newOpen : newClose, newClose, 0)
 			{
 				EndTime = bar.EndTime
 			});

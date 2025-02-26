@@ -12,7 +12,7 @@ public partial class AwesomeOscillator : Indicator
 	public Color DownColor { get; set; } = Color.Red;
 
 	[Plot("Result")]
-	public PlotSeries Result { get; set; } = new(Color.Blue, PlotStyle.Histogram);
+	public PlotSeries Result { get; set; } = new(Color.Blue, PlotStyle.Histogram) { IsColorEditorBrowsable = false };
 
 	private SimpleMovingAverage _sma5, _sma34;
 

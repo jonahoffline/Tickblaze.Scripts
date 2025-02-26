@@ -15,7 +15,7 @@ public partial class AbsolutePriceOscillator : Indicator
 	public int SlowPeriod { get; set; } = 26;
 
 	[Plot("Result")]
-	public PlotSeries Result { get; set; } = new(Color.Blue, PlotStyle.Histogram);
+	public PlotSeries Result { get; set; } = new(Color.Blue, PlotStyle.Histogram) { IsColorEditorBrowsable = false };
 
 	private MovingAverage _maLong, _maShort;
 

@@ -324,6 +324,8 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private Symbol Symbol => Bars.Symbol;
 		private double TickSize => Bars.Symbol.TickSize;
 
+		public bool IsVisible => FromIndex <= _script.Chart?.LastVisibleBarIndex && ToIndex >= _script.Chart.FirstVisibleBarIndex;
+
 		private readonly T _script = script ?? throw new ArgumentNullException(nameof(script));
 		private readonly Drawing _drawing = script as Drawing;
 		public BarSeries Bars => bars ?? throw new ArgumentNullException(nameof(bars));
@@ -364,7 +366,7 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 				return;
 			}
 
-			if (FromIndex > chart.LastVisibleBarIndex || ToIndex < chart.FirstVisibleBarIndex)
+			if (!IsVisible)
 			{
 				return;
 			}

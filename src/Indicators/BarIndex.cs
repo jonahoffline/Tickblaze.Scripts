@@ -6,7 +6,7 @@ namespace Tickblaze.Scripts.Indicators;
 public class BarIndex : Indicator
 {
 	[Plot("Bar Index")]
-	public PlotSeries Result { get; set; } = new(Color.Gray, PlotStyle.Histogram);
+	public PlotSeries Result { get; set; } = new(Color.Gray, PlotStyle.Histogram) { IsColorEditorBrowsable = false };
 
 	public BarIndex()
 	{

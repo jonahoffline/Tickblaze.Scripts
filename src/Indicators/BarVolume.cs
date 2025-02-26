@@ -9,7 +9,7 @@ public sealed partial class BarVolume : Indicator
 	public Color DownColor { get; set; } = Color.Red;
 
 	[Plot("Volume")]
-	public PlotSeries Volume { get; set; } = new(Color.Gray, PlotStyle.Histogram);
+	public PlotSeries Volume { get; set; } = new(Color.Gray, PlotStyle.Histogram) { IsColorEditorBrowsable = false };
 
 	public BarVolume()
 	{
