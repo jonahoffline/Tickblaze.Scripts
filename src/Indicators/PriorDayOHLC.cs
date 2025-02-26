@@ -17,6 +17,7 @@ public partial class PriorDayOHLC : Indicator
 	[Plot("Close")]
 	public PlotSeries Close { get; set; } = new(Color.Gray, LineStyle.Dash);
 
+	private bool _isDailyChart;
 	private IExchangeSession _lastSession;
 	private double _open, _high, _low, _close;
 
@@ -27,8 +28,18 @@ public partial class PriorDayOHLC : Indicator
 		IsOverlay = true;
 	}
 
+	protected override void Initialize()
+	{
+		_isDailyChart = Bars.Period.Source is BarPeriod.SourceType.Day;
+	}
+
 	protected override void Calculate(int index)
 	{
+		if (_isDailyChart)
+		{
+			return;
+		}
+
 		if (index > 0 && double.IsNaN(Open[index]))
 		{
 			Open[index] = Open[index - 1];

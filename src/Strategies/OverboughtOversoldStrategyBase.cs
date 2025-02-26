@@ -31,7 +31,7 @@ public abstract class OverboughtOversoldStrategyBase : BaseStopsAndTargetsStrate
 			{
 				TryEnterMarket(OrderDirection.Short, comment);
 			}
-			else if (Position?.Direction is OrderDirection.Short)
+			else if (Position?.Direction is OrderDirection.Long)
 			{
 				ClosePosition(comment);
 			}

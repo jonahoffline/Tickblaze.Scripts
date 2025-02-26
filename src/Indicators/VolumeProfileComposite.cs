@@ -218,6 +218,16 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 		}
 	}
 
+	public override (double Min, double Max) GetYRange()
+	{
+		var visibleAreas = _areas
+			.Where(a => a.IsVisible)
+			.ToArray();
+		return visibleAreas.Length == 0 
+			? base.GetYRange()
+			: (visibleAreas.Min(a => a.Low), visibleAreas.Max(a => a.High));
+	}
+
 	private bool IsNewSession(int index)
 	{
 		var bar = Bars[index];

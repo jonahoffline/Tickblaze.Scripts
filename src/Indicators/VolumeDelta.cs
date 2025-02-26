@@ -16,17 +16,12 @@ public partial class VolumeDelta : Indicator
 	[Parameter("Down", GroupName = "Colors")]
 	public Color DownColor { get; set; } = "#ff6347";
 
-	[Plot("Open")]
-	public PlotSeries Open { get; set; } = new("#00000000", PlotStyle.Dot, 1);
-
-	[Plot("High")]
-	public PlotSeries High { get; set; } = new("#00000000", PlotStyle.Dot, 1);
-
-	[Plot("Low")]
-	public PlotSeries Low { get; set; } = new("#00000000", PlotStyle.Dot, 1);
-
 	[Plot("Close")]
-	public PlotSeries Close { get; set; } = new("#00000000", PlotStyle.Dot, 1);
+	public PlotSeries Close { get; set; } = new("#00000000", PlotStyle.Dot, 1) { IsEditorBrowsable = false };
+
+	public DataSeries Open { get; set; }
+	public DataSeries High { get; set; }
+	public DataSeries Low { get; set; }
 
 	public enum AnchorPeriodType
 	{
@@ -61,6 +56,10 @@ public partial class VolumeDelta : Indicator
 
 	protected override void Initialize()
 	{
+		Open = new();
+		High = new();
+		Low = new();
+
 		var barSeriesInfo = new BarSeriesInfo
 		{
 			Period = Bars.Period.Source switch
@@ -69,7 +68,7 @@ public partial class VolumeDelta : Indicator
 				BarPeriod.SourceType.Bid or
 				BarPeriod.SourceType.Trade => new(Bars.Period.Source, BarPeriod.PeriodType.Tick, 1),
 				BarPeriod.SourceType.Minute => new(BarPeriod.SourceType.Trade, Bars.Period.Size <= 15 ? BarPeriod.PeriodType.Second : BarPeriod.PeriodType.Minute, 1),
-				BarPeriod.SourceType.Day => new(BarPeriod.SourceType.Trade, BarPeriod.PeriodType.Minute, 5),
+				BarPeriod.SourceType.Day => new(BarPeriod.SourceType.Minute, BarPeriod.PeriodType.Minute, 5),
 				_ => throw new NotImplementedException(),
 			}
 		};
@@ -112,7 +111,7 @@ public partial class VolumeDelta : Indicator
 							AnchorPeriodType.Weekly => IsNewWeek(lastSessionStart, sessionStart),
 							AnchorPeriodType.Monthly => lastSessionStart.Month != sessionStart.Month,
 							AnchorPeriodType.Yearly => lastSessionStart.Year < sessionStart.Year,
-							_ => throw new ArgumentOutOfRangeException()
+							_ => throw new NotImplementedException()
 						};
 					}
 
@@ -127,12 +126,14 @@ public partial class VolumeDelta : Indicator
 			}
 
 			Close[index] += isUp ? volume : -volume;
+			Close.Colors[index] = Close[index] > 0 ? UpColor : DownColor;
+			Close.IsLineBreak[index] = true;
+
 			High[index] = Math.Max(High[index], Close[index]);
 			Low[index] = Math.Min(Low[index], Close[index]);
 
 			_lastDataPoint = new(bar.Close, isUp);
 		}
-
 	}
 
 	private int GetBarIndex(DateTime time)
@@ -187,5 +188,19 @@ public partial class VolumeDelta : Indicator
 				context.DrawLine(new Point(x, openY), new Point(x, closeY), color, bodyThickness);
 			}
 		}
+	}
+
+	public override (double Min, double Max) GetYRange()
+	{
+		var min = double.MaxValue;
+		var max = double.MinValue;
+
+		for (var index = Chart.FirstVisibleBarIndex; index <= Chart.LastVisibleBarIndex; index++)
+		{
+			max = Math.Max(max, High[index]);
+			min = Math.Min(min, Low[index]);
+		}
+
+		return (min, max);
 	}
 }
