@@ -1033,6 +1033,45 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.BarType.UpdateBar
   fullName: Tickblaze.Scripts.Api.Bases.BarType.UpdateBar
   nameWithType: BarType.UpdateBar
+- uid: Tickblaze.Scripts.Api.Bases.CommissionSimulator
+  name: CommissionSimulator
+  href: api/Tickblaze.Scripts.Api.Bases.CommissionSimulator.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.CommissionSimulator
+  fullName: Tickblaze.Scripts.Api.Bases.CommissionSimulator
+  nameWithType: CommissionSimulator
+- uid: Tickblaze.Scripts.Api.Bases.CommissionSimulator.#ctor
+  name: CommissionSimulator()
+  href: api/Tickblaze.Scripts.Api.Bases.CommissionSimulator.html#Tickblaze_Scripts_Api_Bases_CommissionSimulator__ctor
+  commentId: M:Tickblaze.Scripts.Api.Bases.CommissionSimulator.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Bases.CommissionSimulator.CommissionSimulator()
+  fullName.vb: Tickblaze.Scripts.Api.Bases.CommissionSimulator.New()
+  nameWithType: CommissionSimulator.CommissionSimulator()
+  nameWithType.vb: CommissionSimulator.New()
+- uid: Tickblaze.Scripts.Api.Bases.CommissionSimulator.#ctor*
+  name: CommissionSimulator
+  href: api/Tickblaze.Scripts.Api.Bases.CommissionSimulator.html#Tickblaze_Scripts_Api_Bases_CommissionSimulator__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.CommissionSimulator.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Bases.CommissionSimulator.CommissionSimulator
+  fullName.vb: Tickblaze.Scripts.Api.Bases.CommissionSimulator.New
+  nameWithType: CommissionSimulator.CommissionSimulator
+  nameWithType.vb: CommissionSimulator.New
+- uid: Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate(Tickblaze.Scripts.Api.Models.Symbol,System.Double,System.Double,System.Boolean)
+  name: Calculate(Symbol, double, double, bool)
+  href: api/Tickblaze.Scripts.Api.Bases.CommissionSimulator.html#Tickblaze_Scripts_Api_Bases_CommissionSimulator_Calculate_Tickblaze_Scripts_Api_Models_Symbol_System_Double_System_Double_System_Boolean_
+  commentId: M:Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate(Tickblaze.Scripts.Api.Models.Symbol,System.Double,System.Double,System.Boolean)
+  name.vb: Calculate(Symbol, Double, Double, Boolean)
+  fullName: Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate(Tickblaze.Scripts.Api.Models.Symbol, double, double, bool)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate(Tickblaze.Scripts.Api.Models.Symbol, Double, Double, Boolean)
+  nameWithType: CommissionSimulator.Calculate(Symbol, double, double, bool)
+  nameWithType.vb: CommissionSimulator.Calculate(Symbol, Double, Double, Boolean)
+- uid: Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate*
+  name: Calculate
+  href: api/Tickblaze.Scripts.Api.Bases.CommissionSimulator.html#Tickblaze_Scripts_Api_Bases_CommissionSimulator_Calculate_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate
+  fullName: Tickblaze.Scripts.Api.Bases.CommissionSimulator.Calculate
+  nameWithType: CommissionSimulator.Calculate
 - uid: Tickblaze.Scripts.Api.Bases.Drawing
   name: Drawing
   href: api/Tickblaze.Scripts.Api.Bases.Drawing.html
@@ -1678,6 +1717,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.DisplayName
   fullName: Tickblaze.Scripts.Api.Bases.Indicator.DisplayName
   nameWithType: Indicator.DisplayName
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.GetYRange
+  name: GetYRange()
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_GetYRange
+  commentId: M:Tickblaze.Scripts.Api.Bases.Indicator.GetYRange
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.GetYRange()
+  nameWithType: Indicator.GetYRange()
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.GetYRange*
+  name: GetYRange
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_GetYRange_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.GetYRange
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.GetYRange
+  nameWithType: Indicator.GetYRange
 - uid: Tickblaze.Scripts.Api.Bases.Indicator.IsOverlay
   name: IsOverlay
   href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_IsOverlay
@@ -7187,13 +7238,13 @@ references:
   fullName: Tickblaze.Scripts.Api.Models.Color.Transparent
   nameWithType: Color.Transparent
 - uid: Tickblaze.Scripts.Api.Models.Color.TryParse(System.String,System.String,Tickblaze.Scripts.Api.Models.Color@)
-  name: TryParse(string, string, out Color)
+  name: TryParse(string, string?, out Color)
   href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_TryParse_System_String_System_String_Tickblaze_Scripts_Api_Models_Color__
   commentId: M:Tickblaze.Scripts.Api.Models.Color.TryParse(System.String,System.String,Tickblaze.Scripts.Api.Models.Color@)
   name.vb: TryParse(String, String, Color)
-  fullName: Tickblaze.Scripts.Api.Models.Color.TryParse(string, string, out Tickblaze.Scripts.Api.Models.Color)
+  fullName: Tickblaze.Scripts.Api.Models.Color.TryParse(string, string?, out Tickblaze.Scripts.Api.Models.Color)
   fullName.vb: Tickblaze.Scripts.Api.Models.Color.TryParse(String, String, Tickblaze.Scripts.Api.Models.Color)
-  nameWithType: Color.TryParse(string, string, out Color)
+  nameWithType: Color.TryParse(string, string?, out Color)
   nameWithType.vb: Color.TryParse(String, String, Color)
 - uid: Tickblaze.Scripts.Api.Models.Color.TryParse*
   name: TryParse
@@ -8477,6 +8528,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.PlotSeries.FurthestUpdateIndex
   fullName: Tickblaze.Scripts.Api.PlotSeries.FurthestUpdateIndex
   nameWithType: PlotSeries.FurthestUpdateIndex
+- uid: Tickblaze.Scripts.Api.PlotSeries.IsColorEditorBrowsable
+  name: IsColorEditorBrowsable
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries_IsColorEditorBrowsable
+  commentId: P:Tickblaze.Scripts.Api.PlotSeries.IsColorEditorBrowsable
+  fullName: Tickblaze.Scripts.Api.PlotSeries.IsColorEditorBrowsable
+  nameWithType: PlotSeries.IsColorEditorBrowsable
+- uid: Tickblaze.Scripts.Api.PlotSeries.IsColorEditorBrowsable*
+  name: IsColorEditorBrowsable
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries_IsColorEditorBrowsable_
+  commentId: Overload:Tickblaze.Scripts.Api.PlotSeries.IsColorEditorBrowsable
+  fullName: Tickblaze.Scripts.Api.PlotSeries.IsColorEditorBrowsable
+  nameWithType: PlotSeries.IsColorEditorBrowsable
 - uid: Tickblaze.Scripts.Api.PlotSeries.IsEditorBrowsable
   name: IsEditorBrowsable
   href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries_IsEditorBrowsable
