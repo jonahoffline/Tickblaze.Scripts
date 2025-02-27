@@ -5,12 +5,14 @@
       "src": [
         {
           "files": [
-			"src/Tickblaze.Core.dll",
+            "src/Tickblaze.Core.dll",
             "src/Tickblaze.Scripts.Api.dll"
           ]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "memberLayout": "samePage",
+      "namespaceLayout": "flattened"
     }
   ],
   "build": {
@@ -45,6 +47,9 @@
       "_appFaviconPath": "images/favicon.ico",
       "_enableSearch": true,
       "pdf": false
-    }
+    },
+    "postProcessors": [
+      "MyProcessor"
+    ]
   }
 }

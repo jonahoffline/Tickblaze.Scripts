@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Docfx.Plugins" Version="2.78.1" />
+    <PackageReference Include="System.Composition" Version="8.0.0" />
+    <PackageReference Include="Tickblaze.Scripts.Api" Version="2.0.0.51-pre.2">
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+  </ItemGroup>
+
+  <Target Name="CopyToPlugins" AfterTargets="Build">
+    <PropertyGroup>
+      <PluginsDir>..\docs\template\plugins\</PluginsDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PluginsDir)" />
+    <ItemGroup>
+      <OutputFiles Include="$(OutputPath)\$(TargetName).*" />
+      <OutputFiles Include="$(PkgTickblaze_Scripts_Api)\lib\net9.0\Tickblaze.Scripts.Api.dll" />
+      <OutputFiles Include="$(PkgTickblaze_Scripts_Api)\lib\net9.0\Tickblaze.Core.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(PluginsDir)" />
+  </Target>
+
+</Project>

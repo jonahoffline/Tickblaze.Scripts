@@ -365,4 +365,4 @@ MigrationBackup/
 docs/_site/
 docs/api/
 docs/src/
-/docs/template/plugins
+docs/template/plugins
