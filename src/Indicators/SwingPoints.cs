@@ -29,10 +29,10 @@ public partial class SwingPoints : Indicator
 	[Parameter("Swing Dot Size", Description = "Size of the swing dots")]
 	public int SwingDotSize { get; set; } = 6;
 
-	[Parameter("Swing High Dot Color", Description = "Color of the swing high dots")]
+	[Parameter("Swing High Dot Color", Description = "Color of the swing high dots",ShowInSignature = NullableBool.False)]
 	public Color SwingHighColor { get; set; } = Color.Cyan;
 
-	[Parameter("Swing Low Dot Color", Description = "Color of the swing low dots")]
+	[Parameter("Swing Low Dot Color", Description = "Color of the swing low dots",ShowInSignature = NullableBool.False)]
 	public Color SwingLowColor { get; set; } = Color.Yellow;
 
 	protected override void Initialize()

@@ -18,7 +18,7 @@ public partial class PivotPoints : Indicator
 	[Parameter("Display", GroupName = LabelsGroupName)]
 	public LabelDisplayType LabelsDisplay { get; set; } = LabelDisplayType.Hidden;
 
-	[Parameter("Font", GroupName = LabelsGroupName)]
+	[Parameter("Font", GroupName = LabelsGroupName,ShowInSignature = NullableBool.False)]
 	public Font LabelsFont { get; set; } = new("Arial", 12);
 
 	[Plot("PP")]

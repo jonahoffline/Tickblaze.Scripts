@@ -31,79 +31,79 @@ public partial class VolumeProfileComposite : Indicator, VolumeProfile.ISettings
 	[Parameter("Value Area %", Description = "Percentage of total volume considered in the value area", GroupName = StyleGroupName)]
 	public double ValueAreaPercent { get; set; } = 70;
 
-	[Parameter("Value Area Color", Description = "Color of the value area", GroupName = StyleGroupName)]
+	[Parameter("Value Area Color", Description = "Color of the value area", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color ValueAreaColor { get; set; } = "#bf808080";
 
-	[Parameter("Above Value Area Color", Description = "Color of area above the value area", GroupName = StyleGroupName)]
+	[Parameter("Above Value Area Color", Description = "Color of area above the value area", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color ValueAreaAboveColor { get; set; } = "#80ff0000";
 
-	[Parameter("Below Value Area Color", Description = "Color of area below the value area", GroupName = StyleGroupName)]
+	[Parameter("Below Value Area Color", Description = "Color of area below the value area", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color ValueAreaBelowColor { get; set; } = "#80ff0000";
 
 	[Parameter("Show Outline?", Description = "Show/Hide the outline", GroupName = StyleGroupName)]
 	public bool BoxVisible { get; set; }
 
-	[Parameter("Outline Color", Description = "Color of the volume profile outline box", GroupName = StyleGroupName)]
+	[Parameter("Outline Color", Description = "Color of the volume profile outline box", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color BoxLineColor { get; set; } = "#80ffffff";
 
-	[Parameter("Outline Thickness", Description = "Thickness of the volume profile outline box", GroupName = StyleGroupName)]
+	[Parameter("Outline Thickness", Description = "Thickness of the volume profile outline box", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public int BoxLineThickness { get; set; } = 1;
 
-	[Parameter("Outline Style", Description = "Style of the volume profile outline box (solid, dashed, etc.)", GroupName = StyleGroupName)]
+	[Parameter("Outline Style", Description = "Style of the volume profile outline box (solid, dashed, etc.)", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public LineStyle BoxLineStyle { get; set; } = LineStyle.Dot;
 
 	[Parameter("Show VAH Line?", Description = "Show/Hide the Value Area High (VAH) line", GroupName = StyleGroupName)]
 	public bool VahLineVisible { get; set; } = false;
 
-	[Parameter("VAH Line Color", Description = "Color of the Value Area High (VAH) line", GroupName = StyleGroupName)]
+	[Parameter("VAH Line Color", Description = "Color of the Value Area High (VAH) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color VahLineColor { get; set; } = Color.White;
 
-	[Parameter("VAH Line Thickness", Description = "Thickness of the Value Area High (VAH) line", GroupName = StyleGroupName)]
+	[Parameter("VAH Line Thickness", Description = "Thickness of the Value Area High (VAH) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public int VahLineThickness { get; set; } = 2;
 
-	[Parameter("VAH Line Style", Description = "Style of the Value Area High (VAH) line", GroupName = StyleGroupName)]
+	[Parameter("VAH Line Style", Description = "Style of the Value Area High (VAH) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public LineStyle VahLineStyle { get; set; } = LineStyle.Solid;
 
 	[Parameter("Show VAL Line?", Description = "Show/Hide the Value Area Low (VAL) line", GroupName = StyleGroupName)]
 	public bool ValLineVisible { get; set; } = false;
 
-	[Parameter("VAL Line Color", Description = "Color of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
+	[Parameter("VAL Line Color", Description = "Color of the Value Area Low (VAL) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color ValLineColor { get; set; } = Color.White;
 
-	[Parameter("VAL Line Thickness", Description = "Thickness of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
+	[Parameter("VAL Line Thickness", Description = "Thickness of the Value Area Low (VAL) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public int ValLineThickness { get; set; } = 2;
 
-	[Parameter("VAL Line Style", Description = "Style of the Value Area Low (VAL) line", GroupName = StyleGroupName)]
+	[Parameter("VAL Line Style", Description = "Style of the Value Area Low (VAL) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public LineStyle ValLineStyle { get; set; } = LineStyle.Solid;
 
 	[Parameter("Show POC Line?", Description = "Show/Hide the Point of Control (POC) line", GroupName = StyleGroupName)]
 	public bool PocLineVisible { get; set; } = true;
 
-	[Parameter("POC Line Color", Description = "Color of the Point of Control (POC) line", GroupName = StyleGroupName)]
+	[Parameter("POC Line Color", Description = "Color of the Point of Control (POC) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color PocLineColor { get; set; } = Color.Yellow;
 
-	[Parameter("POC Line Thickness", Description = "Thickness of the Point of Control (POC) line", GroupName = StyleGroupName)]
+	[Parameter("POC Line Thickness", Description = "Thickness of the Point of Control (POC) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public int PocLineThickness { get; set; } = 2;
 
-	[Parameter("POC Line Style", Description = "Style of the Point of Control (POC) line", GroupName = StyleGroupName)]
+	[Parameter("POC Line Style", Description = "Style of the Point of Control (POC) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public LineStyle PocLineStyle { get; set; } = LineStyle.Solid;
 
 	[Parameter("Show VAH/VAL/POC Prices?", Description = "Displays prices for VAH, VAL, and POC levels", GroupName = StyleGroupName)]
 	public bool ShowPrices { get; set; } = false;
 
-	[Parameter("Font", Description = "Font for displaying VAH/VAL/POC prices", GroupName = StyleGroupName)]
+	[Parameter("Font", Description = "Font for displaying VAH/VAL/POC prices", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Font Font { get; set; } = new("Arial", 12);
 
 	[Parameter("VWAP Enabled?", Description = "Show/Hide the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
 	public bool VwapEnabled { get; set; } = false;
 
-	[Parameter("VWAP Line Color", Description = "Color of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
+	[Parameter("VWAP Line Color", Description = "Color of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public Color VwapLineColor { get; set; } = Color.Blue;
 
-	[Parameter("VWAP Line Thickness", Description = "Thickness of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
+	[Parameter("VWAP Line Thickness", Description = "Thickness of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public int VwapLineThickness { get; set; } = 1;
 
-	[Parameter("VWAP Line Style", Description = "Style of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName)]
+	[Parameter("VWAP Line Style", Description = "Style of the Volume Weighted Average Price (VWAP) line", GroupName = StyleGroupName,ShowInSignature = NullableBool.False)]
 	public LineStyle VwapLineStyle { get; set; } = LineStyle.Solid;
 
 	public enum CompositionType

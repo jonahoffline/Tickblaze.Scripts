@@ -10,10 +10,10 @@ public partial class VolumeDelta : Indicator
 	[Parameter("Anchor period")]
 	public AnchorPeriodType AnchorPeriod { get; set; } = AnchorPeriodType.Daily;
 
-	[Parameter("Up", GroupName = "Colors")]
+	[Parameter("Up", GroupName = "Colors",ShowInSignature = NullableBool.False)]
 	public Color UpColor { get; set; } = "#008b8b";
 
-	[Parameter("Down", GroupName = "Colors")]
+	[Parameter("Down", GroupName = "Colors",ShowInSignature = NullableBool.False)]
 	public Color DownColor { get; set; } = "#ff6347";
 
 	[Plot("Close")]

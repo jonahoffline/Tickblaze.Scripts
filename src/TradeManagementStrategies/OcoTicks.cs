@@ -103,7 +103,7 @@ public class OcoTicks : TradeManagementStrategy
 		var stopPrice = Position.EntryPrice + BreakevenOffsetTicks * DirectionAsInt * Symbol.TickSize;
 		foreach (var group in _orderData.Where(d => d.StopLoss != null))
 		{
-			ModifyOrder(group.StopLoss, group.StopLoss.Quantity, stopPrice, null);
+			ModifyOrder(group.StopLoss, group.Entry.Quantity, stopPrice, null);
 		}
 	}
 
@@ -135,7 +135,7 @@ public class OcoTicks : TradeManagementStrategy
 			.Where(x => x.SizePercent != 0 && x.Ticks != 0)
 			.ToList();
 
-		if (takeProfits.Count == 2 && takeProfits[0].SizePercent >= 100)
+		if (takeProfits is [{ SizePercent: >= 100 }, _])
 		{
 			takeProfits.RemoveAt(1);
 		}
@@ -201,11 +201,11 @@ public class OcoTicks : TradeManagementStrategy
 
 			if (spec.TakeProfitTicks != null)
 			{
-				_orderData[^1].ProfitTarget = SetTakeProfit(_orderData[^1].Entry, order.Price + spec.TakeProfitTicks.Value * Symbol.TickSize * DirectionAsInt);
+				_orderData[^1].ProfitTarget = SetTakeProfitTicks(_orderData[^1].Entry, spec.TakeProfitTicks.Value);
 				_orderData[^1].ProfitTargetTicks = spec.TakeProfitTicks.Value;
 			}
 
-			_orderData[^1].StopLoss = SetStopLoss(_orderData[^1].Entry, order.Price - StopLossTicks * Symbol.TickSize * DirectionAsInt);
+			_orderData[^1].StopLoss = SetStopLossTicks(_orderData[^1].Entry, StopLossTicks);
 			_orderData[^1].StopLossTicks = StopLossTicks;
 		}
 
@@ -244,16 +244,16 @@ public class OcoTicks : TradeManagementStrategy
 			{
 				_orderData.Remove(orderData);
 			}
-			else
+			else if (order.Status == OrderStatus.Pending)
 			{
 				if (orderData.StopLoss?.Status is OrderStatus.Pending)
 				{
-					ModifyOrder(orderData.StopLoss, orderData.StopLoss.Quantity, entry.Price - StopLossTicks * Symbol.TickSize * direction, null);
+					ModifyOrder(orderData.StopLoss, orderData.Entry.Quantity, entry.Price - StopLossTicks * Symbol.TickSize * direction, null);
 				}
 
 				if (orderData.ProfitTarget?.Status is OrderStatus.Pending)
 				{
-					ModifyOrder(orderData.ProfitTarget, orderData.ProfitTarget.Quantity, null, entry.Price + orderData.ProfitTargetTicks * Symbol.TickSize * direction);
+					ModifyOrder(orderData.ProfitTarget, orderData.Entry.Quantity, null, entry.Price + orderData.ProfitTargetTicks * Symbol.TickSize * direction);
 				}
 			}
 		}

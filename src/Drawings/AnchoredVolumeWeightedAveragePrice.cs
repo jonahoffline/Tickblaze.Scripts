@@ -17,7 +17,7 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	public bool BandEnabled1 { get; set; } = false;
 
 	[Parameter("1. Band deviations"), NumericRange(0, double.MaxValue)]
-	public double BandMultiplier1 { get; set; } = 0.75;
+	public double BandMultiplier1 { get; set; } = 1;
 
 	[Parameter("1. Band Color")]
 	public Color BandColor1 { get; set; } = Color.Green;
@@ -32,7 +32,7 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	public bool BandEnabled2 { get; set; } = false;
 
 	[Parameter("2. Band deviations"), NumericRange(0, double.MaxValue)]
-	public double BandMultiplier2 { get; set; } = 1.75;
+	public double BandMultiplier2 { get; set; } = 2;
 
 	[Parameter("2. Band Color")]
 	public Color BandColor2 { get; set; } = Color.Yellow;
@@ -47,7 +47,7 @@ public class AnchoredVolumeWeightedAveragePrice : Drawing
 	public bool BandEnabled3 { get; set; } = false;
 
 	[Parameter("3. Band deviations"), NumericRange(0, double.MaxValue)]
-	public double BandMultiplier3 { get; set; } = 2.75;
+	public double BandMultiplier3 { get; set; } = 3;
 
 	[Parameter("3. Band Color")]
 	public Color BandColor3 { get; set; } = Color.Red;
