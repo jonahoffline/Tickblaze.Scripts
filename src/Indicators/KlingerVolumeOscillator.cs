@@ -5,10 +5,10 @@
 /// </summary>
 public partial class KlingerVolumeOscillator : Indicator
 {
-	[Parameter("Up Color")]
+	[Parameter("Up Color",ShowInSignature = NullableBool.False)]
 	public Color UpColor { get; set; } = Color.Green;
 
-	[Parameter("Down Color")]
+	[Parameter("Down Color",ShowInSignature = NullableBool.False)]
 	public Color DownColor { get; set; } = Color.Red;
 
 	[Plot("Result")]

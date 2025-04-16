@@ -20,10 +20,10 @@ public partial class MovingAverageConvergenceDivergence : Indicator
 	[Parameter("Signal Period"), NumericRange(1, int.MaxValue)]
 	public int SignalPeriod { get; set; } = 9;
 
-	[Parameter("Positive Color")]
+	[Parameter("Positive Color",ShowInSignature = NullableBool.False)]
 	public Color PositiveColor { get; set; } = Color.Green;
 
-	[Parameter("Negative Color")]
+	[Parameter("Negative Color",ShowInSignature = NullableBool.False)]
 	public Color NegativeColor { get; set; } = Color.Red;
 
 	[Plot("Histogram")]

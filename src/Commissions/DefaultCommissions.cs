@@ -2,41 +2,49 @@
 
 public class DefaultCommissions : CommissionSimulator
 {
-	private const string PerOrderDescription = "The commission paid per submitted order";
-
-	private const string PerUnitDescription = "The commission paid on an order per each one quantity bought or sold";
-
-	[Parameter("Commission Per Order", GroupName = "Stocks", Description = PerOrderDescription)]
+	[Parameter("Min $ Per-Order", GroupName = "Stocks", Description = "Minimum commission amount per-order")]
 	[NumericRange(0, double.MaxValue)]
-	public double StockPerOrderCommission { get; set; } = 10;
+	public double StockMinCommissionsPerOrder { get; set; } = 0;
 
-	[Parameter("Commission Per Quantity", GroupName = "Stocks", Description = PerUnitDescription)]
+	[Parameter("Max $ Per-Order", GroupName = "Stocks", Description = "Maximum commission charge per-order")]
 	[NumericRange(0, double.MaxValue)]
-	public double StockPerUnitCommission { get; set; } = 0.01;
+	public double StockMaxCommissionsPerOrder { get; set; } = 100_000_000;
 
-	[Parameter("Commission Per Order", GroupName = "Futures", Description = PerOrderDescription)]
+	[Parameter("$ Per-Side, Per-share", GroupName = "Stocks", Description = "Commission dollar amount per-order, per-share traded")]
 	[NumericRange(0, double.MaxValue)]
-	public double FuturesPerOrderCommission { get; set; } = 0.25;
+	public double StockPerSidePerUnitCommission { get; set; } = 1;
 
-	[Parameter("Commission Per Quantity", GroupName = "Futures", Description = PerUnitDescription)]
+	[Parameter("Max % of Order", GroupName = "Stocks", Description = "Maximum commission amount as a percentage of the total order")]
 	[NumericRange(0, double.MaxValue)]
-	public double FuturesPerUnitCommission { get; set; } = 1.5;
+	public double StockMaxCommissionsPerOrderAsPercent { get; set; } = 1000;
 
-	[Parameter("Commission Per Order", GroupName = "Forex", Description = PerOrderDescription)]
+	[Parameter("$ Per-Side, Per-Contract", GroupName = "Futures", Description = "Commission amount per-order, per-contract")]
 	[NumericRange(0, double.MaxValue)]
-	public double ForexPerOrderCommission { get; set; } = 1;
+	public double FuturesPerSidePerContractCommission { get; set; } = 2;
 
-	[Parameter("Commission Per Quantity", GroupName = "Forex", Description = PerUnitDescription)]
+	[Parameter("Min $ Per-Order", GroupName = "Forex", Description = "Minimum commission amount per-order")]
 	[NumericRange(0, double.MaxValue)]
-	public double ForexPerUnitCommission { get; set; } = 0.00002;
+	public double ForexMinCommissionsPerOrder { get; set; } = 0;
 
-	[Parameter("Commission Per Order", GroupName = "Crypto", Description = PerOrderDescription)]
+	[Parameter("Max $ Per-Order", GroupName = "Forex", Description = "Maximum commission charge per-order")]
 	[NumericRange(0, double.MaxValue)]
-	public double CryptoPerOrderCommission { get; set; } = 1;
+	public double ForexMaxCommissionsPerOrder { get; set; } = 100_000_000;
 
-	[Parameter("Commission Per Quantity", GroupName = "Crypto", Description = PerUnitDescription)]
+	[Parameter("$ Per-Side, Per-Lot", GroupName = "Forex", Description = "Commission dollar amount per-order, per-lot traded")]
 	[NumericRange(0, double.MaxValue)]
-	public double CryptoPerUnitCommission { get; set; } = 0.01;
+	public double ForexPerSidePerUnitCommission { get; set; } = 0;
+
+	[Parameter("Max % of Order", GroupName = "Forex", Description = "Maximum commission amount as a percentage of the total order")]
+	[NumericRange(0, double.MaxValue)]
+	public double ForexMaxCommissionsPerOrderAsPercent { get; set; } = 1000;
+
+	[Parameter("Minimum $ Commission", GroupName = "Crypto", Description = "Minimum commission amount per-order")]
+	[NumericRange(0, double.MaxValue)]
+	public double MinCryptoCommission { get; set; } = 0;
+
+	[Parameter("% of Order", GroupName = "Crypto", Description = "Commission amount as a percentage of the total order")]
+	[NumericRange(0, double.MaxValue)]
+	public double PercentCryptoCommission { get; set; } = 0.15;
 
 	public DefaultCommissions()
 	{
@@ -46,24 +54,23 @@ public class DefaultCommissions : CommissionSimulator
 
 	public override double Calculate(Symbol symbolInfo, double fillQuantity, double fillPrice, bool isFirstFill)
 	{
-		var perOrderCommission = symbolInfo.Type switch
+		return symbolInfo.Type switch
 		{
-			InstrumentType.ETF or InstrumentType.Stock or InstrumentType.Index => StockPerOrderCommission,
-			InstrumentType.Forex => ForexPerOrderCommission,
-			InstrumentType.Future => FuturesPerOrderCommission,
-			InstrumentType.CryptoCurrency => CryptoPerOrderCommission,
+			InstrumentType.ETF or InstrumentType.Stock or InstrumentType.Index => Math.Max(StockMinCommissionsPerOrder, new[]
+			{
+				StockMaxCommissionsPerOrder, 
+				fillQuantity * fillPrice * StockMaxCommissionsPerOrderAsPercent / 100, 
+				StockPerSidePerUnitCommission * fillQuantity
+			}.Min()),
+			InstrumentType.Forex => Math.Max(ForexMinCommissionsPerOrder, new[]
+			{
+				ForexMaxCommissionsPerOrder, 
+				fillQuantity * fillPrice * ForexMaxCommissionsPerOrderAsPercent / 100,
+				ForexPerSidePerUnitCommission * fillQuantity / 1e5
+			}.Min()),
+			InstrumentType.Future => FuturesPerSidePerContractCommission * fillQuantity,
+			InstrumentType.CryptoCurrency => Math.Max(MinCryptoCommission, symbolInfo.PointValue * fillPrice * fillQuantity * PercentCryptoCommission / 100),
 			_ => 0
 		};
-
-		var perQuantityCommission = symbolInfo.Type switch
-		{
-			InstrumentType.ETF or InstrumentType.Stock or InstrumentType.Index => StockPerUnitCommission,
-			InstrumentType.Forex => ForexPerUnitCommission,
-			InstrumentType.Future => FuturesPerUnitCommission,
-			InstrumentType.CryptoCurrency => CryptoPerUnitCommission,
-			_ => 0
-		};
-		
-		return perOrderCommission + fillQuantity * perQuantityCommission;
 	}
 }
