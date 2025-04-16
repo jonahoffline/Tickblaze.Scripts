@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IMetadata | Tickblaze </title>
+      <title>Enum NullableBool | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IMetadata | Tickblaze ">
+      <meta name="title" content="Enum NullableBool | Tickblaze ">
       
-      <meta name="description" content="Defines metadata properties for a script, including name, description, and related metadata.">
+      
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,25 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata">
+        <article data-uid="Tickblaze.Core.NullableBool">
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IMetadata" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata" class="text-break">
-Interface IMetadata  
+
+  <h1 id="Tickblaze_Core_NullableBool" data-uid="Tickblaze.Core.NullableBool" class="text-break">
+Enum NullableBool  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Tickblaze.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines metadata properties for a script, including name, description, and related metadata.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMetadata</code></pre>
+    <pre><code class="lang-csharp hljs">public enum NullableBool</code></pre>
   </div>
 
 
@@ -119,184 +119,22 @@ Interface IMetadata
   <div>
       <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
   </div>
+  <div>
+      <a class="xref" href="Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_ToNullable_Tickblaze_Core_NullableBool_">EnumExtensions.ToNullable(NullableBool)</a>
+  </div>
   </dd></dl>
   </details>
 
-
-
-
-
-  <h2 class="section" id="properties">Properties
+  <h2 id="fields">Fields
 </h2>
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IMetadata_Description_" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.Description*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IMetadata_Description" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.Description">
-  Description
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>A description of the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Description { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="System.String" text="string"/></dt>
+    <dt id="Tickblaze_Core_NullableBool_False"><code>False = 2</code></dt>
+    <dd></dd>
+    <dt id="Tickblaze_Core_NullableBool_Null"><code>Null = 0</code></dt>
+    <dd></dd>
+    <dt id="Tickblaze_Core_NullableBool_True"><code>True = 1</code></dt>
     <dd></dd>
   </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IMetadata_Metadata_" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.Metadata*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IMetadata_Metadata" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.Metadata">
-  Metadata
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Associated metadata for the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Metadata Metadata { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Models.Metadata" text="Metadata"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IMetadata_Name_" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.Name*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IMetadata_Name" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.Name">
-  Name
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The name of the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.String" text="string"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IMetadata_ProductCodeAliases_" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IMetadata_ProductCodeAliases" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases">
-  ProductCodeAliases
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string[] ProductCodeAliases { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IMetadata_ShortName_" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.ShortName*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IMetadata_ShortName" data-uid="Tickblaze.Scripts.Api.Interfaces.IMetadata.ShortName">
-  ShortName
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The short name of the script.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string ShortName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.String" text="string"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
 
 
 

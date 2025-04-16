@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class SymbolScript | Tickblaze </title>
+      <title>Class AddOn | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class SymbolScript | Tickblaze ">
+      <meta name="title" content="Class AddOn | Tickblaze ">
       
-      <meta name="description" content="Represents a base class for scripts that can interact with chart data, parameters, and initialization processes.">
+      <meta name="description" content="Represents a base class for add on scripts.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript">
+        <article data-uid="Tickblaze.Scripts.Api.Bases.AddOn">
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Bases_SymbolScript" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript" class="text-break">
-Class SymbolScript  
+  <h1 id="Tickblaze_Scripts_Api_Bases_AddOn" data-uid="Tickblaze.Scripts.Api.Bases.AddOn" class="text-break">
+Class AddOn  
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class SymbolScript
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a base class for scripts that can interact with chart data, parameters, and initialization processes.</p>
+  <div class="markdown summary"><p>Represents a base class for add on scripts.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SymbolScript : Script, IScript, IDisposable, IMetadata</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AddOn : Script, IScript, IDisposable, IMetadata</code></pre>
   </div>
 
 
@@ -114,7 +114,7 @@ Class SymbolScript
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html">Script</a></div>
-      <div><span class="xref">SymbolScript</span></div>
+      <div><span class="xref">AddOn</span></div>
     </dd>
   </dl>
   </details>
@@ -130,18 +130,6 @@ Class SymbolScript
     </dl>
   </details>
 
-  <details class="typelist-details">
-    <summary>Derived</summary>
-    <dl class="typelist derived">
-      <dd>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Drawing.html">Drawing</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.Indicator.html">Indicator</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.PositionSizer.html">PositionSizer</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.TradingScript.html">TradingScript</a></div>
-      </dd>
-    </dl>
-  </details>
 
   <details class="typelist-details">
     <summary>Inherited Members</summary>
@@ -236,23 +224,55 @@ Class SymbolScript
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_AddOn__ctor_" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.#ctor*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_AddOn__ctor" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.#ctor">
+  AddOn()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AddOn()</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_Bars_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.Bars*"></a>
+  <a id="Tickblaze_Scripts_Api_Bases_AddOn_WindowProvider_" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_Bars" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.Bars">
-  Bars
+  <h3 id="Tickblaze_Scripts_Api_Bases_AddOn_WindowProvider" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider">
+  WindowProvider
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The bar series associated with the script.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the window provider associated with the add-on.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarSeries Bars { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IWindowProvider? WindowProvider { get; set; }</code></pre>
   </div>
 
 
@@ -262,7 +282,7 @@ Class SymbolScript
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Models.BarSeries" text="BarSeries"/></dt>
+    <dt><xref uid="Tickblaze.Scripts.Api.Interfaces.IWindowProvider" text="IWindowProvider"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -278,73 +298,25 @@ Class SymbolScript
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars*"></a>
+  <a id="Tickblaze_Scripts_Api_Bases_AddOn_CreateMenuItem_" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Bases_BarType_System_Nullable_System_DateTime__System_Nullable_System_DateTime__" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Bases.BarType,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
-  GetBars(BarType, DateTime?, DateTime?)
+  <h3 id="Tickblaze_Scripts_Api_Bases_AddOn_CreateMenuItem" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem">
+  CreateMenuItem()
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BarSeries GetBars(BarType barType, DateTime? startTimeUtc = null, DateTime? endTimeUtc = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>barType</code> <a class="xref" href="Tickblaze.Scripts.Api.Bases.BarType.html">BarType</a></dt>
-    <dd></dd>
-    <dt><code>startTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
-    <dt><code>endTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
-    <dd><p><a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a> which will fill automatically and can be subscribed to for data updates</p>
-</dd>
-  </dl>
-
-
-
-  <!--
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Models_BarSeriesInfo_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Models.BarSeriesInfo)">
-  GetBars(BarSeriesInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Returns a bar series which will fill automatically and can be subscribed to for data updates</p>
+  <div class="markdown level1 summary"><p>Creates a control that will be displayed in the main menu.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BarSeries GetBars(BarSeriesInfo barSeriesInfo)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract object CreateMenuItem()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>barSeriesInfo</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeriesInfo.html">BarSeriesInfo</a></dt>
-    <dd></dd>
-  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.BarSeries.html">BarSeries</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd></dd>
   </dl>
 
@@ -360,31 +332,23 @@ Class SymbolScript
 
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol*"></a>
+  <a id="Tickblaze_Scripts_Api_Bases_AddOn_OnShutdown_" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_SymbolInfo_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol(Tickblaze.Scripts.Api.Models.SymbolInfo)">
-  GetSymbol(SymbolInfo)
+  <h3 id="Tickblaze_Scripts_Api_Bases_AddOn_OnShutdown" data-uid="Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown">
+  OnShutdown()
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the application is shutting down or when the script is reloaded.
+Allows for cleanup operations or resource deallocation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Symbol? GetSymbol(SymbolInfo symbolParams)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnShutdown()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>symbolParams</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.SymbolInfo.html">SymbolInfo</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Symbol.html">Symbol</a></dt>
-    <dd></dd>
-  </dl>
 
 
 

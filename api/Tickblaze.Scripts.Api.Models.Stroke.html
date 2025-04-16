@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Font | Tickblaze </title>
+      <title>Class Stroke | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Font | Tickblaze ">
+      <meta name="title" content="Class Stroke | Tickblaze ">
       
-      <meta name="description" content="Represents a font with a family name, size, style, and weight.">
+      
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Models.Font">
+        <article data-uid="Tickblaze.Scripts.Api.Models.Stroke">
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Models_Font" data-uid="Tickblaze.Scripts.Api.Models.Font" class="text-break">
-Class Font  
+  <h1 id="Tickblaze_Scripts_Api_Models_Stroke" data-uid="Tickblaze.Scripts.Api.Models.Stroke" class="text-break">
+Class Stroke  
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,11 @@ Class Font
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a font with a family name, size, style, and weight.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record Font : IEquatable&lt;Font&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed record Stroke : IEquatable&lt;Stroke&gt;</code></pre>
   </div>
 
 
@@ -113,7 +112,7 @@ Class Font
   <dl class="typelist inheritance">
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Font</span></div>
+      <div><span class="xref">Stroke</span></div>
     </dd>
   </dl>
   </details>
@@ -122,7 +121,7 @@ Class Font
     <summary>Implements</summary>
     <dl class="typelist implements">
       <dd>
-        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a>&gt;</div>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a>&gt;</div>
       </dd>
     </dl>
   </details>
@@ -134,9 +133,6 @@ Class Font
       <dd>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-      </div>
-      <div>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
       </div>
       <div>
         <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
@@ -165,10 +161,10 @@ Class Font
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font__ctor_" data-uid="Tickblaze.Scripts.Api.Models.Font.#ctor*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke__ctor_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font__ctor" data-uid="Tickblaze.Scripts.Api.Models.Font.#ctor">
-  Font()
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke__ctor" data-uid="Tickblaze.Scripts.Api.Models.Stroke.#ctor">
+  Stroke()
   
   </h3>
 
@@ -176,85 +172,9 @@ Class Font
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Font()</code></pre>
+    <pre><code class="lang-csharp hljs">public Stroke()</code></pre>
   </div>
 
-
-
-
-
-  <!--
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Models_Font__ctor_" data-uid="Tickblaze.Scripts.Api.Models.Font.#ctor*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_Font__ctor_System_String_System_Int32_Tickblaze_Scripts_Api_Enums_FontStyle_Tickblaze_Scripts_Api_Enums_FontWeight_" data-uid="Tickblaze.Scripts.Api.Models.Font.#ctor(System.String,System.Int32,Tickblaze.Scripts.Api.Enums.FontStyle,Tickblaze.Scripts.Api.Enums.FontWeight)">
-  Font(string, int, FontStyle, FontWeight)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Font(string familyName = &quot;Segoe UI&quot;, int size = 12, FontStyle style = FontStyle.Normal, FontWeight weight = FontWeight.Regular)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>familyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The font family name. Defaults to &quot;Segoe UI&quot;.</p>
-</dd>
-    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The font size. Defaults to 12.</p>
-</dd>
-    <dt><code>style</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.FontStyle.html">FontStyle</a></dt>
-    <dd><p>The font style. Defaults to <a class="xref" href="Tickblaze.Scripts.Api.Enums.FontStyle.html#Tickblaze_Scripts_Api_Enums_FontStyle_Normal">Normal</a>.</p>
-</dd>
-    <dt><code>weight</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.FontWeight.html">FontWeight</a></dt>
-    <dd><p>The font weight. Defaults to <a class="xref" href="Tickblaze.Scripts.Api.Enums.FontWeight.html#Tickblaze_Scripts_Api_Enums_FontWeight_Regular">Regular</a>.</p>
-</dd>
-  </dl>
-
-
-
-
-  <!--
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Models_Font__ctor_" data-uid="Tickblaze.Scripts.Api.Models.Font.#ctor*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_Font__ctor_Tickblaze_Scripts_Api_Models_Font_" data-uid="Tickblaze.Scripts.Api.Models.Font.#ctor(Tickblaze.Scripts.Api.Models.Font)">
-  Font(Font)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Font(Font original)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>original</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -273,10 +193,44 @@ Class Font
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_EqualityContract_" data-uid="Tickblaze.Scripts.Api.Models.Font.EqualityContract*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_Color_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Color*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_EqualityContract" data-uid="Tickblaze.Scripts.Api.Models.Font.EqualityContract">
-  EqualityContract
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_Color" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Color">
+  Color
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The color of the stroke.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color Color { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Models.Color" text="Color"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_EditableFields_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.EditableFields*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_EditableFields" data-uid="Tickblaze.Scripts.Api.Models.Stroke.EditableFields">
+  EditableFields
   
   </h3>
 
@@ -284,7 +238,7 @@ Class Font
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Type EqualityContract { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StrokeEditableFields EditableFields { get; set; }</code></pre>
   </div>
 
 
@@ -294,7 +248,7 @@ Class Font
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="System.Type" text="Type"/></dt>
+    <dt><xref uid="Tickblaze.Scripts.Api.Models.StrokeEditableFields" text="StrokeEditableFields"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -306,19 +260,19 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_FamilyName_" data-uid="Tickblaze.Scripts.Api.Models.Font.FamilyName*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_IsVisible_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.IsVisible*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_FamilyName" data-uid="Tickblaze.Scripts.Api.Models.Font.FamilyName">
-  FamilyName
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_IsVisible" data-uid="Tickblaze.Scripts.Api.Models.Stroke.IsVisible">
+  IsVisible
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the font family name.</p>
+  <div class="markdown level1 summary"><p>Indicates whether the stroke is visible</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FamilyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsVisible { get; set; }</code></pre>
   </div>
 
 
@@ -328,7 +282,7 @@ Class Font
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="System.String" text="string"/></dt>
+    <dt><xref uid="System.Boolean" text="bool"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -340,19 +294,53 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_Size_" data-uid="Tickblaze.Scripts.Api.Models.Font.Size*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_LineStyle_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.LineStyle*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_Size" data-uid="Tickblaze.Scripts.Api.Models.Font.Size">
-  Size
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_LineStyle" data-uid="Tickblaze.Scripts.Api.Models.Stroke.LineStyle">
+  LineStyle
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the font size.</p>
+  <div class="markdown level1 summary"><p>The line style for the stroke.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Size { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LineStyle LineStyle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Core.Enums.LineStyle" text="LineStyle"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_Thickness_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Thickness*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_Thickness" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Thickness">
+  Thickness
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The thickness of the stroke.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Thickness { get; set; }</code></pre>
   </div>
 
 
@@ -374,81 +362,13 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_Style_" data-uid="Tickblaze.Scripts.Api.Models.Font.Style*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_Style" data-uid="Tickblaze.Scripts.Api.Models.Font.Style">
-  Style
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the font style.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FontStyle Style { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Enums.FontStyle" text="FontStyle"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Models_Font_Weight_" data-uid="Tickblaze.Scripts.Api.Models.Font.Weight*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_Weight" data-uid="Tickblaze.Scripts.Api.Models.Font.Weight">
-  Weight
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the font weight.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FontWeight Weight { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Enums.FontWeight" text="FontWeight"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_Equals_" data-uid="Tickblaze.Scripts.Api.Models.Font.Equals*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_Equals_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Equals*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_Equals_System_Object_" data-uid="Tickblaze.Scripts.Api.Models.Font.Equals(System.Object)">
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_Equals_System_Object_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Equals(System.Object)">
   Equals(object?)
   
   </h3>
@@ -484,10 +404,10 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_Equals_" data-uid="Tickblaze.Scripts.Api.Models.Font.Equals*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_Equals_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Equals*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_Equals_Tickblaze_Scripts_Api_Models_Font_" data-uid="Tickblaze.Scripts.Api.Models.Font.Equals(Tickblaze.Scripts.Api.Models.Font)">
-  Equals(Font?)
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_Equals_Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.Equals(Tickblaze.Scripts.Api.Models.Stroke)">
+  Equals(Stroke?)
   
   </h3>
 
@@ -495,12 +415,12 @@ Class Font
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool Equals(Font? other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(Stroke? other)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>other</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></dt>
+    <dt><code>other</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
     <dd></dd>
   </dl>
 
@@ -522,9 +442,9 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_GetHashCode_" data-uid="Tickblaze.Scripts.Api.Models.Font.GetHashCode*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_GetHashCode_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.GetHashCode*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_GetHashCode" data-uid="Tickblaze.Scripts.Api.Models.Font.GetHashCode">
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_GetHashCode" data-uid="Tickblaze.Scripts.Api.Models.Stroke.GetHashCode">
   GetHashCode()
   
   </h3>
@@ -555,47 +475,9 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_PrintMembers_" data-uid="Tickblaze.Scripts.Api.Models.Font.PrintMembers*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_ToString_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.ToString*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_PrintMembers_System_Text_StringBuilder_" data-uid="Tickblaze.Scripts.Api.Models.Font.PrintMembers(System.Text.StringBuilder)">
-  PrintMembers(StringBuilder)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual bool PrintMembers(StringBuilder builder)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-  <!--
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Models_Font_ToString_" data-uid="Tickblaze.Scripts.Api.Models.Font.ToString*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_ToString" data-uid="Tickblaze.Scripts.Api.Models.Font.ToString">
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_ToString" data-uid="Tickblaze.Scripts.Api.Models.Stroke.ToString">
   ToString()
   
   </h3>
@@ -630,10 +512,10 @@ Class Font
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_op_Equality_" data-uid="Tickblaze.Scripts.Api.Models.Font.op_Equality*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_op_Equality_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.op_Equality*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_op_Equality_Tickblaze_Scripts_Api_Models_Font_Tickblaze_Scripts_Api_Models_Font_" data-uid="Tickblaze.Scripts.Api.Models.Font.op_Equality(Tickblaze.Scripts.Api.Models.Font,Tickblaze.Scripts.Api.Models.Font)">
-  operator ==(Font?, Font?)
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_op_Equality_Tickblaze_Scripts_Api_Models_Stroke_Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.op_Equality(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Scripts.Api.Models.Stroke)">
+  operator ==(Stroke?, Stroke?)
   
   </h3>
 
@@ -641,14 +523,14 @@ Class Font
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(Font? left, Font? right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Stroke? left, Stroke? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></dt>
+    <dt><code>left</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
     <dd></dd>
-    <dt><code>right</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></dt>
+    <dt><code>right</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
     <dd></dd>
   </dl>
 
@@ -670,10 +552,10 @@ Class Font
 
 
 
-  <a id="Tickblaze_Scripts_Api_Models_Font_op_Inequality_" data-uid="Tickblaze.Scripts.Api.Models.Font.op_Inequality*"></a>
+  <a id="Tickblaze_Scripts_Api_Models_Stroke_op_Inequality_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.op_Inequality*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Models_Font_op_Inequality_Tickblaze_Scripts_Api_Models_Font_Tickblaze_Scripts_Api_Models_Font_" data-uid="Tickblaze.Scripts.Api.Models.Font.op_Inequality(Tickblaze.Scripts.Api.Models.Font,Tickblaze.Scripts.Api.Models.Font)">
-  operator !=(Font?, Font?)
+  <h3 id="Tickblaze_Scripts_Api_Models_Stroke_op_Inequality_Tickblaze_Scripts_Api_Models_Stroke_Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Models.Stroke.op_Inequality(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Scripts.Api.Models.Stroke)">
+  operator !=(Stroke?, Stroke?)
   
   </h3>
 
@@ -681,14 +563,14 @@ Class Font
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(Font? left, Font? right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Stroke? left, Stroke? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></dt>
+    <dt><code>left</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
     <dd></dd>
-    <dt><code>right</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Font.html">Font</a></dt>
+    <dt><code>right</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
     <dd></dd>
   </dl>
 

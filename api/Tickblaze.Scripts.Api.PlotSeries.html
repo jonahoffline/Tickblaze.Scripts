@@ -239,7 +239,7 @@ Class PlotSeries
 
   <a id="Tickblaze_Scripts_Api_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)">
+  <h3 id="Tickblaze_Scripts_Api_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_Tickblaze_Core_Enums_LineStyle_System_Int32_System_Boolean_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Core.Enums.LineStyle,System.Int32,System.Boolean)">
   PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)
   
   </h3>
@@ -263,7 +263,7 @@ Class PlotSeries
     <dt><code>plotStyle</code> <a class="xref" href="Tickblaze.Core.Enums.PlotStyle.html">PlotStyle</a></dt>
     <dd><p>The style of the plot.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The line style for the plot series.</p>
 </dd>
     <dt><code>thickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
@@ -324,17 +324,17 @@ Class PlotSeries
 
   <a id="Tickblaze_Scripts_Api_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_System_Int32_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,System.Int32)">
-  PlotSeries(Color, PlotStyle, int)
+  <h3 id="Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_LineStyle_System_Int32_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32)">
+  PlotSeries(Color, LineStyle, int)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.PlotSeries.html">PlotSeries</a> class with the specified color, plot style, and thickness.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.PlotSeries.html">PlotSeries</a> class with the specified color, line style, and thickness.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries(Color color, PlotStyle plotStyle = PlotStyle.Line, int thickness = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlotSeries(Color color, LineStyle lineStyle = LineStyle.Solid, int thickness = 1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -342,8 +342,8 @@ Class PlotSeries
     <dt><code>color</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
     <dd><p>The color of the plot series.</p>
 </dd>
-    <dt><code>plotStyle</code> <a class="xref" href="Tickblaze.Core.Enums.PlotStyle.html">PlotStyle</a></dt>
-    <dd><p>The style of the plot.</p>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
+    <dd><p>The line style for the plot series.</p>
 </dd>
     <dt><code>thickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the plot series line.</p>
@@ -365,17 +365,17 @@ Class PlotSeries
 
   <a id="Tickblaze_Scripts_Api_PlotSeries__ctor_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)">
-  PlotSeries(Color, LineStyle, int)
+  <h3 id="Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_System_Int32_" data-uid="Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,System.Int32)">
+  PlotSeries(Color, PlotStyle, int)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.PlotSeries.html">PlotSeries</a> class with the specified color, line style, and thickness.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tickblaze.Scripts.Api.PlotSeries.html">PlotSeries</a> class with the specified color, plot style, and thickness.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlotSeries(Color color, LineStyle lineStyle = LineStyle.Solid, int thickness = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlotSeries(Color color, PlotStyle plotStyle = PlotStyle.Line, int thickness = 1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -383,8 +383,8 @@ Class PlotSeries
     <dt><code>color</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a></dt>
     <dd><p>The color of the plot series.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
-    <dd><p>The line style for the plot series.</p>
+    <dt><code>plotStyle</code> <a class="xref" href="Tickblaze.Core.Enums.PlotStyle.html">PlotStyle</a></dt>
+    <dd><p>The style of the plot.</p>
 </dd>
     <dt><code>thickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the plot series line.</p>
@@ -708,7 +708,7 @@ Class PlotSeries
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Enums.LineStyle" text="LineStyle"/></dt>
+    <dt><xref uid="Tickblaze.Core.Enums.LineStyle" text="LineStyle"/></dt>
     <dd></dd>
   </dl>
   -->

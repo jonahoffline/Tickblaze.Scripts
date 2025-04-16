@@ -22,6 +22,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.EnumExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.EnumExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Core.Enums.ContractType.yml",
       "output": {
         ".html": {
@@ -61,6 +75,20 @@
       "IsMRef": true,
       "Title": "Tickblaze.Core.Enums.InstrumentType",
       "Summary": "<p sourcefile=\"api/Tickblaze.Core.Enums.InstrumentType.yml\" sourcestartlinenumber=\"1\">Represents the instrument types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.LineStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.LineStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Enums.LineStyle",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Core.Enums.LineStyle.yml\" sourcestartlinenumber=\"1\">Specifies the style of a line.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -158,6 +186,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Tickblaze.Core.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.NullableBool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.NullableBool.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.NullableBool",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core",
       "Summary": null
     },
     {
@@ -313,6 +369,20 @@
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.Attributes",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.AddOn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.AddOn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Bases.AddOn",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Bases.AddOn.yml\" sourcestartlinenumber=\"1\">Represents a base class for add on scripts.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -635,20 +705,6 @@
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.Enums.HorizontalAlignment",
       "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Enums.HorizontalAlignment.yml\" sourcestartlinenumber=\"1\">Specifies the horizontal aligment.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.LineStyle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Enums.LineStyle.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Tickblaze.Scripts.Api.Enums.LineStyle",
-      "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Enums.LineStyle.yml\" sourcestartlinenumber=\"1\">Specifies the style of a line.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1044,6 +1100,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IWindowProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.IWindowProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Interfaces.IWindowProvider",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Interfaces.IWindowProvider.yml\" sourcestartlinenumber=\"1\">Provides the ability to create windows</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.yml",
       "output": {
         ".html": {
@@ -1380,6 +1450,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Stroke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.Stroke.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Models.Stroke",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Models.StrokeEditableFields",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Symbol.yml",
       "output": {
         ".html": {
@@ -1418,6 +1516,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.NotOptimizableAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.NotOptimizableAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.NotOptimizableAttribute",
       "Summary": null
     },
     {

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum LineStyle | Tickblaze </title>
+      <title>Interface IWindowProvider | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum LineStyle | Tickblaze ">
+      <meta name="title" content="Interface IWindowProvider | Tickblaze ">
       
-      <meta name="description" content="Specifies the style of a line.">
+      <meta name="description" content="Provides the ability to create windows">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,26 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Enums.LineStyle">
+        <article data-uid="Tickblaze.Scripts.Api.Interfaces.IWindowProvider">
 
 
 
-
-  <h1 id="Tickblaze_Scripts_Api_Enums_LineStyle" data-uid="Tickblaze.Scripts.Api.Enums.LineStyle" class="text-break">
-Enum LineStyle  
+  <h1 id="Tickblaze_Scripts_Api_Interfaces_IWindowProvider" data-uid="Tickblaze.Scripts.Api.Interfaces.IWindowProvider" class="text-break">
+Interface IWindowProvider  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Enums.html">Enums</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies the style of a line.</p>
+  <div class="markdown summary"><p>Provides the ability to create windows</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum LineStyle</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IWindowProvider</code></pre>
   </div>
 
 
@@ -118,33 +117,57 @@ Enum LineStyle
   <dl class="typelist extensionMethods">
     <dd>
   <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.ComparisonExtensions.html#Tickblaze_Scripts_Api_ComparisonExtensions_EnumCompareTo__1___0___0_">ComparisonExtensions.EnumCompareTo&lt;TEnum&gt;(TEnum, TEnum)</a>
-  </div>
-  <div>
-      <a class="xref" href="Tickblaze.Scripts.Api.ComparisonExtensions.html#Tickblaze_Scripts_Api_ComparisonExtensions_EnumEquals__1___0___0_">ComparisonExtensions.EnumEquals&lt;TEnum&gt;(TEnum, TEnum)</a>
+      <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
   </div>
   </dd></dl>
   </details>
 
-  <h2 id="fields">Fields
+
+
+
+
+  <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IWindowProvider_CreateWindow_" data-uid="Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IWindowProvider_CreateWindow_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow(System.String)">
+  CreateWindow(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? CreateWindow(string title)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt id="Tickblaze_Scripts_Api_Enums_LineStyle_Dash"><code>Dash = 101</code></dt>
-    <dd><p>Dashed line.</p>
-</dd>
-    <dt id="Tickblaze_Scripts_Api_Enums_LineStyle_DashDot"><code>DashDot = 103</code></dt>
-    <dd><p>Dash-dot line.</p>
-</dd>
-    <dt id="Tickblaze_Scripts_Api_Enums_LineStyle_DashDotDot"><code>DashDotDot = 104</code></dt>
-    <dd><p>Dash-dot-dot line.</p>
-</dd>
-    <dt id="Tickblaze_Scripts_Api_Enums_LineStyle_Dot"><code>Dot = 102</code></dt>
-    <dd><p>Dotted line.</p>
-</dd>
-    <dt id="Tickblaze_Scripts_Api_Enums_LineStyle_Solid"><code>Solid = 100</code></dt>
-    <dd><p>Solid line.</p>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An object representing the created window, or <code>null</code> if the creation failed.</p>
 </dd>
   </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
 
 
 

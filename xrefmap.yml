@@ -1,6 +1,30 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Tickblaze.Core
+  name: Tickblaze.Core
+  href: api/Tickblaze.Core.html
+  commentId: N:Tickblaze.Core
+  fullName: Tickblaze.Core
+  nameWithType: Tickblaze.Core
+- uid: Tickblaze.Core.EnumExtensions
+  name: EnumExtensions
+  href: api/Tickblaze.Core.EnumExtensions.html
+  commentId: T:Tickblaze.Core.EnumExtensions
+  fullName: Tickblaze.Core.EnumExtensions
+  nameWithType: EnumExtensions
+- uid: Tickblaze.Core.EnumExtensions.ToNullable(Tickblaze.Core.NullableBool)
+  name: ToNullable(NullableBool)
+  href: api/Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_ToNullable_Tickblaze_Core_NullableBool_
+  commentId: M:Tickblaze.Core.EnumExtensions.ToNullable(Tickblaze.Core.NullableBool)
+  fullName: Tickblaze.Core.EnumExtensions.ToNullable(Tickblaze.Core.NullableBool)
+  nameWithType: EnumExtensions.ToNullable(NullableBool)
+- uid: Tickblaze.Core.EnumExtensions.ToNullable*
+  name: ToNullable
+  href: api/Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_ToNullable_
+  commentId: Overload:Tickblaze.Core.EnumExtensions.ToNullable
+  fullName: Tickblaze.Core.EnumExtensions.ToNullable
+  nameWithType: EnumExtensions.ToNullable
 - uid: Tickblaze.Core.Enums
   name: Tickblaze.Core.Enums
   href: api/Tickblaze.Core.Enums.html
@@ -199,6 +223,42 @@ references:
   commentId: F:Tickblaze.Core.Enums.InstrumentType.Unknown
   fullName: Tickblaze.Core.Enums.InstrumentType.Unknown
   nameWithType: InstrumentType.Unknown
+- uid: Tickblaze.Core.Enums.LineStyle
+  name: LineStyle
+  href: api/Tickblaze.Core.Enums.LineStyle.html
+  commentId: T:Tickblaze.Core.Enums.LineStyle
+  fullName: Tickblaze.Core.Enums.LineStyle
+  nameWithType: LineStyle
+- uid: Tickblaze.Core.Enums.LineStyle.Dash
+  name: Dash
+  href: api/Tickblaze.Core.Enums.LineStyle.html#Tickblaze_Core_Enums_LineStyle_Dash
+  commentId: F:Tickblaze.Core.Enums.LineStyle.Dash
+  fullName: Tickblaze.Core.Enums.LineStyle.Dash
+  nameWithType: LineStyle.Dash
+- uid: Tickblaze.Core.Enums.LineStyle.DashDot
+  name: DashDot
+  href: api/Tickblaze.Core.Enums.LineStyle.html#Tickblaze_Core_Enums_LineStyle_DashDot
+  commentId: F:Tickblaze.Core.Enums.LineStyle.DashDot
+  fullName: Tickblaze.Core.Enums.LineStyle.DashDot
+  nameWithType: LineStyle.DashDot
+- uid: Tickblaze.Core.Enums.LineStyle.DashDotDot
+  name: DashDotDot
+  href: api/Tickblaze.Core.Enums.LineStyle.html#Tickblaze_Core_Enums_LineStyle_DashDotDot
+  commentId: F:Tickblaze.Core.Enums.LineStyle.DashDotDot
+  fullName: Tickblaze.Core.Enums.LineStyle.DashDotDot
+  nameWithType: LineStyle.DashDotDot
+- uid: Tickblaze.Core.Enums.LineStyle.Dot
+  name: Dot
+  href: api/Tickblaze.Core.Enums.LineStyle.html#Tickblaze_Core_Enums_LineStyle_Dot
+  commentId: F:Tickblaze.Core.Enums.LineStyle.Dot
+  fullName: Tickblaze.Core.Enums.LineStyle.Dot
+  nameWithType: LineStyle.Dot
+- uid: Tickblaze.Core.Enums.LineStyle.Solid
+  name: Solid
+  href: api/Tickblaze.Core.Enums.LineStyle.html#Tickblaze_Core_Enums_LineStyle_Solid
+  commentId: F:Tickblaze.Core.Enums.LineStyle.Solid
+  fullName: Tickblaze.Core.Enums.LineStyle.Solid
+  nameWithType: LineStyle.Solid
 - uid: Tickblaze.Core.Enums.PlotStyle
   name: PlotStyle
   href: api/Tickblaze.Core.Enums.PlotStyle.html
@@ -484,6 +544,30 @@ references:
   fullName.vb: Tickblaze.Core.Models.ContractSettings.<>
   nameWithType: ContractSettings.operator !=
   nameWithType.vb: ContractSettings.<>
+- uid: Tickblaze.Core.NullableBool
+  name: NullableBool
+  href: api/Tickblaze.Core.NullableBool.html
+  commentId: T:Tickblaze.Core.NullableBool
+  fullName: Tickblaze.Core.NullableBool
+  nameWithType: NullableBool
+- uid: Tickblaze.Core.NullableBool.False
+  name: "False"
+  href: api/Tickblaze.Core.NullableBool.html#Tickblaze_Core_NullableBool_False
+  commentId: F:Tickblaze.Core.NullableBool.False
+  fullName: Tickblaze.Core.NullableBool.False
+  nameWithType: NullableBool.False
+- uid: Tickblaze.Core.NullableBool.Null
+  name: "Null"
+  href: api/Tickblaze.Core.NullableBool.html#Tickblaze_Core_NullableBool_Null
+  commentId: F:Tickblaze.Core.NullableBool.Null
+  fullName: Tickblaze.Core.NullableBool.Null
+  nameWithType: NullableBool.Null
+- uid: Tickblaze.Core.NullableBool.True
+  name: "True"
+  href: api/Tickblaze.Core.NullableBool.html#Tickblaze_Core_NullableBool_True
+  commentId: F:Tickblaze.Core.NullableBool.True
+  fullName: Tickblaze.Core.NullableBool.True
+  nameWithType: NullableBool.True
 - uid: Tickblaze.Scripts.Api
   name: Tickblaze.Scripts.Api
   href: api/Tickblaze.Scripts.Api.html
@@ -799,6 +883,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Order
   fullName: Tickblaze.Scripts.Api.Attributes.ParameterAttribute.Order
   nameWithType: ParameterAttribute.Order
+- uid: Tickblaze.Scripts.Api.Attributes.ParameterAttribute.ShowInSignature
+  name: ShowInSignature
+  href: api/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.html#Tickblaze_Scripts_Api_Attributes_ParameterAttribute_ShowInSignature
+  commentId: P:Tickblaze.Scripts.Api.Attributes.ParameterAttribute.ShowInSignature
+  fullName: Tickblaze.Scripts.Api.Attributes.ParameterAttribute.ShowInSignature
+  nameWithType: ParameterAttribute.ShowInSignature
+- uid: Tickblaze.Scripts.Api.Attributes.ParameterAttribute.ShowInSignature*
+  name: ShowInSignature
+  href: api/Tickblaze.Scripts.Api.Attributes.ParameterAttribute.html#Tickblaze_Scripts_Api_Attributes_ParameterAttribute_ShowInSignature_
+  commentId: Overload:Tickblaze.Scripts.Api.Attributes.ParameterAttribute.ShowInSignature
+  fullName: Tickblaze.Scripts.Api.Attributes.ParameterAttribute.ShowInSignature
+  nameWithType: ParameterAttribute.ShowInSignature
 - uid: Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute
   name: ParameterGroupOrderAttribute
   href: api/Tickblaze.Scripts.Api.Attributes.ParameterGroupOrderAttribute.html
@@ -889,6 +985,66 @@ references:
   commentId: N:Tickblaze.Scripts.Api.Bases
   fullName: Tickblaze.Scripts.Api.Bases
   nameWithType: Tickblaze.Scripts.Api.Bases
+- uid: Tickblaze.Scripts.Api.Bases.AddOn
+  name: AddOn
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.AddOn
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn
+  nameWithType: AddOn
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.#ctor
+  name: AddOn()
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn__ctor
+  commentId: M:Tickblaze.Scripts.Api.Bases.AddOn.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.AddOn()
+  fullName.vb: Tickblaze.Scripts.Api.Bases.AddOn.New()
+  nameWithType: AddOn.AddOn()
+  nameWithType.vb: AddOn.New()
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.#ctor*
+  name: AddOn
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.AddOn.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.AddOn
+  fullName.vb: Tickblaze.Scripts.Api.Bases.AddOn.New
+  nameWithType: AddOn.AddOn
+  nameWithType.vb: AddOn.New
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem
+  name: CreateMenuItem()
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn_CreateMenuItem
+  commentId: M:Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem()
+  nameWithType: AddOn.CreateMenuItem()
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem*
+  name: CreateMenuItem
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn_CreateMenuItem_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.CreateMenuItem
+  nameWithType: AddOn.CreateMenuItem
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown
+  name: OnShutdown()
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn_OnShutdown
+  commentId: M:Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown()
+  nameWithType: AddOn.OnShutdown()
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown*
+  name: OnShutdown
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn_OnShutdown_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.OnShutdown
+  nameWithType: AddOn.OnShutdown
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider
+  name: WindowProvider
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn_WindowProvider
+  commentId: P:Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider
+  nameWithType: AddOn.WindowProvider
+- uid: Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider*
+  name: WindowProvider
+  href: api/Tickblaze.Scripts.Api.Bases.AddOn.html#Tickblaze_Scripts_Api_Bases_AddOn_WindowProvider_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider
+  fullName: Tickblaze.Scripts.Api.Bases.AddOn.WindowProvider
+  nameWithType: AddOn.WindowProvider
 - uid: Tickblaze.Scripts.Api.Bases.BarType
   name: BarType
   href: api/Tickblaze.Scripts.Api.Bases.BarType.html
@@ -2098,6 +2254,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.Print
   fullName: Tickblaze.Scripts.Api.Bases.Script.Print
   nameWithType: Script.Print
+- uid: Tickblaze.Scripts.Api.Bases.Script.ProductCodeAliases
+  name: ProductCodeAliases
+  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ProductCodeAliases
+  commentId: P:Tickblaze.Scripts.Api.Bases.Script.ProductCodeAliases
+  fullName: Tickblaze.Scripts.Api.Bases.Script.ProductCodeAliases
+  nameWithType: Script.ProductCodeAliases
+- uid: Tickblaze.Scripts.Api.Bases.Script.ProductCodeAliases*
+  name: ProductCodeAliases
+  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ProductCodeAliases_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.ProductCodeAliases
+  fullName: Tickblaze.Scripts.Api.Bases.Script.ProductCodeAliases
+  nameWithType: Script.ProductCodeAliases
 - uid: Tickblaze.Scripts.Api.Bases.Script.ShortName
   name: ShortName
   href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_ShortName
@@ -3310,42 +3478,6 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Enums.HorizontalAlignment.Right
   fullName: Tickblaze.Scripts.Api.Enums.HorizontalAlignment.Right
   nameWithType: HorizontalAlignment.Right
-- uid: Tickblaze.Scripts.Api.Enums.LineStyle
-  name: LineStyle
-  href: api/Tickblaze.Scripts.Api.Enums.LineStyle.html
-  commentId: T:Tickblaze.Scripts.Api.Enums.LineStyle
-  fullName: Tickblaze.Scripts.Api.Enums.LineStyle
-  nameWithType: LineStyle
-- uid: Tickblaze.Scripts.Api.Enums.LineStyle.Dash
-  name: Dash
-  href: api/Tickblaze.Scripts.Api.Enums.LineStyle.html#Tickblaze_Scripts_Api_Enums_LineStyle_Dash
-  commentId: F:Tickblaze.Scripts.Api.Enums.LineStyle.Dash
-  fullName: Tickblaze.Scripts.Api.Enums.LineStyle.Dash
-  nameWithType: LineStyle.Dash
-- uid: Tickblaze.Scripts.Api.Enums.LineStyle.DashDot
-  name: DashDot
-  href: api/Tickblaze.Scripts.Api.Enums.LineStyle.html#Tickblaze_Scripts_Api_Enums_LineStyle_DashDot
-  commentId: F:Tickblaze.Scripts.Api.Enums.LineStyle.DashDot
-  fullName: Tickblaze.Scripts.Api.Enums.LineStyle.DashDot
-  nameWithType: LineStyle.DashDot
-- uid: Tickblaze.Scripts.Api.Enums.LineStyle.DashDotDot
-  name: DashDotDot
-  href: api/Tickblaze.Scripts.Api.Enums.LineStyle.html#Tickblaze_Scripts_Api_Enums_LineStyle_DashDotDot
-  commentId: F:Tickblaze.Scripts.Api.Enums.LineStyle.DashDotDot
-  fullName: Tickblaze.Scripts.Api.Enums.LineStyle.DashDotDot
-  nameWithType: LineStyle.DashDotDot
-- uid: Tickblaze.Scripts.Api.Enums.LineStyle.Dot
-  name: Dot
-  href: api/Tickblaze.Scripts.Api.Enums.LineStyle.html#Tickblaze_Scripts_Api_Enums_LineStyle_Dot
-  commentId: F:Tickblaze.Scripts.Api.Enums.LineStyle.Dot
-  fullName: Tickblaze.Scripts.Api.Enums.LineStyle.Dot
-  nameWithType: LineStyle.Dot
-- uid: Tickblaze.Scripts.Api.Enums.LineStyle.Solid
-  name: Solid
-  href: api/Tickblaze.Scripts.Api.Enums.LineStyle.html#Tickblaze_Scripts_Api_Enums_LineStyle_Solid
-  commentId: F:Tickblaze.Scripts.Api.Enums.LineStyle.Solid
-  fullName: Tickblaze.Scripts.Api.Enums.LineStyle.Solid
-  nameWithType: LineStyle.Solid
 - uid: Tickblaze.Scripts.Api.Enums.OrderAction
   name: OrderAction
   href: api/Tickblaze.Scripts.Api.Enums.OrderAction.html
@@ -4300,99 +4432,150 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.IDrawingContext
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext
   nameWithType: IDrawingContext
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawEllipse(IPoint, double, double, Color?, Color?, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawEllipse(IPoint, Double, Double, Color?, Color?, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint, double, double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint, Double, Double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint, double, double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint, Double, Double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawEllipse(IPoint, double, double, Color?, Color?, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawEllipse(IPoint, Double, Double, Color?, Color?, Integer, LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawEllipse(IPoint, double, double, Color?, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: DrawEllipse(IPoint, Double, Double, Color?, Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint, double, double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint, Double, Double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawEllipse(IPoint, double, double, Color?, Stroke)
+  nameWithType.vb: IDrawingContext.DrawEllipse(IPoint, Double, Double, Color?, Stroke)
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse*
   name: DrawEllipse
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse
   nameWithType: IDrawingContext.DrawEllipse
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawExtendedLine(IPoint, IPoint, Color, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawExtendedLine(IPoint, IPoint, Color, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawExtendedLine(IPoint, IPoint, Color, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawExtendedLine(IPoint, IPoint, Color, Integer, LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawExtendedLine(IPoint, IPoint, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawExtendedLine(IPoint, IPoint, Stroke)
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine*
   name: DrawExtendedLine
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine
   nameWithType: IDrawingContext.DrawExtendedLine
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawLine(IPoint, IPoint, Color, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawLine(IPoint, IPoint, Color, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawLine(IPoint, IPoint, Color, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawLine(IPoint, IPoint, Color, Integer, LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawLine(IPoint, IPoint, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawLine(IPoint, IPoint, Stroke)
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine*
   name: DrawLine
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine
   nameWithType: IDrawingContext.DrawLine
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawPolygon(IEnumerable<IPoint>, Color?, Color?, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawPolygon(IEnumerable(Of IPoint), Color?, Color?, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable<Tickblaze.Scripts.Api.Interfaces.IPoint>, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable(Of Tickblaze.Scripts.Api.Interfaces.IPoint), Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable<Tickblaze.Scripts.Api.Interfaces.IPoint>, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable(Of Tickblaze.Scripts.Api.Interfaces.IPoint), Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawPolygon(IEnumerable<IPoint>, Color?, Color?, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawPolygon(IEnumerable(Of IPoint), Color?, Color?, Integer, LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawPolygon(IEnumerable<IPoint>, Color?, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: DrawPolygon(IEnumerable(Of IPoint), Color?, Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable<Tickblaze.Scripts.Api.Interfaces.IPoint>, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable(Of Tickblaze.Scripts.Api.Interfaces.IPoint), Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawPolygon(IEnumerable<IPoint>, Color?, Stroke)
+  nameWithType.vb: IDrawingContext.DrawPolygon(IEnumerable(Of IPoint), Color?, Stroke)
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon*
   name: DrawPolygon
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon
   nameWithType: IDrawingContext.DrawPolygon
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawRay(IPoint, IPoint, Color, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawRay(IPoint, IPoint, Color, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawRay(IPoint, IPoint, Color, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawRay(IPoint, IPoint, Color, Integer, LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawRay(IPoint, IPoint, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawRay(IPoint, IPoint, Stroke)
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay*
   name: DrawRay
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay
   nameWithType: IDrawingContext.DrawRay
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawRectangle(IPoint, double, double, Color?, Color?, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawRectangle(IPoint, Double, Double, Color?, Color?, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, double, double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Double, Double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, double, double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Double, Double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawRectangle(IPoint, double, double, Color?, Color?, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawRectangle(IPoint, Double, Double, Color?, Color?, Integer, LineStyle)
-- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawRectangle(IPoint, double, double, Color?, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: DrawRectangle(IPoint, Double, Double, Color?, Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, double, double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Double, Double, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawRectangle(IPoint, double, double, Color?, Stroke)
+  nameWithType.vb: IDrawingContext.DrawRectangle(IPoint, Double, Double, Color?, Stroke)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawRectangle(IPoint, IPoint, Color?, Color?, int, LineStyle)
-  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_
-  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name.vb: DrawRectangle(IPoint, IPoint, Color?, Color?, Integer, LineStyle)
-  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Scripts.Api.Enums.LineStyle)
-  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Scripts.Api.Enums.LineStyle)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, int, Tickblaze.Core.Enums.LineStyle)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Color?, Integer, Tickblaze.Core.Enums.LineStyle)
   nameWithType: IDrawingContext.DrawRectangle(IPoint, IPoint, Color?, Color?, int, LineStyle)
   nameWithType.vb: IDrawingContext.DrawRectangle(IPoint, IPoint, Color?, Color?, Integer, LineStyle)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawRectangle(IPoint, IPoint, Color?, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawRectangle(IPoint, IPoint, Color?, Stroke)
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*
   name: DrawRectangle
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_
@@ -4654,6 +4837,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IMetadata.Name
   fullName: Tickblaze.Scripts.Api.Interfaces.IMetadata.Name
   nameWithType: IMetadata.Name
+- uid: Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases
+  name: ProductCodeAliases
+  href: api/Tickblaze.Scripts.Api.Interfaces.IMetadata.html#Tickblaze_Scripts_Api_Interfaces_IMetadata_ProductCodeAliases
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases
+  fullName: Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases
+  nameWithType: IMetadata.ProductCodeAliases
+- uid: Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases*
+  name: ProductCodeAliases
+  href: api/Tickblaze.Scripts.Api.Interfaces.IMetadata.html#Tickblaze_Scripts_Api_Interfaces_IMetadata_ProductCodeAliases_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases
+  fullName: Tickblaze.Scripts.Api.Interfaces.IMetadata.ProductCodeAliases
+  nameWithType: IMetadata.ProductCodeAliases
 - uid: Tickblaze.Scripts.Api.Interfaces.IMetadata.ShortName
   name: ShortName
   href: api/Tickblaze.Scripts.Api.Interfaces.IMetadata.html#Tickblaze_Scripts_Api_Interfaces_IMetadata_ShortName
@@ -5074,6 +5269,27 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
   fullName: Tickblaze.Scripts.Api.Interfaces.ISymbol.Type
   nameWithType: ISymbol.Type
+- uid: Tickblaze.Scripts.Api.Interfaces.IWindowProvider
+  name: IWindowProvider
+  href: api/Tickblaze.Scripts.Api.Interfaces.IWindowProvider.html
+  commentId: T:Tickblaze.Scripts.Api.Interfaces.IWindowProvider
+  fullName: Tickblaze.Scripts.Api.Interfaces.IWindowProvider
+  nameWithType: IWindowProvider
+- uid: Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow(System.String)
+  name: CreateWindow(string)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IWindowProvider.html#Tickblaze_Scripts_Api_Interfaces_IWindowProvider_CreateWindow_System_String_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow(System.String)
+  name.vb: CreateWindow(String)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow(string)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow(String)
+  nameWithType: IWindowProvider.CreateWindow(string)
+  nameWithType.vb: IWindowProvider.CreateWindow(String)
+- uid: Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow*
+  name: CreateWindow
+  href: api/Tickblaze.Scripts.Api.Interfaces.IWindowProvider.html#Tickblaze_Scripts_Api_Interfaces_IWindowProvider_CreateWindow_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow
+  fullName: Tickblaze.Scripts.Api.Interfaces.IWindowProvider.CreateWindow
+  nameWithType: IWindowProvider.CreateWindow
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders
   name: Tickblaze.Scripts.Api.Interfaces.Orders
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.html
@@ -7385,6 +7601,15 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Models.Font
   fullName: Tickblaze.Scripts.Api.Models.Font
   nameWithType: Font
+- uid: Tickblaze.Scripts.Api.Models.Font.#ctor
+  name: Font()
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font__ctor
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Models.Font.Font()
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.New()
+  nameWithType: Font.Font()
+  nameWithType.vb: Font.New()
 - uid: Tickblaze.Scripts.Api.Models.Font.#ctor(System.String,System.Int32,Tickblaze.Scripts.Api.Enums.FontStyle,Tickblaze.Scripts.Api.Enums.FontWeight)
   name: Font(string, int, FontStyle, FontWeight)
   href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font__ctor_System_String_System_Int32_Tickblaze_Scripts_Api_Enums_FontStyle_Tickblaze_Scripts_Api_Enums_FontWeight_
@@ -7394,6 +7619,15 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.Font.New(String, Integer, Tickblaze.Scripts.Api.Enums.FontStyle, Tickblaze.Scripts.Api.Enums.FontWeight)
   nameWithType: Font.Font(string, int, FontStyle, FontWeight)
   nameWithType.vb: Font.New(String, Integer, FontStyle, FontWeight)
+- uid: Tickblaze.Scripts.Api.Models.Font.#ctor(Tickblaze.Scripts.Api.Models.Font)
+  name: Font(Font)
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font__ctor_Tickblaze_Scripts_Api_Models_Font_
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.#ctor(Tickblaze.Scripts.Api.Models.Font)
+  name.vb: New(Font)
+  fullName: Tickblaze.Scripts.Api.Models.Font.Font(Tickblaze.Scripts.Api.Models.Font)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.New(Tickblaze.Scripts.Api.Models.Font)
+  nameWithType: Font.Font(Font)
+  nameWithType.vb: Font.New(Font)
 - uid: Tickblaze.Scripts.Api.Models.Font.#ctor*
   name: Font
   href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font__ctor_
@@ -7403,6 +7637,42 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.Font.New
   nameWithType: Font.Font
   nameWithType.vb: Font.New
+- uid: Tickblaze.Scripts.Api.Models.Font.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_EqualityContract
+  commentId: P:Tickblaze.Scripts.Api.Models.Font.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Models.Font.EqualityContract
+  nameWithType: Font.EqualityContract
+- uid: Tickblaze.Scripts.Api.Models.Font.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_EqualityContract_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Models.Font.EqualityContract
+  nameWithType: Font.EqualityContract
+- uid: Tickblaze.Scripts.Api.Models.Font.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.Font.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.Equals(Object)
+  nameWithType: Font.Equals(object?)
+  nameWithType.vb: Font.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.Font.Equals(Tickblaze.Scripts.Api.Models.Font)
+  name: Equals(Font?)
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_Equals_Tickblaze_Scripts_Api_Models_Font_
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.Equals(Tickblaze.Scripts.Api.Models.Font)
+  name.vb: Equals(Font)
+  fullName: Tickblaze.Scripts.Api.Models.Font.Equals(Tickblaze.Scripts.Api.Models.Font?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.Equals(Tickblaze.Scripts.Api.Models.Font)
+  nameWithType: Font.Equals(Font?)
+  nameWithType.vb: Font.Equals(Font)
+- uid: Tickblaze.Scripts.Api.Models.Font.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.Equals
+  fullName: Tickblaze.Scripts.Api.Models.Font.Equals
+  nameWithType: Font.Equals
 - uid: Tickblaze.Scripts.Api.Models.Font.FamilyName
   name: FamilyName
   href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_FamilyName
@@ -7415,6 +7685,30 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Font.FamilyName
   fullName: Tickblaze.Scripts.Api.Models.Font.FamilyName
   nameWithType: Font.FamilyName
+- uid: Tickblaze.Scripts.Api.Models.Font.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.Font.GetHashCode()
+  nameWithType: Font.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Models.Font.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.Font.GetHashCode
+  nameWithType: Font.GetHashCode
+- uid: Tickblaze.Scripts.Api.Models.Font.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Scripts.Api.Models.Font.PrintMembers(System.Text.StringBuilder)
+  nameWithType: Font.PrintMembers(StringBuilder)
+- uid: Tickblaze.Scripts.Api.Models.Font.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_PrintMembers_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.PrintMembers
+  fullName: Tickblaze.Scripts.Api.Models.Font.PrintMembers
+  nameWithType: Font.PrintMembers
 - uid: Tickblaze.Scripts.Api.Models.Font.Size
   name: Size
   href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_Size
@@ -7439,6 +7733,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Font.Style
   fullName: Tickblaze.Scripts.Api.Models.Font.Style
   nameWithType: Font.Style
+- uid: Tickblaze.Scripts.Api.Models.Font.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_ToString
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.ToString
+  fullName: Tickblaze.Scripts.Api.Models.Font.ToString()
+  nameWithType: Font.ToString()
+- uid: Tickblaze.Scripts.Api.Models.Font.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.ToString
+  fullName: Tickblaze.Scripts.Api.Models.Font.ToString
+  nameWithType: Font.ToString
 - uid: Tickblaze.Scripts.Api.Models.Font.Weight
   name: Weight
   href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_Weight
@@ -7451,6 +7757,42 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Font.Weight
   fullName: Tickblaze.Scripts.Api.Models.Font.Weight
   nameWithType: Font.Weight
+- uid: Tickblaze.Scripts.Api.Models.Font.op_Equality(Tickblaze.Scripts.Api.Models.Font,Tickblaze.Scripts.Api.Models.Font)
+  name: operator ==(Font?, Font?)
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_op_Equality_Tickblaze_Scripts_Api_Models_Font_Tickblaze_Scripts_Api_Models_Font_
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.op_Equality(Tickblaze.Scripts.Api.Models.Font,Tickblaze.Scripts.Api.Models.Font)
+  name.vb: =(Font, Font)
+  fullName: Tickblaze.Scripts.Api.Models.Font.operator ==(Tickblaze.Scripts.Api.Models.Font?, Tickblaze.Scripts.Api.Models.Font?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.=(Tickblaze.Scripts.Api.Models.Font, Tickblaze.Scripts.Api.Models.Font)
+  nameWithType: Font.operator ==(Font?, Font?)
+  nameWithType.vb: Font.=(Font, Font)
+- uid: Tickblaze.Scripts.Api.Models.Font.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Models.Font.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.=
+  nameWithType: Font.operator ==
+  nameWithType.vb: Font.=
+- uid: Tickblaze.Scripts.Api.Models.Font.op_Inequality(Tickblaze.Scripts.Api.Models.Font,Tickblaze.Scripts.Api.Models.Font)
+  name: operator !=(Font?, Font?)
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_op_Inequality_Tickblaze_Scripts_Api_Models_Font_Tickblaze_Scripts_Api_Models_Font_
+  commentId: M:Tickblaze.Scripts.Api.Models.Font.op_Inequality(Tickblaze.Scripts.Api.Models.Font,Tickblaze.Scripts.Api.Models.Font)
+  name.vb: <>(Font, Font)
+  fullName: Tickblaze.Scripts.Api.Models.Font.operator !=(Tickblaze.Scripts.Api.Models.Font?, Tickblaze.Scripts.Api.Models.Font?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.<>(Tickblaze.Scripts.Api.Models.Font, Tickblaze.Scripts.Api.Models.Font)
+  nameWithType: Font.operator !=(Font?, Font?)
+  nameWithType.vb: Font.<>(Font, Font)
+- uid: Tickblaze.Scripts.Api.Models.Font.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Models.Font.html#Tickblaze_Scripts_Api_Models_Font_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Font.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Models.Font.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Models.Font.<>
+  nameWithType: Font.operator !=
+  nameWithType.vb: Font.<>
 - uid: Tickblaze.Scripts.Api.Models.Metadata
   name: Metadata
   href: api/Tickblaze.Scripts.Api.Models.Metadata.html
@@ -7565,31 +7907,31 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Models.PlotLevel
   fullName: Tickblaze.Scripts.Api.Models.PlotLevel
   nameWithType: PlotLevel
-- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,System.String,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
+- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,System.String,Tickblaze.Core.Enums.LineStyle,System.Int32)
   name: PlotLevel(double, string, LineStyle, int)
-  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_Double_System_String_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_
-  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,System.String,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
+  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_Double_System_String_Tickblaze_Core_Enums_LineStyle_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,System.String,Tickblaze.Core.Enums.LineStyle,System.Int32)
   name.vb: New(Double, String, LineStyle, Integer)
-  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(double, string, Tickblaze.Scripts.Api.Enums.LineStyle, int)
-  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(Double, String, Tickblaze.Scripts.Api.Enums.LineStyle, Integer)
+  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(double, string, Tickblaze.Core.Enums.LineStyle, int)
+  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(Double, String, Tickblaze.Core.Enums.LineStyle, Integer)
   nameWithType: PlotLevel.PlotLevel(double, string, LineStyle, int)
   nameWithType.vb: PlotLevel.New(Double, String, LineStyle, Integer)
-- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
+- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32)
   name: PlotLevel(double, Color, LineStyle, int)
-  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_Double_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_
-  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
+  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_Double_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_LineStyle_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32)
   name.vb: New(Double, Color, LineStyle, Integer)
-  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, int)
-  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(Double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, Integer)
+  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, int)
+  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(Double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, Integer)
   nameWithType: PlotLevel.PlotLevel(double, Color, LineStyle, int)
   nameWithType.vb: PlotLevel.New(Double, Color, LineStyle, Integer)
-- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.String,System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
+- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.String,System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32,System.Boolean)
   name: PlotLevel(string, double, Color, LineStyle, int, bool)
-  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_String_System_Double_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_
-  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.String,System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
+  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_String_System_Double_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_LineStyle_System_Int32_System_Boolean_
+  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.String,System.Double,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32,System.Boolean)
   name.vb: New(String, Double, Color, LineStyle, Integer, Boolean)
-  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(string, double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, int, bool)
-  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(String, Double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, Integer, Boolean)
+  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(string, double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, int, bool)
+  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(String, Double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, Integer, Boolean)
   nameWithType: PlotLevel.PlotLevel(string, double, Color, LineStyle, int, bool)
   nameWithType.vb: PlotLevel.New(String, Double, Color, LineStyle, Integer, Boolean)
 - uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor*
@@ -7880,6 +8222,210 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Size.Width
   fullName: Tickblaze.Scripts.Api.Models.Size.Width
   nameWithType: Size.Width
+- uid: Tickblaze.Scripts.Api.Models.Stroke
+  name: Stroke
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html
+  commentId: T:Tickblaze.Scripts.Api.Models.Stroke
+  fullName: Tickblaze.Scripts.Api.Models.Stroke
+  nameWithType: Stroke
+- uid: Tickblaze.Scripts.Api.Models.Stroke.#ctor
+  name: Stroke()
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke__ctor
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Stroke()
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.New()
+  nameWithType: Stroke.Stroke()
+  nameWithType.vb: Stroke.New()
+- uid: Tickblaze.Scripts.Api.Models.Stroke.#ctor*
+  name: Stroke
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Stroke
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.New
+  nameWithType: Stroke.Stroke
+  nameWithType.vb: Stroke.New
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Color
+  name: Color
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Color
+  commentId: P:Tickblaze.Scripts.Api.Models.Stroke.Color
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Color
+  nameWithType: Stroke.Color
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Color*
+  name: Color
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Color_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.Color
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Color
+  nameWithType: Stroke.Color
+- uid: Tickblaze.Scripts.Api.Models.Stroke.EditableFields
+  name: EditableFields
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_EditableFields
+  commentId: P:Tickblaze.Scripts.Api.Models.Stroke.EditableFields
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.EditableFields
+  nameWithType: Stroke.EditableFields
+- uid: Tickblaze.Scripts.Api.Models.Stroke.EditableFields*
+  name: EditableFields
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_EditableFields_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.EditableFields
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.EditableFields
+  nameWithType: Stroke.EditableFields
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.Equals(Object)
+  nameWithType: Stroke.Equals(object?)
+  nameWithType.vb: Stroke.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Equals(Tickblaze.Scripts.Api.Models.Stroke)
+  name: Equals(Stroke?)
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Equals_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.Equals(Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: Equals(Stroke)
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Equals(Tickblaze.Scripts.Api.Models.Stroke?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.Equals(Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: Stroke.Equals(Stroke?)
+  nameWithType.vb: Stroke.Equals(Stroke)
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.Equals
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Equals
+  nameWithType: Stroke.Equals
+- uid: Tickblaze.Scripts.Api.Models.Stroke.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.GetHashCode()
+  nameWithType: Stroke.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Models.Stroke.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.GetHashCode
+  nameWithType: Stroke.GetHashCode
+- uid: Tickblaze.Scripts.Api.Models.Stroke.IsVisible
+  name: IsVisible
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_IsVisible
+  commentId: P:Tickblaze.Scripts.Api.Models.Stroke.IsVisible
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.IsVisible
+  nameWithType: Stroke.IsVisible
+- uid: Tickblaze.Scripts.Api.Models.Stroke.IsVisible*
+  name: IsVisible
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_IsVisible_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.IsVisible
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.IsVisible
+  nameWithType: Stroke.IsVisible
+- uid: Tickblaze.Scripts.Api.Models.Stroke.LineStyle
+  name: LineStyle
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_LineStyle
+  commentId: P:Tickblaze.Scripts.Api.Models.Stroke.LineStyle
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.LineStyle
+  nameWithType: Stroke.LineStyle
+- uid: Tickblaze.Scripts.Api.Models.Stroke.LineStyle*
+  name: LineStyle
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_LineStyle_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.LineStyle
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.LineStyle
+  nameWithType: Stroke.LineStyle
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Thickness
+  name: Thickness
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Thickness
+  commentId: P:Tickblaze.Scripts.Api.Models.Stroke.Thickness
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Thickness
+  nameWithType: Stroke.Thickness
+- uid: Tickblaze.Scripts.Api.Models.Stroke.Thickness*
+  name: Thickness
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_Thickness_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.Thickness
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.Thickness
+  nameWithType: Stroke.Thickness
+- uid: Tickblaze.Scripts.Api.Models.Stroke.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_ToString
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.ToString
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.ToString()
+  nameWithType: Stroke.ToString()
+- uid: Tickblaze.Scripts.Api.Models.Stroke.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.ToString
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.ToString
+  nameWithType: Stroke.ToString
+- uid: Tickblaze.Scripts.Api.Models.Stroke.op_Equality(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Scripts.Api.Models.Stroke)
+  name: operator ==(Stroke?, Stroke?)
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_op_Equality_Tickblaze_Scripts_Api_Models_Stroke_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.op_Equality(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: =(Stroke, Stroke)
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.operator ==(Tickblaze.Scripts.Api.Models.Stroke?, Tickblaze.Scripts.Api.Models.Stroke?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.=(Tickblaze.Scripts.Api.Models.Stroke, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: Stroke.operator ==(Stroke?, Stroke?)
+  nameWithType.vb: Stroke.=(Stroke, Stroke)
+- uid: Tickblaze.Scripts.Api.Models.Stroke.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.=
+  nameWithType: Stroke.operator ==
+  nameWithType.vb: Stroke.=
+- uid: Tickblaze.Scripts.Api.Models.Stroke.op_Inequality(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Scripts.Api.Models.Stroke)
+  name: operator !=(Stroke?, Stroke?)
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_op_Inequality_Tickblaze_Scripts_Api_Models_Stroke_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Models.Stroke.op_Inequality(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: <>(Stroke, Stroke)
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.operator !=(Tickblaze.Scripts.Api.Models.Stroke?, Tickblaze.Scripts.Api.Models.Stroke?)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.<>(Tickblaze.Scripts.Api.Models.Stroke, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: Stroke.operator !=(Stroke?, Stroke?)
+  nameWithType.vb: Stroke.<>(Stroke, Stroke)
+- uid: Tickblaze.Scripts.Api.Models.Stroke.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Models.Stroke.html#Tickblaze_Scripts_Api_Models_Stroke_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Stroke.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Models.Stroke.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Models.Stroke.<>
+  nameWithType: Stroke.operator !=
+  nameWithType.vb: Stroke.<>
+- uid: Tickblaze.Scripts.Api.Models.StrokeEditableFields
+  name: StrokeEditableFields
+  href: api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html
+  commentId: T:Tickblaze.Scripts.Api.Models.StrokeEditableFields
+  fullName: Tickblaze.Scripts.Api.Models.StrokeEditableFields
+  nameWithType: StrokeEditableFields
+- uid: Tickblaze.Scripts.Api.Models.StrokeEditableFields.All
+  name: All
+  href: api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html#Tickblaze_Scripts_Api_Models_StrokeEditableFields_All
+  commentId: F:Tickblaze.Scripts.Api.Models.StrokeEditableFields.All
+  fullName: Tickblaze.Scripts.Api.Models.StrokeEditableFields.All
+  nameWithType: StrokeEditableFields.All
+- uid: Tickblaze.Scripts.Api.Models.StrokeEditableFields.Color
+  name: Color
+  href: api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html#Tickblaze_Scripts_Api_Models_StrokeEditableFields_Color
+  commentId: F:Tickblaze.Scripts.Api.Models.StrokeEditableFields.Color
+  fullName: Tickblaze.Scripts.Api.Models.StrokeEditableFields.Color
+  nameWithType: StrokeEditableFields.Color
+- uid: Tickblaze.Scripts.Api.Models.StrokeEditableFields.IsVisible
+  name: IsVisible
+  href: api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html#Tickblaze_Scripts_Api_Models_StrokeEditableFields_IsVisible
+  commentId: F:Tickblaze.Scripts.Api.Models.StrokeEditableFields.IsVisible
+  fullName: Tickblaze.Scripts.Api.Models.StrokeEditableFields.IsVisible
+  nameWithType: StrokeEditableFields.IsVisible
+- uid: Tickblaze.Scripts.Api.Models.StrokeEditableFields.LineStyle
+  name: LineStyle
+  href: api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html#Tickblaze_Scripts_Api_Models_StrokeEditableFields_LineStyle
+  commentId: F:Tickblaze.Scripts.Api.Models.StrokeEditableFields.LineStyle
+  fullName: Tickblaze.Scripts.Api.Models.StrokeEditableFields.LineStyle
+  nameWithType: StrokeEditableFields.LineStyle
+- uid: Tickblaze.Scripts.Api.Models.StrokeEditableFields.Thickness
+  name: Thickness
+  href: api/Tickblaze.Scripts.Api.Models.StrokeEditableFields.html#Tickblaze_Scripts_Api_Models_StrokeEditableFields_Thickness
+  commentId: F:Tickblaze.Scripts.Api.Models.StrokeEditableFields.Thickness
+  fullName: Tickblaze.Scripts.Api.Models.StrokeEditableFields.Thickness
+  nameWithType: StrokeEditableFields.Thickness
 - uid: Tickblaze.Scripts.Api.Models.Symbol
   name: Symbol
   href: api/Tickblaze.Scripts.Api.Models.Symbol.html
@@ -8291,6 +8837,30 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.SymbolInfo.<>
   nameWithType: SymbolInfo.operator !=
   nameWithType.vb: SymbolInfo.<>
+- uid: Tickblaze.Scripts.Api.NotOptimizableAttribute
+  name: NotOptimizableAttribute
+  href: api/Tickblaze.Scripts.Api.NotOptimizableAttribute.html
+  commentId: T:Tickblaze.Scripts.Api.NotOptimizableAttribute
+  fullName: Tickblaze.Scripts.Api.NotOptimizableAttribute
+  nameWithType: NotOptimizableAttribute
+- uid: Tickblaze.Scripts.Api.NotOptimizableAttribute.#ctor
+  name: NotOptimizableAttribute()
+  href: api/Tickblaze.Scripts.Api.NotOptimizableAttribute.html#Tickblaze_Scripts_Api_NotOptimizableAttribute__ctor
+  commentId: M:Tickblaze.Scripts.Api.NotOptimizableAttribute.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.NotOptimizableAttribute.NotOptimizableAttribute()
+  fullName.vb: Tickblaze.Scripts.Api.NotOptimizableAttribute.New()
+  nameWithType: NotOptimizableAttribute.NotOptimizableAttribute()
+  nameWithType.vb: NotOptimizableAttribute.New()
+- uid: Tickblaze.Scripts.Api.NotOptimizableAttribute.#ctor*
+  name: NotOptimizableAttribute
+  href: api/Tickblaze.Scripts.Api.NotOptimizableAttribute.html#Tickblaze_Scripts_Api_NotOptimizableAttribute__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.NotOptimizableAttribute.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.NotOptimizableAttribute.NotOptimizableAttribute
+  fullName.vb: Tickblaze.Scripts.Api.NotOptimizableAttribute.New
+  nameWithType: NotOptimizableAttribute.NotOptimizableAttribute
+  nameWithType.vb: NotOptimizableAttribute.New
 - uid: Tickblaze.Scripts.Api.Parameter
   name: Parameter
   href: api/Tickblaze.Scripts.Api.Parameter.html
@@ -8435,13 +9005,13 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New()
   nameWithType: PlotSeries.PlotSeries()
   nameWithType.vb: PlotSeries.New()
-- uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
+- uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Core.Enums.LineStyle,System.Int32,System.Boolean)
   name: PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)
-  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_System_Boolean_
-  commentId: M:Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32,System.Boolean)
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_Tickblaze_Core_Enums_LineStyle_System_Int32_System_Boolean_
+  commentId: M:Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,Tickblaze.Core.Enums.LineStyle,System.Int32,System.Boolean)
   name.vb: New(String, Color, PlotStyle, LineStyle, Integer, Boolean)
-  fullName: Tickblaze.Scripts.Api.PlotSeries.PlotSeries(string, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Scripts.Api.Enums.LineStyle, int, bool)
-  fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(String, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Scripts.Api.Enums.LineStyle, Integer, Boolean)
+  fullName: Tickblaze.Scripts.Api.PlotSeries.PlotSeries(string, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Core.Enums.LineStyle, int, bool)
+  fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(String, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Core.Enums.LineStyle, Integer, Boolean)
   nameWithType: PlotSeries.PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)
   nameWithType.vb: PlotSeries.New(String, Color, PlotStyle, LineStyle, Integer, Boolean)
 - uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color)
@@ -8453,6 +9023,15 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color)
   nameWithType: PlotSeries.PlotSeries(Color)
   nameWithType.vb: PlotSeries.New(Color)
+- uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32)
+  name: PlotSeries(Color, LineStyle, int)
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_LineStyle_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.LineStyle,System.Int32)
+  name.vb: New(Color, LineStyle, Integer)
+  fullName: Tickblaze.Scripts.Api.PlotSeries.PlotSeries(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, int)
+  fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, Integer)
+  nameWithType: PlotSeries.PlotSeries(Color, LineStyle, int)
+  nameWithType.vb: PlotSeries.New(Color, LineStyle, Integer)
 - uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Core.Enums.PlotStyle,System.Int32)
   name: PlotSeries(Color, PlotStyle, int)
   href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Core_Enums_PlotStyle_System_Int32_
@@ -8462,15 +9041,6 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Integer)
   nameWithType: PlotSeries.PlotSeries(Color, PlotStyle, int)
   nameWithType.vb: PlotSeries.New(Color, PlotStyle, Integer)
-- uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
-  name: PlotSeries(Color, LineStyle, int)
-  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_Tickblaze_Scripts_Api_Enums_LineStyle_System_Int32_
-  commentId: M:Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color,Tickblaze.Scripts.Api.Enums.LineStyle,System.Int32)
-  name.vb: New(Color, LineStyle, Integer)
-  fullName: Tickblaze.Scripts.Api.PlotSeries.PlotSeries(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, int)
-  fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Scripts.Api.Enums.LineStyle, Integer)
-  nameWithType: PlotSeries.PlotSeries(Color, LineStyle, int)
-  nameWithType.vb: PlotSeries.New(Color, LineStyle, Integer)
 - uid: Tickblaze.Scripts.Api.PlotSeries.#ctor*
   name: PlotSeries
   href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_

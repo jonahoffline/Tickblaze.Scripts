@@ -170,7 +170,7 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawEllipse(IPoint, double, double, Color?, Color?, int, LineStyle)
   
   </h3>
@@ -203,8 +203,55 @@ Interface IDrawingContext
     <dt><code>lineThickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the outline.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawEllipse(IPoint, double, double, Color?, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws an ellipse with the specified dimensions and styling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawEllipse(IPoint center, double radiusX, double radiusY, Color? fillColor, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The center point of the ellipse.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The horizontal radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The vertical radius of the ellipse.</p>
+</dd>
+    <dt><code>fillColor</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</dt>
+    <dd><p>The color used to fill the ellipse.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the outline.</p>
 </dd>
   </dl>
 
@@ -223,7 +270,7 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawExtendedLine(IPoint, IPoint, Color, int, LineStyle)
   
   </h3>
@@ -250,8 +297,49 @@ Interface IDrawingContext
     <dt><code>thickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the line.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the line.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawExtendedLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawExtendedLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawExtendedLine(IPoint, IPoint, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a line extended in both directions beyond its endpoints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawExtendedLine(IPoint pointA, IPoint pointB, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pointA</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The first point on the line.</p>
+</dd>
+    <dt><code>pointB</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The second point on the line.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the line.</p>
 </dd>
   </dl>
 
@@ -270,7 +358,7 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawLine(IPoint, IPoint, Color, int, LineStyle)
   
   </h3>
@@ -297,8 +385,49 @@ Interface IDrawingContext
     <dt><code>thickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the line.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the line.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawLine_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawLine(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawLine(IPoint, IPoint, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a line between two points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawLine(IPoint pointA, IPoint pointB, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pointA</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The first point of the line.</p>
+</dd>
+    <dt><code>pointB</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The second point of the line.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the line.</p>
 </dd>
   </dl>
 
@@ -317,7 +446,7 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawPolygon(IEnumerable&lt;IPoint&gt;, Color?, Color?, int, LineStyle)
   
   </h3>
@@ -344,8 +473,49 @@ Interface IDrawingContext
     <dt><code>lineThickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the outline.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawPolygon_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Interfaces_IPoint__System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawPolygon(System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Interfaces.IPoint},System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawPolygon(IEnumerable&lt;IPoint&gt;, Color?, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a polygon defined by a sequence of points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawPolygon(IEnumerable&lt;IPoint&gt; points, Color? fillColor, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a>&gt;</dt>
+    <dd><p>The vertices of the polygon.</p>
+</dd>
+    <dt><code>fillColor</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</dt>
+    <dd><p>The color used to fill the polygon.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the outline.</p>
 </dd>
   </dl>
 
@@ -364,7 +534,7 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Color_System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Color,System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawRay(IPoint, IPoint, Color, int, LineStyle)
   
   </h3>
@@ -391,8 +561,49 @@ Interface IDrawingContext
     <dt><code>thickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the ray.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the ray.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRay_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRay(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawRay(IPoint, IPoint, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a ray originating from a point and extending through a second point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawRay(IPoint pointA, IPoint pointB, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pointA</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The starting point of the ray.</p>
+</dd>
+    <dt><code>pointB</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>A point along the direction of the ray.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the ray.</p>
 </dd>
   </dl>
 
@@ -411,7 +622,7 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawRectangle(IPoint, double, double, Color?, Color?, int, LineStyle)
   
   </h3>
@@ -444,7 +655,7 @@ Interface IDrawingContext
     <dt><code>lineThickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the outline.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the outline.</p>
 </dd>
   </dl>
@@ -464,7 +675,54 @@ Interface IDrawingContext
 
   <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Scripts_Api_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Scripts.Api.Enums.LineStyle)">
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawRectangle(IPoint, double, double, Color?, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a rectangle at the specified location with the given dimensions and styling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawRectangle(IPoint pointA, double width, double height, Color? fillColor, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pointA</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The top-left corner of the rectangle.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The width of the rectangle.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The height of the rectangle.</p>
+</dd>
+    <dt><code>fillColor</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</dt>
+    <dd><p>The color used to fill the rectangle.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)">
   DrawRectangle(IPoint, IPoint, Color?, Color?, int, LineStyle)
   
   </h3>
@@ -494,8 +752,52 @@ Interface IDrawingContext
     <dt><code>lineThickness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The thickness of the outline.</p>
 </dd>
-    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.LineStyle.html">LineStyle</a></dt>
+    <dt><code>lineStyle</code> <a class="xref" href="Tickblaze.Core.Enums.LineStyle.html">LineStyle</a></dt>
     <dd><p>The style of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawRectangle_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_" data-uid="Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawRectangle(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)">
+  DrawRectangle(IPoint, IPoint, Color?, Stroke)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a rectangle defined by two points with the given styling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawRectangle(IPoint pointA, IPoint pointB, Color? fillColor, Stroke stroke)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pointA</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The corner of the rectangle.</p>
+</dd>
+    <dt><code>pointB</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IPoint.html">IPoint</a></dt>
+    <dd><p>The opposite corner of the rectangle.</p>
+</dd>
+    <dt><code>fillColor</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Color.html">Color</a>?</dt>
+    <dd><p>The color used to fill the rectangle.</p>
+</dd>
+    <dt><code>stroke</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Stroke.html">Stroke</a></dt>
+    <dd><p>The stroke of the outline.</p>
 </dd>
   </dl>
 
