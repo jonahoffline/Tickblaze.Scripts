@@ -22,6 +22,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.AsyncReleaser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.AsyncReleaser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.AsyncReleaser",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Core.AsyncReleaser.yml\" sourcestartlinenumber=\"1\">Wraps an action in an IDisposable, firing the action in dispose</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Capturer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Capturer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Capturer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Core.EnumExtensions.yml",
       "output": {
         ".html": {
@@ -106,6 +134,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Enums.PutOrCall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Enums.PutOrCall.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Enums.PutOrCall",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Core.Enums.PutOrCall.yml\" sourcestartlinenumber=\"1\">Represents the option type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Core.Enums.yml",
       "output": {
         ".html": {
@@ -176,6 +218,104 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.OptionSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.OptionSnapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options.OptionSnapshot",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.OptionUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.OptionUpdate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options.OptionUpdate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.OptionsInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.OptionsInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options.OptionsInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.PutCallInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.PutCallInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options.PutCallInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.StrikesUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.StrikesUpdate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options.StrikesUpdate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Models.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Models.Options.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Models.Options",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Core.Models.yml",
       "output": {
         ".html": {
@@ -201,6 +341,20 @@
       "IsMRef": true,
       "Title": "Tickblaze.Core.NullableBool",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Releaser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Releaser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Releaser",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Core.Releaser.yml\" sourcestartlinenumber=\"1\">Wraps an action in an IDisposable, firing the action in dispose</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -257,20 +411,6 @@
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter",
       "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.yml\" sourcestartlinenumber=\"1\">Interface for script base adapter.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter",
-      "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.yml\" sourcestartlinenumber=\"1\">Interface for script base adapter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1226,6 +1366,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Models.ArrowInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Models.ArrowInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Models.ArrowInfo",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Models.ArrowInfo.yml\" sourcestartlinenumber=\"1\">Struct used to define an arrow</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Models.Bar.yml",
       "output": {
         ".html": {
@@ -1620,11 +1774,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -1663,11 +1817,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "docs/toc.json"
-        },
         ".html": {
           "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
         }
       },
       "version": ""
@@ -1826,11 +1980,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

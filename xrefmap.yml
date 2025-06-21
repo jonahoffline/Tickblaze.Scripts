@@ -7,12 +7,111 @@ references:
   commentId: N:Tickblaze.Core
   fullName: Tickblaze.Core
   nameWithType: Tickblaze.Core
+- uid: Tickblaze.Core.AsyncReleaser
+  name: AsyncReleaser
+  href: api/Tickblaze.Core.AsyncReleaser.html
+  commentId: T:Tickblaze.Core.AsyncReleaser
+  fullName: Tickblaze.Core.AsyncReleaser
+  nameWithType: AsyncReleaser
+- uid: Tickblaze.Core.AsyncReleaser.#ctor(System.Func{System.Threading.Tasks.Task})
+  name: AsyncReleaser(Func<Task>)
+  href: api/Tickblaze.Core.AsyncReleaser.html#Tickblaze_Core_AsyncReleaser__ctor_System_Func_System_Threading_Tasks_Task__
+  commentId: M:Tickblaze.Core.AsyncReleaser.#ctor(System.Func{System.Threading.Tasks.Task})
+  name.vb: New(Func(Of Task))
+  fullName: Tickblaze.Core.AsyncReleaser.AsyncReleaser(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: Tickblaze.Core.AsyncReleaser.New(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: AsyncReleaser.AsyncReleaser(Func<Task>)
+  nameWithType.vb: AsyncReleaser.New(Func(Of Task))
+- uid: Tickblaze.Core.AsyncReleaser.#ctor*
+  name: AsyncReleaser
+  href: api/Tickblaze.Core.AsyncReleaser.html#Tickblaze_Core_AsyncReleaser__ctor_
+  commentId: Overload:Tickblaze.Core.AsyncReleaser.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.AsyncReleaser.AsyncReleaser
+  fullName.vb: Tickblaze.Core.AsyncReleaser.New
+  nameWithType: AsyncReleaser.AsyncReleaser
+  nameWithType.vb: AsyncReleaser.New
+- uid: Tickblaze.Core.AsyncReleaser.DisposeAsync
+  name: DisposeAsync()
+  href: api/Tickblaze.Core.AsyncReleaser.html#Tickblaze_Core_AsyncReleaser_DisposeAsync
+  commentId: M:Tickblaze.Core.AsyncReleaser.DisposeAsync
+  fullName: Tickblaze.Core.AsyncReleaser.DisposeAsync()
+  nameWithType: AsyncReleaser.DisposeAsync()
+- uid: Tickblaze.Core.AsyncReleaser.DisposeAsync*
+  name: DisposeAsync
+  href: api/Tickblaze.Core.AsyncReleaser.html#Tickblaze_Core_AsyncReleaser_DisposeAsync_
+  commentId: Overload:Tickblaze.Core.AsyncReleaser.DisposeAsync
+  fullName: Tickblaze.Core.AsyncReleaser.DisposeAsync
+  nameWithType: AsyncReleaser.DisposeAsync
+- uid: Tickblaze.Core.Capturer
+  name: Capturer
+  href: api/Tickblaze.Core.Capturer.html
+  commentId: T:Tickblaze.Core.Capturer
+  fullName: Tickblaze.Core.Capturer
+  nameWithType: Capturer
+- uid: Tickblaze.Core.Capturer.#ctor
+  name: Capturer()
+  href: api/Tickblaze.Core.Capturer.html#Tickblaze_Core_Capturer__ctor
+  commentId: M:Tickblaze.Core.Capturer.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Core.Capturer.Capturer()
+  fullName.vb: Tickblaze.Core.Capturer.New()
+  nameWithType: Capturer.Capturer()
+  nameWithType.vb: Capturer.New()
+- uid: Tickblaze.Core.Capturer.#ctor*
+  name: Capturer
+  href: api/Tickblaze.Core.Capturer.html#Tickblaze_Core_Capturer__ctor_
+  commentId: Overload:Tickblaze.Core.Capturer.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Capturer.Capturer
+  fullName.vb: Tickblaze.Core.Capturer.New
+  nameWithType: Capturer.Capturer
+  nameWithType.vb: Capturer.New
+- uid: Tickblaze.Core.Capturer.Capture
+  name: Capture()
+  href: api/Tickblaze.Core.Capturer.html#Tickblaze_Core_Capturer_Capture
+  commentId: M:Tickblaze.Core.Capturer.Capture
+  fullName: Tickblaze.Core.Capturer.Capture()
+  nameWithType: Capturer.Capture()
+- uid: Tickblaze.Core.Capturer.Capture*
+  name: Capture
+  href: api/Tickblaze.Core.Capturer.html#Tickblaze_Core_Capturer_Capture_
+  commentId: Overload:Tickblaze.Core.Capturer.Capture
+  fullName: Tickblaze.Core.Capturer.Capture
+  nameWithType: Capturer.Capture
+- uid: Tickblaze.Core.Capturer.IsCaptured
+  name: IsCaptured
+  href: api/Tickblaze.Core.Capturer.html#Tickblaze_Core_Capturer_IsCaptured
+  commentId: P:Tickblaze.Core.Capturer.IsCaptured
+  fullName: Tickblaze.Core.Capturer.IsCaptured
+  nameWithType: Capturer.IsCaptured
+- uid: Tickblaze.Core.Capturer.IsCaptured*
+  name: IsCaptured
+  href: api/Tickblaze.Core.Capturer.html#Tickblaze_Core_Capturer_IsCaptured_
+  commentId: Overload:Tickblaze.Core.Capturer.IsCaptured
+  fullName: Tickblaze.Core.Capturer.IsCaptured
+  nameWithType: Capturer.IsCaptured
 - uid: Tickblaze.Core.EnumExtensions
   name: EnumExtensions
   href: api/Tickblaze.Core.EnumExtensions.html
   commentId: T:Tickblaze.Core.EnumExtensions
   fullName: Tickblaze.Core.EnumExtensions
   nameWithType: EnumExtensions
+- uid: Tickblaze.Core.EnumExtensions.GetFlags*
+  name: GetFlags
+  href: api/Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_GetFlags_
+  commentId: Overload:Tickblaze.Core.EnumExtensions.GetFlags
+  fullName: Tickblaze.Core.EnumExtensions.GetFlags
+  nameWithType: EnumExtensions.GetFlags
+- uid: Tickblaze.Core.EnumExtensions.GetFlags``1(``0)
+  name: GetFlags<TEnum>(TEnum)
+  href: api/Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_GetFlags__1___0_
+  commentId: M:Tickblaze.Core.EnumExtensions.GetFlags``1(``0)
+  name.vb: GetFlags(Of TEnum)(TEnum)
+  fullName: Tickblaze.Core.EnumExtensions.GetFlags<TEnum>(TEnum)
+  fullName.vb: Tickblaze.Core.EnumExtensions.GetFlags(Of TEnum)(TEnum)
+  nameWithType: EnumExtensions.GetFlags<TEnum>(TEnum)
+  nameWithType.vb: EnumExtensions.GetFlags(Of TEnum)(TEnum)
 - uid: Tickblaze.Core.EnumExtensions.ToNullable(Tickblaze.Core.NullableBool)
   name: ToNullable(NullableBool)
   href: api/Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_ToNullable_Tickblaze_Core_NullableBool_
@@ -331,6 +430,24 @@ references:
   commentId: F:Tickblaze.Core.Enums.PlotStyle.TriangleUp
   fullName: Tickblaze.Core.Enums.PlotStyle.TriangleUp
   nameWithType: PlotStyle.TriangleUp
+- uid: Tickblaze.Core.Enums.PutOrCall
+  name: PutOrCall
+  href: api/Tickblaze.Core.Enums.PutOrCall.html
+  commentId: T:Tickblaze.Core.Enums.PutOrCall
+  fullName: Tickblaze.Core.Enums.PutOrCall
+  nameWithType: PutOrCall
+- uid: Tickblaze.Core.Enums.PutOrCall.Call
+  name: Call
+  href: api/Tickblaze.Core.Enums.PutOrCall.html#Tickblaze_Core_Enums_PutOrCall_Call
+  commentId: F:Tickblaze.Core.Enums.PutOrCall.Call
+  fullName: Tickblaze.Core.Enums.PutOrCall.Call
+  nameWithType: PutOrCall.Call
+- uid: Tickblaze.Core.Enums.PutOrCall.Put
+  name: Put
+  href: api/Tickblaze.Core.Enums.PutOrCall.html#Tickblaze_Core_Enums_PutOrCall_Put
+  commentId: F:Tickblaze.Core.Enums.PutOrCall.Put
+  fullName: Tickblaze.Core.Enums.PutOrCall.Put
+  nameWithType: PutOrCall.Put
 - uid: Tickblaze.Core.Extensions
   name: Tickblaze.Core.Extensions
   href: api/Tickblaze.Core.Extensions.html
@@ -544,6 +661,516 @@ references:
   fullName.vb: Tickblaze.Core.Models.ContractSettings.<>
   nameWithType: ContractSettings.operator !=
   nameWithType.vb: ContractSettings.<>
+- uid: Tickblaze.Core.Models.Options
+  name: Tickblaze.Core.Models.Options
+  href: api/Tickblaze.Core.Models.Options.html
+  commentId: N:Tickblaze.Core.Models.Options
+  fullName: Tickblaze.Core.Models.Options
+  nameWithType: Tickblaze.Core.Models.Options
+- uid: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate
+  name: ImpliedVolatilityUpdate
+  href: api/Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.html
+  commentId: T:Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate
+  fullName: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate
+  nameWithType: ImpliedVolatilityUpdate
+- uid: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.#ctor(System.Double)
+  name: ImpliedVolatilityUpdate(double)
+  href: api/Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.html#Tickblaze_Core_Models_Options_ImpliedVolatilityUpdate__ctor_System_Double_
+  commentId: M:Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.#ctor(System.Double)
+  name.vb: New(Double)
+  fullName: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.ImpliedVolatilityUpdate(double)
+  fullName.vb: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.New(Double)
+  nameWithType: ImpliedVolatilityUpdate.ImpliedVolatilityUpdate(double)
+  nameWithType.vb: ImpliedVolatilityUpdate.New(Double)
+- uid: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.#ctor*
+  name: ImpliedVolatilityUpdate
+  href: api/Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.html#Tickblaze_Core_Models_Options_ImpliedVolatilityUpdate__ctor_
+  commentId: Overload:Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.ImpliedVolatilityUpdate
+  fullName.vb: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.New
+  nameWithType: ImpliedVolatilityUpdate.ImpliedVolatilityUpdate
+  nameWithType.vb: ImpliedVolatilityUpdate.New
+- uid: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.ImpliedVolatility
+  name: ImpliedVolatility
+  href: api/Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.html#Tickblaze_Core_Models_Options_ImpliedVolatilityUpdate_ImpliedVolatility
+  commentId: F:Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.ImpliedVolatility
+  fullName: Tickblaze.Core.Models.Options.ImpliedVolatilityUpdate.ImpliedVolatility
+  nameWithType: ImpliedVolatilityUpdate.ImpliedVolatility
+- uid: Tickblaze.Core.Models.Options.OptionSnapshot
+  name: OptionSnapshot
+  href: api/Tickblaze.Core.Models.Options.OptionSnapshot.html
+  commentId: T:Tickblaze.Core.Models.Options.OptionSnapshot
+  fullName: Tickblaze.Core.Models.Options.OptionSnapshot
+  nameWithType: OptionSnapshot
+- uid: Tickblaze.Core.Models.Options.OptionSnapshot.#ctor(System.Collections.Concurrent.ConcurrentDictionary{System.Double,Tickblaze.Core.Models.Options.PutCallInfo},System.Double)
+  name: OptionSnapshot(ConcurrentDictionary<double, PutCallInfo>, double)
+  href: api/Tickblaze.Core.Models.Options.OptionSnapshot.html#Tickblaze_Core_Models_Options_OptionSnapshot__ctor_System_Collections_Concurrent_ConcurrentDictionary_System_Double_Tickblaze_Core_Models_Options_PutCallInfo__System_Double_
+  commentId: M:Tickblaze.Core.Models.Options.OptionSnapshot.#ctor(System.Collections.Concurrent.ConcurrentDictionary{System.Double,Tickblaze.Core.Models.Options.PutCallInfo},System.Double)
+  name.vb: New(ConcurrentDictionary(Of Double, PutCallInfo), Double)
+  fullName: Tickblaze.Core.Models.Options.OptionSnapshot.OptionSnapshot(System.Collections.Concurrent.ConcurrentDictionary<double, Tickblaze.Core.Models.Options.PutCallInfo>, double)
+  fullName.vb: Tickblaze.Core.Models.Options.OptionSnapshot.New(System.Collections.Concurrent.ConcurrentDictionary(Of Double, Tickblaze.Core.Models.Options.PutCallInfo), Double)
+  nameWithType: OptionSnapshot.OptionSnapshot(ConcurrentDictionary<double, PutCallInfo>, double)
+  nameWithType.vb: OptionSnapshot.New(ConcurrentDictionary(Of Double, PutCallInfo), Double)
+- uid: Tickblaze.Core.Models.Options.OptionSnapshot.#ctor*
+  name: OptionSnapshot
+  href: api/Tickblaze.Core.Models.Options.OptionSnapshot.html#Tickblaze_Core_Models_Options_OptionSnapshot__ctor_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionSnapshot.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Models.Options.OptionSnapshot.OptionSnapshot
+  fullName.vb: Tickblaze.Core.Models.Options.OptionSnapshot.New
+  nameWithType: OptionSnapshot.OptionSnapshot
+  nameWithType.vb: OptionSnapshot.New
+- uid: Tickblaze.Core.Models.Options.OptionSnapshot.ImpliedVolatility
+  name: ImpliedVolatility
+  href: api/Tickblaze.Core.Models.Options.OptionSnapshot.html#Tickblaze_Core_Models_Options_OptionSnapshot_ImpliedVolatility
+  commentId: P:Tickblaze.Core.Models.Options.OptionSnapshot.ImpliedVolatility
+  fullName: Tickblaze.Core.Models.Options.OptionSnapshot.ImpliedVolatility
+  nameWithType: OptionSnapshot.ImpliedVolatility
+- uid: Tickblaze.Core.Models.Options.OptionSnapshot.ImpliedVolatility*
+  name: ImpliedVolatility
+  href: api/Tickblaze.Core.Models.Options.OptionSnapshot.html#Tickblaze_Core_Models_Options_OptionSnapshot_ImpliedVolatility_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionSnapshot.ImpliedVolatility
+  fullName: Tickblaze.Core.Models.Options.OptionSnapshot.ImpliedVolatility
+  nameWithType: OptionSnapshot.ImpliedVolatility
+- uid: Tickblaze.Core.Models.Options.OptionUpdate
+  name: OptionUpdate
+  href: api/Tickblaze.Core.Models.Options.OptionUpdate.html
+  commentId: T:Tickblaze.Core.Models.Options.OptionUpdate
+  fullName: Tickblaze.Core.Models.Options.OptionUpdate
+  nameWithType: OptionUpdate
+- uid: Tickblaze.Core.Models.Options.OptionUpdate.#ctor
+  name: OptionUpdate()
+  href: api/Tickblaze.Core.Models.Options.OptionUpdate.html#Tickblaze_Core_Models_Options_OptionUpdate__ctor
+  commentId: M:Tickblaze.Core.Models.Options.OptionUpdate.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Core.Models.Options.OptionUpdate.OptionUpdate()
+  fullName.vb: Tickblaze.Core.Models.Options.OptionUpdate.New()
+  nameWithType: OptionUpdate.OptionUpdate()
+  nameWithType.vb: OptionUpdate.New()
+- uid: Tickblaze.Core.Models.Options.OptionUpdate.#ctor*
+  name: OptionUpdate
+  href: api/Tickblaze.Core.Models.Options.OptionUpdate.html#Tickblaze_Core_Models_Options_OptionUpdate__ctor_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionUpdate.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Models.Options.OptionUpdate.OptionUpdate
+  fullName.vb: Tickblaze.Core.Models.Options.OptionUpdate.New
+  nameWithType: OptionUpdate.OptionUpdate
+  nameWithType.vb: OptionUpdate.New
+- uid: Tickblaze.Core.Models.Options.OptionsInfo
+  name: OptionsInfo
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html
+  commentId: T:Tickblaze.Core.Models.Options.OptionsInfo
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo
+  nameWithType: OptionsInfo
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.#ctor
+  name: OptionsInfo()
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo__ctor
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OptionsInfo()
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.New()
+  nameWithType: OptionsInfo.OptionsInfo()
+  nameWithType.vb: OptionsInfo.New()
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.#ctor(Tickblaze.Core.Models.Options.OptionsInfo)
+  name: OptionsInfo(OptionsInfo)
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo__ctor_Tickblaze_Core_Models_Options_OptionsInfo_
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.#ctor(Tickblaze.Core.Models.Options.OptionsInfo)
+  name.vb: New(OptionsInfo)
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OptionsInfo(Tickblaze.Core.Models.Options.OptionsInfo)
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.New(Tickblaze.Core.Models.Options.OptionsInfo)
+  nameWithType: OptionsInfo.OptionsInfo(OptionsInfo)
+  nameWithType.vb: OptionsInfo.New(OptionsInfo)
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.#ctor*
+  name: OptionsInfo
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo__ctor_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OptionsInfo
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.New
+  nameWithType: OptionsInfo.OptionsInfo
+  nameWithType.vb: OptionsInfo.New
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_EqualityContract
+  commentId: P:Tickblaze.Core.Models.Options.OptionsInfo.EqualityContract
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.EqualityContract
+  nameWithType: OptionsInfo.EqualityContract
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_EqualityContract_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.EqualityContract
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.EqualityContract
+  nameWithType: OptionsInfo.EqualityContract
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Equals_System_Object_
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Equals(object?)
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.Equals(Object)
+  nameWithType: OptionsInfo.Equals(object?)
+  nameWithType.vb: OptionsInfo.Equals(Object)
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Equals(Tickblaze.Core.Models.Options.OptionsInfo)
+  name: Equals(OptionsInfo?)
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Equals_Tickblaze_Core_Models_Options_OptionsInfo_
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.Equals(Tickblaze.Core.Models.Options.OptionsInfo)
+  name.vb: Equals(OptionsInfo)
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Equals(Tickblaze.Core.Models.Options.OptionsInfo?)
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.Equals(Tickblaze.Core.Models.Options.OptionsInfo)
+  nameWithType: OptionsInfo.Equals(OptionsInfo?)
+  nameWithType.vb: OptionsInfo.Equals(OptionsInfo)
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Equals*
+  name: Equals
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Equals_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.Equals
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Equals
+  nameWithType: OptionsInfo.Equals
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Gamma
+  name: Gamma
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Gamma
+  commentId: P:Tickblaze.Core.Models.Options.OptionsInfo.Gamma
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Gamma
+  nameWithType: OptionsInfo.Gamma
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Gamma*
+  name: Gamma
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Gamma_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.Gamma
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Gamma
+  nameWithType: OptionsInfo.Gamma
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_GetHashCode
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.GetHashCode
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.GetHashCode()
+  nameWithType: OptionsInfo.GetHashCode()
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_GetHashCode_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.GetHashCode
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.GetHashCode
+  nameWithType: OptionsInfo.GetHashCode
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterest
+  name: OpenInterest
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_OpenInterest
+  commentId: P:Tickblaze.Core.Models.Options.OptionsInfo.OpenInterest
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterest
+  nameWithType: OptionsInfo.OpenInterest
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterest*
+  name: OpenInterest
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_OpenInterest_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.OpenInterest
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterest
+  nameWithType: OptionsInfo.OpenInterest
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterestGamma
+  name: OpenInterestGamma
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_OpenInterestGamma
+  commentId: P:Tickblaze.Core.Models.Options.OptionsInfo.OpenInterestGamma
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterestGamma
+  nameWithType: OptionsInfo.OpenInterestGamma
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterestGamma*
+  name: OpenInterestGamma
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_OpenInterestGamma_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.OpenInterestGamma
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.OpenInterestGamma
+  nameWithType: OptionsInfo.OpenInterestGamma
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.PrintMembers(System.Text.StringBuilder)
+  nameWithType: OptionsInfo.PrintMembers(StringBuilder)
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_PrintMembers_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.PrintMembers
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.PrintMembers
+  nameWithType: OptionsInfo.PrintMembers
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.ToString
+  name: ToString()
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_ToString
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.ToString
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.ToString()
+  nameWithType: OptionsInfo.ToString()
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.ToString*
+  name: ToString
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_ToString_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.ToString
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.ToString
+  nameWithType: OptionsInfo.ToString
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Volume
+  name: Volume
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Volume
+  commentId: P:Tickblaze.Core.Models.Options.OptionsInfo.Volume
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Volume
+  nameWithType: OptionsInfo.Volume
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.Volume*
+  name: Volume
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_Volume_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.Volume
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.Volume
+  nameWithType: OptionsInfo.Volume
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.VolumeGamma
+  name: VolumeGamma
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_VolumeGamma
+  commentId: P:Tickblaze.Core.Models.Options.OptionsInfo.VolumeGamma
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.VolumeGamma
+  nameWithType: OptionsInfo.VolumeGamma
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.VolumeGamma*
+  name: VolumeGamma
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_VolumeGamma_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.VolumeGamma
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.VolumeGamma
+  nameWithType: OptionsInfo.VolumeGamma
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.op_Equality(Tickblaze.Core.Models.Options.OptionsInfo,Tickblaze.Core.Models.Options.OptionsInfo)
+  name: operator ==(OptionsInfo?, OptionsInfo?)
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_op_Equality_Tickblaze_Core_Models_Options_OptionsInfo_Tickblaze_Core_Models_Options_OptionsInfo_
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.op_Equality(Tickblaze.Core.Models.Options.OptionsInfo,Tickblaze.Core.Models.Options.OptionsInfo)
+  name.vb: =(OptionsInfo, OptionsInfo)
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.operator ==(Tickblaze.Core.Models.Options.OptionsInfo?, Tickblaze.Core.Models.Options.OptionsInfo?)
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.=(Tickblaze.Core.Models.Options.OptionsInfo, Tickblaze.Core.Models.Options.OptionsInfo)
+  nameWithType: OptionsInfo.operator ==(OptionsInfo?, OptionsInfo?)
+  nameWithType.vb: OptionsInfo.=(OptionsInfo, OptionsInfo)
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_op_Equality_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.operator ==
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.=
+  nameWithType: OptionsInfo.operator ==
+  nameWithType.vb: OptionsInfo.=
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.op_Inequality(Tickblaze.Core.Models.Options.OptionsInfo,Tickblaze.Core.Models.Options.OptionsInfo)
+  name: operator !=(OptionsInfo?, OptionsInfo?)
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_op_Inequality_Tickblaze_Core_Models_Options_OptionsInfo_Tickblaze_Core_Models_Options_OptionsInfo_
+  commentId: M:Tickblaze.Core.Models.Options.OptionsInfo.op_Inequality(Tickblaze.Core.Models.Options.OptionsInfo,Tickblaze.Core.Models.Options.OptionsInfo)
+  name.vb: <>(OptionsInfo, OptionsInfo)
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.operator !=(Tickblaze.Core.Models.Options.OptionsInfo?, Tickblaze.Core.Models.Options.OptionsInfo?)
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.<>(Tickblaze.Core.Models.Options.OptionsInfo, Tickblaze.Core.Models.Options.OptionsInfo)
+  nameWithType: OptionsInfo.operator !=(OptionsInfo?, OptionsInfo?)
+  nameWithType.vb: OptionsInfo.<>(OptionsInfo, OptionsInfo)
+- uid: Tickblaze.Core.Models.Options.OptionsInfo.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Core.Models.Options.OptionsInfo.html#Tickblaze_Core_Models_Options_OptionsInfo_op_Inequality_
+  commentId: Overload:Tickblaze.Core.Models.Options.OptionsInfo.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Core.Models.Options.OptionsInfo.operator !=
+  fullName.vb: Tickblaze.Core.Models.Options.OptionsInfo.<>
+  nameWithType: OptionsInfo.operator !=
+  nameWithType.vb: OptionsInfo.<>
+- uid: Tickblaze.Core.Models.Options.PutCallInfo
+  name: PutCallInfo
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html
+  commentId: T:Tickblaze.Core.Models.Options.PutCallInfo
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo
+  nameWithType: PutCallInfo
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.#ctor
+  name: PutCallInfo()
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo__ctor
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.PutCallInfo()
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.New()
+  nameWithType: PutCallInfo.PutCallInfo()
+  nameWithType.vb: PutCallInfo.New()
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.#ctor(Tickblaze.Core.Models.Options.PutCallInfo)
+  name: PutCallInfo(PutCallInfo)
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo__ctor_Tickblaze_Core_Models_Options_PutCallInfo_
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.#ctor(Tickblaze.Core.Models.Options.PutCallInfo)
+  name.vb: New(PutCallInfo)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.PutCallInfo(Tickblaze.Core.Models.Options.PutCallInfo)
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.New(Tickblaze.Core.Models.Options.PutCallInfo)
+  nameWithType: PutCallInfo.PutCallInfo(PutCallInfo)
+  nameWithType.vb: PutCallInfo.New(PutCallInfo)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.#ctor*
+  name: PutCallInfo
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo__ctor_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.PutCallInfo
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.New
+  nameWithType: PutCallInfo.PutCallInfo
+  nameWithType.vb: PutCallInfo.New
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Call
+  name: Call
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Call
+  commentId: P:Tickblaze.Core.Models.Options.PutCallInfo.Call
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Call
+  nameWithType: PutCallInfo.Call
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Call*
+  name: Call
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Call_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.Call
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Call
+  nameWithType: PutCallInfo.Call
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_EqualityContract
+  commentId: P:Tickblaze.Core.Models.Options.PutCallInfo.EqualityContract
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.EqualityContract
+  nameWithType: PutCallInfo.EqualityContract
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_EqualityContract_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.EqualityContract
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.EqualityContract
+  nameWithType: PutCallInfo.EqualityContract
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Equals_System_Object_
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Equals(object?)
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.Equals(Object)
+  nameWithType: PutCallInfo.Equals(object?)
+  nameWithType.vb: PutCallInfo.Equals(Object)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Equals(Tickblaze.Core.Models.Options.PutCallInfo)
+  name: Equals(PutCallInfo?)
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Equals_Tickblaze_Core_Models_Options_PutCallInfo_
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.Equals(Tickblaze.Core.Models.Options.PutCallInfo)
+  name.vb: Equals(PutCallInfo)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Equals(Tickblaze.Core.Models.Options.PutCallInfo?)
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.Equals(Tickblaze.Core.Models.Options.PutCallInfo)
+  nameWithType: PutCallInfo.Equals(PutCallInfo?)
+  nameWithType.vb: PutCallInfo.Equals(PutCallInfo)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Equals*
+  name: Equals
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Equals_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.Equals
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Equals
+  nameWithType: PutCallInfo.Equals
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_GetHashCode
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.GetHashCode
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.GetHashCode()
+  nameWithType: PutCallInfo.GetHashCode()
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_GetHashCode_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.GetHashCode
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.GetHashCode
+  nameWithType: PutCallInfo.GetHashCode
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Item(Tickblaze.Core.Enums.PutOrCall)
+  name: this[PutOrCall]
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Item_Tickblaze_Core_Enums_PutOrCall_
+  commentId: P:Tickblaze.Core.Models.Options.PutCallInfo.Item(Tickblaze.Core.Enums.PutOrCall)
+  name.vb: this[](PutOrCall)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.this[Tickblaze.Core.Enums.PutOrCall]
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.this[](Tickblaze.Core.Enums.PutOrCall)
+  nameWithType: PutCallInfo.this[PutOrCall]
+  nameWithType.vb: PutCallInfo.this[](PutOrCall)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Item*
+  name: this
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Item_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.Item
+  name.vb: this[]
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.this
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.this[]
+  nameWithType: PutCallInfo.this
+  nameWithType.vb: PutCallInfo.this[]
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.PrintMembers(System.Text.StringBuilder)
+  nameWithType: PutCallInfo.PrintMembers(StringBuilder)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_PrintMembers_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.PrintMembers
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.PrintMembers
+  nameWithType: PutCallInfo.PrintMembers
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Put
+  name: Put
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Put
+  commentId: P:Tickblaze.Core.Models.Options.PutCallInfo.Put
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Put
+  nameWithType: PutCallInfo.Put
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.Put*
+  name: Put
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_Put_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.Put
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.Put
+  nameWithType: PutCallInfo.Put
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.ToString
+  name: ToString()
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_ToString
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.ToString
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.ToString()
+  nameWithType: PutCallInfo.ToString()
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.ToString*
+  name: ToString
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_ToString_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.ToString
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.ToString
+  nameWithType: PutCallInfo.ToString
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.op_Equality(Tickblaze.Core.Models.Options.PutCallInfo,Tickblaze.Core.Models.Options.PutCallInfo)
+  name: operator ==(PutCallInfo?, PutCallInfo?)
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_op_Equality_Tickblaze_Core_Models_Options_PutCallInfo_Tickblaze_Core_Models_Options_PutCallInfo_
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.op_Equality(Tickblaze.Core.Models.Options.PutCallInfo,Tickblaze.Core.Models.Options.PutCallInfo)
+  name.vb: =(PutCallInfo, PutCallInfo)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.operator ==(Tickblaze.Core.Models.Options.PutCallInfo?, Tickblaze.Core.Models.Options.PutCallInfo?)
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.=(Tickblaze.Core.Models.Options.PutCallInfo, Tickblaze.Core.Models.Options.PutCallInfo)
+  nameWithType: PutCallInfo.operator ==(PutCallInfo?, PutCallInfo?)
+  nameWithType.vb: PutCallInfo.=(PutCallInfo, PutCallInfo)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_op_Equality_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.operator ==
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.=
+  nameWithType: PutCallInfo.operator ==
+  nameWithType.vb: PutCallInfo.=
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.op_Inequality(Tickblaze.Core.Models.Options.PutCallInfo,Tickblaze.Core.Models.Options.PutCallInfo)
+  name: operator !=(PutCallInfo?, PutCallInfo?)
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_op_Inequality_Tickblaze_Core_Models_Options_PutCallInfo_Tickblaze_Core_Models_Options_PutCallInfo_
+  commentId: M:Tickblaze.Core.Models.Options.PutCallInfo.op_Inequality(Tickblaze.Core.Models.Options.PutCallInfo,Tickblaze.Core.Models.Options.PutCallInfo)
+  name.vb: <>(PutCallInfo, PutCallInfo)
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.operator !=(Tickblaze.Core.Models.Options.PutCallInfo?, Tickblaze.Core.Models.Options.PutCallInfo?)
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.<>(Tickblaze.Core.Models.Options.PutCallInfo, Tickblaze.Core.Models.Options.PutCallInfo)
+  nameWithType: PutCallInfo.operator !=(PutCallInfo?, PutCallInfo?)
+  nameWithType.vb: PutCallInfo.<>(PutCallInfo, PutCallInfo)
+- uid: Tickblaze.Core.Models.Options.PutCallInfo.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Core.Models.Options.PutCallInfo.html#Tickblaze_Core_Models_Options_PutCallInfo_op_Inequality_
+  commentId: Overload:Tickblaze.Core.Models.Options.PutCallInfo.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Core.Models.Options.PutCallInfo.operator !=
+  fullName.vb: Tickblaze.Core.Models.Options.PutCallInfo.<>
+  nameWithType: PutCallInfo.operator !=
+  nameWithType.vb: PutCallInfo.<>
+- uid: Tickblaze.Core.Models.Options.StrikesUpdate
+  name: StrikesUpdate
+  href: api/Tickblaze.Core.Models.Options.StrikesUpdate.html
+  commentId: T:Tickblaze.Core.Models.Options.StrikesUpdate
+  fullName: Tickblaze.Core.Models.Options.StrikesUpdate
+  nameWithType: StrikesUpdate
+- uid: Tickblaze.Core.Models.Options.StrikesUpdate.#ctor(System.Collections.Concurrent.ConcurrentDictionary{System.Double,Tickblaze.Core.Models.Options.PutCallInfo})
+  name: StrikesUpdate(ConcurrentDictionary<double, PutCallInfo>)
+  href: api/Tickblaze.Core.Models.Options.StrikesUpdate.html#Tickblaze_Core_Models_Options_StrikesUpdate__ctor_System_Collections_Concurrent_ConcurrentDictionary_System_Double_Tickblaze_Core_Models_Options_PutCallInfo__
+  commentId: M:Tickblaze.Core.Models.Options.StrikesUpdate.#ctor(System.Collections.Concurrent.ConcurrentDictionary{System.Double,Tickblaze.Core.Models.Options.PutCallInfo})
+  name.vb: New(ConcurrentDictionary(Of Double, PutCallInfo))
+  fullName: Tickblaze.Core.Models.Options.StrikesUpdate.StrikesUpdate(System.Collections.Concurrent.ConcurrentDictionary<double, Tickblaze.Core.Models.Options.PutCallInfo>)
+  fullName.vb: Tickblaze.Core.Models.Options.StrikesUpdate.New(System.Collections.Concurrent.ConcurrentDictionary(Of Double, Tickblaze.Core.Models.Options.PutCallInfo))
+  nameWithType: StrikesUpdate.StrikesUpdate(ConcurrentDictionary<double, PutCallInfo>)
+  nameWithType.vb: StrikesUpdate.New(ConcurrentDictionary(Of Double, PutCallInfo))
+- uid: Tickblaze.Core.Models.Options.StrikesUpdate.#ctor*
+  name: StrikesUpdate
+  href: api/Tickblaze.Core.Models.Options.StrikesUpdate.html#Tickblaze_Core_Models_Options_StrikesUpdate__ctor_
+  commentId: Overload:Tickblaze.Core.Models.Options.StrikesUpdate.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Models.Options.StrikesUpdate.StrikesUpdate
+  fullName.vb: Tickblaze.Core.Models.Options.StrikesUpdate.New
+  nameWithType: StrikesUpdate.StrikesUpdate
+  nameWithType.vb: StrikesUpdate.New
+- uid: Tickblaze.Core.Models.Options.StrikesUpdate.Snapshot
+  name: Snapshot
+  href: api/Tickblaze.Core.Models.Options.StrikesUpdate.html#Tickblaze_Core_Models_Options_StrikesUpdate_Snapshot
+  commentId: F:Tickblaze.Core.Models.Options.StrikesUpdate.Snapshot
+  fullName: Tickblaze.Core.Models.Options.StrikesUpdate.Snapshot
+  nameWithType: StrikesUpdate.Snapshot
 - uid: Tickblaze.Core.NullableBool
   name: NullableBool
   href: api/Tickblaze.Core.NullableBool.html
@@ -568,6 +1195,42 @@ references:
   commentId: F:Tickblaze.Core.NullableBool.True
   fullName: Tickblaze.Core.NullableBool.True
   nameWithType: NullableBool.True
+- uid: Tickblaze.Core.Releaser
+  name: Releaser
+  href: api/Tickblaze.Core.Releaser.html
+  commentId: T:Tickblaze.Core.Releaser
+  fullName: Tickblaze.Core.Releaser
+  nameWithType: Releaser
+- uid: Tickblaze.Core.Releaser.#ctor(System.Action)
+  name: Releaser(Action)
+  href: api/Tickblaze.Core.Releaser.html#Tickblaze_Core_Releaser__ctor_System_Action_
+  commentId: M:Tickblaze.Core.Releaser.#ctor(System.Action)
+  name.vb: New(Action)
+  fullName: Tickblaze.Core.Releaser.Releaser(System.Action)
+  fullName.vb: Tickblaze.Core.Releaser.New(System.Action)
+  nameWithType: Releaser.Releaser(Action)
+  nameWithType.vb: Releaser.New(Action)
+- uid: Tickblaze.Core.Releaser.#ctor*
+  name: Releaser
+  href: api/Tickblaze.Core.Releaser.html#Tickblaze_Core_Releaser__ctor_
+  commentId: Overload:Tickblaze.Core.Releaser.#ctor
+  name.vb: New
+  fullName: Tickblaze.Core.Releaser.Releaser
+  fullName.vb: Tickblaze.Core.Releaser.New
+  nameWithType: Releaser.Releaser
+  nameWithType.vb: Releaser.New
+- uid: Tickblaze.Core.Releaser.Dispose
+  name: Dispose()
+  href: api/Tickblaze.Core.Releaser.html#Tickblaze_Core_Releaser_Dispose
+  commentId: M:Tickblaze.Core.Releaser.Dispose
+  fullName: Tickblaze.Core.Releaser.Dispose()
+  nameWithType: Releaser.Dispose()
+- uid: Tickblaze.Core.Releaser.Dispose*
+  name: Dispose
+  href: api/Tickblaze.Core.Releaser.html#Tickblaze_Core_Releaser_Dispose_
+  commentId: Overload:Tickblaze.Core.Releaser.Dispose
+  fullName: Tickblaze.Core.Releaser.Dispose
+  nameWithType: Releaser.Dispose
 - uid: Tickblaze.Scripts.Api
   name: Tickblaze.Scripts.Api
   href: api/Tickblaze.Scripts.Api.html
@@ -679,36 +1342,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.Script
   fullName: Tickblaze.Scripts.Api.Adapters.IScriptBaseAdapter.Script
   nameWithType: IScriptBaseAdapter.Script
-- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter
-  name: ISymbolScriptBaseAdapter
-  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html
-  commentId: T:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter
-  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter
-  nameWithType: ISymbolScriptBaseAdapter
-- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData(Tickblaze.Scripts.Api.Models.BarSeriesInfo)
-  name: AddData(BarSeriesInfo)
-  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_AddData_Tickblaze_Scripts_Api_Models_BarSeriesInfo_
-  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData(Tickblaze.Scripts.Api.Models.BarSeriesInfo)
-  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData(Tickblaze.Scripts.Api.Models.BarSeriesInfo)
-  nameWithType: ISymbolScriptBaseAdapter.AddData(BarSeriesInfo)
-- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData*
-  name: AddData
-  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_AddData_
-  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData
-  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.AddData
-  nameWithType: ISymbolScriptBaseAdapter.AddData
-- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol(Tickblaze.Scripts.Api.Models.SymbolInfo)
-  name: GetSymbol(SymbolInfo)
-  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_GetSymbol_Tickblaze_Scripts_Api_Models_SymbolInfo_
-  commentId: M:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol(Tickblaze.Scripts.Api.Models.SymbolInfo)
-  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol(Tickblaze.Scripts.Api.Models.SymbolInfo)
-  nameWithType: ISymbolScriptBaseAdapter.GetSymbol(SymbolInfo)
-- uid: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol*
-  name: GetSymbol
-  href: api/Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.html#Tickblaze_Scripts_Api_Adapters_ISymbolScriptBaseAdapter_GetSymbol_
-  commentId: Overload:Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol
-  fullName: Tickblaze.Scripts.Api.Adapters.ISymbolScriptBaseAdapter.GetSymbol
-  nameWithType: ISymbolScriptBaseAdapter.GetSymbol
 - uid: Tickblaze.Scripts.Api.Attributes
   name: Tickblaze.Scripts.Api.Attributes
   href: api/Tickblaze.Scripts.Api.Attributes.html
@@ -1429,6 +2062,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Bases.IIndicator
   fullName: Tickblaze.Scripts.Api.Bases.IIndicator
   nameWithType: IIndicator
+- uid: Tickblaze.Scripts.Api.Bases.IIndicator.ApplyBackgroundColorToAllPanels
+  name: ApplyBackgroundColorToAllPanels
+  href: api/Tickblaze.Scripts.Api.Bases.IIndicator.html#Tickblaze_Scripts_Api_Bases_IIndicator_ApplyBackgroundColorToAllPanels
+  commentId: P:Tickblaze.Scripts.Api.Bases.IIndicator.ApplyBackgroundColorToAllPanels
+  fullName: Tickblaze.Scripts.Api.Bases.IIndicator.ApplyBackgroundColorToAllPanels
+  nameWithType: IIndicator.ApplyBackgroundColorToAllPanels
+- uid: Tickblaze.Scripts.Api.Bases.IIndicator.ApplyBackgroundColorToAllPanels*
+  name: ApplyBackgroundColorToAllPanels
+  href: api/Tickblaze.Scripts.Api.Bases.IIndicator.html#Tickblaze_Scripts_Api_Bases_IIndicator_ApplyBackgroundColorToAllPanels_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.IIndicator.ApplyBackgroundColorToAllPanels
+  fullName: Tickblaze.Scripts.Api.Bases.IIndicator.ApplyBackgroundColorToAllPanels
+  nameWithType: IIndicator.ApplyBackgroundColorToAllPanels
 - uid: Tickblaze.Scripts.Api.Bases.IIndicator.AutoRescale
   name: AutoRescale
   href: api/Tickblaze.Scripts.Api.Bases.IIndicator.html#Tickblaze_Scripts_Api_Bases_IIndicator_AutoRescale
@@ -1561,6 +2206,18 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Bases.Indicator.New
   nameWithType: Indicator.Indicator
   nameWithType.vb: Indicator.New
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.ApplyBackgroundColorToAllPanels
+  name: ApplyBackgroundColorToAllPanels
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_ApplyBackgroundColorToAllPanels
+  commentId: P:Tickblaze.Scripts.Api.Bases.Indicator.ApplyBackgroundColorToAllPanels
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.ApplyBackgroundColorToAllPanels
+  nameWithType: Indicator.ApplyBackgroundColorToAllPanels
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.ApplyBackgroundColorToAllPanels*
+  name: ApplyBackgroundColorToAllPanels
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_ApplyBackgroundColorToAllPanels_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.ApplyBackgroundColorToAllPanels
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.ApplyBackgroundColorToAllPanels
+  nameWithType: Indicator.ApplyBackgroundColorToAllPanels
 - uid: Tickblaze.Scripts.Api.Bases.Indicator.AutoRescale
   name: AutoRescale
   href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_AutoRescale
@@ -1996,6 +2653,30 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.Symbol
   fullName: Tickblaze.Scripts.Api.Bases.Indicator.Symbol
   nameWithType: Indicator.Symbol
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.YAxisBottomMarginMin
+  name: YAxisBottomMarginMin
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_YAxisBottomMarginMin
+  commentId: P:Tickblaze.Scripts.Api.Bases.Indicator.YAxisBottomMarginMin
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.YAxisBottomMarginMin
+  nameWithType: Indicator.YAxisBottomMarginMin
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.YAxisBottomMarginMin*
+  name: YAxisBottomMarginMin
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_YAxisBottomMarginMin_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.YAxisBottomMarginMin
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.YAxisBottomMarginMin
+  nameWithType: Indicator.YAxisBottomMarginMin
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
+  name: YAxisTopMarginMin
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_YAxisTopMarginMin
+  commentId: P:Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
+  nameWithType: Indicator.YAxisTopMarginMin
+- uid: Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin*
+  name: YAxisTopMarginMin
+  href: api/Tickblaze.Scripts.Api.Bases.Indicator.html#Tickblaze_Scripts_Api_Bases_Indicator_YAxisTopMarginMin_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
+  fullName: Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
+  nameWithType: Indicator.YAxisTopMarginMin
 - uid: Tickblaze.Scripts.Api.Bases.PositionSizer
   name: PositionSizer
   href: api/Tickblaze.Scripts.Api.Bases.PositionSizer.html
@@ -2344,21 +3025,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.ChartScale
   fullName: Tickblaze.Scripts.Api.Bases.Strategy.ChartScale
   nameWithType: Strategy.ChartScale
-- uid: Tickblaze.Scripts.Api.Bases.Strategy.OnBar(System.Int32)
-  name: OnBar(int)
-  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_OnBar_System_Int32_
-  commentId: M:Tickblaze.Scripts.Api.Bases.Strategy.OnBar(System.Int32)
-  name.vb: OnBar(Integer)
-  fullName: Tickblaze.Scripts.Api.Bases.Strategy.OnBar(int)
-  fullName.vb: Tickblaze.Scripts.Api.Bases.Strategy.OnBar(Integer)
-  nameWithType: Strategy.OnBar(int)
-  nameWithType.vb: Strategy.OnBar(Integer)
-- uid: Tickblaze.Scripts.Api.Bases.Strategy.OnBar*
-  name: OnBar
-  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_OnBar_
-  commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.OnBar
-  fullName: Tickblaze.Scripts.Api.Bases.Strategy.OnBar
-  nameWithType: Strategy.OnBar
 - uid: Tickblaze.Scripts.Api.Bases.Strategy.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)
   name: OnRender(IDrawingContext)
   href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_
@@ -2425,15 +3091,6 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
   fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.Bars
   nameWithType: SymbolScript.Bars
-- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Bases.BarType,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
-  name: GetBars(BarType, DateTime?, DateTime?)
-  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Bases_BarType_System_Nullable_System_DateTime__System_Nullable_System_DateTime__
-  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Bases.BarType,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
-  name.vb: GetBars(BarType, Date?, Date?)
-  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Bases.BarType, System.DateTime?, System.DateTime?)
-  fullName.vb: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Bases.BarType, Date?, Date?)
-  nameWithType: SymbolScript.GetBars(BarType, DateTime?, DateTime?)
-  nameWithType.vb: SymbolScript.GetBars(BarType, Date?, Date?)
 - uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars(Tickblaze.Scripts.Api.Models.BarSeriesInfo)
   name: GetBars(BarSeriesInfo)
   href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetBars_Tickblaze_Scripts_Api_Models_BarSeriesInfo_
@@ -2446,6 +3103,33 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars
   fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetBars
   nameWithType: SymbolScript.GetBars
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetDom
+  name: GetDom()
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetDom
+  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.GetDom
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetDom()
+  nameWithType: SymbolScript.GetDom()
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetDom*
+  name: GetDom
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetDom_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.GetDom
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetDom
+  nameWithType: SymbolScript.GetDom
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates(Tickblaze.Scripts.Api.Models.SymbolInfo)
+  name: GetL2QuoteUpdates(SymbolInfo?)
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetL2QuoteUpdates_Tickblaze_Scripts_Api_Models_SymbolInfo_
+  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates(Tickblaze.Scripts.Api.Models.SymbolInfo)
+  name.vb: GetL2QuoteUpdates(SymbolInfo)
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates(Tickblaze.Scripts.Api.Models.SymbolInfo?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates(Tickblaze.Scripts.Api.Models.SymbolInfo)
+  nameWithType: SymbolScript.GetL2QuoteUpdates(SymbolInfo?)
+  nameWithType.vb: SymbolScript.GetL2QuoteUpdates(SymbolInfo)
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates*
+  name: GetL2QuoteUpdates
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetL2QuoteUpdates_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetL2QuoteUpdates
+  nameWithType: SymbolScript.GetL2QuoteUpdates
 - uid: Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol(Tickblaze.Scripts.Api.Models.SymbolInfo)
   name: GetSymbol(SymbolInfo)
   href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_SymbolInfo_
@@ -2665,6 +3349,21 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.TradingScript.ModifyOrder
   fullName: Tickblaze.Scripts.Api.Bases.TradingScript.ModifyOrder
   nameWithType: TradingScript.ModifyOrder
+- uid: Tickblaze.Scripts.Api.Bases.TradingScript.OnBar(System.Int32)
+  name: OnBar(int)
+  href: api/Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_OnBar_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.Bases.TradingScript.OnBar(System.Int32)
+  name.vb: OnBar(Integer)
+  fullName: Tickblaze.Scripts.Api.Bases.TradingScript.OnBar(int)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.TradingScript.OnBar(Integer)
+  nameWithType: TradingScript.OnBar(int)
+  nameWithType.vb: TradingScript.OnBar(Integer)
+- uid: Tickblaze.Scripts.Api.Bases.TradingScript.OnBar*
+  name: OnBar
+  href: api/Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_OnBar_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.TradingScript.OnBar
+  fullName: Tickblaze.Scripts.Api.Bases.TradingScript.OnBar
+  nameWithType: TradingScript.OnBar
 - uid: Tickblaze.Scripts.Api.Bases.TradingScript.OnBarUpdate
   name: OnBarUpdate()
   href: api/Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_OnBarUpdate
@@ -4033,6 +4732,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.IChart
   fullName: Tickblaze.Scripts.Api.Interfaces.IChart
   nameWithType: IChart
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.BackgroundColor
+  name: BackgroundColor
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_BackgroundColor
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.IChart.BackgroundColor
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.BackgroundColor
+  nameWithType: IChart.BackgroundColor
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.BackgroundColor*
+  name: BackgroundColor
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_BackgroundColor_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IChart.BackgroundColor
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.BackgroundColor
+  nameWithType: IChart.BackgroundColor
 - uid: Tickblaze.Scripts.Api.Interfaces.IChart.BarWidth
   name: BarWidth
   href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_BarWidth
@@ -4171,6 +4882,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IChart.LastVisibleBarIndex
   fullName: Tickblaze.Scripts.Api.Interfaces.IChart.LastVisibleBarIndex
   nameWithType: IChart.LastVisibleBarIndex
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.TextColor
+  name: TextColor
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_TextColor
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.IChart.TextColor
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.TextColor
+  nameWithType: IChart.TextColor
+- uid: Tickblaze.Scripts.Api.Interfaces.IChart.TextColor*
+  name: TextColor
+  href: api/Tickblaze.Scripts.Api.Interfaces.IChart.html#Tickblaze_Scripts_Api_Interfaces_IChart_TextColor_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IChart.TextColor
+  fullName: Tickblaze.Scripts.Api.Interfaces.IChart.TextColor
+  nameWithType: IChart.TextColor
 - uid: Tickblaze.Scripts.Api.Interfaces.IChartObject
   name: IChartObject
   href: api/Tickblaze.Scripts.Api.Interfaces.IChartObject.html
@@ -4432,6 +5155,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.IDrawingContext
   fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext
   nameWithType: IDrawingContext
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawArrow(Tickblaze.Scripts.Api.Models.ArrowInfo,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  name: DrawArrow(ArrowInfo, Color?, Stroke)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawArrow_Tickblaze_Scripts_Api_Models_ArrowInfo_System_Nullable_Tickblaze_Scripts_Api_Models_Color__Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawArrow(Tickblaze.Scripts.Api.Models.ArrowInfo,System.Nullable{Tickblaze.Scripts.Api.Models.Color},Tickblaze.Scripts.Api.Models.Stroke)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawArrow(Tickblaze.Scripts.Api.Models.ArrowInfo, Tickblaze.Scripts.Api.Models.Color?, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: IDrawingContext.DrawArrow(ArrowInfo, Color?, Stroke)
+- uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawArrow*
+  name: DrawArrow
+  href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawArrow_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawArrow
+  fullName: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawArrow
+  nameWithType: IDrawingContext.DrawArrow
 - uid: Tickblaze.Scripts.Api.Interfaces.IDrawingContext.DrawEllipse(Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double,System.Double,System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Nullable{Tickblaze.Scripts.Api.Models.Color},System.Int32,Tickblaze.Core.Enums.LineStyle)
   name: DrawEllipse(IPoint, double, double, Color?, Color?, int, LineStyle)
   href: api/Tickblaze.Scripts.Api.Interfaces.IDrawingContext.html#Tickblaze_Scripts_Api_Interfaces_IDrawingContext_DrawEllipse_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_System_Double_System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Nullable_Tickblaze_Scripts_Api_Models_Color__System_Int32_Tickblaze_Core_Enums_LineStyle_
@@ -5929,6 +6664,216 @@ references:
   commentId: N:Tickblaze.Scripts.Api.Models
   fullName: Tickblaze.Scripts.Api.Models
   nameWithType: Tickblaze.Scripts.Api.Models
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo
+  name: ArrowInfo
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html
+  commentId: T:Tickblaze.Scripts.Api.Models.ArrowInfo
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo
+  nameWithType: ArrowInfo
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.#ctor(System.Double,System.Double,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double)
+  name: ArrowInfo(double, double, IPoint, double)
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo__ctor_System_Double_System_Double_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.#ctor(System.Double,System.Double,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double)
+  name.vb: New(Double, Double, IPoint, Double)
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.ArrowInfo(double, double, Tickblaze.Scripts.Api.Interfaces.IPoint, double)
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.New(Double, Double, Tickblaze.Scripts.Api.Interfaces.IPoint, Double)
+  nameWithType: ArrowInfo.ArrowInfo(double, double, IPoint, double)
+  nameWithType.vb: ArrowInfo.New(Double, Double, IPoint, Double)
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.#ctor(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double)
+  name: ArrowInfo(IPoint, IPoint, double)
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo__ctor_Tickblaze_Scripts_Api_Interfaces_IPoint_Tickblaze_Scripts_Api_Interfaces_IPoint_System_Double_
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.#ctor(Tickblaze.Scripts.Api.Interfaces.IPoint,Tickblaze.Scripts.Api.Interfaces.IPoint,System.Double)
+  name.vb: New(IPoint, IPoint, Double)
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.ArrowInfo(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, double)
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.New(Tickblaze.Scripts.Api.Interfaces.IPoint, Tickblaze.Scripts.Api.Interfaces.IPoint, Double)
+  nameWithType: ArrowInfo.ArrowInfo(IPoint, IPoint, double)
+  nameWithType.vb: ArrowInfo.New(IPoint, IPoint, Double)
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.#ctor*
+  name: ArrowInfo
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.ArrowInfo
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.New
+  nameWithType: ArrowInfo.ArrowInfo
+  nameWithType.vb: ArrowInfo.New
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Angle
+  name: Angle
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Angle
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.Angle
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Angle
+  nameWithType: ArrowInfo.Angle
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Angle*
+  name: Angle
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Angle_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.Angle
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Angle
+  nameWithType: ArrowInfo.Angle
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.DrawingPoints
+  name: DrawingPoints
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_DrawingPoints
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.DrawingPoints
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.DrawingPoints
+  nameWithType: ArrowInfo.DrawingPoints
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.DrawingPoints*
+  name: DrawingPoints
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_DrawingPoints_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.DrawingPoints
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.DrawingPoints
+  nameWithType: ArrowInfo.DrawingPoints
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.End
+  name: End
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_End
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.End
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.End
+  nameWithType: ArrowInfo.End
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.End*
+  name: End
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_End_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.End
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.End
+  nameWithType: ArrowInfo.End
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(System.Object)
+  name: Equals(object)
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(object)
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(Object)
+  nameWithType: ArrowInfo.Equals(object)
+  nameWithType.vb: ArrowInfo.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(Tickblaze.Scripts.Api.Models.ArrowInfo)
+  name: Equals(ArrowInfo)
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Equals_Tickblaze_Scripts_Api_Models_ArrowInfo_
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(Tickblaze.Scripts.Api.Models.ArrowInfo)
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals(Tickblaze.Scripts.Api.Models.ArrowInfo)
+  nameWithType: ArrowInfo.Equals(ArrowInfo)
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.Equals
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Equals
+  nameWithType: ArrowInfo.Equals
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.GetHashCode()
+  nameWithType: ArrowInfo.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.GetHashCode
+  nameWithType: ArrowInfo.GetHashCode
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.HeadLengthRatio
+  name: HeadLengthRatio
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_HeadLengthRatio
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.HeadLengthRatio
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.HeadLengthRatio
+  nameWithType: ArrowInfo.HeadLengthRatio
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.HeadLengthRatio*
+  name: HeadLengthRatio
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_HeadLengthRatio_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.HeadLengthRatio
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.HeadLengthRatio
+  nameWithType: ArrowInfo.HeadLengthRatio
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Length
+  name: Length
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Length
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.Length
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Length
+  nameWithType: ArrowInfo.Length
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Length*
+  name: Length
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Length_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.Length
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Length
+  nameWithType: ArrowInfo.Length
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Start
+  name: Start
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Start
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.Start
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Start
+  nameWithType: ArrowInfo.Start
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Start*
+  name: Start
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Start_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.Start
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Start
+  nameWithType: ArrowInfo.Start
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.TailWidthRatio
+  name: TailWidthRatio
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_TailWidthRatio
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.TailWidthRatio
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.TailWidthRatio
+  nameWithType: ArrowInfo.TailWidthRatio
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.TailWidthRatio*
+  name: TailWidthRatio
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_TailWidthRatio_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.TailWidthRatio
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.TailWidthRatio
+  nameWithType: ArrowInfo.TailWidthRatio
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_ToString
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.ToString
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.ToString()
+  nameWithType: ArrowInfo.ToString()
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.ToString
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.ToString
+  nameWithType: ArrowInfo.ToString
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Width
+  name: Width
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Width
+  commentId: P:Tickblaze.Scripts.Api.Models.ArrowInfo.Width
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Width
+  nameWithType: ArrowInfo.Width
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.Width*
+  name: Width
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_Width_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.Width
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.Width
+  nameWithType: ArrowInfo.Width
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.op_Equality(Tickblaze.Scripts.Api.Models.ArrowInfo,Tickblaze.Scripts.Api.Models.ArrowInfo)
+  name: operator ==(ArrowInfo, ArrowInfo)
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_op_Equality_Tickblaze_Scripts_Api_Models_ArrowInfo_Tickblaze_Scripts_Api_Models_ArrowInfo_
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.op_Equality(Tickblaze.Scripts.Api.Models.ArrowInfo,Tickblaze.Scripts.Api.Models.ArrowInfo)
+  name.vb: =(ArrowInfo, ArrowInfo)
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.operator ==(Tickblaze.Scripts.Api.Models.ArrowInfo, Tickblaze.Scripts.Api.Models.ArrowInfo)
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.=(Tickblaze.Scripts.Api.Models.ArrowInfo, Tickblaze.Scripts.Api.Models.ArrowInfo)
+  nameWithType: ArrowInfo.operator ==(ArrowInfo, ArrowInfo)
+  nameWithType.vb: ArrowInfo.=(ArrowInfo, ArrowInfo)
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.=
+  nameWithType: ArrowInfo.operator ==
+  nameWithType.vb: ArrowInfo.=
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.op_Inequality(Tickblaze.Scripts.Api.Models.ArrowInfo,Tickblaze.Scripts.Api.Models.ArrowInfo)
+  name: operator !=(ArrowInfo, ArrowInfo)
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_op_Inequality_Tickblaze_Scripts_Api_Models_ArrowInfo_Tickblaze_Scripts_Api_Models_ArrowInfo_
+  commentId: M:Tickblaze.Scripts.Api.Models.ArrowInfo.op_Inequality(Tickblaze.Scripts.Api.Models.ArrowInfo,Tickblaze.Scripts.Api.Models.ArrowInfo)
+  name.vb: <>(ArrowInfo, ArrowInfo)
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.operator !=(Tickblaze.Scripts.Api.Models.ArrowInfo, Tickblaze.Scripts.Api.Models.ArrowInfo)
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.<>(Tickblaze.Scripts.Api.Models.ArrowInfo, Tickblaze.Scripts.Api.Models.ArrowInfo)
+  nameWithType: ArrowInfo.operator !=(ArrowInfo, ArrowInfo)
+  nameWithType.vb: ArrowInfo.<>(ArrowInfo, ArrowInfo)
+- uid: Tickblaze.Scripts.Api.Models.ArrowInfo.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Models.ArrowInfo.html#Tickblaze_Scripts_Api_Models_ArrowInfo_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.ArrowInfo.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Models.ArrowInfo.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Models.ArrowInfo.<>
+  nameWithType: ArrowInfo.operator !=
+  nameWithType.vb: ArrowInfo.<>
 - uid: Tickblaze.Scripts.Api.Models.Bar
   name: Bar
   href: api/Tickblaze.Scripts.Api.Models.Bar.html
@@ -6502,24 +7447,6 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Models.BarSeries
   fullName: Tickblaze.Scripts.Api.Models.BarSeries
   nameWithType: BarSeries
-- uid: Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod,System.Boolean,Tickblaze.Core.Models.ContractSettings,Tickblaze.Scripts.Api.Bases.BarType)
-  name: BarSeries(Symbol, BarPeriod, bool, ContractSettings, BarType)
-  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries__ctor_Tickblaze_Scripts_Api_Models_Symbol_Tickblaze_Scripts_Api_Models_BarPeriod_System_Boolean_Tickblaze_Core_Models_ContractSettings_Tickblaze_Scripts_Api_Bases_BarType_
-  commentId: M:Tickblaze.Scripts.Api.Models.BarSeries.#ctor(Tickblaze.Scripts.Api.Models.Symbol,Tickblaze.Scripts.Api.Models.BarPeriod,System.Boolean,Tickblaze.Core.Models.ContractSettings,Tickblaze.Scripts.Api.Bases.BarType)
-  name.vb: New(Symbol, BarPeriod, Boolean, ContractSettings, BarType)
-  fullName: Tickblaze.Scripts.Api.Models.BarSeries.BarSeries(Tickblaze.Scripts.Api.Models.Symbol, Tickblaze.Scripts.Api.Models.BarPeriod, bool, Tickblaze.Core.Models.ContractSettings, Tickblaze.Scripts.Api.Bases.BarType)
-  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.New(Tickblaze.Scripts.Api.Models.Symbol, Tickblaze.Scripts.Api.Models.BarPeriod, Boolean, Tickblaze.Core.Models.ContractSettings, Tickblaze.Scripts.Api.Bases.BarType)
-  nameWithType: BarSeries.BarSeries(Symbol, BarPeriod, bool, ContractSettings, BarType)
-  nameWithType.vb: BarSeries.New(Symbol, BarPeriod, Boolean, ContractSettings, BarType)
-- uid: Tickblaze.Scripts.Api.Models.BarSeries.#ctor*
-  name: BarSeries
-  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries__ctor_
-  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.#ctor
-  name.vb: New
-  fullName: Tickblaze.Scripts.Api.Models.BarSeries.BarSeries
-  fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.New
-  nameWithType: BarSeries.BarSeries
-  nameWithType.vb: BarSeries.New
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs
   name: BarSeries.BarEventArgs
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.BarEventArgs.html
@@ -7865,6 +8792,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Metadata.ResourceId
   fullName: Tickblaze.Scripts.Api.Models.Metadata.ResourceId
   nameWithType: Metadata.ResourceId
+- uid: Tickblaze.Scripts.Api.Models.Metadata.ScriptVersion
+  name: ScriptVersion
+  href: api/Tickblaze.Scripts.Api.Models.Metadata.html#Tickblaze_Scripts_Api_Models_Metadata_ScriptVersion
+  commentId: P:Tickblaze.Scripts.Api.Models.Metadata.ScriptVersion
+  fullName: Tickblaze.Scripts.Api.Models.Metadata.ScriptVersion
+  nameWithType: Metadata.ScriptVersion
+- uid: Tickblaze.Scripts.Api.Models.Metadata.ScriptVersion*
+  name: ScriptVersion
+  href: api/Tickblaze.Scripts.Api.Models.Metadata.html#Tickblaze_Scripts_Api_Models_Metadata_ScriptVersion_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Metadata.ScriptVersion
+  fullName: Tickblaze.Scripts.Api.Models.Metadata.ScriptVersion
+  nameWithType: Metadata.ScriptVersion
 - uid: Tickblaze.Scripts.Api.Models.Metadata.ShortName
   name: ShortName
   href: api/Tickblaze.Scripts.Api.Models.Metadata.html#Tickblaze_Scripts_Api_Models_Metadata_ShortName
@@ -8069,6 +9008,42 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.Point.New
   nameWithType: Point.Point
   nameWithType.vb: Point.New
+- uid: Tickblaze.Scripts.Api.Models.Point.Angle
+  name: Angle
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_Angle
+  commentId: P:Tickblaze.Scripts.Api.Models.Point.Angle
+  fullName: Tickblaze.Scripts.Api.Models.Point.Angle
+  nameWithType: Point.Angle
+- uid: Tickblaze.Scripts.Api.Models.Point.Angle*
+  name: Angle
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_Angle_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Point.Angle
+  fullName: Tickblaze.Scripts.Api.Models.Point.Angle
+  nameWithType: Point.Angle
+- uid: Tickblaze.Scripts.Api.Models.Point.Magnitude
+  name: Magnitude
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_Magnitude
+  commentId: P:Tickblaze.Scripts.Api.Models.Point.Magnitude
+  fullName: Tickblaze.Scripts.Api.Models.Point.Magnitude
+  nameWithType: Point.Magnitude
+- uid: Tickblaze.Scripts.Api.Models.Point.Magnitude*
+  name: Magnitude
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_Magnitude_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Point.Magnitude
+  fullName: Tickblaze.Scripts.Api.Models.Point.Magnitude
+  nameWithType: Point.Magnitude
+- uid: Tickblaze.Scripts.Api.Models.Point.Normalize
+  name: Normalize()
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_Normalize
+  commentId: M:Tickblaze.Scripts.Api.Models.Point.Normalize
+  fullName: Tickblaze.Scripts.Api.Models.Point.Normalize()
+  nameWithType: Point.Normalize()
+- uid: Tickblaze.Scripts.Api.Models.Point.Normalize*
+  name: Normalize
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_Normalize_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Point.Normalize
+  fullName: Tickblaze.Scripts.Api.Models.Point.Normalize
+  nameWithType: Point.Normalize
 - uid: Tickblaze.Scripts.Api.Models.Point.X
   name: X
   href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_X
@@ -8111,6 +9086,51 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.Point.+
   nameWithType: Point.operator +
   nameWithType.vb: Point.+
+- uid: Tickblaze.Scripts.Api.Models.Point.op_Division(Tickblaze.Scripts.Api.Models.Point,System.Double)
+  name: operator /(Point, double)
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_op_Division_Tickblaze_Scripts_Api_Models_Point_System_Double_
+  commentId: M:Tickblaze.Scripts.Api.Models.Point.op_Division(Tickblaze.Scripts.Api.Models.Point,System.Double)
+  name.vb: /(Point, Double)
+  fullName: Tickblaze.Scripts.Api.Models.Point.operator /(Tickblaze.Scripts.Api.Models.Point, double)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Point./(Tickblaze.Scripts.Api.Models.Point, Double)
+  nameWithType: Point.operator /(Point, double)
+  nameWithType.vb: Point./(Point, Double)
+- uid: Tickblaze.Scripts.Api.Models.Point.op_Division*
+  name: operator /
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_op_Division_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Point.op_Division
+  name.vb: /
+  fullName: Tickblaze.Scripts.Api.Models.Point.operator /
+  fullName.vb: Tickblaze.Scripts.Api.Models.Point./
+  nameWithType: Point.operator /
+  nameWithType.vb: Point./
+- uid: Tickblaze.Scripts.Api.Models.Point.op_Multiply(System.Double,Tickblaze.Scripts.Api.Models.Point)
+  name: operator *(double, Point)
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_op_Multiply_System_Double_Tickblaze_Scripts_Api_Models_Point_
+  commentId: M:Tickblaze.Scripts.Api.Models.Point.op_Multiply(System.Double,Tickblaze.Scripts.Api.Models.Point)
+  name.vb: '*(Double, Point)'
+  fullName: Tickblaze.Scripts.Api.Models.Point.operator *(double, Tickblaze.Scripts.Api.Models.Point)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Point.*(Double, Tickblaze.Scripts.Api.Models.Point)
+  nameWithType: Point.operator *(double, Point)
+  nameWithType.vb: Point.*(Double, Point)
+- uid: Tickblaze.Scripts.Api.Models.Point.op_Multiply(Tickblaze.Scripts.Api.Models.Point,System.Double)
+  name: operator *(Point, double)
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_op_Multiply_Tickblaze_Scripts_Api_Models_Point_System_Double_
+  commentId: M:Tickblaze.Scripts.Api.Models.Point.op_Multiply(Tickblaze.Scripts.Api.Models.Point,System.Double)
+  name.vb: '*(Point, Double)'
+  fullName: Tickblaze.Scripts.Api.Models.Point.operator *(Tickblaze.Scripts.Api.Models.Point, double)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Point.*(Tickblaze.Scripts.Api.Models.Point, Double)
+  nameWithType: Point.operator *(Point, double)
+  nameWithType.vb: Point.*(Point, Double)
+- uid: Tickblaze.Scripts.Api.Models.Point.op_Multiply*
+  name: operator *
+  href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_op_Multiply_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Point.op_Multiply
+  name.vb: '*'
+  fullName: Tickblaze.Scripts.Api.Models.Point.operator *
+  fullName.vb: Tickblaze.Scripts.Api.Models.Point.*
+  nameWithType: Point.operator *
+  nameWithType.vb: Point.*
 - uid: Tickblaze.Scripts.Api.Models.Point.op_Subtraction(Tickblaze.Scripts.Api.Models.Point,Tickblaze.Scripts.Api.Models.Point)
   name: operator -(Point, Point)
   href: api/Tickblaze.Scripts.Api.Models.Point.html#Tickblaze_Scripts_Api_Models_Point_op_Subtraction_Tickblaze_Scripts_Api_Models_Point_Tickblaze_Scripts_Api_Models_Point_

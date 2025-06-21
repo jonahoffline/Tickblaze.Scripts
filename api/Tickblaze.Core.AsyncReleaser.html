@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum NullableBool | Tickblaze </title>
+      <title>Class AsyncReleaser | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum NullableBool | Tickblaze ">
+      <meta name="title" content="Class AsyncReleaser | Tickblaze ">
       
-      
+      <meta name="description" content="Wraps an action in an IDisposable, firing the action in dispose">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,13 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Core.NullableBool">
+        <article data-uid="Tickblaze.Core.AsyncReleaser">
 
 
 
-
-  <h1 id="Tickblaze_Core_NullableBool" data-uid="Tickblaze.Core.NullableBool" class="text-break">
-Enum NullableBool  
+  <h1 id="Tickblaze_Core_AsyncReleaser" data-uid="Tickblaze.Core.AsyncReleaser" class="text-break">
+Class AsyncReleaser  
   </h1>
 
   <div class="facts text-secondary">
@@ -98,19 +97,64 @@ Enum NullableBool
   <dl><dt>Assembly</dt><dd>Tickblaze.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Wraps an action in an IDisposable, firing the action in dispose</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum NullableBool</code></pre>
+    <pre><code class="lang-csharp hljs">public class AsyncReleaser : IAsyncDisposable</code></pre>
   </div>
 
 
 
 
+  <details class="typelist-details">
+  <summary>Inheritance</summary>
+  <dl class="typelist inheritance">
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AsyncReleaser</span></div>
+    </dd>
+  </dl>
+  </details>
+
+  <details class="typelist-details">
+    <summary>Implements</summary>
+    <dl class="typelist implements">
+      <dd>
+        <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+      </dd>
+    </dl>
+  </details>
 
 
-
+  <details class="typelist-details">
+    <summary>Inherited Members</summary>
+    <dl class="typelist inheritedMembers">
+      <dd>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      </div>
+      <div>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+      </div>
+    </dd></dl>
+  </details>
 
   <details class="typelist-details">
     <summary>Extension Methods</summary>
@@ -119,25 +163,86 @@ Enum NullableBool
   <div>
       <a class="xref" href="Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_">TypeExtensions.IsNumericType(object)</a>
   </div>
-  <div>
-      <a class="xref" href="Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_GetFlags__1___0_">EnumExtensions.GetFlags&lt;TEnum&gt;(TEnum)</a>
-  </div>
-  <div>
-      <a class="xref" href="Tickblaze.Core.EnumExtensions.html#Tickblaze_Core_EnumExtensions_ToNullable_Tickblaze_Core_NullableBool_">EnumExtensions.ToNullable(NullableBool)</a>
-  </div>
   </dd></dl>
   </details>
 
-  <h2 id="fields">Fields
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
 </h2>
+
+
+  <a id="Tickblaze_Core_AsyncReleaser__ctor_" data-uid="Tickblaze.Core.AsyncReleaser.#ctor*"></a>
+
+  <h3 id="Tickblaze_Core_AsyncReleaser__ctor_System_Func_System_Threading_Tasks_Task__" data-uid="Tickblaze.Core.AsyncReleaser.#ctor(System.Func{System.Threading.Tasks.Task})">
+  AsyncReleaser(Func&lt;Task&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wraps an action in an IDisposable, firing the action in dispose</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AsyncReleaser(Func&lt;Task&gt; disposeAction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt id="Tickblaze_Core_NullableBool_False"><code>False = 2</code></dt>
-    <dd></dd>
-    <dt id="Tickblaze_Core_NullableBool_Null"><code>Null = 0</code></dt>
-    <dd></dd>
-    <dt id="Tickblaze_Core_NullableBool_True"><code>True = 1</code></dt>
+    <dt><code>disposeAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tickblaze_Core_AsyncReleaser_DisposeAsync_" data-uid="Tickblaze.Core.AsyncReleaser.DisposeAsync*"></a>
+
+  <h3 id="Tickblaze_Core_AsyncReleaser_DisposeAsync" data-uid="Tickblaze.Core.AsyncReleaser.DisposeAsync">
+  DisposeAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
 
 
 

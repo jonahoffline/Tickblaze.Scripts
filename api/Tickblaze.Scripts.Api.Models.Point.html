@@ -288,6 +288,74 @@ Class Point
 </h2>
 
 
+  <a id="Tickblaze_Scripts_Api_Models_Point_Angle_" data-uid="Tickblaze.Scripts.Api.Models.Point.Angle*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Point_Angle" data-uid="Tickblaze.Scripts.Api.Models.Point.Angle">
+  Angle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The angle of the point as a vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Angle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Double" text="double"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Point_Magnitude_" data-uid="Tickblaze.Scripts.Api.Models.Point.Magnitude*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Point_Magnitude" data-uid="Tickblaze.Scripts.Api.Models.Point.Magnitude">
+  Magnitude
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The magnitude of the point as a vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Magnitude { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Double" text="double"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
   <a id="Tickblaze_Scripts_Api_Models_Point_X_" data-uid="Tickblaze.Scripts.Api.Models.Point.X*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Models_Point_X" data-uid="Tickblaze.Scripts.Api.Models.Point.X">
@@ -356,6 +424,43 @@ Class Point
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Point_Normalize_" data-uid="Tickblaze.Scripts.Api.Models.Point.Normalize*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Point_Normalize" data-uid="Tickblaze.Scripts.Api.Models.Point.Normalize">
+  Normalize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point Normalize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
   <h2 class="section" id="operators">Operators
 </h2>
 
@@ -390,6 +495,126 @@ Class Point
     <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
     <dd><p>A new <a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a> that is the result of adding <code class="paramref">p1</code> and <code class="paramref">p2</code>.</p>
 </dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Point_op_Division_" data-uid="Tickblaze.Scripts.Api.Models.Point.op_Division*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Point_op_Division_Tickblaze_Scripts_Api_Models_Point_System_Double_" data-uid="Tickblaze.Scripts.Api.Models.Point.op_Division(Tickblaze.Scripts.Api.Models.Point,System.Double)">
+  operator /(Point, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator /(Point p, double multiplier)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>p</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>multiplier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Point_op_Multiply_" data-uid="Tickblaze.Scripts.Api.Models.Point.op_Multiply*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Point_op_Multiply_System_Double_Tickblaze_Scripts_Api_Models_Point_" data-uid="Tickblaze.Scripts.Api.Models.Point.op_Multiply(System.Double,Tickblaze.Scripts.Api.Models.Point)">
+  operator *(double, Point)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator *(double multiplier, Point p)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>multiplier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>p</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Models_Point_op_Multiply_" data-uid="Tickblaze.Scripts.Api.Models.Point.op_Multiply*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Models_Point_op_Multiply_Tickblaze_Scripts_Api_Models_Point_System_Double_" data-uid="Tickblaze.Scripts.Api.Models.Point.op_Multiply(Tickblaze.Scripts.Api.Models.Point,System.Double)">
+  operator *(Point, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator *(Point p, double multiplier)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>p</code> <a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>multiplier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Point.html">Point</a></dt>
+    <dd></dd>
   </dl>
 
 
