@@ -102,7 +102,7 @@ Interface IPosition
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPosition</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IPosition : IPositionBase</code></pre>
   </div>
 
 
@@ -111,6 +111,33 @@ Interface IPosition
 
 
 
+  <details class="typelist-details">
+    <summary>Inherited Members</summary>
+    <dl class="typelist inheritedMembers">
+      <dd>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Status">IPositionBase.Status</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_EntryPrice">IPositionBase.EntryPrice</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_ExitPrice">IPositionBase.ExitPrice</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Quantity">IPositionBase.Quantity</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Commission">IPositionBase.Commission</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Direction">IPositionBase.Direction</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Symbol">IPositionBase.Symbol</a>
+      </div>
+    </dd></dl>
+  </details>
 
   <details class="typelist-details">
     <summary>Extension Methods</summary>
@@ -130,19 +157,18 @@ Interface IPosition
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Commission_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Trades_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Commission" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission">
-  Commission
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Trades" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades">
+  Trades
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the total commission incurred for the position.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double Commission { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ITrade&gt; Trades { get; }</code></pre>
   </div>
 
 
@@ -152,211 +178,7 @@ Interface IPosition
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="System.Double" text="double"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Direction_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Direction" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction">
-  Direction
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the direction of the position, indicating whether it is long or short.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OrderDirection Direction { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Enums.OrderDirection" text="OrderDirection"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_EntryPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_EntryPrice" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice">
-  EntryPrice
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the price at which the position was entered.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double EntryPrice { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.Double" text="double"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_ExitPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_ExitPrice" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice">
-  ExitPrice
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the price at which the position was exited. This is zero for an open position.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double ExitPrice { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.Double" text="double"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Quantity_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Quantity" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity">
-  Quantity
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the quantity of the position.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">double Quantity { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.Double" text="double"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Status_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Status" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status">
-  Status
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the current status of the position.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">PositionStatus Status { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Enums.PositionStatus" text="PositionStatus"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Symbol_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Symbol" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol">
-  Symbol
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the trading symbol associated with the position.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISymbol Symbol { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Interfaces.ISymbol" text="ISymbol"/></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html">ITrade</a>&gt;</dt>
     <dd></dd>
   </dl>
   -->

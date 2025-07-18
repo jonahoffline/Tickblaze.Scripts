@@ -134,6 +134,7 @@ Class Script
       <dd>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.AddOn.html">AddOn</a></div>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.CommissionSimulator.html">CommissionSimulator</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html">OptimizationAlgorithm</a></div>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html">SymbolScript</a></div>
       </dd>
     </dl>
@@ -592,6 +593,86 @@ Class Script
 
 
 
+  <a id="Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_" data-uid="Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_" data-uid="Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)">
+  GetOptimizationParameters(OptimizationParameters)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the parameters of the script for the UI in an optimization context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Parameters GetOptimizationParameters(OptimizationParameters parameterValues)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameterValues</code> <a class="xref" href="Tickblaze.Scripts.Api.OptimizationParameters.html">OptimizationParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Parameters.html">Parameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_" data-uid="Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_Parameters_Tickblaze_Scripts_Api_OptimizationParameters_" data-uid="Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.Parameters,Tickblaze.Scripts.Api.OptimizationParameters)">
+  GetOptimizationParameters(Parameters, OptimizationParameters)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the parameters of the script for the UI in an optimization context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Parameters GetOptimizationParameters(Parameters parameters, OptimizationParameters parameterValues)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameters</code> <a class="xref" href="Tickblaze.Scripts.Api.Parameters.html">Parameters</a></dt>
+    <dd></dd>
+    <dt><code>parameterValues</code> <a class="xref" href="Tickblaze.Scripts.Api.OptimizationParameters.html">OptimizationParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Tickblaze.Scripts.Api.Parameters.html">Parameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
   <a id="Tickblaze_Scripts_Api_Bases_Script_GetParameters_" data-uid="Tickblaze.Scripts.Api.Bases.Script.GetParameters*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Bases_Script_GetParameters" data-uid="Tickblaze.Scripts.Api.Bases.Script.GetParameters">
@@ -726,7 +807,7 @@ Class Script
   <a id="Tickblaze_Scripts_Api_Bases_Script_Print_" data-uid="Tickblaze.Scripts.Api.Bases.Script.Print*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_" data-uid="Tickblaze.Scripts.Api.Bases.Script.Print(System.Object)">
-  Print(object)
+  Print(object?)
   
   </h3>
 
@@ -735,7 +816,7 @@ Class Script
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Print(object value)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void Print(object? value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

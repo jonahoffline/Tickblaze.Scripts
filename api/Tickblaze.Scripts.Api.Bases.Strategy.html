@@ -102,7 +102,7 @@ Class Strategy
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Strategy : TradingScript, IScript, IDisposable, IMetadata, IOrderManager, IOrderAccessor, IChartObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Strategy : TradingScript, IScript, IDisposable, IMetadata, IChartObject, IStrategyOrderManager, IOrderManager, IOrderAccessor</code></pre>
   </div>
 
 
@@ -128,9 +128,10 @@ Class Strategy
         <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IScript.html">IScript</a></div>
         <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IMetadata.html">IMetadata</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartObject.html">IChartObject</a></div>
+        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html">IStrategyOrderManager</a></div>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderManager.html">IOrderManager</a></div>
         <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html">IOrderAccessor</a></div>
-        <div><a class="xref" href="Tickblaze.Scripts.Api.Interfaces.IChartObject.html">IChartObject</a></div>
       </dd>
     </dl>
   </details>
@@ -216,6 +217,12 @@ Class Strategy
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_Position">TradingScript.Position</a>
       </div>
       <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_OnCurrentPortfolioTimeUpdated_System_DateTime_">SymbolScript.OnCurrentPortfolioTimeUpdated(DateTime)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_QueueDelayedAction_System_DateTime_System_Action_">SymbolScript.QueueDelayedAction(DateTime, Action)</a>
+      </div>
+      <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_SymbolInfo_">SymbolScript.GetSymbol(SymbolInfo)</a>
       </div>
       <div>
@@ -228,7 +235,13 @@ Class Strategy
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetDom">SymbolScript.GetDom()</a>
       </div>
       <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_PortfolioTimeUtc">SymbolScript.PortfolioTimeUtc</a>
+      </div>
+      <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_Bars">SymbolScript.Bars</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_IsRealtime">SymbolScript.IsRealtime</a>
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script__initializers">Script._initializers</a>
@@ -238,6 +251,12 @@ Class Strategy
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters_Tickblaze_Scripts_Api_Parameters_">Script.GetParameters(Parameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_">Script.GetOptimizationParameters(OptimizationParameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_Parameters_Tickblaze_Scripts_Api_OptimizationParameters_">Script.GetOptimizationParameters(Parameters, OptimizationParameters)</a>
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
@@ -423,6 +442,39 @@ Class Strategy
 
 
 
+  <a id="Tickblaze_Scripts_Api_Bases_Strategy_RunType_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.RunType*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Strategy_RunType" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.RunType">
+  RunType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RunType RunType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Enums.RunType" text="RunType"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
   <a id="Tickblaze_Scripts_Api_Bases_Strategy_ShowOnChart_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.ShowOnChart*"></a>
 
   <h3 id="Tickblaze_Scripts_Api_Bases_Strategy_ShowOnChart" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.ShowOnChart">
@@ -459,6 +511,83 @@ Class Strategy
 
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Strategy_CancelPendingOrders_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Strategy_CancelPendingOrders_System_Boolean_System_String_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders(System.Boolean,System.String)">
+  CancelPendingOrders(bool, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels all pending orders</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelPendingOrders(bool includeAttachedOrders, string comment = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeAttachedOrders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if attached orders should be included</p>
+</dd>
+    <dt><code>comment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Comment to place on order</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_Strategy_Flatten_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.Flatten*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_Strategy_Flatten_System_String_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.Flatten(System.String)">
+  Flatten(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes positions and cancel pending orders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Flatten(string comment = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>comment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional comment for the orders and cancellations.</p>
+</dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+  <h4 class="section" id="Tickblaze_Scripts_Api_Bases_Strategy_Flatten_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Will also automatically flatten incoming fills appearing after the call
+is made. This behavior is automatically disabled when a new entry is made.</p>
+</div>
+
+
 
 
   <a id="Tickblaze_Scripts_Api_Bases_Strategy_OnRender_" data-uid="Tickblaze.Scripts.Api.Bases.Strategy.OnRender*"></a>

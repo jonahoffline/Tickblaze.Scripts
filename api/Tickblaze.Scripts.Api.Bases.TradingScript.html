@@ -148,6 +148,12 @@ Class TradingScript
     <dl class="typelist inheritedMembers">
       <dd>
       <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_OnCurrentPortfolioTimeUpdated_System_DateTime_">SymbolScript.OnCurrentPortfolioTimeUpdated(DateTime)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_QueueDelayedAction_System_DateTime_System_Action_">SymbolScript.QueueDelayedAction(DateTime, Action)</a>
+      </div>
+      <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetSymbol_Tickblaze_Scripts_Api_Models_SymbolInfo_">SymbolScript.GetSymbol(SymbolInfo)</a>
       </div>
       <div>
@@ -160,7 +166,13 @@ Class TradingScript
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_GetDom">SymbolScript.GetDom()</a>
       </div>
       <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_PortfolioTimeUtc">SymbolScript.PortfolioTimeUtc</a>
+      </div>
+      <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_Bars">SymbolScript.Bars</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_IsRealtime">SymbolScript.IsRealtime</a>
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script__initializers">Script._initializers</a>
@@ -170,6 +182,12 @@ Class TradingScript
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters_Tickblaze_Scripts_Api_Parameters_">Script.GetParameters(Parameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_">Script.GetOptimizationParameters(OptimizationParameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_Parameters_Tickblaze_Scripts_Api_OptimizationParameters_">Script.GetOptimizationParameters(Parameters, OptimizationParameters)</a>
       </div>
       <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
@@ -367,7 +385,7 @@ Class TradingScript
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPosition Position { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IPosition? Position { get; }</code></pre>
   </div>
 
 
@@ -378,6 +396,39 @@ Class TradingScript
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><xref uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPosition" text="IPosition"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_TradingScript_RunType_" data-uid="Tickblaze.Scripts.Api.Bases.TradingScript.RunType*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_TradingScript_RunType" data-uid="Tickblaze.Scripts.Api.Bases.TradingScript.RunType">
+  RunType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RunType RunType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Enums.RunType" text="RunType"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -476,7 +527,6 @@ Class TradingScript
   </h3>
 
   <div class="markdown level1 summary"><p>Closes the entire position with an optional comment.</p>
-<param name="comment">Optional comment for the order.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -487,7 +537,8 @@ Class TradingScript
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>comment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Optional comment for the order.</p>
+</dd>
   </dl>
 
 
@@ -644,11 +695,6 @@ Class TradingScript
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies an existing order.</p>
-<param name="order">The order of open position.
-<param name="quantity">Order quantity.
-<param name="stopPrice">Stop price if applicable.
-<param name="limitPrice">Limit price if applicable.
-<param name="timeInForce">Order duration. Defaults to Day.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -659,15 +705,20 @@ Class TradingScript
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>order</code> <a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html">IOrder</a></dt>
-    <dd></dd>
+    <dd><p>The order of open position.</p>
+</dd>
     <dt><code>quantity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>Order quantity.</p>
+</dd>
     <dt><code>stopPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
-    <dd></dd>
+    <dd><p>Stop price if applicable.</p>
+</dd>
     <dt><code>limitPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
-    <dd></dd>
+    <dd><p>Limit price if applicable.</p>
+</dd>
     <dt><code>timeInForce</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></dt>
-    <dd></dd>
+    <dd><p>Order duration. Defaults to Day.</p>
+</dd>
   </dl>
 
 
@@ -755,7 +806,7 @@ protected virtual void OnBarUpdate()</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when an order's fill status is updated.</p>
+  <div class="markdown level1 summary"><p>Called when an order's fill status is updated (after positions, trades, and dependant orders are updated).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -965,12 +1016,6 @@ protected virtual void OnBarUpdate()</code></pre>
   </h3>
 
   <div class="markdown level1 summary"><p>Places a stop-limit order.</p>
-<param name="action">The buy or sell action.
-<param name="quantity">Order quantity.
-<param name="stopPrice">Stop price.
-<param name="limitPrice">Limit price.
-<param name="timeInForce">Order duration. Defaults to Day.
-<param name="comment">Optional comment for the order.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -981,17 +1026,23 @@ protected virtual void OnBarUpdate()</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>action</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.OrderAction.html">OrderAction</a></dt>
-    <dd></dd>
+    <dd><p>The buy or sell action.</p>
+</dd>
     <dt><code>quantity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>Order quantity.</p>
+</dd>
     <dt><code>stopPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>Stop price.</p>
+</dd>
     <dt><code>limitPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>Limit price.</p>
+</dd>
     <dt><code>timeInForce</code> <a class="xref" href="Tickblaze.Scripts.Api.Enums.TimeInForce.html">TimeInForce</a></dt>
-    <dd></dd>
+    <dd><p>Order duration. Defaults to Day.</p>
+</dd>
     <dt><code>comment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Optional comment for the order.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>

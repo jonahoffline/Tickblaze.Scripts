@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface ITradeManagementStrategyScriptBase | Tickblaze </title>
+      <title>Interface IStrategyOrderManager | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface ITradeManagementStrategyScriptBase | Tickblaze ">
+      <meta name="title" content="Interface IStrategyOrderManager | Tickblaze ">
       
-      <meta name="description" content="Interface for a trade management strategy script base, providing methods to start and stop the strategy.">
+      
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,25 +84,24 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase">
+        <article data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager">
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase" class="text-break">
-Interface ITradeManagementStrategyScriptBase  
+  <h1 id="Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager" class="text-break">
+Interface IStrategyOrderManager  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Bases.html">Bases</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.html">Orders</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Interface for a trade management strategy script base, providing methods to start and stop the strategy.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITradeManagementStrategyScriptBase : IOrderManager, IOrderAccessor</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IStrategyOrderManager : IOrderManager, IOrderAccessor</code></pre>
   </div>
 
 
@@ -195,63 +194,34 @@ Interface ITradeManagementStrategyScriptBase
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase_IsActive_" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.IsActive*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase_IsActive" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.IsActive">
-  IsActive
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Indicates whether the strategy is currently active.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsActive { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <!--
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><xref uid="System.Boolean" text="bool"/></dt>
-    <dd></dd>
-  </dl>
-  -->
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase_Start_" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.Start*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_CancelPendingOrders_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase_Start" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.Start">
-  Start()
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_CancelPendingOrders_System_Boolean_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders(System.Boolean,System.String)">
+  CancelPendingOrders(bool, string)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Starts the strategy.</p>
+  <div class="markdown level1 summary"><p>Cancels all pending orders</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Start()</code></pre>
+    <pre><code class="lang-csharp hljs">void CancelPendingOrders(bool includeAttachedOrders, string comment = &quot;&quot;)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeAttachedOrders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if attached orders should be included</p>
+</dd>
+    <dt><code>comment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Comment to place on order</p>
+</dd>
+  </dl>
 
 
 
@@ -266,21 +236,27 @@ Interface ITradeManagementStrategyScriptBase
 
 
 
-  <a id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase_Stop_" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.Stop*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_Flatten_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Bases_ITradeManagementStrategyScriptBase_Stop" data-uid="Tickblaze.Scripts.Api.Bases.ITradeManagementStrategyScriptBase.Stop">
-  Stop()
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_Flatten_System_String_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten(System.String)">
+  Flatten(string)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Stops the strategy.</p>
+  <div class="markdown level1 summary"><p>Closes positions and cancel pending orders.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Stop()</code></pre>
+    <pre><code class="lang-csharp hljs">void Flatten(string comment = &quot;&quot;)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>comment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional comment for the orders and cancellations.</p>
+</dd>
+  </dl>
 
 
 
@@ -291,6 +267,10 @@ Interface ITradeManagementStrategyScriptBase
 
 
 
+  <h4 class="section" id="Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_Flatten_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Will also automatically flatten incoming fills appearing after the call
+is made. This behavior is automatically disabled when a new entry is made.</p>
+</div>
 
 
 

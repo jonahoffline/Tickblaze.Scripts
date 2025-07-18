@@ -162,6 +162,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Core.Extensions.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Core.Extensions.EnumerableExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Core.Extensions.EnumerableExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Core.Extensions.MathExtensions.yml",
       "output": {
         ".html": {
@@ -652,6 +666,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Bases.OptimizationParameter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Bases.OptimizationRange",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationVector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Bases.OptimizationVector",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Bases.PositionSizer.yml",
       "output": {
         ".html": {
@@ -806,6 +876,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.EnumExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.EnumExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.FontStyle.yml",
       "output": {
         ".html": {
@@ -929,6 +1013,20 @@
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.Enums.RoundingMode",
       "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Enums.RoundingMode.yml\" sourcestartlinenumber=\"1\">Specifies the mode of rounding.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Enums.RunType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Enums.RunType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Enums.RunType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1324,6 +1422,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.yml",
       "output": {
         ".html": {
@@ -1335,6 +1447,34 @@
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.Interfaces.Orders.IPositions",
       "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.yml\" sourcestartlinenumber=\"1\">Represents a collection of positions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.Interfaces.Orders.ITrade",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1688,6 +1828,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.OptimizationParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.OptimizationParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.OptimizationParameters",
+      "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.OptimizationParameters.yml\" sourcestartlinenumber=\"1\">Represents a collection of parameters, either from an object or a dictionary of key-value pairs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Tickblaze.Scripts.Api.Parameter.yml",
       "output": {
         ".html": {
@@ -1727,6 +1881,20 @@
       "IsMRef": true,
       "Title": "Tickblaze.Scripts.Api.PlotSeries",
       "Summary": "<p sourcefile=\"api/Tickblaze.Scripts.Api.PlotSeries.yml\" sourcestartlinenumber=\"1\">Represents a series of plot data, including properties for color, line style, thickness, and visibility.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tickblaze.Scripts.Api.ReflectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tickblaze.Scripts.Api.ReflectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tickblaze.Scripts.Api.ReflectionExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",

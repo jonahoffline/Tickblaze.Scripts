@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IScript | Tickblaze </title>
+      <title>Interface IPositionBase | Tickblaze </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IScript | Tickblaze ">
+      <meta name="title" content="Interface IPositionBase | Tickblaze ">
       
-      <meta name="description" content="Defines properties and methods for a script, including initialization and metadata.">
+      
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,25 +84,24 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Tickblaze.Scripts.Api.Interfaces.IScript">
+        <article data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase">
 
 
 
-  <h1 id="Tickblaze_Scripts_Api_Interfaces_IScript" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript" class="text-break">
-Interface IScript  
+  <h1 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase" class="text-break">
+Interface IPositionBase  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tickblaze.html">Tickblaze</a>.<a class="xref" href="Tickblaze.Scripts.html">Scripts</a>.<a class="xref" href="Tickblaze.Scripts.Api.html">Api</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.html">Interfaces</a>.<a class="xref" href="Tickblaze.Scripts.Api.Interfaces.Orders.html">Orders</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Tickblaze.Scripts.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines properties and methods for a script, including initialization and metadata.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IScript : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IPositionBase</code></pre>
   </div>
 
 
@@ -111,15 +110,6 @@ Interface IScript
 
 
 
-  <details class="typelist-details">
-    <summary>Inherited Members</summary>
-    <dl class="typelist inheritedMembers">
-      <dd>
-      <div>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
-      </div>
-    </dd></dl>
-  </details>
 
   <details class="typelist-details">
     <summary>Extension Methods</summary>
@@ -139,19 +129,19 @@ Interface IScript
 </h2>
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_IsInitialized_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.IsInitialized*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Commission_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IScript_IsInitialized" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.IsInitialized">
-  IsInitialized
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Commission" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission">
+  Commission
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the script has been initialized.</p>
+  <div class="markdown level1 summary"><p>Gets the total commission incurred for the position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsInitialized { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">double Commission { get; }</code></pre>
   </div>
 
 
@@ -161,7 +151,7 @@ Interface IScript
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="System.Boolean" text="bool"/></dt>
+    <dt><xref uid="System.Double" text="double"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -173,19 +163,19 @@ Interface IScript
 
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_Metadata_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Metadata*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Direction_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IScript_Metadata" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Metadata">
-  Metadata
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Direction" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction">
+  Direction
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The metadata associated with the script.</p>
+  <div class="markdown level1 summary"><p>Gets the direction of the position, indicating whether it is long or short.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Metadata Metadata { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">OrderDirection Direction { get; }</code></pre>
   </div>
 
 
@@ -195,7 +185,7 @@ Interface IScript
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Models.Metadata" text="Metadata"/></dt>
+    <dt><xref uid="Tickblaze.Scripts.Api.Enums.OrderDirection" text="OrderDirection"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -207,19 +197,19 @@ Interface IScript
 
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_Parameters_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Parameters*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_EntryPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IScript_Parameters" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Parameters">
-  Parameters
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_EntryPrice" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice">
+  EntryPrice
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The parameters for the script.</p>
+  <div class="markdown level1 summary"><p>Gets the price at which the position was entered.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Parameters Parameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">double EntryPrice { get; }</code></pre>
   </div>
 
 
@@ -229,7 +219,7 @@ Interface IScript
   <!--
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><xref uid="Tickblaze.Scripts.Api.Parameters" text="Parameters"/></dt>
+    <dt><xref uid="System.Double" text="double"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -241,40 +231,31 @@ Interface IScript
 
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_ExitPrice_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice*"></a>
 
-
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_GetOptimizationParameters_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters*"></a>
-
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IScript_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)">
-  GetOptimizationParameters(OptimizationParameters)
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_ExitPrice" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice">
+  ExitPrice
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the parameters of the script for the UI in an optimization context.</p>
+  <div class="markdown level1 summary"><p>Gets the price at which the position was exited. This is zero for an open position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Parameters GetOptimizationParameters(OptimizationParameters parameterValues)</code></pre>
+    <pre><code class="lang-csharp hljs">double ExitPrice { get; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>parameterValues</code> <a class="xref" href="Tickblaze.Scripts.Api.OptimizationParameters.html">OptimizationParameters</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Tickblaze.Scripts.Api.Parameters.html">Parameters</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
   <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Double" text="double"/></dt>
+    <dd></dd>
+  </dl>
   -->
 
 
@@ -284,31 +265,31 @@ Interface IScript
 
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_GetParameters_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.GetParameters*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Quantity_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IScript_GetParameters" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.GetParameters">
-  GetParameters()
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Quantity" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity">
+  Quantity
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the parameters of the script for the UI.</p>
+  <div class="markdown level1 summary"><p>Gets the quantity of the position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Parameters GetParameters()</code></pre>
+    <pre><code class="lang-csharp hljs">double Quantity { get; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Tickblaze.Scripts.Api.Parameters.html">Parameters</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
   <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Double" text="double"/></dt>
+    <dd></dd>
+  </dl>
   -->
 
 
@@ -318,19 +299,19 @@ Interface IScript
 
 
 
-  <a id="Tickblaze_Scripts_Api_Interfaces_IScript_Initialize_" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Initialize*"></a>
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Status_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status*"></a>
 
-  <h3 id="Tickblaze_Scripts_Api_Interfaces_IScript_Initialize" data-uid="Tickblaze.Scripts.Api.Interfaces.IScript.Initialize">
-  Initialize()
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Status" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status">
+  Status
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes the script.</p>
+  <div class="markdown level1 summary"><p>Gets the current status of the position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">PositionStatus Status { get; }</code></pre>
   </div>
 
 
@@ -338,6 +319,45 @@ Interface IScript
 
 
   <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Enums.PositionStatus" text="PositionStatus"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Symbol_" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Symbol" data-uid="Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol">
+  Symbol
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the trading symbol associated with the position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISymbol Symbol { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="Tickblaze.Scripts.Api.Interfaces.ISymbol" text="ISymbol"/></dt>
+    <dd></dd>
+  </dl>
   -->
 
 

@@ -157,6 +157,12 @@ Class SymbolScript
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters_Tickblaze_Scripts_Api_Parameters_">Script.GetParameters(Parameters)</a>
       </div>
       <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_">Script.GetOptimizationParameters(OptimizationParameters)</a>
+      </div>
+      <div>
+        <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_Parameters_Tickblaze_Scripts_Api_OptimizationParameters_">Script.GetOptimizationParameters(Parameters, OptimizationParameters)</a>
+      </div>
+      <div>
         <a class="xref" href="Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Initialize">Script.Initialize()</a>
       </div>
       <div>
@@ -263,6 +269,72 @@ Class SymbolScript
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><xref uid="Tickblaze.Scripts.Api.Models.BarSeries" text="BarSeries"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_IsRealtime_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_IsRealtime" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime">
+  IsRealtime
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRealtime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.Boolean" text="bool"/></dt>
+    <dd></dd>
+  </dl>
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_PortfolioTimeUtc_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_PortfolioTimeUtc" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc">
+  PortfolioTimeUtc
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime PortfolioTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <!--
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><xref uid="System.DateTime" text="DateTime"/></dt>
     <dd></dd>
   </dl>
   -->
@@ -413,6 +485,75 @@ Class SymbolScript
     <dt><a class="xref" href="Tickblaze.Scripts.Api.Models.Symbol.html">Symbol</a></dt>
     <dd></dd>
   </dl>
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_OnCurrentPortfolioTimeUpdated_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_OnCurrentPortfolioTimeUpdated_System_DateTime_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated(System.DateTime)">
+  OnCurrentPortfolioTimeUpdated(DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnCurrentPortfolioTimeUpdated(DateTime dateTimeUtc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dateTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <!--
+  -->
+
+
+
+
+
+
+
+
+  <a id="Tickblaze_Scripts_Api_Bases_SymbolScript_QueueDelayedAction_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction*"></a>
+
+  <h3 id="Tickblaze_Scripts_Api_Bases_SymbolScript_QueueDelayedAction_System_DateTime_System_Action_" data-uid="Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction(System.DateTime,System.Action)">
+  QueueDelayedAction(DateTime, Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues an action to execute after a given delay. This method works in realtime on an exact time, and in non realtime by executing on the first data point after the specified time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void QueueDelayedAction(DateTime executionTimeUtc, Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
 
 
 

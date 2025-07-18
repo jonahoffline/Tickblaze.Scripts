@@ -454,6 +454,90 @@ references:
   commentId: N:Tickblaze.Core.Extensions
   fullName: Tickblaze.Core.Extensions
   nameWithType: Tickblaze.Core.Extensions
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions
+  name: EnumerableExtensions
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html
+  commentId: T:Tickblaze.Core.Extensions.EnumerableExtensions
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions
+  nameWithType: EnumerableExtensions
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange*
+  name: GetHighLowRange
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_GetHighLowRange_
+  commentId: Overload:Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange
+  nameWithType: EnumerableExtensions.GetHighLowRange
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange``1(System.Collections.Generic.IEnumerable{``0})
+  name: GetHighLowRange<TSource>(IEnumerable<TSource>)
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_GetHighLowRange__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: GetHighLowRange(Of TSource)(IEnumerable(Of TSource))
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange<TSource>(System.Collections.Generic.IEnumerable<TSource>)
+  fullName.vb: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource))
+  nameWithType: EnumerableExtensions.GetHighLowRange<TSource>(IEnumerable<TSource>)
+  nameWithType.vb: EnumerableExtensions.GetHighLowRange(Of TSource)(IEnumerable(Of TSource))
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1})
+  name: GetHighLowRange<TSource, TRange>(IEnumerable<TSource>, Func<TSource, TRange>, Func<TSource, TRange>)
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_GetHighLowRange__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___1__
+  commentId: M:Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1})
+  name.vb: GetHighLowRange(Of TSource, TRange)(IEnumerable(Of TSource), Func(Of TSource, TRange), Func(Of TSource, TRange))
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange<TSource, TRange>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TRange>, System.Func<TSource, TRange>)
+  fullName.vb: Tickblaze.Core.Extensions.EnumerableExtensions.GetHighLowRange(Of TSource, TRange)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TSource, TRange), System.Func(Of TSource, TRange))
+  nameWithType: EnumerableExtensions.GetHighLowRange<TSource, TRange>(IEnumerable<TSource>, Func<TSource, TRange>, Func<TSource, TRange>)
+  nameWithType.vb: EnumerableExtensions.GetHighLowRange(Of TSource, TRange)(IEnumerable(Of TSource), Func(Of TSource, TRange), Func(Of TSource, TRange))
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault*
+  name: MaxOrDefault
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_MaxOrDefault_
+  commentId: Overload:Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault
+  nameWithType: EnumerableExtensions.MaxOrDefault
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double},System.Double)
+  name: MaxOrDefault<T>(IEnumerable<T>, Func<T, double>, double)
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_MaxOrDefault__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Double__System_Double_
+  commentId: M:Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double},System.Double)
+  name.vb: MaxOrDefault(Of T)(IEnumerable(Of T), Func(Of T, Double), Double)
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, double>, double)
+  fullName.vb: Tickblaze.Core.Extensions.EnumerableExtensions.MaxOrDefault(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Double), Double)
+  nameWithType: EnumerableExtensions.MaxOrDefault<T>(IEnumerable<T>, Func<T, double>, double)
+  nameWithType.vb: EnumerableExtensions.MaxOrDefault(Of T)(IEnumerable(Of T), Func(Of T, Double), Double)
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault*
+  name: MinOrDefault
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_MinOrDefault_
+  commentId: Overload:Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault
+  nameWithType: EnumerableExtensions.MinOrDefault
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double},System.Double)
+  name: MinOrDefault<T>(IEnumerable<T>, Func<T, double>, double)
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_MinOrDefault__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Double__System_Double_
+  commentId: M:Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double},System.Double)
+  name.vb: MinOrDefault(Of T)(IEnumerable(Of T), Func(Of T, Double), Double)
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, double>, double)
+  fullName.vb: Tickblaze.Core.Extensions.EnumerableExtensions.MinOrDefault(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Double), Double)
+  nameWithType: EnumerableExtensions.MinOrDefault<T>(IEnumerable<T>, Func<T, double>, double)
+  nameWithType.vb: EnumerableExtensions.MinOrDefault(Of T)(IEnumerable(Of T), Func(Of T, Double), Double)
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin*
+  name: StringJoin
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_StringJoin_
+  commentId: Overload:Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin
+  nameWithType: EnumerableExtensions.StringJoin
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin``1(System.Collections.Generic.IEnumerable{``0},System.Char)
+  name: StringJoin<TItem>(IEnumerable<TItem>, char)
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_StringJoin__1_System_Collections_Generic_IEnumerable___0__System_Char_
+  commentId: M:Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin``1(System.Collections.Generic.IEnumerable{``0},System.Char)
+  name.vb: StringJoin(Of TItem)(IEnumerable(Of TItem), Char)
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin<TItem>(System.Collections.Generic.IEnumerable<TItem>, char)
+  fullName.vb: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin(Of TItem)(System.Collections.Generic.IEnumerable(Of TItem), Char)
+  nameWithType: EnumerableExtensions.StringJoin<TItem>(IEnumerable<TItem>, char)
+  nameWithType.vb: EnumerableExtensions.StringJoin(Of TItem)(IEnumerable(Of TItem), Char)
+- uid: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  name: StringJoin<TItem>(IEnumerable<TItem>, string)
+  href: api/Tickblaze.Core.Extensions.EnumerableExtensions.html#Tickblaze_Core_Extensions_EnumerableExtensions_StringJoin__1_System_Collections_Generic_IEnumerable___0__System_String_
+  commentId: M:Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  name.vb: StringJoin(Of TItem)(IEnumerable(Of TItem), String)
+  fullName: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin<TItem>(System.Collections.Generic.IEnumerable<TItem>, string)
+  fullName.vb: Tickblaze.Core.Extensions.EnumerableExtensions.StringJoin(Of TItem)(System.Collections.Generic.IEnumerable(Of TItem), String)
+  nameWithType: EnumerableExtensions.StringJoin<TItem>(IEnumerable<TItem>, string)
+  nameWithType.vb: EnumerableExtensions.StringJoin(Of TItem)(IEnumerable(Of TItem), String)
 - uid: Tickblaze.Core.Extensions.MathExtensions
   name: MathExtensions
   href: api/Tickblaze.Core.Extensions.MathExtensions.html
@@ -511,6 +595,21 @@ references:
   commentId: T:Tickblaze.Core.Extensions.TypeExtensions
   fullName: Tickblaze.Core.Extensions.TypeExtensions
   nameWithType: TypeExtensions
+- uid: Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup*
+  name: GetPropertyAttributeLookup
+  href: api/Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_GetPropertyAttributeLookup_
+  commentId: Overload:Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup
+  fullName: Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup
+  nameWithType: TypeExtensions.GetPropertyAttributeLookup
+- uid: Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup``1(System.Type,System.Boolean)
+  name: GetPropertyAttributeLookup<TAttribute>(Type, bool)
+  href: api/Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_GetPropertyAttributeLookup__1_System_Type_System_Boolean_
+  commentId: M:Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup``1(System.Type,System.Boolean)
+  name.vb: GetPropertyAttributeLookup(Of TAttribute)(Type, Boolean)
+  fullName: Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup<TAttribute>(System.Type, bool)
+  fullName.vb: Tickblaze.Core.Extensions.TypeExtensions.GetPropertyAttributeLookup(Of TAttribute)(System.Type, Boolean)
+  nameWithType: TypeExtensions.GetPropertyAttributeLookup<TAttribute>(Type, bool)
+  nameWithType.vb: TypeExtensions.GetPropertyAttributeLookup(Of TAttribute)(Type, Boolean)
 - uid: Tickblaze.Core.Extensions.TypeExtensions.IsNumericType(System.Object)
   name: IsNumericType(object)
   href: api/Tickblaze.Core.Extensions.TypeExtensions.html#Tickblaze_Core_Extensions_TypeExtensions_IsNumericType_System_Object_
@@ -2677,6 +2776,600 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
   fullName: Tickblaze.Scripts.Api.Bases.Indicator.YAxisTopMarginMin
   nameWithType: Indicator.YAxisTopMarginMin
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm
+  name: OptimizationAlgorithm
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm
+  nameWithType: OptimizationAlgorithm
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.#ctor
+  name: OptimizationAlgorithm()
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm__ctor
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationAlgorithm()
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.New()
+  nameWithType: OptimizationAlgorithm.OptimizationAlgorithm()
+  nameWithType.vb: OptimizationAlgorithm.New()
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.#ctor*
+  name: OptimizationAlgorithm
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationAlgorithm
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.New
+  nameWithType: OptimizationAlgorithm.OptimizationAlgorithm
+  nameWithType.vb: OptimizationAlgorithm.New
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun(System.Int32)
+  name: GetNextVectorsToRun(int)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_GetNextVectorsToRun_System_Int32_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun(System.Int32)
+  name.vb: GetNextVectorsToRun(Integer)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun(int)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun(Integer)
+  nameWithType: OptimizationAlgorithm.GetNextVectorsToRun(int)
+  nameWithType.vb: OptimizationAlgorithm.GetNextVectorsToRun(Integer)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun*
+  name: GetNextVectorsToRun
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_GetNextVectorsToRun_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.GetNextVectorsToRun
+  nameWithType: OptimizationAlgorithm.GetNextVectorsToRun
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.MaxOptimizations
+  name: MaxOptimizations
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_MaxOptimizations
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.MaxOptimizations
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.MaxOptimizations
+  nameWithType: OptimizationAlgorithm.MaxOptimizations
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.MaxOptimizations*
+  name: MaxOptimizations
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_MaxOptimizations_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.MaxOptimizations
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.MaxOptimizations
+  nameWithType: OptimizationAlgorithm.MaxOptimizations
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OnVectorProcessed(Tickblaze.Scripts.Api.Bases.OptimizationVector)
+  name: OnVectorProcessed(OptimizationVector)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_OnVectorProcessed_Tickblaze_Scripts_Api_Bases_OptimizationVector_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OnVectorProcessed(Tickblaze.Scripts.Api.Bases.OptimizationVector)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OnVectorProcessed(Tickblaze.Scripts.Api.Bases.OptimizationVector)
+  nameWithType: OptimizationAlgorithm.OnVectorProcessed(OptimizationVector)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OnVectorProcessed*
+  name: OnVectorProcessed
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_OnVectorProcessed_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OnVectorProcessed
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OnVectorProcessed
+  nameWithType: OptimizationAlgorithm.OnVectorProcessed
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationParameters
+  name: OptimizationParameters
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_OptimizationParameters
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationParameters
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationParameters
+  nameWithType: OptimizationAlgorithm.OptimizationParameters
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationParameters*
+  name: OptimizationParameters
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_OptimizationParameters_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationParameters
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.OptimizationParameters
+  nameWithType: OptimizationAlgorithm.OptimizationParameters
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.Vectors
+  name: Vectors
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_Vectors
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.Vectors
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.Vectors
+  nameWithType: OptimizationAlgorithm.Vectors
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.Vectors*
+  name: Vectors
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.html#Tickblaze_Scripts_Api_Bases_OptimizationAlgorithm_Vectors_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.Vectors
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationAlgorithm.Vectors
+  nameWithType: OptimizationAlgorithm.Vectors
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter
+  name: OptimizationParameter
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.OptimizationParameter
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter
+  nameWithType: OptimizationParameter
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.#ctor(System.Int32,System.String,System.Type,Tickblaze.Scripts.Api.Bases.OptimizationRange,System.Object[])
+  name: OptimizationParameter(int, string, Type, OptimizationRange?, object?[]?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter__ctor_System_Int32_System_String_System_Type_Tickblaze_Scripts_Api_Bases_OptimizationRange_System_Object___
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.#ctor(System.Int32,System.String,System.Type,Tickblaze.Scripts.Api.Bases.OptimizationRange,System.Object[])
+  name.vb: New(Integer, String, Type, OptimizationRange, Object())
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.OptimizationParameter(int, string, System.Type, Tickblaze.Scripts.Api.Bases.OptimizationRange?, object?[]?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.New(Integer, String, System.Type, Tickblaze.Scripts.Api.Bases.OptimizationRange, Object())
+  nameWithType: OptimizationParameter.OptimizationParameter(int, string, Type, OptimizationRange?, object?[]?)
+  nameWithType.vb: OptimizationParameter.New(Integer, String, Type, OptimizationRange, Object())
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.#ctor(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name: OptimizationParameter(OptimizationParameter)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter__ctor_Tickblaze_Scripts_Api_Bases_OptimizationParameter_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.#ctor(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name.vb: New(OptimizationParameter)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.OptimizationParameter(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.New(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  nameWithType: OptimizationParameter.OptimizationParameter(OptimizationParameter)
+  nameWithType.vb: OptimizationParameter.New(OptimizationParameter)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.#ctor*
+  name: OptimizationParameter
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.OptimizationParameter
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.New
+  nameWithType: OptimizationParameter.OptimizationParameter
+  nameWithType.vb: OptimizationParameter.New
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.AllowedValues
+  name: AllowedValues
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_AllowedValues
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationParameter.AllowedValues
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.AllowedValues
+  nameWithType: OptimizationParameter.AllowedValues
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.AllowedValues*
+  name: AllowedValues
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_AllowedValues_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.AllowedValues
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.AllowedValues
+  nameWithType: OptimizationParameter.AllowedValues
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct(System.Int32@,System.String@,System.Type@,Tickblaze.Scripts.Api.Bases.OptimizationRange@,System.Object[]@)
+  name: Deconstruct(out int, out string, out Type, out OptimizationRange?, out object?[]?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Deconstruct_System_Int32__System_String__System_Type__Tickblaze_Scripts_Api_Bases_OptimizationRange__System_Object____
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct(System.Int32@,System.String@,System.Type@,Tickblaze.Scripts.Api.Bases.OptimizationRange@,System.Object[]@)
+  name.vb: Deconstruct(Integer, String, Type, OptimizationRange, Object())
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct(out int, out string, out System.Type, out Tickblaze.Scripts.Api.Bases.OptimizationRange?, out object?[]?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct(Integer, String, System.Type, Tickblaze.Scripts.Api.Bases.OptimizationRange, Object())
+  nameWithType: OptimizationParameter.Deconstruct(out int, out string, out Type, out OptimizationRange?, out object?[]?)
+  nameWithType.vb: OptimizationParameter.Deconstruct(Integer, String, Type, OptimizationRange, Object())
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct*
+  name: Deconstruct
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Deconstruct_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Deconstruct
+  nameWithType: OptimizationParameter.Deconstruct
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_EqualityContract
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationParameter.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.EqualityContract
+  nameWithType: OptimizationParameter.EqualityContract
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_EqualityContract_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.EqualityContract
+  nameWithType: OptimizationParameter.EqualityContract
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(Object)
+  nameWithType: OptimizationParameter.Equals(object?)
+  nameWithType.vb: OptimizationParameter.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name: Equals(OptimizationParameter?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Equals_Tickblaze_Scripts_Api_Bases_OptimizationParameter_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name.vb: Equals(OptimizationParameter)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(Tickblaze.Scripts.Api.Bases.OptimizationParameter?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals(Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  nameWithType: OptimizationParameter.Equals(OptimizationParameter?)
+  nameWithType.vb: OptimizationParameter.Equals(OptimizationParameter)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Equals
+  nameWithType: OptimizationParameter.Equals
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.GetHashCode()
+  nameWithType: OptimizationParameter.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.GetHashCode
+  nameWithType: OptimizationParameter.GetHashCode
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue*
+  name: HasValue
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_HasValue_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue
+  nameWithType: OptimizationParameter.HasValue
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue``1(``0)
+  name: HasValue<T>(T)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_HasValue__1___0_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue``1(``0)
+  name.vb: HasValue(Of T)(T)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue<T>(T)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.HasValue(Of T)(T)
+  nameWithType: OptimizationParameter.HasValue<T>(T)
+  nameWithType.vb: OptimizationParameter.HasValue(Of T)(T)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Index
+  name: Index
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Index
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Index
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Index
+  nameWithType: OptimizationParameter.Index
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Index*
+  name: Index
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Index_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Index
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Index
+  nameWithType: OptimizationParameter.Index
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PrintMembers(System.Text.StringBuilder)
+  nameWithType: OptimizationParameter.PrintMembers(StringBuilder)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_PrintMembers_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.PrintMembers
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PrintMembers
+  nameWithType: OptimizationParameter.PrintMembers
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PropertyName
+  name: PropertyName
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_PropertyName
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationParameter.PropertyName
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PropertyName
+  nameWithType: OptimizationParameter.PropertyName
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PropertyName*
+  name: PropertyName
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_PropertyName_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.PropertyName
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.PropertyName
+  nameWithType: OptimizationParameter.PropertyName
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Range
+  name: Range
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Range
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Range
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Range
+  nameWithType: OptimizationParameter.Range
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Range*
+  name: Range
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Range_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Range
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Range
+  nameWithType: OptimizationParameter.Range
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_ToString
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.ToString
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.ToString()
+  nameWithType: OptimizationParameter.ToString()
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.ToString
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.ToString
+  nameWithType: OptimizationParameter.ToString
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Type
+  name: Type
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Type
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Type
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Type
+  nameWithType: OptimizationParameter.Type
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Type*
+  name: Type
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_Type_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.Type
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.Type
+  nameWithType: OptimizationParameter.Type
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Equality(Tickblaze.Scripts.Api.Bases.OptimizationParameter,Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name: operator ==(OptimizationParameter?, OptimizationParameter?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_op_Equality_Tickblaze_Scripts_Api_Bases_OptimizationParameter_Tickblaze_Scripts_Api_Bases_OptimizationParameter_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Equality(Tickblaze.Scripts.Api.Bases.OptimizationParameter,Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name.vb: =(OptimizationParameter, OptimizationParameter)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.operator ==(Tickblaze.Scripts.Api.Bases.OptimizationParameter?, Tickblaze.Scripts.Api.Bases.OptimizationParameter?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.=(Tickblaze.Scripts.Api.Bases.OptimizationParameter, Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  nameWithType: OptimizationParameter.operator ==(OptimizationParameter?, OptimizationParameter?)
+  nameWithType.vb: OptimizationParameter.=(OptimizationParameter, OptimizationParameter)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.=
+  nameWithType: OptimizationParameter.operator ==
+  nameWithType.vb: OptimizationParameter.=
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Inequality(Tickblaze.Scripts.Api.Bases.OptimizationParameter,Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name: operator !=(OptimizationParameter?, OptimizationParameter?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_op_Inequality_Tickblaze_Scripts_Api_Bases_OptimizationParameter_Tickblaze_Scripts_Api_Bases_OptimizationParameter_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Inequality(Tickblaze.Scripts.Api.Bases.OptimizationParameter,Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  name.vb: <>(OptimizationParameter, OptimizationParameter)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.operator !=(Tickblaze.Scripts.Api.Bases.OptimizationParameter?, Tickblaze.Scripts.Api.Bases.OptimizationParameter?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.<>(Tickblaze.Scripts.Api.Bases.OptimizationParameter, Tickblaze.Scripts.Api.Bases.OptimizationParameter)
+  nameWithType: OptimizationParameter.operator !=(OptimizationParameter?, OptimizationParameter?)
+  nameWithType.vb: OptimizationParameter.<>(OptimizationParameter, OptimizationParameter)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationParameter.html#Tickblaze_Scripts_Api_Bases_OptimizationParameter_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationParameter.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationParameter.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationParameter.<>
+  nameWithType: OptimizationParameter.operator !=
+  nameWithType.vb: OptimizationParameter.<>
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange
+  name: OptimizationRange
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.OptimizationRange
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange
+  nameWithType: OptimizationRange
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.#ctor(System.IComparable,System.IComparable,System.IComparable)
+  name: OptimizationRange(IComparable, IComparable, IComparable)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange__ctor_System_IComparable_System_IComparable_System_IComparable_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.#ctor(System.IComparable,System.IComparable,System.IComparable)
+  name.vb: New(IComparable, IComparable, IComparable)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.OptimizationRange(System.IComparable, System.IComparable, System.IComparable)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.New(System.IComparable, System.IComparable, System.IComparable)
+  nameWithType: OptimizationRange.OptimizationRange(IComparable, IComparable, IComparable)
+  nameWithType.vb: OptimizationRange.New(IComparable, IComparable, IComparable)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.#ctor(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name: OptimizationRange(OptimizationRange)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange__ctor_Tickblaze_Scripts_Api_Bases_OptimizationRange_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.#ctor(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name.vb: New(OptimizationRange)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.OptimizationRange(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.New(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  nameWithType: OptimizationRange.OptimizationRange(OptimizationRange)
+  nameWithType.vb: OptimizationRange.New(OptimizationRange)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.#ctor*
+  name: OptimizationRange
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.OptimizationRange
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.New
+  nameWithType: OptimizationRange.OptimizationRange
+  nameWithType.vb: OptimizationRange.New
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Contains(System.IComparable)
+  name: Contains(IComparable)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Contains_System_IComparable_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.Contains(System.IComparable)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Contains(System.IComparable)
+  nameWithType: OptimizationRange.Contains(IComparable)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Contains*
+  name: Contains
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Contains_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.Contains
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Contains
+  nameWithType: OptimizationRange.Contains
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct(System.IComparable@,System.IComparable@,System.IComparable@)
+  name: Deconstruct(out IComparable, out IComparable, out IComparable)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Deconstruct_System_IComparable__System_IComparable__System_IComparable__
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct(System.IComparable@,System.IComparable@,System.IComparable@)
+  name.vb: Deconstruct(IComparable, IComparable, IComparable)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct(out System.IComparable, out System.IComparable, out System.IComparable)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct(System.IComparable, System.IComparable, System.IComparable)
+  nameWithType: OptimizationRange.Deconstruct(out IComparable, out IComparable, out IComparable)
+  nameWithType.vb: OptimizationRange.Deconstruct(IComparable, IComparable, IComparable)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct*
+  name: Deconstruct
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Deconstruct_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Deconstruct
+  nameWithType: OptimizationRange.Deconstruct
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.EqualityContract
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_EqualityContract
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationRange.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.EqualityContract
+  nameWithType: OptimizationRange.EqualityContract
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.EqualityContract*
+  name: EqualityContract
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_EqualityContract_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.EqualityContract
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.EqualityContract
+  nameWithType: OptimizationRange.EqualityContract
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Equals_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(object?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(Object)
+  nameWithType: OptimizationRange.Equals(object?)
+  nameWithType.vb: OptimizationRange.Equals(Object)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name: Equals(OptimizationRange?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Equals_Tickblaze_Scripts_Api_Bases_OptimizationRange_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name.vb: Equals(OptimizationRange)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(Tickblaze.Scripts.Api.Bases.OptimizationRange?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals(Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  nameWithType: OptimizationRange.Equals(OptimizationRange?)
+  nameWithType.vb: OptimizationRange.Equals(OptimizationRange)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals*
+  name: Equals
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_Equals_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.Equals
+  nameWithType: OptimizationRange.Equals
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.GetHashCode
+  name: GetHashCode()
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_GetHashCode
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.GetHashCode()
+  nameWithType: OptimizationRange.GetHashCode()
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.GetHashCode*
+  name: GetHashCode
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_GetHashCode_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.GetHashCode
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.GetHashCode
+  nameWithType: OptimizationRange.GetHashCode
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.PrintMembers(System.Text.StringBuilder)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.PrintMembers(System.Text.StringBuilder)
+  nameWithType: OptimizationRange.PrintMembers(StringBuilder)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.PrintMembers*
+  name: PrintMembers
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_PrintMembers_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.PrintMembers
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.PrintMembers
+  nameWithType: OptimizationRange.PrintMembers
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ToString
+  name: ToString()
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ToString
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.ToString
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ToString()
+  nameWithType: OptimizationRange.ToString()
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ToString*
+  name: ToString
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ToString_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.ToString
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ToString
+  nameWithType: OptimizationRange.ToString
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueHigh
+  name: ValueHigh
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ValueHigh
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueHigh
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueHigh
+  nameWithType: OptimizationRange.ValueHigh
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueHigh*
+  name: ValueHigh
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ValueHigh_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueHigh
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueHigh
+  nameWithType: OptimizationRange.ValueHigh
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueLow
+  name: ValueLow
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ValueLow
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueLow
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueLow
+  nameWithType: OptimizationRange.ValueLow
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueLow*
+  name: ValueLow
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ValueLow_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueLow
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueLow
+  nameWithType: OptimizationRange.ValueLow
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueStep
+  name: ValueStep
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ValueStep
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueStep
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueStep
+  nameWithType: OptimizationRange.ValueStep
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueStep*
+  name: ValueStep
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_ValueStep_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueStep
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.ValueStep
+  nameWithType: OptimizationRange.ValueStep
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Equality(Tickblaze.Scripts.Api.Bases.OptimizationRange,Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name: operator ==(OptimizationRange?, OptimizationRange?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_op_Equality_Tickblaze_Scripts_Api_Bases_OptimizationRange_Tickblaze_Scripts_Api_Bases_OptimizationRange_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Equality(Tickblaze.Scripts.Api.Bases.OptimizationRange,Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name.vb: =(OptimizationRange, OptimizationRange)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.operator ==(Tickblaze.Scripts.Api.Bases.OptimizationRange?, Tickblaze.Scripts.Api.Bases.OptimizationRange?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.=(Tickblaze.Scripts.Api.Bases.OptimizationRange, Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  nameWithType: OptimizationRange.operator ==(OptimizationRange?, OptimizationRange?)
+  nameWithType.vb: OptimizationRange.=(OptimizationRange, OptimizationRange)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Equality*
+  name: operator ==
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_op_Equality_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Equality
+  name.vb: =
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.operator ==
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.=
+  nameWithType: OptimizationRange.operator ==
+  nameWithType.vb: OptimizationRange.=
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Inequality(Tickblaze.Scripts.Api.Bases.OptimizationRange,Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name: operator !=(OptimizationRange?, OptimizationRange?)
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_op_Inequality_Tickblaze_Scripts_Api_Bases_OptimizationRange_Tickblaze_Scripts_Api_Bases_OptimizationRange_
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Inequality(Tickblaze.Scripts.Api.Bases.OptimizationRange,Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  name.vb: <>(OptimizationRange, OptimizationRange)
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.operator !=(Tickblaze.Scripts.Api.Bases.OptimizationRange?, Tickblaze.Scripts.Api.Bases.OptimizationRange?)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.<>(Tickblaze.Scripts.Api.Bases.OptimizationRange, Tickblaze.Scripts.Api.Bases.OptimizationRange)
+  nameWithType: OptimizationRange.operator !=(OptimizationRange?, OptimizationRange?)
+  nameWithType.vb: OptimizationRange.<>(OptimizationRange, OptimizationRange)
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Inequality*
+  name: operator !=
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationRange.html#Tickblaze_Scripts_Api_Bases_OptimizationRange_op_Inequality_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationRange.op_Inequality
+  name.vb: <>
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationRange.operator !=
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationRange.<>
+  nameWithType: OptimizationRange.operator !=
+  nameWithType.vb: OptimizationRange.<>
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector
+  name: OptimizationVector
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html
+  commentId: T:Tickblaze.Scripts.Api.Bases.OptimizationVector
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector
+  nameWithType: OptimizationVector
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.#ctor
+  name: OptimizationVector()
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector__ctor
+  commentId: M:Tickblaze.Scripts.Api.Bases.OptimizationVector.#ctor
+  name.vb: New()
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.OptimizationVector()
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationVector.New()
+  nameWithType: OptimizationVector.OptimizationVector()
+  nameWithType.vb: OptimizationVector.New()
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.#ctor*
+  name: OptimizationVector
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationVector.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.OptimizationVector
+  fullName.vb: Tickblaze.Scripts.Api.Bases.OptimizationVector.New
+  nameWithType: OptimizationVector.OptimizationVector
+  nameWithType.vb: OptimizationVector.New
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.Index
+  name: Index
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_Index
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationVector.Index
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.Index
+  nameWithType: OptimizationVector.Index
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.Index*
+  name: Index
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_Index_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationVector.Index
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.Index
+  nameWithType: OptimizationVector.Index
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.IsProcessed
+  name: IsProcessed
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_IsProcessed
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationVector.IsProcessed
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.IsProcessed
+  nameWithType: OptimizationVector.IsProcessed
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.IsProcessed*
+  name: IsProcessed
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_IsProcessed_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationVector.IsProcessed
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.IsProcessed
+  nameWithType: OptimizationVector.IsProcessed
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.Score
+  name: Score
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_Score
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationVector.Score
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.Score
+  nameWithType: OptimizationVector.Score
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.Score*
+  name: Score
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_Score_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationVector.Score
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.Score
+  nameWithType: OptimizationVector.Score
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.Values
+  name: Values
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_Values
+  commentId: P:Tickblaze.Scripts.Api.Bases.OptimizationVector.Values
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.Values
+  nameWithType: OptimizationVector.Values
+- uid: Tickblaze.Scripts.Api.Bases.OptimizationVector.Values*
+  name: Values
+  href: api/Tickblaze.Scripts.Api.Bases.OptimizationVector.html#Tickblaze_Scripts_Api_Bases_OptimizationVector_Values_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.OptimizationVector.Values
+  fullName: Tickblaze.Scripts.Api.Bases.OptimizationVector.Values
+  nameWithType: OptimizationVector.Values
 - uid: Tickblaze.Scripts.Api.Bases.PositionSizer
   name: PositionSizer
   href: api/Tickblaze.Scripts.Api.Bases.PositionSizer.html
@@ -2764,6 +3457,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.PositionSizer.Position
   fullName: Tickblaze.Scripts.Api.Bases.PositionSizer.Position
   nameWithType: PositionSizer.Position
+- uid: Tickblaze.Scripts.Api.Bases.PositionSizer.RunType
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Bases.PositionSizer.html#Tickblaze_Scripts_Api_Bases_PositionSizer_RunType
+  commentId: P:Tickblaze.Scripts.Api.Bases.PositionSizer.RunType
+  fullName: Tickblaze.Scripts.Api.Bases.PositionSizer.RunType
+  nameWithType: PositionSizer.RunType
+- uid: Tickblaze.Scripts.Api.Bases.PositionSizer.RunType*
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Bases.PositionSizer.html#Tickblaze_Scripts_Api_Bases_PositionSizer_RunType_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.PositionSizer.RunType
+  fullName: Tickblaze.Scripts.Api.Bases.PositionSizer.RunType
+  nameWithType: PositionSizer.RunType
 - uid: Tickblaze.Scripts.Api.Bases.PositionSizer.Symbol
   name: Symbol
   href: api/Tickblaze.Scripts.Api.Bases.PositionSizer.html#Tickblaze_Scripts_Api_Bases_PositionSizer_Symbol
@@ -2830,6 +3535,24 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.Dispose
   fullName: Tickblaze.Scripts.Api.Bases.Script.Dispose
   nameWithType: Script.Dispose
+- uid: Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)
+  name: GetOptimizationParameters(OptimizationParameters)
+  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_
+  commentId: M:Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)
+  fullName: Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)
+  nameWithType: Script.GetOptimizationParameters(OptimizationParameters)
+- uid: Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.Parameters,Tickblaze.Scripts.Api.OptimizationParameters)
+  name: GetOptimizationParameters(Parameters, OptimizationParameters)
+  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_Tickblaze_Scripts_Api_Parameters_Tickblaze_Scripts_Api_OptimizationParameters_
+  commentId: M:Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.Parameters,Tickblaze.Scripts.Api.OptimizationParameters)
+  fullName: Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters(Tickblaze.Scripts.Api.Parameters, Tickblaze.Scripts.Api.OptimizationParameters)
+  nameWithType: Script.GetOptimizationParameters(Parameters, OptimizationParameters)
+- uid: Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters*
+  name: GetOptimizationParameters
+  href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetOptimizationParameters_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters
+  fullName: Tickblaze.Scripts.Api.Bases.Script.GetOptimizationParameters
+  nameWithType: Script.GetOptimizationParameters
 - uid: Tickblaze.Scripts.Api.Bases.Script.GetParameters
   name: GetParameters()
   href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_GetParameters
@@ -2921,13 +3644,13 @@ references:
   fullName: Tickblaze.Scripts.Api.Bases.Script.Parameters
   nameWithType: Script.Parameters
 - uid: Tickblaze.Scripts.Api.Bases.Script.Print(System.Object)
-  name: Print(object)
+  name: Print(object?)
   href: api/Tickblaze.Scripts.Api.Bases.Script.html#Tickblaze_Scripts_Api_Bases_Script_Print_System_Object_
   commentId: M:Tickblaze.Scripts.Api.Bases.Script.Print(System.Object)
   name.vb: Print(Object)
-  fullName: Tickblaze.Scripts.Api.Bases.Script.Print(object)
+  fullName: Tickblaze.Scripts.Api.Bases.Script.Print(object?)
   fullName.vb: Tickblaze.Scripts.Api.Bases.Script.Print(Object)
-  nameWithType: Script.Print(object)
+  nameWithType: Script.Print(object?)
   nameWithType.vb: Script.Print(Object)
 - uid: Tickblaze.Scripts.Api.Bases.Script.Print*
   name: Print
@@ -3001,6 +3724,21 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Bases.Strategy.New
   nameWithType: Strategy.Strategy
   nameWithType.vb: Strategy.New
+- uid: Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders(System.Boolean,System.String)
+  name: CancelPendingOrders(bool, string)
+  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_CancelPendingOrders_System_Boolean_System_String_
+  commentId: M:Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders(System.Boolean,System.String)
+  name.vb: CancelPendingOrders(Boolean, String)
+  fullName: Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders(bool, string)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders(Boolean, String)
+  nameWithType: Strategy.CancelPendingOrders(bool, string)
+  nameWithType.vb: Strategy.CancelPendingOrders(Boolean, String)
+- uid: Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders*
+  name: CancelPendingOrders
+  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_CancelPendingOrders_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders
+  fullName: Tickblaze.Scripts.Api.Bases.Strategy.CancelPendingOrders
+  nameWithType: Strategy.CancelPendingOrders
 - uid: Tickblaze.Scripts.Api.Bases.Strategy.Chart
   name: Chart
   href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_Chart
@@ -3025,6 +3763,21 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.ChartScale
   fullName: Tickblaze.Scripts.Api.Bases.Strategy.ChartScale
   nameWithType: Strategy.ChartScale
+- uid: Tickblaze.Scripts.Api.Bases.Strategy.Flatten(System.String)
+  name: Flatten(string)
+  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_Flatten_System_String_
+  commentId: M:Tickblaze.Scripts.Api.Bases.Strategy.Flatten(System.String)
+  name.vb: Flatten(String)
+  fullName: Tickblaze.Scripts.Api.Bases.Strategy.Flatten(string)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.Strategy.Flatten(String)
+  nameWithType: Strategy.Flatten(string)
+  nameWithType.vb: Strategy.Flatten(String)
+- uid: Tickblaze.Scripts.Api.Bases.Strategy.Flatten*
+  name: Flatten
+  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_Flatten_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.Flatten
+  fullName: Tickblaze.Scripts.Api.Bases.Strategy.Flatten
+  nameWithType: Strategy.Flatten
 - uid: Tickblaze.Scripts.Api.Bases.Strategy.OnRender(Tickblaze.Scripts.Api.Interfaces.IDrawingContext)
   name: OnRender(IDrawingContext)
   href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_OnRender_Tickblaze_Scripts_Api_Interfaces_IDrawingContext_
@@ -3061,6 +3814,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.OnTick
   fullName: Tickblaze.Scripts.Api.Bases.Strategy.OnTick
   nameWithType: Strategy.OnTick
+- uid: Tickblaze.Scripts.Api.Bases.Strategy.RunType
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_RunType
+  commentId: P:Tickblaze.Scripts.Api.Bases.Strategy.RunType
+  fullName: Tickblaze.Scripts.Api.Bases.Strategy.RunType
+  nameWithType: Strategy.RunType
+- uid: Tickblaze.Scripts.Api.Bases.Strategy.RunType*
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_RunType_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.Strategy.RunType
+  fullName: Tickblaze.Scripts.Api.Bases.Strategy.RunType
+  nameWithType: Strategy.RunType
 - uid: Tickblaze.Scripts.Api.Bases.Strategy.ShowOnChart
   name: ShowOnChart
   href: api/Tickblaze.Scripts.Api.Bases.Strategy.html#Tickblaze_Scripts_Api_Bases_Strategy_ShowOnChart
@@ -3142,6 +3907,60 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol
   fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.GetSymbol
   nameWithType: SymbolScript.GetSymbol
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime
+  name: IsRealtime
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_IsRealtime
+  commentId: P:Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime
+  nameWithType: SymbolScript.IsRealtime
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime*
+  name: IsRealtime
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_IsRealtime_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.IsRealtime
+  nameWithType: SymbolScript.IsRealtime
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated(System.DateTime)
+  name: OnCurrentPortfolioTimeUpdated(DateTime)
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_OnCurrentPortfolioTimeUpdated_System_DateTime_
+  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated(System.DateTime)
+  name.vb: OnCurrentPortfolioTimeUpdated(Date)
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated(System.DateTime)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated(Date)
+  nameWithType: SymbolScript.OnCurrentPortfolioTimeUpdated(DateTime)
+  nameWithType.vb: SymbolScript.OnCurrentPortfolioTimeUpdated(Date)
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated*
+  name: OnCurrentPortfolioTimeUpdated
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_OnCurrentPortfolioTimeUpdated_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.OnCurrentPortfolioTimeUpdated
+  nameWithType: SymbolScript.OnCurrentPortfolioTimeUpdated
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc
+  name: PortfolioTimeUtc
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_PortfolioTimeUtc
+  commentId: P:Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc
+  nameWithType: SymbolScript.PortfolioTimeUtc
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc*
+  name: PortfolioTimeUtc
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_PortfolioTimeUtc_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.PortfolioTimeUtc
+  nameWithType: SymbolScript.PortfolioTimeUtc
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction(System.DateTime,System.Action)
+  name: QueueDelayedAction(DateTime, Action)
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_QueueDelayedAction_System_DateTime_System_Action_
+  commentId: M:Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction(System.DateTime,System.Action)
+  name.vb: QueueDelayedAction(Date, Action)
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction(System.DateTime, System.Action)
+  fullName.vb: Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction(Date, System.Action)
+  nameWithType: SymbolScript.QueueDelayedAction(DateTime, Action)
+  nameWithType.vb: SymbolScript.QueueDelayedAction(Date, Action)
+- uid: Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction*
+  name: QueueDelayedAction
+  href: api/Tickblaze.Scripts.Api.Bases.SymbolScript.html#Tickblaze_Scripts_Api_Bases_SymbolScript_QueueDelayedAction_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction
+  fullName: Tickblaze.Scripts.Api.Bases.SymbolScript.QueueDelayedAction
+  nameWithType: SymbolScript.QueueDelayedAction
 - uid: Tickblaze.Scripts.Api.Bases.TradeManagementStrategy
   name: TradeManagementStrategy
   href: api/Tickblaze.Scripts.Api.Bases.TradeManagementStrategy.html
@@ -3496,6 +4315,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Bases.TradingScript.Position
   fullName: Tickblaze.Scripts.Api.Bases.TradingScript.Position
   nameWithType: TradingScript.Position
+- uid: Tickblaze.Scripts.Api.Bases.TradingScript.RunType
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_RunType
+  commentId: P:Tickblaze.Scripts.Api.Bases.TradingScript.RunType
+  fullName: Tickblaze.Scripts.Api.Bases.TradingScript.RunType
+  nameWithType: TradingScript.RunType
+- uid: Tickblaze.Scripts.Api.Bases.TradingScript.RunType*
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_RunType_
+  commentId: Overload:Tickblaze.Scripts.Api.Bases.TradingScript.RunType
+  fullName: Tickblaze.Scripts.Api.Bases.TradingScript.RunType
+  nameWithType: TradingScript.RunType
 - uid: Tickblaze.Scripts.Api.Bases.TradingScript.SetStopLoss(Tickblaze.Scripts.Api.Interfaces.Orders.IOrder,System.Double,System.String)
   name: SetStopLoss(IOrder, double, string)
   href: api/Tickblaze.Scripts.Api.Bases.TradingScript.html#Tickblaze_Scripts_Api_Bases_TradingScript_SetStopLoss_Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_System_Double_System_String_
@@ -4021,6 +4852,30 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.ComparisonExtensions.IsInRange(Of TComparable)(TComparable, TComparable, TComparable)
   nameWithType: ComparisonExtensions.IsInRange<TComparable>(TComparable, TComparable, TComparable)
   nameWithType.vb: ComparisonExtensions.IsInRange(Of TComparable)(TComparable, TComparable, TComparable)
+- uid: Tickblaze.Scripts.Api.EnumExtensions
+  name: EnumExtensions
+  href: api/Tickblaze.Scripts.Api.EnumExtensions.html
+  commentId: T:Tickblaze.Scripts.Api.EnumExtensions
+  fullName: Tickblaze.Scripts.Api.EnumExtensions
+  nameWithType: EnumExtensions
+- uid: Tickblaze.Scripts.Api.EnumExtensions.AsInt(Tickblaze.Scripts.Api.Enums.OrderAction)
+  name: AsInt(OrderAction)
+  href: api/Tickblaze.Scripts.Api.EnumExtensions.html#Tickblaze_Scripts_Api_EnumExtensions_AsInt_Tickblaze_Scripts_Api_Enums_OrderAction_
+  commentId: M:Tickblaze.Scripts.Api.EnumExtensions.AsInt(Tickblaze.Scripts.Api.Enums.OrderAction)
+  fullName: Tickblaze.Scripts.Api.EnumExtensions.AsInt(Tickblaze.Scripts.Api.Enums.OrderAction)
+  nameWithType: EnumExtensions.AsInt(OrderAction)
+- uid: Tickblaze.Scripts.Api.EnumExtensions.AsInt(Tickblaze.Scripts.Api.Enums.OrderDirection)
+  name: AsInt(OrderDirection)
+  href: api/Tickblaze.Scripts.Api.EnumExtensions.html#Tickblaze_Scripts_Api_EnumExtensions_AsInt_Tickblaze_Scripts_Api_Enums_OrderDirection_
+  commentId: M:Tickblaze.Scripts.Api.EnumExtensions.AsInt(Tickblaze.Scripts.Api.Enums.OrderDirection)
+  fullName: Tickblaze.Scripts.Api.EnumExtensions.AsInt(Tickblaze.Scripts.Api.Enums.OrderDirection)
+  nameWithType: EnumExtensions.AsInt(OrderDirection)
+- uid: Tickblaze.Scripts.Api.EnumExtensions.AsInt*
+  name: AsInt
+  href: api/Tickblaze.Scripts.Api.EnumExtensions.html#Tickblaze_Scripts_Api_EnumExtensions_AsInt_
+  commentId: Overload:Tickblaze.Scripts.Api.EnumExtensions.AsInt
+  fullName: Tickblaze.Scripts.Api.EnumExtensions.AsInt
+  nameWithType: EnumExtensions.AsInt
 - uid: Tickblaze.Scripts.Api.Enums
   name: Tickblaze.Scripts.Api.Enums
   href: api/Tickblaze.Scripts.Api.Enums.html
@@ -4327,6 +5182,30 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Enums.RoundingMode.Up
   fullName: Tickblaze.Scripts.Api.Enums.RoundingMode.Up
   nameWithType: RoundingMode.Up
+- uid: Tickblaze.Scripts.Api.Enums.RunType
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Enums.RunType.html
+  commentId: T:Tickblaze.Scripts.Api.Enums.RunType
+  fullName: Tickblaze.Scripts.Api.Enums.RunType
+  nameWithType: RunType
+- uid: Tickblaze.Scripts.Api.Enums.RunType.Backtest
+  name: Backtest
+  href: api/Tickblaze.Scripts.Api.Enums.RunType.html#Tickblaze_Scripts_Api_Enums_RunType_Backtest
+  commentId: F:Tickblaze.Scripts.Api.Enums.RunType.Backtest
+  fullName: Tickblaze.Scripts.Api.Enums.RunType.Backtest
+  nameWithType: RunType.Backtest
+- uid: Tickblaze.Scripts.Api.Enums.RunType.Live
+  name: Live
+  href: api/Tickblaze.Scripts.Api.Enums.RunType.html#Tickblaze_Scripts_Api_Enums_RunType_Live
+  commentId: F:Tickblaze.Scripts.Api.Enums.RunType.Live
+  fullName: Tickblaze.Scripts.Api.Enums.RunType.Live
+  nameWithType: RunType.Live
+- uid: Tickblaze.Scripts.Api.Enums.RunType.Optimization
+  name: Optimization
+  href: api/Tickblaze.Scripts.Api.Enums.RunType.html#Tickblaze_Scripts_Api_Enums_RunType_Optimization
+  commentId: F:Tickblaze.Scripts.Api.Enums.RunType.Optimization
+  fullName: Tickblaze.Scripts.Api.Enums.RunType.Optimization
+  nameWithType: RunType.Optimization
 - uid: Tickblaze.Scripts.Api.Enums.TimeInForce
   name: TimeInForce
   href: api/Tickblaze.Scripts.Api.Enums.TimeInForce.html
@@ -5698,6 +6577,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.IScript
   fullName: Tickblaze.Scripts.Api.Interfaces.IScript
   nameWithType: IScript
+- uid: Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)
+  name: GetOptimizationParameters(OptimizationParameters)
+  href: api/Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_GetOptimizationParameters_Tickblaze_Scripts_Api_OptimizationParameters_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)
+  fullName: Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters(Tickblaze.Scripts.Api.OptimizationParameters)
+  nameWithType: IScript.GetOptimizationParameters(OptimizationParameters)
+- uid: Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters*
+  name: GetOptimizationParameters
+  href: api/Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_GetOptimizationParameters_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters
+  fullName: Tickblaze.Scripts.Api.Interfaces.IScript.GetOptimizationParameters
+  nameWithType: IScript.GetOptimizationParameters
 - uid: Tickblaze.Scripts.Api.Interfaces.IScript.GetParameters
   name: GetParameters()
   href: api/Tickblaze.Scripts.Api.Interfaces.IScript.html#Tickblaze_Scripts_Api_Interfaces_IScript_GetParameters
@@ -6037,6 +6928,18 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder
   nameWithType: IOrder
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Comment
+  name: Comment
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Comment
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Comment
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Comment
+  nameWithType: IOrder.Comment
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Comment*
+  name: Comment
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Comment_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Comment
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Comment
+  nameWithType: IOrder.Comment
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction
   name: Direction
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Direction
@@ -6049,6 +6952,33 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Direction
   nameWithType: IOrder.Direction
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.FilledQuantity
+  name: FilledQuantity
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_FilledQuantity
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.FilledQuantity
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.FilledQuantity
+  nameWithType: IOrder.FilledQuantity
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.FilledQuantity*
+  name: FilledQuantity
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_FilledQuantity_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.FilledQuantity
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.FilledQuantity
+  nameWithType: IOrder.FilledQuantity
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice(System.Nullable{System.Double})
+  name: GetOrderPrice(double?)
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_GetOrderPrice_System_Nullable_System_Double__
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice(System.Nullable{System.Double})
+  name.vb: GetOrderPrice(Double?)
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice(double?)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice(Double?)
+  nameWithType: IOrder.GetOrderPrice(double?)
+  nameWithType.vb: IOrder.GetOrderPrice(Double?)
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice*
+  name: GetOrderPrice
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_GetOrderPrice_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.GetOrderPrice
+  nameWithType: IOrder.GetOrderPrice
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index
   name: Index
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Index
@@ -6061,6 +6991,54 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Index
   nameWithType: IOrder.Index
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsComplete
+  name: IsComplete
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsComplete
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsComplete
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsComplete
+  nameWithType: IOrder.IsComplete
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsComplete*
+  name: IsComplete
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsComplete_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsComplete
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsComplete
+  nameWithType: IOrder.IsComplete
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsFilled
+  name: IsFilled
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsFilled
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsFilled
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsFilled
+  nameWithType: IOrder.IsFilled
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsFilled*
+  name: IsFilled
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsFilled_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsFilled
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsFilled
+  nameWithType: IOrder.IsFilled
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsStopLoss
+  name: IsStopLoss
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsStopLoss
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsStopLoss
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsStopLoss
+  nameWithType: IOrder.IsStopLoss
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsStopLoss*
+  name: IsStopLoss
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsStopLoss_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsStopLoss
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsStopLoss
+  nameWithType: IOrder.IsStopLoss
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsTakeProfit
+  name: IsTakeProfit
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsTakeProfit
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsTakeProfit
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsTakeProfit
+  nameWithType: IOrder.IsTakeProfit
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsTakeProfit*
+  name: IsTakeProfit
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_IsTakeProfit_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsTakeProfit
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.IsTakeProfit
+  nameWithType: IOrder.IsTakeProfit
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice
   name: LimitPrice
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_LimitPrice
@@ -6073,6 +7051,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.LimitPrice
   nameWithType: IOrder.LimitPrice
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.ParentOrderIndex
+  name: ParentOrderIndex
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_ParentOrderIndex
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.ParentOrderIndex
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.ParentOrderIndex
+  nameWithType: IOrder.ParentOrderIndex
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.ParentOrderIndex*
+  name: ParentOrderIndex
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_ParentOrderIndex_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.ParentOrderIndex
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.ParentOrderIndex
+  nameWithType: IOrder.ParentOrderIndex
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price
   name: Price
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Price
@@ -6085,6 +7075,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Price
   nameWithType: IOrder.Price
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.PriceOffset
+  name: PriceOffset
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_PriceOffset
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.PriceOffset
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.PriceOffset
+  nameWithType: IOrder.PriceOffset
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.PriceOffset*
+  name: PriceOffset
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_PriceOffset_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.PriceOffset
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.PriceOffset
+  nameWithType: IOrder.PriceOffset
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.Quantity
   name: Quantity
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrder.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrder_Quantity
@@ -6214,6 +7216,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Position
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Position
   nameWithType: IOrderAccessor.Position
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.RunType
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_RunType
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.RunType
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.RunType
+  nameWithType: IOrderAccessor.RunType
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.RunType*
+  name: RunType
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_RunType_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.RunType
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.RunType
+  nameWithType: IOrderAccessor.RunType
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.Symbol
   name: Symbol
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IOrderAccessor.html#Tickblaze_Scripts_Api_Interfaces_Orders_IOrderAccessor_Symbol
@@ -6520,90 +7534,108 @@ references:
   commentId: T:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition
   nameWithType: IPosition
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades
+  name: Trades
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Trades
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades
+  nameWithType: IPosition.Trades
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades*
+  name: Trades
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Trades_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Trades
+  nameWithType: IPosition.Trades
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase
+  name: IPositionBase
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html
+  commentId: T:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase
+  nameWithType: IPositionBase
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission
   name: Commission
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Commission
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission
-  nameWithType: IPosition.Commission
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Commission
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission
+  nameWithType: IPositionBase.Commission
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission*
   name: Commission
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Commission_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Commission
-  nameWithType: IPosition.Commission
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Commission_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Commission
+  nameWithType: IPositionBase.Commission
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction
   name: Direction
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Direction
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction
-  nameWithType: IPosition.Direction
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Direction
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction
+  nameWithType: IPositionBase.Direction
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction*
   name: Direction
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Direction_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Direction
-  nameWithType: IPosition.Direction
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Direction_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Direction
+  nameWithType: IPositionBase.Direction
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice
   name: EntryPrice
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_EntryPrice
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice
-  nameWithType: IPosition.EntryPrice
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_EntryPrice
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice
+  nameWithType: IPositionBase.EntryPrice
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice*
   name: EntryPrice
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_EntryPrice_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.EntryPrice
-  nameWithType: IPosition.EntryPrice
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_EntryPrice_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.EntryPrice
+  nameWithType: IPositionBase.EntryPrice
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice
   name: ExitPrice
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_ExitPrice
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice
-  nameWithType: IPosition.ExitPrice
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_ExitPrice
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice
+  nameWithType: IPositionBase.ExitPrice
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice*
   name: ExitPrice
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_ExitPrice_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.ExitPrice
-  nameWithType: IPosition.ExitPrice
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_ExitPrice_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.ExitPrice
+  nameWithType: IPositionBase.ExitPrice
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity
   name: Quantity
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Quantity
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity
-  nameWithType: IPosition.Quantity
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Quantity
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity
+  nameWithType: IPositionBase.Quantity
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity*
   name: Quantity
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Quantity_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Quantity
-  nameWithType: IPosition.Quantity
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Quantity_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Quantity
+  nameWithType: IPositionBase.Quantity
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status
   name: Status
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Status
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status
-  nameWithType: IPosition.Status
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Status
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status
+  nameWithType: IPositionBase.Status
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status*
   name: Status
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Status_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Status
-  nameWithType: IPosition.Status
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Status_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Status
+  nameWithType: IPositionBase.Status
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol
   name: Symbol
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Symbol
-  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol
-  nameWithType: IPosition.Symbol
-- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol*
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Symbol
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol
+  nameWithType: IPositionBase.Symbol
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol*
   name: Symbol
-  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPosition_Symbol_
-  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol
-  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPosition.Symbol
-  nameWithType: IPosition.Symbol
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.html#Tickblaze_Scripts_Api_Interfaces_Orders_IPositionBase_Symbol_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositionBase.Symbol
+  nameWithType: IPositionBase.Symbol
 - uid: Tickblaze.Scripts.Api.Interfaces.Orders.IPositions
   name: IPositions
   href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.html
@@ -6658,6 +7690,72 @@ references:
   commentId: E:Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.Opened
   fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IPositions.Opened
   nameWithType: IPositions.Opened
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager
+  name: IStrategyOrderManager
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html
+  commentId: T:Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager
+  nameWithType: IStrategyOrderManager
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders(System.Boolean,System.String)
+  name: CancelPendingOrders(bool, string)
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_CancelPendingOrders_System_Boolean_System_String_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders(System.Boolean,System.String)
+  name.vb: CancelPendingOrders(Boolean, String)
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders(bool, string)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders(Boolean, String)
+  nameWithType: IStrategyOrderManager.CancelPendingOrders(bool, string)
+  nameWithType.vb: IStrategyOrderManager.CancelPendingOrders(Boolean, String)
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders*
+  name: CancelPendingOrders
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_CancelPendingOrders_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.CancelPendingOrders
+  nameWithType: IStrategyOrderManager.CancelPendingOrders
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten(System.String)
+  name: Flatten(string)
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_Flatten_System_String_
+  commentId: M:Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten(System.String)
+  name.vb: Flatten(String)
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten(string)
+  fullName.vb: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten(String)
+  nameWithType: IStrategyOrderManager.Flatten(string)
+  nameWithType.vb: IStrategyOrderManager.Flatten(String)
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten*
+  name: Flatten
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.html#Tickblaze_Scripts_Api_Interfaces_Orders_IStrategyOrderManager_Flatten_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.IStrategyOrderManager.Flatten
+  nameWithType: IStrategyOrderManager.Flatten
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade
+  name: ITrade
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html
+  commentId: T:Tickblaze.Scripts.Api.Interfaces.Orders.ITrade
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade
+  nameWithType: ITrade
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.EntryOrder
+  name: EntryOrder
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html#Tickblaze_Scripts_Api_Interfaces_Orders_ITrade_EntryOrder
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.EntryOrder
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.EntryOrder
+  nameWithType: ITrade.EntryOrder
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.EntryOrder*
+  name: EntryOrder
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html#Tickblaze_Scripts_Api_Interfaces_Orders_ITrade_EntryOrder_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.EntryOrder
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.EntryOrder
+  nameWithType: ITrade.EntryOrder
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.ExitOrder
+  name: ExitOrder
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html#Tickblaze_Scripts_Api_Interfaces_Orders_ITrade_ExitOrder
+  commentId: P:Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.ExitOrder
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.ExitOrder
+  nameWithType: ITrade.ExitOrder
+- uid: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.ExitOrder*
+  name: ExitOrder
+  href: api/Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.html#Tickblaze_Scripts_Api_Interfaces_Orders_ITrade_ExitOrder_
+  commentId: Overload:Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.ExitOrder
+  fullName: Tickblaze.Scripts.Api.Interfaces.Orders.ITrade.ExitOrder
+  nameWithType: ITrade.ExitOrder
 - uid: Tickblaze.Scripts.Api.Models
   name: Tickblaze.Scripts.Api.Models
   href: api/Tickblaze.Scripts.Api.Models.html
@@ -6907,6 +8005,18 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.Bar.New
   nameWithType: Bar.Bar
   nameWithType.vb: Bar.New
+- uid: Tickblaze.Scripts.Api.Models.Bar.BodyRatio
+  name: BodyRatio
+  href: api/Tickblaze.Scripts.Api.Models.Bar.html#Tickblaze_Scripts_Api_Models_Bar_BodyRatio
+  commentId: P:Tickblaze.Scripts.Api.Models.Bar.BodyRatio
+  fullName: Tickblaze.Scripts.Api.Models.Bar.BodyRatio
+  nameWithType: Bar.BodyRatio
+- uid: Tickblaze.Scripts.Api.Models.Bar.BodyRatio*
+  name: BodyRatio
+  href: api/Tickblaze.Scripts.Api.Models.Bar.html#Tickblaze_Scripts_Api_Models_Bar_BodyRatio_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Bar.BodyRatio
+  fullName: Tickblaze.Scripts.Api.Models.Bar.BodyRatio
+  nameWithType: Bar.BodyRatio
 - uid: Tickblaze.Scripts.Api.Models.Bar.Close
   name: Close
   href: api/Tickblaze.Scripts.Api.Models.Bar.html#Tickblaze_Scripts_Api_Models_Bar_Close
@@ -7579,6 +8689,18 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.BarSeries.this[]
   nameWithType: BarSeries.this
   nameWithType.vb: BarSeries.this[]
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.LatestBarIsFirstOfSession
+  name: LatestBarIsFirstOfSession
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_LatestBarIsFirstOfSession
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeries.LatestBarIsFirstOfSession
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.LatestBarIsFirstOfSession
+  nameWithType: BarSeries.LatestBarIsFirstOfSession
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.LatestBarIsFirstOfSession*
+  name: LatestBarIsFirstOfSession
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_LatestBarIsFirstOfSession_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.LatestBarIsFirstOfSession
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.LatestBarIsFirstOfSession
+  nameWithType: BarSeries.LatestBarIsFirstOfSession
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.Low
   name: Low
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Low
@@ -7627,6 +8749,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.Period
   fullName: Tickblaze.Scripts.Api.Models.BarSeries.Period
   nameWithType: BarSeries.Period
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.Session
+  name: Session
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Session
+  commentId: P:Tickblaze.Scripts.Api.Models.BarSeries.Session
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.Session
+  nameWithType: BarSeries.Session
+- uid: Tickblaze.Scripts.Api.Models.BarSeries.Session*
+  name: Session
+  href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Session_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.BarSeries.Session
+  fullName: Tickblaze.Scripts.Api.Models.BarSeries.Session
+  nameWithType: BarSeries.Session
 - uid: Tickblaze.Scripts.Api.Models.BarSeries.Slice(System.DateTime)
   name: Slice(DateTime)
   href: api/Tickblaze.Scripts.Api.Models.BarSeries.html#Tickblaze_Scripts_Api_Models_BarSeries_Slice_System_DateTime_
@@ -8035,21 +9169,6 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Models.Color.Blue
   fullName: Tickblaze.Scripts.Api.Models.Color.Blue
   nameWithType: Color.Blue
-- uid: Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(System.String)
-  name: CanArgbHexBeParsed(string)
-  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_CanArgbHexBeParsed_System_String_
-  commentId: M:Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(System.String)
-  name.vb: CanArgbHexBeParsed(String)
-  fullName: Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(string)
-  fullName.vb: Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed(String)
-  nameWithType: Color.CanArgbHexBeParsed(string)
-  nameWithType.vb: Color.CanArgbHexBeParsed(String)
-- uid: Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed*
-  name: CanArgbHexBeParsed
-  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_CanArgbHexBeParsed_
-  commentId: Overload:Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed
-  fullName: Tickblaze.Scripts.Api.Models.Color.CanArgbHexBeParsed
-  nameWithType: Color.CanArgbHexBeParsed
 - uid: Tickblaze.Scripts.Api.Models.Color.CoolGray
   name: CoolGray
   href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_CoolGray
@@ -8260,36 +9379,6 @@ references:
   commentId: F:Tickblaze.Scripts.Api.Models.Color.Orange
   fullName: Tickblaze.Scripts.Api.Models.Color.Orange
   nameWithType: Color.Orange
-- uid: Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(System.String)
-  name: ParseArgbHex(string)
-  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_ParseArgbHex_System_String_
-  commentId: M:Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(System.String)
-  name.vb: ParseArgbHex(String)
-  fullName: Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(string)
-  fullName.vb: Tickblaze.Scripts.Api.Models.Color.ParseArgbHex(String)
-  nameWithType: Color.ParseArgbHex(string)
-  nameWithType.vb: Color.ParseArgbHex(String)
-- uid: Tickblaze.Scripts.Api.Models.Color.ParseArgbHex*
-  name: ParseArgbHex
-  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_ParseArgbHex_
-  commentId: Overload:Tickblaze.Scripts.Api.Models.Color.ParseArgbHex
-  fullName: Tickblaze.Scripts.Api.Models.Color.ParseArgbHex
-  nameWithType: Color.ParseArgbHex
-- uid: Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(System.String)
-  name: ParseRgbaHex(string)
-  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_ParseRgbaHex_System_String_
-  commentId: M:Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(System.String)
-  name.vb: ParseRgbaHex(String)
-  fullName: Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(string)
-  fullName.vb: Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex(String)
-  nameWithType: Color.ParseRgbaHex(string)
-  nameWithType.vb: Color.ParseRgbaHex(String)
-- uid: Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex*
-  name: ParseRgbaHex
-  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_ParseRgbaHex_
-  commentId: Overload:Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex
-  fullName: Tickblaze.Scripts.Api.Models.Color.ParseRgbaHex
-  nameWithType: Color.ParseRgbaHex
 - uid: Tickblaze.Scripts.Api.Models.Color.Pink
   name: Pink
   href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_Pink
@@ -8395,6 +9484,36 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.Color.TryParse
   fullName: Tickblaze.Scripts.Api.Models.Color.TryParse
   nameWithType: Color.TryParse
+- uid: Tickblaze.Scripts.Api.Models.Color.TryParseFromName(System.String,Tickblaze.Scripts.Api.Models.Color@)
+  name: TryParseFromName(string, out Color)
+  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_TryParseFromName_System_String_Tickblaze_Scripts_Api_Models_Color__
+  commentId: M:Tickblaze.Scripts.Api.Models.Color.TryParseFromName(System.String,Tickblaze.Scripts.Api.Models.Color@)
+  name.vb: TryParseFromName(String, Color)
+  fullName: Tickblaze.Scripts.Api.Models.Color.TryParseFromName(string, out Tickblaze.Scripts.Api.Models.Color)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Color.TryParseFromName(String, Tickblaze.Scripts.Api.Models.Color)
+  nameWithType: Color.TryParseFromName(string, out Color)
+  nameWithType.vb: Color.TryParseFromName(String, Color)
+- uid: Tickblaze.Scripts.Api.Models.Color.TryParseFromName*
+  name: TryParseFromName
+  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_TryParseFromName_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Color.TryParseFromName
+  fullName: Tickblaze.Scripts.Api.Models.Color.TryParseFromName
+  nameWithType: Color.TryParseFromName
+- uid: Tickblaze.Scripts.Api.Models.Color.TryParseHex(System.String,Tickblaze.Scripts.Api.Models.Color@)
+  name: TryParseHex(string, out Color)
+  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_TryParseHex_System_String_Tickblaze_Scripts_Api_Models_Color__
+  commentId: M:Tickblaze.Scripts.Api.Models.Color.TryParseHex(System.String,Tickblaze.Scripts.Api.Models.Color@)
+  name.vb: TryParseHex(String, Color)
+  fullName: Tickblaze.Scripts.Api.Models.Color.TryParseHex(string, out Tickblaze.Scripts.Api.Models.Color)
+  fullName.vb: Tickblaze.Scripts.Api.Models.Color.TryParseHex(String, Tickblaze.Scripts.Api.Models.Color)
+  nameWithType: Color.TryParseHex(string, out Color)
+  nameWithType.vb: Color.TryParseHex(String, Color)
+- uid: Tickblaze.Scripts.Api.Models.Color.TryParseHex*
+  name: TryParseHex
+  href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_TryParseHex_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.Color.TryParseHex
+  fullName: Tickblaze.Scripts.Api.Models.Color.TryParseHex
+  nameWithType: Color.TryParseHex
 - uid: Tickblaze.Scripts.Api.Models.Color.White
   name: White
   href: api/Tickblaze.Scripts.Api.Models.Color.html#Tickblaze_Scripts_Api_Models_Color_White
@@ -8873,6 +9992,15 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(String, Double, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.LineStyle, Integer, Boolean)
   nameWithType: PlotLevel.PlotLevel(string, double, Color, LineStyle, int, bool)
   nameWithType.vb: PlotLevel.New(String, Double, Color, LineStyle, Integer, Boolean)
+- uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.String,System.Double,Tickblaze.Scripts.Api.Models.Stroke)
+  name: PlotLevel(string, double, Stroke)
+  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_System_String_System_Double_Tickblaze_Scripts_Api_Models_Stroke_
+  commentId: M:Tickblaze.Scripts.Api.Models.PlotLevel.#ctor(System.String,System.Double,Tickblaze.Scripts.Api.Models.Stroke)
+  name.vb: New(String, Double, Stroke)
+  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.PlotLevel(string, double, Tickblaze.Scripts.Api.Models.Stroke)
+  fullName.vb: Tickblaze.Scripts.Api.Models.PlotLevel.New(String, Double, Tickblaze.Scripts.Api.Models.Stroke)
+  nameWithType: PlotLevel.PlotLevel(string, double, Stroke)
+  nameWithType.vb: PlotLevel.New(String, Double, Stroke)
 - uid: Tickblaze.Scripts.Api.Models.PlotLevel.#ctor*
   name: PlotLevel
   href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel__ctor_
@@ -8942,6 +10070,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Models.PlotLevel.Name
   fullName: Tickblaze.Scripts.Api.Models.PlotLevel.Name
   nameWithType: PlotLevel.Name
+- uid: Tickblaze.Scripts.Api.Models.PlotLevel.Stroke
+  name: Stroke
+  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel_Stroke
+  commentId: P:Tickblaze.Scripts.Api.Models.PlotLevel.Stroke
+  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.Stroke
+  nameWithType: PlotLevel.Stroke
+- uid: Tickblaze.Scripts.Api.Models.PlotLevel.Stroke*
+  name: Stroke
+  href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel_Stroke_
+  commentId: Overload:Tickblaze.Scripts.Api.Models.PlotLevel.Stroke
+  fullName: Tickblaze.Scripts.Api.Models.PlotLevel.Stroke
+  nameWithType: PlotLevel.Stroke
 - uid: Tickblaze.Scripts.Api.Models.PlotLevel.Thickness
   name: Thickness
   href: api/Tickblaze.Scripts.Api.Models.PlotLevel.html#Tickblaze_Scripts_Api_Models_PlotLevel_Thickness
@@ -9881,6 +11021,90 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.NotOptimizableAttribute.New
   nameWithType: NotOptimizableAttribute.NotOptimizableAttribute
   nameWithType.vb: NotOptimizableAttribute.New
+- uid: Tickblaze.Scripts.Api.OptimizationParameters
+  name: OptimizationParameters
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html
+  commentId: T:Tickblaze.Scripts.Api.OptimizationParameters
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters
+  nameWithType: OptimizationParameters
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.#ctor(Tickblaze.Scripts.Api.Bases.Script,System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Bases.OptimizationParameter})
+  name: OptimizationParameters(Script, IEnumerable<OptimizationParameter>)
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters__ctor_Tickblaze_Scripts_Api_Bases_Script_System_Collections_Generic_IEnumerable_Tickblaze_Scripts_Api_Bases_OptimizationParameter__
+  commentId: M:Tickblaze.Scripts.Api.OptimizationParameters.#ctor(Tickblaze.Scripts.Api.Bases.Script,System.Collections.Generic.IEnumerable{Tickblaze.Scripts.Api.Bases.OptimizationParameter})
+  name.vb: New(Script, IEnumerable(Of OptimizationParameter))
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.OptimizationParameters(Tickblaze.Scripts.Api.Bases.Script, System.Collections.Generic.IEnumerable<Tickblaze.Scripts.Api.Bases.OptimizationParameter>)
+  fullName.vb: Tickblaze.Scripts.Api.OptimizationParameters.New(Tickblaze.Scripts.Api.Bases.Script, System.Collections.Generic.IEnumerable(Of Tickblaze.Scripts.Api.Bases.OptimizationParameter))
+  nameWithType: OptimizationParameters.OptimizationParameters(Script, IEnumerable<OptimizationParameter>)
+  nameWithType.vb: OptimizationParameters.New(Script, IEnumerable(Of OptimizationParameter))
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.#ctor*
+  name: OptimizationParameters
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters__ctor_
+  commentId: Overload:Tickblaze.Scripts.Api.OptimizationParameters.#ctor
+  name.vb: New
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.OptimizationParameters
+  fullName.vb: Tickblaze.Scripts.Api.OptimizationParameters.New
+  nameWithType: OptimizationParameters.OptimizationParameters
+  nameWithType.vb: OptimizationParameters.New
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse(System.String)
+  name: ContainsFalse(string)
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsFalse_System_String_
+  commentId: M:Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse(System.String)
+  name.vb: ContainsFalse(String)
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse(string)
+  fullName.vb: Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse(String)
+  nameWithType: OptimizationParameters.ContainsFalse(string)
+  nameWithType.vb: OptimizationParameters.ContainsFalse(String)
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse*
+  name: ContainsFalse
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsFalse_
+  commentId: Overload:Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsFalse
+  nameWithType: OptimizationParameters.ContainsFalse
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly*
+  name: ContainsOnly
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsOnly_
+  commentId: Overload:Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly
+  nameWithType: OptimizationParameters.ContainsOnly
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly``1(System.String,``0)
+  name: ContainsOnly<T>(string, T)
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsOnly__1_System_String___0_
+  commentId: M:Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly``1(System.String,``0)
+  name.vb: ContainsOnly(Of T)(String, T)
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly<T>(string, T)
+  fullName.vb: Tickblaze.Scripts.Api.OptimizationParameters.ContainsOnly(Of T)(String, T)
+  nameWithType: OptimizationParameters.ContainsOnly<T>(string, T)
+  nameWithType.vb: OptimizationParameters.ContainsOnly(Of T)(String, T)
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue(System.String)
+  name: ContainsTrue(string)
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsTrue_System_String_
+  commentId: M:Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue(System.String)
+  name.vb: ContainsTrue(String)
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue(string)
+  fullName.vb: Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue(String)
+  nameWithType: OptimizationParameters.ContainsTrue(string)
+  nameWithType.vb: OptimizationParameters.ContainsTrue(String)
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue*
+  name: ContainsTrue
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsTrue_
+  commentId: Overload:Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsTrue
+  nameWithType: OptimizationParameters.ContainsTrue
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue*
+  name: ContainsValue
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsValue_
+  commentId: Overload:Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue
+  nameWithType: OptimizationParameters.ContainsValue
+- uid: Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue``1(System.String,``0)
+  name: ContainsValue<T>(string, T)
+  href: api/Tickblaze.Scripts.Api.OptimizationParameters.html#Tickblaze_Scripts_Api_OptimizationParameters_ContainsValue__1_System_String___0_
+  commentId: M:Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue``1(System.String,``0)
+  name.vb: ContainsValue(Of T)(String, T)
+  fullName: Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue<T>(string, T)
+  fullName.vb: Tickblaze.Scripts.Api.OptimizationParameters.ContainsValue(Of T)(String, T)
+  nameWithType: OptimizationParameters.ContainsValue<T>(string, T)
+  nameWithType.vb: OptimizationParameters.ContainsValue(Of T)(String, T)
 - uid: Tickblaze.Scripts.Api.Parameter
   name: Parameter
   href: api/Tickblaze.Scripts.Api.Parameter.html
@@ -9938,6 +11162,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.Parameter.IsEnabled
   fullName: Tickblaze.Scripts.Api.Parameter.IsEnabled
   nameWithType: Parameter.IsEnabled
+- uid: Tickblaze.Scripts.Api.Parameter.IsOptimizable
+  name: IsOptimizable
+  href: api/Tickblaze.Scripts.Api.Parameter.html#Tickblaze_Scripts_Api_Parameter_IsOptimizable
+  commentId: P:Tickblaze.Scripts.Api.Parameter.IsOptimizable
+  fullName: Tickblaze.Scripts.Api.Parameter.IsOptimizable
+  nameWithType: Parameter.IsOptimizable
+- uid: Tickblaze.Scripts.Api.Parameter.IsOptimizable*
+  name: IsOptimizable
+  href: api/Tickblaze.Scripts.Api.Parameter.html#Tickblaze_Scripts_Api_Parameter_IsOptimizable_
+  commentId: Overload:Tickblaze.Scripts.Api.Parameter.IsOptimizable
+  fullName: Tickblaze.Scripts.Api.Parameter.IsOptimizable
+  nameWithType: Parameter.IsOptimizable
 - uid: Tickblaze.Scripts.Api.Parameter.IsVisible
   name: IsVisible
   href: api/Tickblaze.Scripts.Api.Parameter.html#Tickblaze_Scripts_Api_Parameter_IsVisible
@@ -10034,6 +11270,15 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(String, Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Tickblaze.Core.Enums.LineStyle, Integer, Boolean)
   nameWithType: PlotSeries.PlotSeries(string, Color, PlotStyle, LineStyle, int, bool)
   nameWithType.vb: PlotSeries.New(String, Color, PlotStyle, LineStyle, Integer, Boolean)
+- uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Core.Enums.PlotStyle)
+  name: PlotSeries(string, Stroke, PlotStyle)
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_System_String_Tickblaze_Scripts_Api_Models_Stroke_Tickblaze_Core_Enums_PlotStyle_
+  commentId: M:Tickblaze.Scripts.Api.PlotSeries.#ctor(System.String,Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Core.Enums.PlotStyle)
+  name.vb: New(String, Stroke, PlotStyle)
+  fullName: Tickblaze.Scripts.Api.PlotSeries.PlotSeries(string, Tickblaze.Scripts.Api.Models.Stroke, Tickblaze.Core.Enums.PlotStyle)
+  fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(String, Tickblaze.Scripts.Api.Models.Stroke, Tickblaze.Core.Enums.PlotStyle)
+  nameWithType: PlotSeries.PlotSeries(string, Stroke, PlotStyle)
+  nameWithType.vb: PlotSeries.New(String, Stroke, PlotStyle)
 - uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Color)
   name: PlotSeries(Color)
   href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Color_
@@ -10061,6 +11306,15 @@ references:
   fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(Tickblaze.Scripts.Api.Models.Color, Tickblaze.Core.Enums.PlotStyle, Integer)
   nameWithType: PlotSeries.PlotSeries(Color, PlotStyle, int)
   nameWithType.vb: PlotSeries.New(Color, PlotStyle, Integer)
+- uid: Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Core.Enums.PlotStyle)
+  name: PlotSeries(Stroke, PlotStyle)
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_Tickblaze_Scripts_Api_Models_Stroke_Tickblaze_Core_Enums_PlotStyle_
+  commentId: M:Tickblaze.Scripts.Api.PlotSeries.#ctor(Tickblaze.Scripts.Api.Models.Stroke,Tickblaze.Core.Enums.PlotStyle)
+  name.vb: New(Stroke, PlotStyle)
+  fullName: Tickblaze.Scripts.Api.PlotSeries.PlotSeries(Tickblaze.Scripts.Api.Models.Stroke, Tickblaze.Core.Enums.PlotStyle)
+  fullName.vb: Tickblaze.Scripts.Api.PlotSeries.New(Tickblaze.Scripts.Api.Models.Stroke, Tickblaze.Core.Enums.PlotStyle)
+  nameWithType: PlotSeries.PlotSeries(Stroke, PlotStyle)
+  nameWithType.vb: PlotSeries.New(Stroke, PlotStyle)
 - uid: Tickblaze.Scripts.Api.PlotSeries.#ctor*
   name: PlotSeries
   href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries__ctor_
@@ -10244,6 +11498,18 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.PlotSeries.ResetFurthestUpdateIndex
   fullName: Tickblaze.Scripts.Api.PlotSeries.ResetFurthestUpdateIndex
   nameWithType: PlotSeries.ResetFurthestUpdateIndex
+- uid: Tickblaze.Scripts.Api.PlotSeries.Stroke
+  name: Stroke
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries_Stroke
+  commentId: P:Tickblaze.Scripts.Api.PlotSeries.Stroke
+  fullName: Tickblaze.Scripts.Api.PlotSeries.Stroke
+  nameWithType: PlotSeries.Stroke
+- uid: Tickblaze.Scripts.Api.PlotSeries.Stroke*
+  name: Stroke
+  href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries_Stroke_
+  commentId: Overload:Tickblaze.Scripts.Api.PlotSeries.Stroke
+  fullName: Tickblaze.Scripts.Api.PlotSeries.Stroke
+  nameWithType: PlotSeries.Stroke
 - uid: Tickblaze.Scripts.Api.PlotSeries.Thickness
   name: Thickness
   href: api/Tickblaze.Scripts.Api.PlotSeries.html#Tickblaze_Scripts_Api_PlotSeries_Thickness
@@ -10256,6 +11522,42 @@ references:
   commentId: Overload:Tickblaze.Scripts.Api.PlotSeries.Thickness
   fullName: Tickblaze.Scripts.Api.PlotSeries.Thickness
   nameWithType: PlotSeries.Thickness
+- uid: Tickblaze.Scripts.Api.ReflectionExtensions
+  name: ReflectionExtensions
+  href: api/Tickblaze.Scripts.Api.ReflectionExtensions.html
+  commentId: T:Tickblaze.Scripts.Api.ReflectionExtensions
+  fullName: Tickblaze.Scripts.Api.ReflectionExtensions
+  nameWithType: ReflectionExtensions
+- uid: Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName*
+  name: GetDisplayName
+  href: api/Tickblaze.Scripts.Api.ReflectionExtensions.html#Tickblaze_Scripts_Api_ReflectionExtensions_GetDisplayName_
+  commentId: Overload:Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName
+  fullName: Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName
+  nameWithType: ReflectionExtensions.GetDisplayName
+- uid: Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName``1(``0)
+  name: GetDisplayName<TEnum>(TEnum)
+  href: api/Tickblaze.Scripts.Api.ReflectionExtensions.html#Tickblaze_Scripts_Api_ReflectionExtensions_GetDisplayName__1___0_
+  commentId: M:Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName``1(``0)
+  name.vb: GetDisplayName(Of TEnum)(TEnum)
+  fullName: Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName<TEnum>(TEnum)
+  fullName.vb: Tickblaze.Scripts.Api.ReflectionExtensions.GetDisplayName(Of TEnum)(TEnum)
+  nameWithType: ReflectionExtensions.GetDisplayName<TEnum>(TEnum)
+  nameWithType.vb: ReflectionExtensions.GetDisplayName(Of TEnum)(TEnum)
+- uid: Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName(System.Object)
+  name: GetEnumDisplayName(object)
+  href: api/Tickblaze.Scripts.Api.ReflectionExtensions.html#Tickblaze_Scripts_Api_ReflectionExtensions_GetEnumDisplayName_System_Object_
+  commentId: M:Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName(System.Object)
+  name.vb: GetEnumDisplayName(Object)
+  fullName: Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName(object)
+  fullName.vb: Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName(Object)
+  nameWithType: ReflectionExtensions.GetEnumDisplayName(object)
+  nameWithType.vb: ReflectionExtensions.GetEnumDisplayName(Object)
+- uid: Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName*
+  name: GetEnumDisplayName
+  href: api/Tickblaze.Scripts.Api.ReflectionExtensions.html#Tickblaze_Scripts_Api_ReflectionExtensions_GetEnumDisplayName_
+  commentId: Overload:Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName
+  fullName: Tickblaze.Scripts.Api.ReflectionExtensions.GetEnumDisplayName
+  nameWithType: ReflectionExtensions.GetEnumDisplayName
 - uid: Tickblaze.Scripts.Api.SeriesExtensions
   name: SeriesExtensions
   href: api/Tickblaze.Scripts.Api.SeriesExtensions.html
