@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Tutorial: Accessing Real-Time Level 2 (L2) Market Data in Tickblaze | Tickblaze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Tutorial: Accessing Real-Time Level 2 (L2) Market Data in Tickblaze | Tickblaze ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/l2-data.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="Tickblaze">
+            Tickblaze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="tutorial-accessing-real-time-level-2-l2-market-data-in-tickblaze">Tutorial: Accessing Real-Time Level 2 (L2) Market Data in Tickblaze</h1>
+
+<p>This tutorial shows how to access and visualize real-time market depth (order book) data in Tickblaze.</p>
+<h2 id="step-1-create-basic-dom-indicator-structure">Step 1: Create Basic DOM Indicator Structure</h2>
+<pre><code class="lang-csharp">public partial class DomIndicator : Indicator
+{
+    private IDom _depthOfMarket;
+
+    protected override void Initialize()
+    {
+        // Get the DOM (Depth of Market) interface
+        _depthOfMarket = GetDom();
+        
+        // Subscribe to L2 updates
+        GetL2QuoteUpdates().Start(update =&gt; _depthOfMarket.ApplyUpdate(update));
+    }
+}
+</code></pre>
+<h2 id="step-2-visualizing-the-order-book">Step 2: Visualizing the Order Book</h2>
+<pre><code class="lang-csharp">public override void OnRender(IDrawingContext context)
+{
+    // Get current price levels
+    var bids = _depthOfMarket.GetPriceLevels(L2TickType.Bid);
+    var asks = _depthOfMarket.GetPriceLevels(L2TickType.Ask);
+    
+    // Get visible price range
+    var minPrice = ChartScale.MinPrice;
+    var maxPrice = ChartScale.MaxPrice;
+
+    // Freeze collections for thread-safe access
+    using var bidReleaser = bids.Freeze();
+    using var askReleaser = asks.Freeze();
+
+    // Draw bid levels (blue)
+    foreach (var bid in bids.Enumerate(minPrice, maxPrice))
+    {
+        DrawPriceLevel(context, bid, Colors.Blue);
+    }
+
+    // Draw ask levels (red)
+    foreach (var ask in asks.Enumerate(minPrice, maxPrice))
+    {
+        DrawPriceLevel(context, ask, Colors.Red);
+    }
+}
+
+private void DrawPriceLevel(IDrawingContext context, L2PriceLevel level, Color color)
+{
+	var y = ChartScale.GetYCoordinateByValue(level.Price);
+	var width = level.Size;
+	var pointA = new Point(Chart.Width - width, y);
+	var pointB = new Point(Chart.Width, y);
+
+	context.DrawLine(pointA, pointB, color, 2);
+}
+</code></pre>
+<p>This implementation provides a real-time visualization of market depth that updates automatically as new L2 data arrives.</p>
+<h2 id="key-concepts-explained">Key Concepts Explained</h2>
+<ol>
+<li><p><strong><code>IDom</code> Interface</strong>:</p>
+<ul>
+<li>Provides access to the order book</li>
+<li>Updated in real-time via <code>GetL2QuoteUpdates()</code></li>
+</ul>
+</li>
+<li><p><strong>Price Levels</strong>:</p>
+<ul>
+<li><code>GetPriceLevels()</code> returns current bids/asks</li>
+<li><code>Enumerate()</code> filters levels within visible price range</li>
+</ul>
+</li>
+<li><p><strong>Thread Safety</strong>:</p>
+<ul>
+<li><code>Freeze()</code> locks the collection during rendering</li>
+<li>Required for thread-safe access to real-time data</li>
+</ul>
+</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Tickblaze/Tickblaze.Scripts/blob/main/docs/docs/tutorials/l2-data.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© Copyright 2024. All rights reserved. <a href="https://tickblaze.com">Tickblaze</a>.<span>
+        </span></span></div>
+      </div>
+    </footer>
+  </body>
+</html>

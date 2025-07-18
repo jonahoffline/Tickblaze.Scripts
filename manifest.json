@@ -2026,6 +2026,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/l2-data.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/l2-data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/tutorials/ma-crossover-strategy.md",
       "output": {
         ".html": {
