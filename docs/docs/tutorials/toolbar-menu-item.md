@@ -5,7 +5,7 @@ This tutorial will walk you through creating and adding custom UI elements to yo
 ## 1. Update your project file
 
 - Ensure your project targets Windows and enables WPF support.
-- Add these lines to your `.csproj` file:
+- Make these changes in your `.csproj` file:
 
     ```xml
     <PropertyGroup>
@@ -14,9 +14,9 @@ This tutorial will walk you through creating and adding custom UI elements to yo
     </PropertyGroup>
     ```
 
-## 2. Create a new indicator
+## 2. Create a new indicator or strategy
 
-- Create an indicator and override the `CreateChartToolbarMenuItem()` method that returns a WPF control:
+- Create an indicator or strategy and override the `CreateChartToolbarMenuItem()` method that returns a WPF control:
 
     ```csharp
     public partial class MyToolbarButton : Indicator
@@ -27,7 +27,7 @@ This tutorial will walk you through creating and adding custom UI elements to yo
         {
             _button = new Button { Content = "Click Me!" };
             _button.Click += (s, e) => MessageBox.Show("Button clicked!");
-            
+
             return _button;
         }
     }
@@ -35,7 +35,7 @@ This tutorial will walk you through creating and adding custom UI elements to yo
 
 ## That's it!
 
-The button will appear in your chart toolbar when the indicator is loaded.
+The button will appear in your chart toolbar when the indicator is loaded or strategy running live.
 
 ### Extra Tip:
 For multiple items, use `ContextMenu` with multiple controls.
