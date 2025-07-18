@@ -2076,6 +2076,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/tutorials/toolbar-menu-item.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/tutorials/toolbar-menu-item.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/tutorials/trade-management-strategy.md",
       "output": {
         ".html": {
