@@ -27,6 +27,8 @@
       href: tutorials/parameters-override.md
     - name: Accesing Secondary Data
       href: tutorials/multi-timeframe.md
+    - name: Toolbar Menu item
+      href: tutorials/toolbar-menu-item.md
     - name: Accesing L2 Data
       href: tutorials/l2-data.md
 - name: Examples
