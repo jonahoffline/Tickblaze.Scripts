@@ -297,7 +297,7 @@ public class OcoTicks : TradeManagementStrategy
 		TryMoveToBreakEven();
 	}
 
-	protected override void OnBarUpdate()
+	protected override void OnBar(int index)
 	{
 		TryMoveToBreakEven();
 	}
