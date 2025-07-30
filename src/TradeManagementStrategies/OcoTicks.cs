@@ -5,7 +5,7 @@ namespace Tickblaze.Scripts.TradeManagementStrategies;
 
 public class OcoTicks : TradeManagementStrategy
 {
-	[NumericRange(0, int.MaxValue)]
+	[NumericRange]
 	[Parameter("Stop-loss distance (ticks)", Description = "Enter the distance from your entry in ticks, that you would like to set your stop loss. Entering zero (0) means you have no stop loss.")]
 	public int StopLossTicks { get; set; } = 16;
 
@@ -16,7 +16,7 @@ public class OcoTicks : TradeManagementStrategy
 	[Parameter("Position size value", Description = "The numeric value to use when calculating position size based on the option selected for Position Size Type.")]
 	public double PositionSize { get; set; } = 500;
 
-	[NumericRange(0, int.MaxValue)]
+	[NumericRange]
 	[Parameter("Take-profit #1 distance (ticks)", Description = "Enter the distance from your entry, that you would like to set Target #1. Entering zero (0) means you have no Target #1.")]
 	public int FirstTakeProfitTicks { get; set; } = 8;
 
@@ -24,7 +24,7 @@ public class OcoTicks : TradeManagementStrategy
 	[Parameter("Take-profit #1 size (%)", Description = "Enter how much % of your position you would like to close at Target #1.")]
 	public double FirstTakeProfitSizePercent { get; set; } = 70;
 
-	[NumericRange(0, int.MaxValue)]
+	[NumericRange]
 	[Parameter("Take-profit #2 distance (ticks)", Description = "Enter the distance from your entry, that you would like to set Target #2. Entering zero (0) means you have no Target #2.")]
 	public int SecondTakeProfitTicks { get; set; } = 24;
 
@@ -62,7 +62,7 @@ public class OcoTicks : TradeManagementStrategy
 			}
 
 			// If we're waiting for a break even, stop if our position is no longer valid and all of our entry orders were submitted and reached a final state
-			if (Position?.Direction != (DirectionAsInt == 1 ? OrderDirection.Long : OrderDirection.Short) && _orderData.Count > 0 && _orderData.TrueForAll(group => group.Entry.Status != OrderStatus.Pending))
+			if (Position?.Direction.AsInt() != DirectionAsInt && _orderData.Count > 0 && _orderData.TrueForAll(group => group.Entry.Status != OrderStatus.Pending))
 			{
 				return true;
 			}
@@ -92,8 +92,7 @@ public class OcoTicks : TradeManagementStrategy
 			return;
 		}
 
-		var price = Bars.Close[^1];
-		var ticksInProfit = (int)Math.Round((price - Position.EntryPrice) / Symbol.TickSize) * DirectionAsInt;
+		var ticksInProfit = (int)Math.Round((Bars.Close[^1] - Position.EntryPrice) / Symbol.TickSize) * DirectionAsInt;
 		if (ticksInProfit < BreakevenTriggerTicks)
 		{
 			return;

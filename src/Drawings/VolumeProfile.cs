@@ -329,12 +329,12 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 		private readonly T _script = script ?? throw new ArgumentNullException(nameof(script));
 		private readonly Drawing _drawing = script as Drawing;
 		public BarSeries Bars => bars ?? throw new ArgumentNullException(nameof(bars));
-		private Volume[] _volumes;
-		private BarsRange _range;
+		private Volume[]? _volumes;
+		private BarsRange? _range;
 		private int _pocIndex, _vahIndex, _valIndex;
 		private double _volume, _rowSize, _maximum, _minimum;
 		private bool _isTickSize;
-		private double[] _vwap;
+		private double[]? _vwap;
 		private SourceDataType _calculatedSourceDataType;
 		private RowsLayoutType _calculatedRowsLayoutType;
 		private int _calculatedRowsSize;
@@ -428,7 +428,7 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 					var pointA = new Point(leftX, y - barHeight / 2);
 					var pointB = new Point(rightX, pointA.Y);
 
-					DrawPriceLevel(context, pointA, pointB, Settings.PocLineColor, Settings.PocLineThickness, Settings.PocLineStyle);
+					DrawPriceLevel(context, pointA, pointB, Settings.PocLineColor, Settings.PocLineThickness, Settings.PocLineStyle, volume.price);
 				}
 
 				if (Settings.ValLineVisible && i == _valIndex)
@@ -436,7 +436,7 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 					var pointA = new Point(leftX, _isTickSize ? y - barHeight / 2 : y);
 					var pointB = new Point(rightX, pointA.Y);
 
-					DrawPriceLevel(context, pointA, pointB, Settings.ValLineColor, Settings.ValLineThickness, Settings.ValLineStyle);
+					DrawPriceLevel(context, pointA, pointB, Settings.ValLineColor, Settings.ValLineThickness, Settings.ValLineStyle, volume.price);
 				}
 
 				if (Settings.VahLineVisible && i == _vahIndex)
@@ -444,7 +444,7 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 					var pointA = new Point(leftX, _isTickSize ? y - barHeight / 2 : y - barHeight);
 					var pointB = new Point(rightX, pointA.Y);
 
-					DrawPriceLevel(context, pointA, pointB, Settings.VahLineColor, Settings.VahLineThickness, Settings.VahLineStyle);
+					DrawPriceLevel(context, pointA, pointB, Settings.VahLineColor, Settings.VahLineThickness, Settings.VahLineStyle, volume.price);
 				}
 
 				var color = i > _vahIndex
@@ -558,11 +558,22 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 				_minimum = Low;
 				_volumes = new Volume[rows];
 			}
+
+			if (_volumes.Length > 0)
+			{
+				var symbol = _script.Bars.Symbol;
+
+				for (var i = 0; i < _volumes.Length; i++)
+				{
+					var price = symbol.RoundToTick(_minimum + _rowSize * (i + 0.5));
+					_volumes[i] = new Volume(price);
+				}
+			}
 		}
 
 		private void CalculateVolumes()
 		{
-			if (_volumes.Length == 0)
+			if (_volumes is null || _volumes.Length == 0)
 			{
 				return;
 			}
@@ -639,7 +650,6 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 					var level = (int)Math.Floor((bar.Close - _minimum) / _rowSize);
 					level = Math.Max(0, Math.Min(_volumes.Length - 1, level));
 
-					_volumes[level] ??= new Volume();
 					_volumes[level].Buy += buyVolume;
 					_volumes[level].Sell += sellVolume;
 				}
@@ -674,7 +684,6 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 					for (var level = startLevel; level <= endLevel; level++)
 					{
-						_volumes[level] ??= new Volume();
 						_volumes[level].Buy += buyVolume;
 						_volumes[level].Sell += sellVolume;
 					}
@@ -685,8 +694,6 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 
 			for (var i = 0; i < _volumes.Length; i++)
 			{
-				_volumes[i] ??= new Volume();
-
 				if (_volumes[_pocIndex] < _volumes[i])
 				{
 					_pocIndex = i;
@@ -776,7 +783,7 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 			_vwap = [.. vwap];
 		}
 
-		private void DrawPriceLevel(IDrawingContext context, Point pointA, Point pointB, Color color, int thickness, LineStyle lineStyle)
+		private void DrawPriceLevel(IDrawingContext context, Point pointA, Point pointB, Color color, int thickness, LineStyle lineStyle, double price)
 		{
 			context.DrawLine(pointA, pointB, color, thickness, lineStyle);
 
@@ -785,7 +792,6 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 				return;
 			}
 
-			var price = Symbol.RoundToTick(_script.ChartScale!.GetValueByYCoordinate(pointA.Y));
 			var text = Symbol.FormatPrice(price);
 			var textOrigin = new Point(pointA);
 
@@ -809,8 +815,9 @@ public partial class VolumeProfile : Drawing, VolumeProfile.ISettings
 		public int ToIndex { get; set; }
 	}
 
-	public record Volume
+	public record Volume(double price)
 	{
+		public double Price { get; } = price;
 		public double Buy { get; set; }
 		public double Sell { get; set; }
 		public double Total => Buy + Sell;

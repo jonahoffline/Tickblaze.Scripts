@@ -14,6 +14,7 @@ public enum MovingAverageType
 	WellesWilder,
 	Hull,
 	VolumeWeighted,
+	StepMA
 }
 
 /// <summary>
@@ -40,7 +41,7 @@ public partial class MovingAverage : Indicator
 	/// <remarks>
 	/// The value must be between 1 and 999, inclusive, with a step of 1.
 	/// </remarks>
-	[Parameter("Period"), NumericRange(1, 999, 1)]
+	[Parameter("Period"), NumericRange(1, 999)]
 	public int Period { get; set; } = 14;
 
 	/// <summary>
@@ -101,8 +102,23 @@ public partial class MovingAverage : Indicator
 			MovingAverageType.WellesWilder => new ExponentialMovingAverage(Source, 2 * Period - 1).Result,
 			MovingAverageType.Hull => new HullMovingAverage(Source, Period).Result,
 			MovingAverageType.VolumeWeighted => new VolumeWeightedMovingAverage(Source, Period).Result,
-			_ => throw new NotImplementedException(),
+			MovingAverageType.StepMA => new TrendStepper(Source, Period, 0, Color.Transparent, Color.Transparent).Result,
+			_ => throw new NotImplementedException()
 		};
+
+		if (Type == MovingAverageType.StepMA)
+			Result.PlotStyle = PlotStyle.Stair;
+	}
+
+	protected override Parameters GetParameters(Parameters parameters)
+	{
+		if (Type != MovingAverageType.StepMA)
+			return parameters;
+		
+		parameters[nameof(Period)].Attributes.Name = "Step Size";
+		parameters[nameof(Period)].NumericRange!.MinValue = 1;
+		parameters[nameof(Period)].NumericRange!.MaxValue = int.MaxValue;
+		return parameters;
 	}
 
 	protected override void Calculate(int index)
