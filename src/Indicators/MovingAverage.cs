@@ -3,17 +3,36 @@
 public enum MovingAverageType
 {
 	Simple,
+	
 	Exponential,
+
+	[DisplayName("Double Exponential")]
 	DoubleExponential,
+
+	[DisplayName("Triple Exponential")]
 	TripleExponential,
+
+	[DisplayName("Zero Lag Exponential")]
 	ZeroLagExponential,
+
 	Triangular,
+
+	[DisplayName("Sine Weighted")]
 	SineWeighted,
+
 	Smoothed,
+	
 	Weighted,
+	
+	[DisplayName("Welles Wilder")]
 	WellesWilder,
+
 	Hull,
+
+	[DisplayName("Volume Weighted")]
 	VolumeWeighted,
+
+	[DisplayName("Step MA")]
 	StepMA
 }
 

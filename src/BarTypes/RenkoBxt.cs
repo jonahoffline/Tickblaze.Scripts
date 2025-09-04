@@ -27,19 +27,24 @@ public sealed class RenkoBxt : BarType
 		{
 			_currentSession = Symbol.ExchangeCalendar.GetSession(bar.Time);
 			_trend = 0;
-			AddBar(bar);
+			
+			AddBar(bar with
+			{
+				IsComplete = false
+			});
+			
 			return;
 		}
 
-		var curLastBar = Bars[^1]!;
+		var curLastBar = Bars[^1];
 		
 		// Handle invalid configurations as one giant bar
 		if (Offset >= BarSize || ReversalSize <= Offset)
 		{
-			UpdateBar(curLastBar! with
+			UpdateBar(curLastBar with
 			{
-				High = Math.Max(curLastBar!.High, bar.High),
-				Low = Math.Min(curLastBar!.Low, bar.Low),
+				High = Math.Max(curLastBar.High, bar.High),
+				Low = Math.Min(curLastBar.Low, bar.Low),
 				Close = bar.Close,
 				Volume = curLastBar.Volume + bar.Volume,
 				EndTime = bar.EndTime
@@ -48,7 +53,6 @@ public sealed class RenkoBxt : BarType
 			return;
 		}
 
-		var addedNewBars = false;
 		while (true)
 		{
 			// Calculate the levels at which a new bar would form
@@ -61,7 +65,7 @@ public sealed class RenkoBxt : BarType
 			{
 				var newHigh = Math.Max(curLastBar.High, bar.High);
 				var newLow = Math.Min(curLastBar.Low, bar.Low);
-				UpdateBar(curLastBar! with
+				UpdateBar(curLastBar with
 				{
 					High = newHigh,
 					Low = newLow,
@@ -84,7 +88,8 @@ public sealed class RenkoBxt : BarType
 				High = direction == 1 ? newClose : curLastBar.High,
 				Low = direction == 1 ? curLastBar.Low : newClose,
 				Close = newClose,
-				EndTime = bar.EndTime
+				IsComplete = true,
+				EndTime = bar.EndTime,
 			});
 			
 			var newOpen = newClose - direction * Offset * Symbol.TickSize;

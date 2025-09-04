@@ -9,15 +9,14 @@ public partial class TrendSlopeFilter : Indicator, ITrendSlopeFilter
 	public int SlopeMaPeriod { get; set; }
 	public int SlopePeriod { get; set; }
 	public SlopeRuleType SlopeRule { get; set; }
-	public double SlopeMaximum { get; set; }
-	public double SlopeMinimum { get; set; }
+	public double SlopeAbsMax { get; set; }
 	public Stroke SlopeStroke { get; set; }
 	public Stroke SlopeZeroLevelStroke { get; set; }
 	public Stroke SlopeThresholdLevelStroke { get; set; }
 	public Color SlopeShadingColor { get; set; }
 
 	[Plot("Slope")]
-	public PlotSeries Slope { get; set; } = new PlotSeries(Color.Yellow) { IsEditorBrowsable = false };
+	public PlotSeries Slope { get; set; } = new(Color.Yellow) { IsEditorBrowsable = false };
 
 	public ISeries<bool> IsTrending => _isTrending;
 
@@ -49,7 +48,7 @@ public partial class TrendSlopeFilter : Indicator, ITrendSlopeFilter
 	protected override void Calculate(int index)
 	{
 		var slope = _linearRegressionSlope.Result[index];
-		var isTrending = slope > SlopeMaximum || slope < SlopeMinimum;
+		var isTrending = Math.Abs(slope) < SlopeAbsMax;
 
 		Slope[index] = slope;
 		_isTrending[index] = isTrending;
@@ -61,12 +60,12 @@ public partial class TrendSlopeFilter : Indicator, ITrendSlopeFilter
 		{
 			if (SlopeRule is SlopeRuleType.Minimum)
 			{
-				ShadeBetween(context, SlopeMinimum, SlopeMaximum, SlopeShadingColor);
+				ShadeBetween(context, -SlopeAbsMax, SlopeAbsMax, SlopeShadingColor);
 			}
 			else
 			{
-				ShadeBetween(context, SlopeMaximum, int.MaxValue, SlopeShadingColor);
-				ShadeBetween(context, SlopeMinimum, int.MinValue, SlopeShadingColor);
+				ShadeBetween(context, SlopeAbsMax, int.MaxValue, SlopeShadingColor);
+				ShadeBetween(context, -SlopeAbsMax, int.MinValue, SlopeShadingColor);
 			}
 		}
 
@@ -77,8 +76,8 @@ public partial class TrendSlopeFilter : Indicator, ITrendSlopeFilter
 
 		if (SlopeThresholdLevelStroke is { IsVisible: true, Color.A: > 0 })
 		{
-			DrawLevel(context, SlopeMaximum, SlopeThresholdLevelStroke);
-			DrawLevel(context, SlopeMinimum, SlopeThresholdLevelStroke);
+			DrawLevel(context, SlopeAbsMax, SlopeThresholdLevelStroke);
+			DrawLevel(context, -SlopeAbsMax, SlopeThresholdLevelStroke);
 		}
 	}
 
@@ -139,11 +138,8 @@ public interface ITrendSlopeFilter
 	[Parameter("Slope Rule")]
 	public TrendSlopeFilter.SlopeRuleType SlopeRule { get; set; }
 
-	[Parameter("Maximum"), NumericRange]
-	public double SlopeMaximum { get; set; }
-
-	[Parameter("Minimum"), NumericRange(int.MinValue, 0)]
-	public double SlopeMinimum { get; set; }
+	[Parameter("Slope Min/Max"), NumericRange]
+	public double SlopeAbsMax { get; set; }
 
 	[Parameter("Slope Line", GroupName = VisualsGroupName)]
 	public Stroke SlopeStroke { get; set; }
@@ -160,11 +156,10 @@ public interface ITrendSlopeFilter
 	public void SetDefaults()
 	{
 		SlopeMaType = MovingAverageType.Exponential;
-		SlopeMaPeriod = 14;
-		SlopePeriod = 7;
+		SlopeMaPeriod = 100;
+		SlopePeriod = 50;
 		SlopeRule = TrendSlopeFilter.SlopeRuleType.Minimum;
-		SlopeMaximum = 0.75;
-		SlopeMinimum = -0.75;
+		SlopeAbsMax = 0.25;
 		SlopeStroke = new Stroke { Color = Color.Yellow };
 		SlopeZeroLevelStroke = new Stroke { Color = Color.Gray, LineStyle = LineStyle.Dash };
 		SlopeThresholdLevelStroke = new Stroke { Color = Color.Gray };
